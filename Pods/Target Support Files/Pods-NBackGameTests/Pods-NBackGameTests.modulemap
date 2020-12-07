@@ -1,0 +1,6 @@
+framework module Pods_NBackGameTests {
+  umbrella header "Pods-NBackGameTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

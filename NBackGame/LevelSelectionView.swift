@@ -9,9 +9,8 @@ import SwiftUI
 
 struct LevelSelectionView: View {
     @State private var isShowingAlert = false
+    @StateObject var viewModel: LevelSelectionViewModel
     
-    var viewModel: LevelSelectionViewModel
-
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
@@ -24,37 +23,34 @@ struct LevelSelectionView: View {
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 3)) {
                     ForEach(1...12, id: \.self) { number in
                         ZStack {
-                            if number < 5 {
-                                Circle()
-                                    .aspectRatio(1, contentMode: .fit)
-                                    .overlay(
-                                        Circle()
-                                            .stroke(Color.blue, lineWidth: 2)
-                                    )
-                            } else {
-                                Circle()
-                                    .foregroundColor(.gray)
-                                    .aspectRatio(1, contentMode: .fit)
+                            Button(action: {
+                                viewModel.selectLevel(number)
+                                if number > viewModel.unlockedLevels {
+                                    isShowingAlert = true
+                                }
+                            }, label: {
+                                if number <= viewModel.unlockedLevels {
+                                    Circle()
+                                        .aspectRatio(1, contentMode: .fit)
+                                        .foregroundColor(Color.blue.opacity(0.4))
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.blue, lineWidth: 2)
+                                        )
+                                } else {
+                                    Circle()
+                                        .foregroundColor(.gray)
+                                        .aspectRatio(1, contentMode: .fit)
+                                }
                                 
-                            }
-                            
+                            })
                             
                             Text("\(number)")
                                 .font(.title)
                                 .bold()
                                 .foregroundColor(Color.white)
-                            
+                            NavigationLink("", destination: GameView(press: self.$viewModel.nextScreen), isActive: $viewModel.nextScreen)
                         }
-                        .onTapGesture {
-                            print("tap: \(number)")
-                            if number < 5 {
-                                print("start game")
-                            } else {
-                                isShowingAlert = true
-                            }
-                        }
-                        
-                        
                     }
                 }
                 .padding()
@@ -62,7 +58,7 @@ struct LevelSelectionView: View {
         }
         .navigationBarHidden(true)
         .alert(isPresented: $isShowingAlert) {
-            Alert(title: Text("You haven't unlock this level yet"), message: Text("You need to finish the level before to start this"), dismissButton: .default(Text("OK")))
+            Alert(title: Text("You haven't unlock this level yet"), message: Text("You need to finish the level \(viewModel.selectedLevel - 1) to start this"), dismissButton: .default(Text("OK")))
         }
     }
 }

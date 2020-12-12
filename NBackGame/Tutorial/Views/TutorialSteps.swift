@@ -1,58 +1,11 @@
 //
-//  TutorialView.swift
+//  TutorialSteps.swift
 //  NBackGame
 //
-//  Created by Kornel Miszczak on 19/11/2020.
+//  Created by Kornel Miszczak on 07/12/2020.
 //
 
 import SwiftUI
-
-struct TutorialView: View {
-    @ObservedObject var viewModel: TutorialViewModel
-    var steps: [Int: AnyView] = [
-        1: AnyView(TutorialStep1()),
-        2: AnyView(TutorialStep2()),
-        3: AnyView(TutorialStep3()),
-        4: AnyView(TutorialStep4()),
-        5: AnyView(TutorialStep5()),
-        6: AnyView(TutorialStep6()),
-        7: AnyView(TutorialStep7()),
-        8: AnyView(TutorialStep8()),
-        9: AnyView(TutorialStep9()),
-        10: AnyView(TutorialStep10()),
-    ]
-    var body: some View {
-        ScrollView {
-            ZStack {
-                Color.black.ignoresSafeArea()
-                VStack {
-                    Spacer()
-                    steps[viewModel.currentStep]
-                    Spacer()
-                    TutorialNavigationView(viewModel: viewModel)
-                }
-                
-            }
-        }
-        .navigationBarHidden(true)
-        
-    }
-}
-
-struct TutorialText: View {
-    init(_ text: String) {
-        self.text = text
-    }
-    
-    private let text: String
-    
-    var body: some View {
-        Text(text)
-            .font(.body)
-            .foregroundColor(.white)
-            .padding()
-    }
-}
 
 struct TutorialStep1: View {
     var body: some View {
@@ -294,71 +247,5 @@ struct TutorialStep10: View {
             .frame(width: 120, height: 120)
             .padding()
         })
-    }
-}
-
-struct TutorialNavigationView: View {
-    @ObservedObject var viewModel: TutorialViewModel
-    var body: some View {
-        HStack {
-            if viewModel.currentStep != viewModel.firstStep {
-                Spacer()
-                Button(action: {
-                    withAnimation {
-                        viewModel.previousStep()
-                        
-                    }
-                }, label: {
-                    ZStack {
-                        PlayCircle()
-                            .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                        VStack {
-                            Image(systemName: "arrow.left")
-                                .font(.largeTitle)
-                                .padding(0)
-                            Text("Back")
-                                .foregroundColor(.blue)
-                                .padding(0)
-                        }
-                        
-                    }
-                    .frame(width: 100, height: 100)
-                })
-                Spacer()
-            }
-            if viewModel.currentStep != viewModel.lastStep {
-                Spacer()
-                
-                Button(action: {
-                    withAnimation {
-                        viewModel.nextStep()
-                    }
-                }, label: {
-                    ZStack {
-                        PlayCircle()
-                            .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                        VStack {
-                            Image(systemName: "arrow.right")
-                                .font(.largeTitle)
-                                .padding(0)
-                            Text("Next")
-                                .foregroundColor(.blue)
-                                .padding(0)
-                        }
-                        
-                    }
-                    .frame(width: 100, height: 100)
-                })
-                Spacer()
-                
-            }
-            
-        }
-    }
-}
-
-struct TutorialView_Previews: PreviewProvider {
-    static var previews: some View {
-        TutorialView(viewModel: TutorialViewModel())
     }
 }

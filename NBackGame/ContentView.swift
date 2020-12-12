@@ -106,26 +106,15 @@ struct ContentView: View {
             ZStack {
                 Color.black.ignoresSafeArea()
                 VStack {
-                    NavigationLink(destination: GameView(press: self.$press), isActive: $press) {
-                        //                        NavigationLink(destination: LevelSelectionView(viewModel: LevelSelectionViewModel()), isActive: $press) {
-                        //                        PlayButton(press: $press)
+//                    NavigationLink(destination: GameView(press: self.$press), isActive: $press) {
+                    NavigationLink(destination: LevelSelectionView(viewModel: LevelSelectionViewModel()), isActive: $press) {
                         MenuButton(iconName: "play.fill", text: "Play")
                             
                         
-                        //                        .simultaneousGesture(
-                        //                            DragGesture(minimumDistance: 0)
-                        //                                .onChanged { _ in
-                        //                                    press = true
-                        //                                }
-                        //                                .onEnded { _ in
-                        //                                    press = false
-                        //                                }
-                        //                        )
                     }
                     .padding(.bottom, 30)
                     NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
                         MenuButton(iconName: "book.fill", text: "Tutorial")
-                        //                            .frame(width: 200, height: 200)
                     }
                 }
                 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LevelSelectionView: View {
     @State private var isShowingAlert = false
-    @ObservedObject var viewModel: LevelSelectionViewModel = LevelSelectionViewModel()
+    @ObservedObject var viewModel: LevelSelectionViewModel
     
     var body: some View {
         ZStack {
@@ -49,7 +49,6 @@ struct LevelSelectionView: View {
                                 .font(.title)
                                 .bold()
                                 .foregroundColor(Color.white)
-                            NavigationLink("", destination: GameView(press: self.$viewModel.nextScreen), isActive: $viewModel.nextScreen)
                         }
                     }
                 }
@@ -62,9 +61,9 @@ struct LevelSelectionView: View {
         }
     }
 }
-
-struct LevelSelectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        LevelSelectionView()
-    }
-}
+//
+//struct LevelSelectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LevelSelectionView()
+//    }
+//}

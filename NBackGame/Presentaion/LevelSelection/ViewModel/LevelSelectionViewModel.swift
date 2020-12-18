@@ -6,24 +6,24 @@
 //
 
 import Foundation
-import Combine
+import SwiftUI
 
 class LevelSelectionViewModel: ObservableObject {
     
-    @Published var nextScreen = false {
-        didSet {
-            print("old value: \(oldValue), \(nextScreen)")
-        }
-    }
+    let actions: LevelSelectionViewModelActions
+   
     var selectedLevel = 1
     private(set) var unlockedLevels = 5
-
+    
+    init(actions: LevelSelectionViewModelActions) {
+        self.actions = actions
+    }
+    
     func selectLevel(_ level: Int) {
         print("select level: \(level)")
         selectedLevel = level
         if level <= unlockedLevels {
-            nextScreen = true
-
+            actions.selectLevel(level)
         }
     }
     

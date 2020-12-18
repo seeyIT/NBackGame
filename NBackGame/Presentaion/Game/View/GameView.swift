@@ -36,8 +36,7 @@ struct GameButton: View {
 }
 
 struct GameView: View {
-    @StateObject private var viewModel = GameViewModel()
-    @Binding var press: Bool
+    @ObservedObject var viewModel: GameViewModel
     
     var body: some View {
         ZStack {
@@ -61,7 +60,6 @@ struct GameView: View {
                 Spacer()
              
                 GameBottomPanel(viewModel: viewModel)
-                NavigationLink("", destination: GameSummaryView(press: self.$press, viewModel: GameSummaryViewModel(history: viewModel.history, nBack: viewModel.nBack)), isActive: $viewModel.nextScreen)
                 
             }
             
@@ -148,9 +146,9 @@ struct GameBottomPanel: View {
         }
     }
 }
-
-struct GameView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameView(press: .constant(true))
-    }
-}
+//
+//struct GameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameView(viewModel: GameViewModel())
+//    }
+//}

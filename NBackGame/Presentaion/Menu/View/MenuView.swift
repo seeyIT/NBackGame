@@ -89,29 +89,31 @@ struct MenuButton: View {
             Circle()
                 .stroke(Color.blue, lineWidth: 2)
         )
-        
-       
     }
-    
-    
 }
 
 
-struct ContentView: View {
+struct MenuView: View {
     
     @State private var press = false
+    @ObservedObject var viewModel: MenuViewModel
     
     var body: some View {
         NavigationView {
             ZStack {
                 Color.black.ignoresSafeArea()
                 VStack {
-//                    NavigationLink(destination: GameView(press: self.$press), isActive: $press) {
-                    NavigationLink(destination: LevelSelectionView(), isActive: $press) {
+                    Button(action: {
+                        withAnimation {
+                            viewModel.startGame()
+                        }
+                    }, label: {
                         MenuButton(iconName: "play.fill", text: "Play")
-                    }
+                        
+                    })
                     .padding(.bottom, 30)
-                    NavigationLink(destination: TutorialView()) {
+                    
+                    NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
                         MenuButton(iconName: "book.fill", text: "Tutorial")
                     }
                 }
@@ -124,8 +126,8 @@ struct ContentView: View {
     
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct MenuView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MenuView(viewModel: MenuViewModel(viewState: ViewState(.menu)))
+//    }
+//}

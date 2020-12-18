@@ -27,6 +27,14 @@ struct CurrentItem {
 
 class GameViewModel: ObservableObject {
     
+    let nBack: Int
+    var actions: GameViewModelActions
+
+    init(nBack: Int, actions: GameViewModelActions) {
+        self.nBack = nBack
+        self.actions = actions
+    }
+    
     @Published var positionClicked = false
     @Published var soundClicked = false
     @Published var currentItem: CurrentItem = CurrentItem.placeholder()
@@ -44,15 +52,18 @@ class GameViewModel: ObservableObject {
     
     // TODO: fields to be injected
     let letters = "gmbpkldst"
-    let roundDuration: Double = 3.2
+    let roundDuration: Double = 0.2
     let maxRounds = 25
-    let nBack = 2
     let boardSize: Int = 3
     
     private var timer: Timer?
     
     // MARK: Public functions
     
+    static func placeholder() -> GameViewModel {
+        return GameViewModel(nBack: 0, actions: GameViewModelActions(finishGame: { _ in } ))
+    }
+        
     func startGame() {
         print("Start Game")
         currentRoundNumber = 0
@@ -90,7 +101,7 @@ class GameViewModel: ObservableObject {
                 self.addHistory(previousItem)
             }
             if self.currentRoundNumber >= self.maxRounds {
-                self.finishRound()
+                self.finishGame()
                 return
             }
             
@@ -103,16 +114,13 @@ class GameViewModel: ObservableObject {
         }
     }
     
-    private func finishRound() {
+    private func finishGame() {
         timer?.invalidate()
         timer = nil
-        print("finish")
-        print("History: \(history)")
-        nextScreen = true
+        actions.finishGame(history)
     }
     
     private func addHistory(_ currentItem: CurrentItem) {
-        /// TODO something is wrong here
         let historyItem = HistoryItem(position: currentItem.position, sound: currentItem.sound, positionClicked: positionClicked, soundClicked: soundClicked)
         print("add historyItem: \(historyItem)")
         history.append(historyItem)

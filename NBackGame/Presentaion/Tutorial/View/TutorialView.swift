@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TutorialView: View {
-    @ObservedObject var viewModel: TutorialViewModel = TutorialViewModel()
+    @ObservedObject var viewModel: TutorialViewModel
     
     var steps: [Int: AnyView] = [
         1: AnyView(TutorialStep1()),

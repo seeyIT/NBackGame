@@ -16,19 +16,34 @@ class GameSummaryViewModel {
     var missedSelectionPosition = 0
     var missedSelectionSound = 0
     
-    var history: [HistoryItem]
-    var nBack: Int
+    private var history: [HistoryItem]
+    private var nBack: Int
+
+    let gameInfo: GameInfo
+    let actions: GameSummaryViewModelActions
     
-    init(history: [HistoryItem], nBack n: Int) {
-        self.history = history
-        self.nBack = n
-        print("GameSummaryViewModel init")
+    init(gameInfo: GameInfo, actions: GameSummaryViewModelActions) {
+        self.gameInfo = gameInfo
+        self.actions = actions
+        self.history = gameInfo.history
+        self.nBack = gameInfo.nBack
         calculateResults()
     }
     
+    // MARK: - Public functions
+    
+    func playAgain() {
+        actions.playAgain()
+    }
+    
+    func showMenu() {
+        actions.showMenu()
+    }
+    
+    // MARK: - Private functions
+    
     private func calculateResults() {
         for i in stride(from: history.count - 1, through: nBack, by: -1)  {
-            print("i: \(i)")
             let currentItem = history[i]
             let previousItem = history[i - nBack]
             
@@ -57,5 +72,4 @@ class GameSummaryViewModel {
             }
         }
     }
-    
 }

@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct GameSummaryView: View {
-    @Environment(\.presentationMode) var presentationMode
-    @Binding var press: Bool
-    var viewModel: GameSummaryViewModel 
+    var viewModel: GameSummaryViewModel
     
     var body: some View {
         
@@ -25,7 +23,10 @@ struct GameSummaryView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        presentationMode.wrappedValue.dismiss()
+                        withAnimation {
+                            viewModel.playAgain()
+
+                        }
                     }, label: {
                         MenuButton(iconName: "arrow.counterclockwise", text: "Play again")
                             .frame(width: 120, height: 120)                           
@@ -34,13 +35,13 @@ struct GameSummaryView: View {
                    
                     Spacer()
                     Button(action: {
-                        print("press: \(press)")
-                        press = false
+                        withAnimation {
+                            viewModel.showMenu()
+                        }
                     }, label: {
                         MenuButton(iconName: "line.horizontal.3", text: "Menu")
                             .frame(width: 120, height: 120)
                     })
-//                    .padding(.vertical)
 
                         
                     Spacer()
@@ -115,8 +116,8 @@ struct SummaryTable: View {
     }
 }
 
-struct GameSummaryView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameSummaryView(press: .constant(false), viewModel: GameSummaryViewModel(history: [], nBack: 0))
-    }
-}
+//struct GameSummaryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameSummaryView(viewModel: GameSummaryViewModel(history: [], nBack: 0))
+//    }
+//}

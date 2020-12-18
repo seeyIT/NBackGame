@@ -14,7 +14,7 @@ struct TutorialStep1: View {
         MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: -1)
             .frame(width: 200, height: 200)
         TutorialText("Below the board there are two buttons: Position and Sound.")
-        GameBottomPanel(viewModel: GameViewModel())
+        GameBottomPanel(viewModel: GameViewModel.placeholder())
             .scaleEffect(0.8)
             .disabled(true)
         TutorialText("On each round one of the squares is selected and one letter is spoken. Your job is to decide if position or sound or both was/were the same N round(s) ago. Let's see example on next screen...")

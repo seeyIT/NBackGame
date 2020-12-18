@@ -107,13 +107,11 @@ struct ContentView: View {
                 Color.black.ignoresSafeArea()
                 VStack {
 //                    NavigationLink(destination: GameView(press: self.$press), isActive: $press) {
-                    NavigationLink(destination: LevelSelectionView(viewModel: LevelSelectionViewModel()), isActive: $press) {
+                    NavigationLink(destination: LevelSelectionView(), isActive: $press) {
                         MenuButton(iconName: "play.fill", text: "Play")
-                            
-                        
                     }
                     .padding(.bottom, 30)
-                    NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
+                    NavigationLink(destination: TutorialView()) {
                         MenuButton(iconName: "book.fill", text: "Tutorial")
                     }
                 }

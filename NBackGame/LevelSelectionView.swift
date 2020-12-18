@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LevelSelectionView: View {
     @State private var isShowingAlert = false
-    @StateObject var viewModel: LevelSelectionViewModel
+    @ObservedObject var viewModel: LevelSelectionViewModel = LevelSelectionViewModel()
     
     var body: some View {
         ZStack {
@@ -65,6 +65,6 @@ struct LevelSelectionView: View {
 
 struct LevelSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        LevelSelectionView(viewModel: LevelSelectionViewModel())
+        LevelSelectionView()
     }
 }

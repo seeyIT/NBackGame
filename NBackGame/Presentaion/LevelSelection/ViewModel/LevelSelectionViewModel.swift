@@ -11,16 +11,15 @@ import SwiftUI
 class LevelSelectionViewModel: ObservableObject {
     
     let actions: LevelSelectionViewModelActions
-    let repository: LevelSelectionRepository
+    let repository: GameRepository
     
     var selectedLevel = 1
     private(set) var unlockedLevels = 5
     
-    init(actions: LevelSelectionViewModelActions, repository: LevelSelectionRepository) {
+    init(actions: LevelSelectionViewModelActions, repository: GameRepository) {
         self.actions = actions
         self.repository = repository
-        
-        unlockedLevels = repository.fetchHighestLevel()
+        unlockedLevels = repository.fetchHighestUnlockedLevel()
     }
     
     func selectLevel(_ level: Int) {

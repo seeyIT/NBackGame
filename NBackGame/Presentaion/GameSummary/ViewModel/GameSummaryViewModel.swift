@@ -18,16 +18,19 @@ class GameSummaryViewModel {
     
     private var history: [HistoryItem]
     private var nBack: Int
-
+    
     let gameInfo: GameInfo
     let actions: GameSummaryViewModelActions
+    let repository: GameRepository
     
-    init(gameInfo: GameInfo, actions: GameSummaryViewModelActions) {
+    init(gameInfo: GameInfo, actions: GameSummaryViewModelActions, repository: GameRepository) {
         self.gameInfo = gameInfo
         self.actions = actions
+        self.repository = repository
         self.history = gameInfo.history
-        self.nBack = gameInfo.nBack
+        self.nBack = gameInfo.nBack        
         calculateResults()
+        unlockNextLevel()
     }
     
     // MARK: - Public functions
@@ -69,6 +72,17 @@ class GameSummaryViewModel {
                 if currentItem.soundClicked {
                     incorrectSelectionSound += 1
                 }
+            }
+        }
+    }
+    
+    private func unlockNextLevel() {
+        DispatchQueue.global().async {
+            if self.missedSelectionSound == 0 ,
+               self.missedSelectionPosition == 0,
+               self.incorrectSelectionSound == 0,
+               self.incorrectSelectionPosition == 0 {
+                self.repository.saveUnlocked(level: self.nBack + 1)
             }
         }
     }

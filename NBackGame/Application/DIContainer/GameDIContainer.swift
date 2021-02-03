@@ -16,11 +16,7 @@ final class GameDIContainer {
     }
     
     func makeLevelSelectionViewModel(actions: LevelSelectionViewModelActions) -> LevelSelectionViewModel {
-        return LevelSelectionViewModel(actions: actions, repository: makeLevelSelectionRepository())
-    }
-    
-    func makeLevelSelectionRepository() -> LevelSelectionRepository {
-        return LevelSelectionRepository()
+        return LevelSelectionViewModel(actions: actions, repository: makeGameRepository())
     }
     
     // MARK: - Game
@@ -38,7 +34,13 @@ final class GameDIContainer {
     }
     
     func makeGameSummaryViewModel(gameInfo: GameInfo, actions: GameSummaryViewModelActions) -> GameSummaryViewModel {
-        return GameSummaryViewModel(gameInfo: gameInfo, actions: actions)
+        return GameSummaryViewModel(gameInfo: gameInfo, actions: actions, repository: makeGameRepository())
+    }
+    
+    // MARK: - Repository
+    
+    func makeGameRepository() -> GameRepository {
+        return GameRepository()
     }
     
 }

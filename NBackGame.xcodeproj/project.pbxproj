@@ -20,7 +20,7 @@
 		5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3587D32565300B002BC31C /* GameSummaryView.swift */; };
 		5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */; };
 		5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */; };
-		5F6921E525CB1C2D008A18C9 /* LevelSelectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* LevelSelectionRepository.swift */; };
+		5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* GameRepository.swift */; };
 		5F6921ED25CB1D41008A18C9 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921EC25CB1D41008A18C9 /* RealmService.swift */; };
 		5F6921F225CB1FDF008A18C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921F125CB1FDF008A18C9 /* AppDelegate.swift */; };
 		5F6921FA25CB2114008A18C9 /* AppVersionRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921F925CB2114008A18C9 /* AppVersionRealm.swift */; };
@@ -79,7 +79,7 @@
 		5F3587D32565300B002BC31C /* GameSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryView.swift; sourceTree = "<group>"; };
 		5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevelRealm.swift; sourceTree = "<group>"; };
 		5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevel.swift; sourceTree = "<group>"; };
-		5F6921E425CB1C2D008A18C9 /* LevelSelectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionRepository.swift; sourceTree = "<group>"; };
+		5F6921E425CB1C2D008A18C9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
 		5F6921EC25CB1D41008A18C9 /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		5F6921F125CB1FDF008A18C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5F6921F925CB2114008A18C9 /* AppVersionRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionRealm.swift; sourceTree = "<group>"; };
@@ -347,7 +347,7 @@
 		5F6921E325CB1C07008A18C9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				5F6921E425CB1C2D008A18C9 /* LevelSelectionRepository.swift */,
+				5F6921E425CB1C2D008A18C9 /* GameRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -712,7 +712,7 @@
 				5F2C256B258D1D69008D36F1 /* MenuDIContainer.swift in Sources */,
 				5FC38F99256C4BC0007AF3EA /* LevelSelectionViewModel.swift in Sources */,
 				5F6921ED25CB1D41008A18C9 /* RealmService.swift in Sources */,
-				5F6921E525CB1C2D008A18C9 /* LevelSelectionRepository.swift in Sources */,
+				5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */,
 				5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */,
 				5F05FB86256686F500984BD5 /* TutorialViewModel.swift in Sources */,
 				5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */,

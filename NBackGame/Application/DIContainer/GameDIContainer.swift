@@ -16,7 +16,11 @@ final class GameDIContainer {
     }
     
     func makeLevelSelectionViewModel(actions: LevelSelectionViewModelActions) -> LevelSelectionViewModel {
-        return LevelSelectionViewModel(actions: actions)
+        return LevelSelectionViewModel(actions: actions, repository: makeLevelSelectionRepository())
+    }
+    
+    func makeLevelSelectionRepository() -> LevelSelectionRepository {
+        return LevelSelectionRepository()
     }
     
     // MARK: - Game

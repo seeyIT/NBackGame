@@ -9,7 +9,8 @@ import SwiftUI
 
 @main
 struct NBackGameApp: App {
-    
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     let menuDIContainer = MenuDIContainer()
     @StateObject var menuViewState: ViewState<MenuViewState>  = ViewState<MenuViewState>(MenuViewState.menu)
     

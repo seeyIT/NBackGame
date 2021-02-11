@@ -33,6 +33,7 @@ struct TutorialNavigationView: View {
                     }
                     .frame(width: 100, height: 100)
                 })
+                .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.previousButton)
                 Spacer()
             }
             if viewModel.currentStep != viewModel.lastStep {
@@ -57,6 +58,7 @@ struct TutorialNavigationView: View {
                     }
                     .frame(width: 100, height: 100)
                 })
+                .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.nextButton)
                 Spacer()
             }
         }

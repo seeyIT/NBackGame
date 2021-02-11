@@ -32,6 +32,7 @@ struct GameSummaryView: View {
                             .frame(width: 120, height: 120)                           
                     })
                     .padding(.trailing)
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.playAgainButton)
                    
                     Spacer()
                     Button(action: {
@@ -42,8 +43,8 @@ struct GameSummaryView: View {
                         MenuButton(iconName: "line.horizontal.3", text: "Menu")
                             .frame(width: 120, height: 120)
                     })
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.menuButton)
 
-                        
                     Spacer()
                 }
                 .padding()
@@ -78,20 +79,26 @@ struct SummaryTable: View {
             Group {
                 Text("Position")
                 
-                Text("\(viewModel.correctSelectionPostion)")
+                Text("\(viewModel.correctSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.green)
                     .padding()
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.correctSelectionPositionText)
+
                 
                 Text("\(viewModel.incorrectSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.red)
                     .padding()
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.incorrectSelectionPositionText)
+
                 
                 Text("\(viewModel.missedSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.yellow)
                     .padding()
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.missedSelectionPositionText)
+
             }
             Group {
                 Text("Sound")
@@ -100,16 +107,21 @@ struct SummaryTable: View {
                     .font(.title)
                     .foregroundColor(.green)
                     .padding()
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.correctSelectionSoundText)
+
                 
                 Text("\(viewModel.incorrectSelectionSound)")
                     .font(.title)
                     .foregroundColor(.red)
                     .padding()
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.incorrectSelectionSoundText)
                 
                 Text("\(viewModel.missedSelectionSound)")
                     .font(.title)
                     .foregroundColor(.yellow)
                     .padding()
+                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.missedSelectionSoundText)
+
             }
         }
         .padding()

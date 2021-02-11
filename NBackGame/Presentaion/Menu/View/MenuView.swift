@@ -29,44 +29,6 @@ struct PlayCircle: Shape {
     }
 }
 
-struct PlayButton: View {
-    
-    @Binding var press: Bool
-    
-    var body: some View {
-        ZStack {
-            if press {
-                PlayCircle()
-                    .foregroundColor(Color.blue)
-                VStack {
-                    PlayShape()
-                        .stroke(Color.white, style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
-                        .background(PlayShape().foregroundColor(Color.white))
-                    Text("Play")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color.white)
-                }
-            } else {
-                PlayCircle()
-                    .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                VStack {
-                    PlayShape()
-                        .stroke(Color.blue, style: StrokeStyle(lineWidth: 6, lineCap: .round, lineJoin: .round))
-                        .background(PlayShape().foregroundColor(Color.blue))
-                    Text("Play")
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(Color.blue)
-                }
-                
-                
-            }
-            
-        }
-    }
-}
-
 struct MenuButton: View {
     
     var iconName: String
@@ -112,10 +74,13 @@ struct MenuView: View {
                         
                     })
                     .padding(.bottom, 30)
+                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
                     NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
                         MenuButton(iconName: "book.fill", text: "Tutorial")
                     }
+                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
+
                 }
                 
             }.navigationBarTitle("")

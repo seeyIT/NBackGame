@@ -111,37 +111,26 @@ struct GameBottomPanel: View {
     var body: some View {
         HStack {
             Spacer()
-           
-            GameButton(pressed: $viewModel.positionClicked, text: "Position")
-                .simultaneousGesture(
-                    DragGesture(minimumDistance: 0)
-                        .onChanged({ value in
-                            print("on changes")
-                            viewModel.selectPosition()
-                        })
-                        .onEnded({ _ in
-                            print("on endede")
-                            
-                            
-                        })
-                )
+            
+            Button(action: {
+                print("position clicked")
+                viewModel.selectPosition()
+            }, label: {
+                GameButton(pressed: $viewModel.positionClicked, text: "Position")
+            })
+            .disabled($viewModel.positionClicked.wrappedValue)
+            .accessibilityIdentifier(AccessibilityIdentifier.Game.positionButton)
+            
             Spacer()
             
-            GameButton(pressed: $viewModel.soundClicked, text: "Sound")
-                .simultaneousGesture(
-                    DragGesture(minimumDistance: 0)
-                        .onChanged({ value in
-                            print("on changes")
-                            viewModel.selectSound()
-                            
-                        })
-                        .onEnded({ _ in
-                            print("on endede")
-                            
-                            
-                        })
-                )
-            
+            Button(action: {
+                print("sound clicked")
+                viewModel.selectSound()
+            }, label: {
+                GameButton(pressed: $viewModel.soundClicked, text: "Sound")
+            })
+            .disabled($viewModel.soundClicked.wrappedValue)
+            .accessibilityIdentifier(AccessibilityIdentifier.Game.soundButton)
             Spacer()
         }
     }

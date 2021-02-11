@@ -247,5 +247,7 @@ struct TutorialStep10: View {
             .frame(width: 120, height: 120)
             .padding()
         })
+        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.menuButton)
+
     }
 }

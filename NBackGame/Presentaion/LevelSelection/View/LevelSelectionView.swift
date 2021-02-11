@@ -44,7 +44,7 @@ struct LevelSelectionView: View {
                                 }
                                 
                             })
-                            
+                            .accessibility(identifier: "\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(number)")
                             Text("\(number)")
                                 .font(.title)
                                 .bold()

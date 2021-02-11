@@ -9,7 +9,7 @@ import Foundation
 
 
 class GameSummaryViewModel {
-    var correctSelectionPostion = 0
+    var correctSelectionPosition = 0
     var correctSelectionSound = 0
     var incorrectSelectionPosition = 0
     var incorrectSelectionSound = 0
@@ -52,7 +52,7 @@ class GameSummaryViewModel {
             
             if currentItem.position == previousItem.position {
                 if currentItem.positionClicked {
-                    correctSelectionPostion += 1
+                    correctSelectionPosition += 1
                 } else {
                     missedSelectionPosition += 1
                 }

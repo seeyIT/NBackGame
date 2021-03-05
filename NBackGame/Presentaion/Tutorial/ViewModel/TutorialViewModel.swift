@@ -21,7 +21,6 @@ class TutorialViewModel: ObservableObject {
         if currentStep <= 1 {
             return
         }
-        print("previous step")
         currentStep -= 1
     }
     
@@ -29,8 +28,6 @@ class TutorialViewModel: ObservableObject {
         if currentStep >= lastStep {
             return
         }
-        print("next step")
         currentStep += 1
-        
     }
 }

@@ -5,19 +5,17 @@
 //  Created by Kornel Miszczak on 18/11/2020.
 //
 
-import Foundation
+import SwiftUI
+import Combine
 
-
-class GameSummaryViewModel {
-    var correctSelectionPosition = 0
-    var correctSelectionSound = 0
-    var incorrectSelectionPosition = 0
-    var incorrectSelectionSound = 0
-    var missedSelectionPosition = 0
-    var missedSelectionSound = 0
-    
-    private var history: [HistoryItem]
-    private var nBack: Int
+class GameSummaryViewModel: ObservableObject {
+    @Published var gameResultCalculated = false
+    @Published var correctSelectionPosition = 0
+    @Published var correctSelectionSound = 0
+    @Published var incorrectSelectionPosition = 0
+    @Published var incorrectSelectionSound = 0
+    @Published var missedSelectionPosition = 0
+    @Published var missedSelectionSound = 0
     
     let gameInfo: GameInfo
     let actions: GameSummaryViewModelActions
@@ -27,13 +25,15 @@ class GameSummaryViewModel {
         self.gameInfo = gameInfo
         self.actions = actions
         self.repository = repository
-        self.history = gameInfo.history
-        self.nBack = gameInfo.nBack        
-        calculateResults()
-        unlockNextLevel()
     }
     
     // MARK: - Public functions
+    
+    func onAppear() {
+        // TODO: - Do it in background
+        self.calculateResults(history: self.gameInfo.history, nBack: self.gameInfo.nBack)
+        self.unlockNextLevel()
+    }
     
     func playAgain() {
         actions.playAgain()
@@ -45,7 +45,7 @@ class GameSummaryViewModel {
     
     // MARK: - Private functions
     
-    private func calculateResults() {
+    private func calculateResults(history: [HistoryItem], nBack: Int) {
         for i in stride(from: history.count - 1, through: nBack, by: -1)  {
             let currentItem = history[i]
             let previousItem = history[i - nBack]
@@ -74,15 +74,21 @@ class GameSummaryViewModel {
                 }
             }
         }
+        
+        gameResultCalculated = true
+    }
+    
+    func canUnlockNextLevel() -> Bool {
+        return missedSelectionSound == 0 &&
+            missedSelectionPosition == 0 &&
+            incorrectSelectionSound == 0 &&
+            incorrectSelectionPosition == 0
     }
     
     private func unlockNextLevel() {
         DispatchQueue.global().async {
-            if self.missedSelectionSound == 0 ,
-               self.missedSelectionPosition == 0,
-               self.incorrectSelectionSound == 0,
-               self.incorrectSelectionPosition == 0 {
-                self.repository.saveUnlocked(level: self.nBack + 1)
+            if self.canUnlockNextLevel() {
+                self.repository.saveUnlocked(level: self.gameInfo.nBack + 1)
             }
         }
     }

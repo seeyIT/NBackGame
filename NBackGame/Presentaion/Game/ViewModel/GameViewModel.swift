@@ -39,12 +39,7 @@ class GameViewModel: ObservableObject {
     @Published var soundClicked = false
     @Published var currentItem: CurrentItem = CurrentItem.placeholder()
     @Published var currentRoundNumber = 0
-    @Published var nextScreen = false {
-        didSet {
-            print("old value: \(oldValue), \(nextScreen)")
-        }
-    }
-    
+   
     var history: [HistoryItem] = []
     var cellsCount: Int {
         return boardSize * boardSize
@@ -71,7 +66,6 @@ class GameViewModel: ObservableObject {
         soundClicked = false
         currentItem = CurrentItem.placeholder()
         history.removeAll()
-        nextScreen = false
         
         timer = Timer.scheduledTimer(timeInterval: roundDuration, target: self, selector: #selector(nextRound), userInfo: nil, repeats: true)
         nextRound(skipSaving: true)
@@ -96,22 +90,27 @@ class GameViewModel: ObservableObject {
     @objc private func nextRound(skipSaving: Bool) {
         let previousItem = currentItem
         currentItem = CurrentItem.placeholder()
+        resetButtons()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.resetButtons()
             if !skipSaving {
                 self.addHistory(previousItem)
             }
             if self.currentRoundNumber >= self.maxRounds {
+                print("currentRoundNumber: \(self.currentRoundNumber)")
                 self.finishGame()
                 return
             }
             
             self.currentItem = CurrentItem(position: Int.random(in: 0..<self.cellsCount), sound: String(self.letters.randomElement()!))
-            print("current item: \(self.currentItem)")
             self.currentRoundNumber += 1
-            self.soundClicked = false
-            self.positionClicked = false
             self.speak()
         }
+    }
+    
+    private func resetButtons() {
+        soundClicked = false
+        positionClicked = false
     }
     
     private func finishGame() {
@@ -122,7 +121,6 @@ class GameViewModel: ObservableObject {
     
     private func addHistory(_ currentItem: CurrentItem) {
         let historyItem = HistoryItem(position: currentItem.position, sound: currentItem.sound, positionClicked: positionClicked, soundClicked: soundClicked)
-        print("add historyItem: \(historyItem)")
         history.append(historyItem)
     }
     

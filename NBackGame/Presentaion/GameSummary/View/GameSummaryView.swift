@@ -6,10 +6,13 @@
 //
 
 import SwiftUI
+import Combine
 
 struct GameSummaryView: View {
-    var viewModel: GameSummaryViewModel
-    
+    @ObservedObject var viewModel: GameSummaryViewModel
+    @State private var resultsCalculated = false
+    @State private var cancellable = Set<AnyCancellable>()
+
     var body: some View {
         
         ZStack {
@@ -19,7 +22,13 @@ struct GameSummaryView: View {
                     .font(.largeTitle)
                     .foregroundColor(.blue)
                     .padding()
-                SummaryTable(viewModel: viewModel)
+                if resultsCalculated {
+                    SummaryTable(viewModel: viewModel)
+                } else {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                }
+
                 HStack {
                     Spacer()
                     Button(action: {
@@ -44,7 +53,6 @@ struct GameSummaryView: View {
                             .frame(width: 120, height: 120)
                     })
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.menuButton)
-
                     Spacer()
                 }
                 .padding()
@@ -52,11 +60,21 @@ struct GameSummaryView: View {
         }
         .foregroundColor(.white)
         .navigationBarHidden(true)
+        .onAppear(perform: {
+            viewModel.onAppear()
+            viewModel.$gameResultCalculated
+                .sink { (calculated) in
+                    withAnimation {
+                          resultsCalculated = calculated
+                    }
+                }
+                .store(in: &cancellable)
+        })
     }
 }
 
 struct SummaryTable: View {
-    var viewModel: GameSummaryViewModel
+    @ObservedObject var viewModel: GameSummaryViewModel
     
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4)) {

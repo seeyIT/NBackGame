@@ -44,7 +44,7 @@ struct GameView: View {
             VStack {
                 Spacer()
                 HStack {
-                    Text("N: \(viewModel.nBack)")
+                    Text("N: \(viewModel.level)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                         .padding()
@@ -53,12 +53,12 @@ struct GameView: View {
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                         .padding()
-                        
+                    
                 }
-               
+                
                 MainBoard(boardSize: viewModel.boardSize, cellsCount: viewModel.cellsCount, currentItemPosition: viewModel.currentItem.position)
                 Spacer()
-             
+                
                 GameBottomPanel(viewModel: viewModel)
                 
             }
@@ -72,11 +72,11 @@ struct GameView: View {
 }
 
 struct MainBoard: View {
-//    @ObservedObject private var viewModel: GameViewModel
+    //    @ObservedObject private var viewModel: GameViewModel
     
-//    init(viewModel: GameViewModel) {
-//        self.viewModel = viewModel
-//    }
+    //    init(viewModel: GameViewModel) {
+    //        self.viewModel = viewModel
+    //    }
     
     var boardSize: Int
     var cellsCount: Int

@@ -27,11 +27,11 @@ struct CurrentItem {
 
 class GameViewModel: ObservableObject {
     
-    let nBack: Int
+    let level: Int
     var actions: GameViewModelActions
-
-    init(nBack: Int, actions: GameViewModelActions) {
-        self.nBack = nBack
+    
+    init(level: Int, actions: GameViewModelActions) {
+        self.level = level
         self.actions = actions
     }
     
@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
     @Published var soundClicked = false
     @Published var currentItem: CurrentItem = CurrentItem.placeholder()
     @Published var currentRoundNumber = 0
-   
+    
     var history: [HistoryItem] = []
     var cellsCount: Int {
         return boardSize * boardSize
@@ -56,9 +56,9 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(nBack: 0, actions: GameViewModelActions(finishGame: { _ in } ))
+        return GameViewModel(level: 0, actions: GameViewModelActions(finishGame: { _ in } ))
     }
-        
+    
     func startGame() {
         print("Start Game")
         currentRoundNumber = 0
@@ -92,16 +92,16 @@ class GameViewModel: ObservableObject {
         currentItem = CurrentItem.placeholder()
         resetButtons()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-            self.resetButtons()
             if !skipSaving {
                 self.addHistory(previousItem)
             }
+            self.resetButtons()
+            
             if self.currentRoundNumber >= self.maxRounds {
                 print("currentRoundNumber: \(self.currentRoundNumber)")
                 self.finishGame()
                 return
             }
-            
             self.currentItem = CurrentItem(position: Int.random(in: 0..<self.cellsCount), sound: String(self.letters.randomElement()!))
             self.currentRoundNumber += 1
             self.speak()

@@ -9,5 +9,5 @@ import Foundation
 
 struct GameInfo {
     var history: [HistoryItem]
-    var nBack: Int
+    var level: Int
 }

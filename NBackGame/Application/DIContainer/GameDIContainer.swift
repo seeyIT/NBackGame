@@ -20,12 +20,12 @@ final class GameDIContainer {
     }
     
     // MARK: - Game
-    func makeGameView(nBack: Int, actions: GameViewModelActions) -> GameView {
-        return GameView(viewModel: makeGameViewModel(nBack: nBack, actions: actions))
+    func makeGameView(level: Int, actions: GameViewModelActions) -> GameView {
+        return GameView(viewModel: makeGameViewModel(level: level, actions: actions))
     }
     
-    func makeGameViewModel(nBack: Int, actions: GameViewModelActions) -> GameViewModel {
-        return GameViewModel(nBack: nBack, actions: actions)
+    func makeGameViewModel(level: Int, actions: GameViewModelActions) -> GameViewModel {
+        return GameViewModel(level: level, actions: actions)
     }
     
     // MARK: - Summary
@@ -34,13 +34,24 @@ final class GameDIContainer {
     }
     
     func makeGameSummaryViewModel(gameInfo: GameInfo, actions: GameSummaryViewModelActions) -> GameSummaryViewModel {
-        return GameSummaryViewModel(gameInfo: gameInfo, actions: actions, repository: makeGameRepository())
+        return GameSummaryViewModel(gameInfo: gameInfo, actions: actions, useCases: makeGameSummaryViewUseCases())
     }
     
     // MARK: - Repository
     
     func makeGameRepository() -> GameRepository {
-        return GameRepository()
+        return RealmGameRepository()
+    }
+    
+    // MARK: - UseCase
+    func makeGameSummaryViewUseCases() -> GameSummaryViewModelUseCases {
+        let calculateGameResultUseCase: CalculateGameResultsUseCase = DefaultCalculateGameResultsUseCase()
+        let unlockNextLevelUseCase: UnlockNextLevelUseCase = DefaultUnlockNextLevelUseCase(gameRepository: makeGameRepository())
+        
+        let gameSummaryViewModelUseCases = GameSummaryViewModelUseCases(calculateGameResult: calculateGameResultUseCase,
+                                                                        unlockNextLevelUseCase: unlockNextLevelUseCase)
+        
+        return gameSummaryViewModelUseCases
     }
     
 }

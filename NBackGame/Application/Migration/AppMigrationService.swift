@@ -25,7 +25,7 @@ class AppMigrationService {
     }
     
     private func migrate(from version: Int) {
-        print("migrate from: \(version)v")
+        print("migrate from: v\(version)")
         if version < 2 {
             let newAppVersion = AppVersionRealm(version: 2)
             let defaultUnlockedLevel = UnlockedLevelRealm(level: 2)

@@ -8,31 +8,55 @@
 import SwiftUI
 import Combine
 
+struct GameSummaryViewModelUseCases {
+    let calculateGameResult: CalculateGameResultsUseCase
+    let unlockNextLevelUseCase: UnlockNextLevelUseCase
+}
+
+struct GameResults {
+    var gameResultCalculated = false
+    var correctSelectionPosition: Int = 0
+    var correctSelectionSound: Int = 0
+    var incorrectSelectionPosition: Int = 0
+    var incorrectSelectionSound: Int = 0
+    var missedSelectionPosition: Int = 0
+    var missedSelectionSound: Int = 0
+}
+
 class GameSummaryViewModel: ObservableObject {
-    @Published var gameResultCalculated = false
-    @Published var correctSelectionPosition = 0
-    @Published var correctSelectionSound = 0
-    @Published var incorrectSelectionPosition = 0
-    @Published var incorrectSelectionSound = 0
-    @Published var missedSelectionPosition = 0
-    @Published var missedSelectionSound = 0
+    @Published var gameResults = GameResults()
     
     let gameInfo: GameInfo
     let actions: GameSummaryViewModelActions
-    let repository: GameRepository
+    let useCases: GameSummaryViewModelUseCases
     
-    init(gameInfo: GameInfo, actions: GameSummaryViewModelActions, repository: GameRepository) {
+    init(gameInfo: GameInfo, actions: GameSummaryViewModelActions, useCases: GameSummaryViewModelUseCases) {
         self.gameInfo = gameInfo
         self.actions = actions
-        self.repository = repository
+        self.useCases = useCases
     }
     
     // MARK: - Public functions
     
     func onAppear() {
-        // TODO: - Do it in background
-        self.calculateResults(history: self.gameInfo.history, nBack: self.gameInfo.nBack)
-        self.unlockNextLevel()
+        useCases.calculateGameResult.execute(history: gameInfo.history, level: gameInfo.level) { gameResults in
+            self.gameResults = gameResults
+            
+            DispatchQueue.global().async {
+                self.useCases.unlockNextLevelUseCase.execute(level: self.gameInfo.level + 1, gameResults: self.gameResults) { result in
+                    switch result {
+                    case .success(let levelUnlocked):
+                        print("Level \(levelUnlocked) unlocked")
+                    case .failure(let error as UnlockNextLevelUseCaseError):
+                        print("Error unlocking level: \(error.description)")
+                    case .failure(let error as GameRepositoryError):
+                        print("Error in repository unlocking level: \(error.description)")
+                    case .failure(let error):
+                        print("Other error unlocking level: \(error)")
+                    }
+                }
+            }
+        }
     }
     
     func playAgain() {
@@ -43,53 +67,4 @@ class GameSummaryViewModel: ObservableObject {
         actions.showMenu()
     }
     
-    // MARK: - Private functions
-    
-    private func calculateResults(history: [HistoryItem], nBack: Int) {
-        for i in stride(from: history.count - 1, through: nBack, by: -1)  {
-            let currentItem = history[i]
-            let previousItem = history[i - nBack]
-            
-            if currentItem.position == previousItem.position {
-                if currentItem.positionClicked {
-                    correctSelectionPosition += 1
-                } else {
-                    missedSelectionPosition += 1
-                }
-            } else {
-                if currentItem.positionClicked {
-                    incorrectSelectionPosition += 1
-                }
-            }
-            
-            if currentItem.sound == previousItem.sound {
-                if currentItem.soundClicked {
-                    correctSelectionSound += 1
-                } else {
-                    missedSelectionSound += 1
-                }
-            } else {
-                if currentItem.soundClicked {
-                    incorrectSelectionSound += 1
-                }
-            }
-        }
-        
-        gameResultCalculated = true
-    }
-    
-    func canUnlockNextLevel() -> Bool {
-        return missedSelectionSound == 0 &&
-            missedSelectionPosition == 0 &&
-            incorrectSelectionSound == 0 &&
-            incorrectSelectionPosition == 0
-    }
-    
-    private func unlockNextLevel() {
-        DispatchQueue.global().async {
-            if self.canUnlockNextLevel() {
-                self.repository.saveUnlocked(level: self.gameInfo.nBack + 1)
-            }
-        }
-    }
 }

@@ -16,7 +16,7 @@ class ViewState<T>: ObservableObject {
 }
 
 class GameState<T>: ViewState<T> {
-    var gameInfo: GameInfo = GameInfo(history: [], nBack: 0)
+    var gameInfo: GameInfo = GameInfo(history: [], level: 0)
 }
 
 

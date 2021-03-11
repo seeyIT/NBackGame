@@ -12,7 +12,7 @@ struct GameSummaryView: View {
     @ObservedObject var viewModel: GameSummaryViewModel
     @State private var resultsCalculated = false
     @State private var cancellable = Set<AnyCancellable>()
-
+    
     var body: some View {
         
         ZStack {
@@ -28,13 +28,13 @@ struct GameSummaryView: View {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle())
                 }
-
+                
                 HStack {
                     Spacer()
                     Button(action: {
                         withAnimation {
                             viewModel.playAgain()
-
+                            
                         }
                     }, label: {
                         MenuButton(iconName: "arrow.counterclockwise", text: "Play again")
@@ -42,7 +42,7 @@ struct GameSummaryView: View {
                     })
                     .padding(.trailing)
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.playAgainButton)
-                   
+                    
                     Spacer()
                     Button(action: {
                         withAnimation {
@@ -62,10 +62,11 @@ struct GameSummaryView: View {
         .navigationBarHidden(true)
         .onAppear(perform: {
             viewModel.onAppear()
-            viewModel.$gameResultCalculated
-                .sink { (calculated) in
+            viewModel.$gameResults
+                .sink { gameResults in
+                    print("calculated in view: \(gameResults)")
                     withAnimation {
-                          resultsCalculated = calculated
+                        resultsCalculated = gameResults.gameResultCalculated
                     }
                 }
                 .store(in: &cancellable)
@@ -97,49 +98,49 @@ struct SummaryTable: View {
             Group {
                 Text("Position")
                 
-                Text("\(viewModel.correctSelectionPosition)")
+                Text("\(viewModel.gameResults.correctSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.green)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.correctSelectionPositionText)
-
                 
-                Text("\(viewModel.incorrectSelectionPosition)")
+                
+                Text("\(viewModel.gameResults.incorrectSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.red)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.incorrectSelectionPositionText)
-
                 
-                Text("\(viewModel.missedSelectionPosition)")
+                
+                Text("\(viewModel.gameResults.missedSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.yellow)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.missedSelectionPositionText)
-
+                
             }
             Group {
                 Text("Sound")
                 
-                Text("\(viewModel.correctSelectionSound)")
+                Text("\(viewModel.gameResults.correctSelectionSound)")
                     .font(.title)
                     .foregroundColor(.green)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.correctSelectionSoundText)
-
                 
-                Text("\(viewModel.incorrectSelectionSound)")
+                
+                Text("\(viewModel.gameResults.incorrectSelectionSound)")
                     .font(.title)
                     .foregroundColor(.red)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.incorrectSelectionSoundText)
                 
-                Text("\(viewModel.missedSelectionSound)")
+                Text("\(viewModel.gameResults.missedSelectionSound)")
                     .font(.title)
                     .foregroundColor(.yellow)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.missedSelectionSoundText)
-
+                
             }
         }
         .padding()

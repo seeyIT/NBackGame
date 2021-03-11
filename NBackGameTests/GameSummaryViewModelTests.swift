@@ -10,221 +10,55 @@ import XCTest
 
 class GameSummaryViewModelTests: XCTestCase {
     
-    func actionsMock() {
+    private func actionsMock() {
         
     }
     
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    private enum UnlockNextLevelUseCaseError: Error {
+        case cantUnlock
     }
     
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-    
-    
-    
-    func test_whenViewDefaultViewModelAppearsWithoutHistory_thenCanUnlockNextLevel() throws {
-        // given
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], nBack: 2), actions: actions, repository: GameRepository())
+    class UnlockNextLevelUseCaseMock: UnlockNextLevelUseCase {
+        var expectation: XCTestExpectation?
+        var error: Error?
         
-        // then
-        XCTAssertTrue(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenSoundMissedWithoutHistory_thenCantUnlockNextLevel() throws {
-        // given
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], nBack: 2), actions: actions, repository: GameRepository())
-        
-        // when
-        viewModel.missedSelectionSound = 1
-        
-        // then
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenPositionMissedWithoutHistory_thenCantUnlockNextLevel() throws {
-        // given
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], nBack: 2), actions: actions, repository: GameRepository())
-        
-        // when
-        viewModel.missedSelectionPosition = 1
-        
-        // then
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenSoundIncorrectWithoutHistory_thenCantUnlockNextLevel() throws {
-        // given
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], nBack: 2), actions: actions, repository: GameRepository())
-        
-        // when
-        viewModel.incorrectSelectionSound = 1
-        
-        // then
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenPositionIncorrectWithoutHistory_thenCantUnlockNextLevel() throws {
-        // given
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], nBack: 2), actions: actions, repository: GameRepository())
-        
-        // when
-        viewModel.incorrectSelectionPosition = 1
-        
-        // then
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenCorrectSelectionWithoutHistory_thenCanUnlockNextLevel() throws {
-        // given
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], nBack: 2), actions: actions, repository: GameRepository())
-        
-        // when
-        viewModel.correctSelectionSound = 1
-        viewModel.correctSelectionPosition = 1
-        
-        // then
-        XCTAssertTrue(viewModel.canUnlockNextLevel())
-    }
-    
-
-    func test_whenPlayerSelectedCorrectPositionOnceForN2_thenCanUnlockNextLevel() {
-        // given
-        let history = [
-            HistoryItem(position: 1, sound: "k", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 1, sound: "p", positionClicked: true, soundClicked: false),
-        ]
-        
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: history, nBack: 2), actions: actions, repository: GameRepository())
-       
-        // when
-        viewModel.onAppear()
-        
-        // then
-        XCTAssertEqual(viewModel.correctSelectionPosition, 1)
-        XCTAssertEqual(viewModel.correctSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionPosition, 0)
-        XCTAssertEqual(viewModel.missedSelectionSound, 0)
-        XCTAssertEqual(viewModel.missedSelectionPosition, 0)
-
-        XCTAssertTrue(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenPlayerSelectedCorrectSoundOnceForN2_thenCanUnlockNextLevel() {
-        // given
-        let history = [
-            HistoryItem(position: 1, sound: "k", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 3, sound: "k", positionClicked: false, soundClicked: true),
-        ]
-        
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: history, nBack: 2), actions: actions, repository: GameRepository())
-       
-        // when
-        viewModel.onAppear()
-        
-        // then
-        XCTAssertEqual(viewModel.correctSelectionPosition, 0)
-        XCTAssertEqual(viewModel.correctSelectionSound, 1)
-        XCTAssertEqual(viewModel.incorrectSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionPosition, 0)
-        XCTAssertEqual(viewModel.missedSelectionSound, 0)
-        XCTAssertEqual(viewModel.missedSelectionPosition, 0)
-
-        XCTAssertTrue(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenPlayerSelectedIncorrectPositionOnceForN2_thenCantUnlockNextLevel() {
-        // given
-        let history = [
-            HistoryItem(position: 1, sound: "k", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 3, sound: "p", positionClicked: true, soundClicked: false),
-        ]
-        
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: history, nBack: 2), actions: actions, repository: GameRepository())
-        
-        // when
-        viewModel.onAppear()
-        
-        // then
-        XCTAssertEqual(viewModel.correctSelectionPosition, 0)
-        XCTAssertEqual(viewModel.correctSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionPosition, 1)
-        XCTAssertEqual(viewModel.missedSelectionSound, 0)
-        XCTAssertEqual(viewModel.missedSelectionPosition, 0)
-
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenPlayerSelectedIncorrectSoundOnceForN2_thenCantUnlockNextLevel() {
-        // given
-        let history = [
-            HistoryItem(position: 1, sound: "k", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 3, sound: "p", positionClicked: false, soundClicked: true),
-        ]
-        
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: history, nBack: 2), actions: actions, repository: GameRepository())
-       
-        // when
-        viewModel.onAppear()
-        
-        // then
-        XCTAssertEqual(viewModel.correctSelectionPosition, 0)
-        XCTAssertEqual(viewModel.correctSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionSound, 1)
-        XCTAssertEqual(viewModel.incorrectSelectionPosition, 0)
-        XCTAssertEqual(viewModel.missedSelectionSound, 0)
-        XCTAssertEqual(viewModel.missedSelectionPosition, 0)
-        
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func test_whenSampleGameForN5_thenCantUnlockNextLevel() {
-        // given
-        let history = [
-            HistoryItem(position: 1, sound: "k", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
-            HistoryItem(position: 3, sound: "p", positionClicked: false, soundClicked: true),
-        ]
-        
-        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
-        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: history, nBack: 2), actions: actions, repository: GameRepository())
-       
-        // when
-        viewModel.onAppear()
-        
-        // then
-        XCTAssertEqual(viewModel.correctSelectionPosition, 0)
-        XCTAssertEqual(viewModel.correctSelectionSound, 0)
-        XCTAssertEqual(viewModel.incorrectSelectionSound, 1)
-        XCTAssertEqual(viewModel.incorrectSelectionPosition, 0)
-        XCTAssertEqual(viewModel.missedSelectionSound, 0)
-        XCTAssertEqual(viewModel.missedSelectionPosition, 0)
-        
-        XCTAssertFalse(viewModel.canUnlockNextLevel())
-    }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        func execute(level: Int, gameResults: GameResults, completion: @escaping (Result<Int, Error>) -> Void) {
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(level))
+            }
+            expectation?.fulfill()
         }
     }
     
+    class CalculateGameResultsUseCaseMock: CalculateGameResultsUseCase {
+        var expectation: XCTestExpectation?
+        
+        func execute(history: [HistoryItem], level: Int, completion: @escaping (GameResults) -> Void) {            
+            var gameResults = GameResults()
+            gameResults.correctSelectionSound = 1
+            gameResults.correctSelectionPosition = 1
+            completion(gameResults)
+            expectation?.fulfill()
+        }
+    }
+    
+    func test_whenDefaultViewModelAppears_thenBothUseCasesExecute() throws {
+        // given
+        let actions = GameSummaryViewModelActions(playAgain: actionsMock, showMenu: actionsMock)
+        let calculateGameResultsUseCase = CalculateGameResultsUseCaseMock()
+        calculateGameResultsUseCase.expectation = self.expectation(description: "Results calculated")
+        let unlockNextLevelUseCase = UnlockNextLevelUseCaseMock()
+        unlockNextLevelUseCase.expectation = self.expectation(description: "Try unlock next level")
+        let useCases = GameSummaryViewModelUseCases(calculateGameResult: calculateGameResultsUseCase, unlockNextLevelUseCase: unlockNextLevelUseCase)
+        let viewModel = GameSummaryViewModel(gameInfo: GameInfo(history: [], level: 2), actions: actions, useCases: useCases)
+        
+        // when
+        viewModel.onAppear()
+        
+        // then
+        waitForExpectations(timeout: 5.0, handler: nil)
+    }
 }

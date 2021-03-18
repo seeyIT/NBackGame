@@ -59,6 +59,9 @@ struct LevelSelectionView: View {
         .alert(isPresented: $isShowingAlert) {
             Alert(title: Text("You haven't unlock this level yet"), message: Text("You need to finish the level \(viewModel.selectedLevel - 1) to start this"), dismissButton: .default(Text("OK")))
         }
+        .onAppear(perform: {
+            viewModel.onAppear()
+        })
     }
 }
 //

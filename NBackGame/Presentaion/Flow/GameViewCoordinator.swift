@@ -7,21 +7,7 @@
 
 import SwiftUI
 
-struct LevelSelectionViewModelActions {
-    var selectLevel: (Int) -> Void
-}
-
-struct GameViewModelActions {
-    var finishGame: ([HistoryItem]) -> Void
-}
-
-struct GameSummaryViewModelActions {
-    var playAgain: () -> Void
-    var showMenu: () -> Void
-}
-
 struct GameViewCoordinator: View {
-    
     let gameDIContainer: GameDIContainer
     @StateObject var gameState: GameState<GameViewState> = GameState<GameViewState>(.levelSelection)
     @ObservedObject var menuViewState: ViewState<MenuViewState>
@@ -41,17 +27,17 @@ struct GameViewCoordinator: View {
 
 extension GameViewCoordinator {
     func makeActionsForLevelSelection() -> LevelSelectionViewModelActions {
-        let actions = LevelSelectionViewModelActions(selectLevel: selectLevel)
+        let actions = DefaultLevelSelectionViewModelActions(selectLevel: selectLevel)
         return actions
     }
     
     func makeActionsForGame() -> GameViewModelActions {
-        let actions = GameViewModelActions(finishGame: finishGame)
+        let actions = DefaultGameViewModelActions(finishGame: finishGame)
         return actions
     }
     
     func makeActionsForGameSummary() -> GameSummaryViewModelActions {
-        let actions = GameSummaryViewModelActions(playAgain: playAgain, showMenu: showMenu)
+        let actions = DefaultGameSummaryViewModelActions(playAgain: playAgain, showMenu: showMenu)
         return actions
     }
     

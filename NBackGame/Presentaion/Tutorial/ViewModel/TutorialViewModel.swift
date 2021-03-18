@@ -10,8 +10,8 @@ import Foundation
 class TutorialViewModel: ObservableObject {
     
     @Published var currentStep = 1
-    var firstStep = 1
-    var lastStep = 10
+    let firstStep = 1
+    let lastStep = 10
     
     init() {
         print("TutorialViewModel")

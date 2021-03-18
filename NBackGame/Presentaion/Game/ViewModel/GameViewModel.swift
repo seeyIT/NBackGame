@@ -9,24 +9,7 @@ import Foundation
 import Combine
 import AVFoundation
 
-struct HistoryItem {
-    let position: Int
-    let sound: String
-    let positionClicked: Bool
-    let soundClicked: Bool
-}
-
-struct CurrentItem {
-    let position: Int
-    let sound: String
-    
-    static func placeholder() -> CurrentItem {
-        return CurrentItem(position: -1, sound: "")
-    }
-}
-
 class GameViewModel: ObservableObject {
-    
     let level: Int
     var actions: GameViewModelActions
     
@@ -37,7 +20,7 @@ class GameViewModel: ObservableObject {
     
     @Published var positionClicked = false
     @Published var soundClicked = false
-    @Published var currentItem: CurrentItem = CurrentItem.placeholder()
+    @Published var currentItem: CurrentGameItem = CurrentGameItem.placeholder()
     @Published var currentRoundNumber = 0
     
     var history: [HistoryItem] = []
@@ -56,7 +39,7 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(level: 0, actions: GameViewModelActions(finishGame: { _ in } ))
+        return GameViewModel(level: 0, actions: DefaultGameViewModelActions(finishGame: { _ in } ))
     }
     
     func startGame() {
@@ -64,7 +47,7 @@ class GameViewModel: ObservableObject {
         currentRoundNumber = 0
         positionClicked = false
         soundClicked = false
-        currentItem = CurrentItem.placeholder()
+        currentItem = CurrentGameItem.placeholder()
         history.removeAll()
         
         timer = Timer.scheduledTimer(timeInterval: roundDuration, target: self, selector: #selector(nextRound), userInfo: nil, repeats: true)
@@ -89,7 +72,7 @@ class GameViewModel: ObservableObject {
     
     @objc private func nextRound(skipSaving: Bool) {
         let previousItem = currentItem
-        currentItem = CurrentItem.placeholder()
+        currentItem = CurrentGameItem.placeholder()
         resetButtons()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if !skipSaving {
@@ -102,7 +85,7 @@ class GameViewModel: ObservableObject {
                 self.finishGame()
                 return
             }
-            self.currentItem = CurrentItem(position: Int.random(in: 0..<self.cellsCount), sound: String(self.letters.randomElement()!))
+            self.currentItem = CurrentGameItem(position: Int.random(in: 0..<self.cellsCount), sound: String(self.letters.randomElement()!))
             self.currentRoundNumber += 1
             self.speak()
         }
@@ -119,8 +102,8 @@ class GameViewModel: ObservableObject {
         actions.finishGame(history)
     }
     
-    private func addHistory(_ currentItem: CurrentItem) {
-        let historyItem = HistoryItem(position: currentItem.position, sound: currentItem.sound, positionClicked: positionClicked, soundClicked: soundClicked)
+    private func addHistory(_ currentGameItem: CurrentGameItem) {
+        let historyItem = HistoryItem(position: currentGameItem.position, sound: currentGameItem.sound, positionClicked: positionClicked, soundClicked: soundClicked)
         history.append(historyItem)
     }
     

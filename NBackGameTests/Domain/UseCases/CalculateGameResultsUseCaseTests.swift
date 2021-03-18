@@ -15,11 +15,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         let expectation = self.expectation(description: "Game result calculated")
         let history: [HistoryItem] = []
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
-        
+        let sut = DefaultCalculateGameResultsUseCase()
+
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -43,11 +43,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
             HistoryItem(position: 1, sound: "p", positionClicked: true, soundClicked: false)
         ]
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -72,11 +72,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
             HistoryItem(position: 3, sound: "k", positionClicked: false, soundClicked: true)
         ]
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -103,11 +103,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         
         
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -134,11 +134,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         
         
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -166,11 +166,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         
         
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -197,11 +197,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         
         
         let level = 2
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -234,11 +234,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         ]
         
         let level = 9
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -272,11 +272,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         ]
         
         let level = 10
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }
@@ -324,11 +324,11 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         ]
         
         let level = 5
-        let useCase = DefaultCalculateGameResultsUseCase()
+        let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
         
         // when
-        useCase.execute(history: history, level: level) { result in
+        sut.execute(history: history, level: level) { result in
             gameResults = result
             expectation.fulfill()
         }

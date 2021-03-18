@@ -20,7 +20,6 @@ final class DefaultUnlockNextLevelUseCase: UnlockNextLevelUseCase {
         self.gameRepository = gameRepository
     }
     
-    
     func execute(level: Int,
                  gameResults: GameResults,
                  completion: @escaping (Result<Int, Error>) -> Void) {

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GameRepository {
-    func fetchHighestUnlockedLevel() -> Int
+    func fetchHighestUnlockedLevel(fallbackLevel: Int, completion: @escaping (Int) -> Void) -> Void
     func saveUnlocked(level: Int, completion: @escaping (Result<Int, Error>) -> Void)
 }
 
@@ -18,17 +18,22 @@ class RealmGameRepository: GameRepository {
     
     private let highestLevelFallback: Int = 2
     
-    func fetchHighestUnlockedLevel() -> Int {
-        guard let highestLevel = realmService.instance.objects(UnlockedLevelRealm.self).sorted(byKeyPath: "level").last?.level else { return highestLevelFallback }
-        return highestLevel
+    func fetchHighestUnlockedLevel(fallbackLevel: Int,
+                                   completion: @escaping (Int) -> Void)  {
+        let level = realmService.instance
+            .objects(UnlockedLevelRealm.self)
+            .sorted(byKeyPath: "level")
+            .last?
+            .level ?? fallbackLevel
+        completion(level)
     }
     
     func saveUnlocked(level: Int,
                       completion: @escaping (Result<Int, Error>) -> Void) {
-        let defaultUnlockedLevel = UnlockedLevelRealm(level: level)
         do {
             let previousUnlockedHigherLevels = realmService.instance.objects(UnlockedLevelRealm.self).filter("level >= %@", level)
             if previousUnlockedHigherLevels.isEmpty {
+                let defaultUnlockedLevel = UnlockedLevelRealm(level: level)
                 try realmService.instance.write {
                     realmService.instance.add(defaultUnlockedLevel)
                 }

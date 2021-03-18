@@ -8,18 +8,28 @@
 import Foundation
 import SwiftUI
 
+struct LevelSelectionViewModelUseCases {
+    let fetchHighestUnlockedLevelUseCase: FetchHighestUnlockedLevelUseCase
+}
+
 class LevelSelectionViewModel: ObservableObject {
+    static let defaultLevelUnlocked: Int = 1
+    var selectedLevel = 1
+
+    @Published private(set) var unlockedLevels = defaultLevelUnlocked
     
     let actions: LevelSelectionViewModelActions
-    let repository: GameRepository
+    let useCases: LevelSelectionViewModelUseCases
     
-    var selectedLevel = 1
-    private(set) var unlockedLevels = 5
-    
-    init(actions: LevelSelectionViewModelActions, repository: GameRepository) {
+    init(actions: LevelSelectionViewModelActions, useCases: LevelSelectionViewModelUseCases) {
         self.actions = actions
-        self.repository = repository
-        unlockedLevels = repository.fetchHighestUnlockedLevel()
+        self.useCases = useCases
+    }
+    
+    func onAppear() {
+        self.useCases.fetchHighestUnlockedLevelUseCase.execute(fallbackLevel: LevelSelectionViewModel.defaultLevelUnlocked) { result in
+            self.unlockedLevels = result
+        }
     }
     
     func selectLevel(_ level: Int) {

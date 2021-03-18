@@ -73,7 +73,6 @@ class GameViewModel: ObservableObject {
     @objc private func nextRound(skipSaving: Bool) {
         let previousItem = currentItem
         currentItem = CurrentGameItem.placeholder()
-        resetButtons()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if !skipSaving {
                 self.addHistory(previousItem)

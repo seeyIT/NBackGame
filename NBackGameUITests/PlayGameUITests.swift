@@ -8,23 +8,9 @@
 import XCTest
 
 class PlayGameUITests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
-        continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func test2nBack5RoundsSoundClicks() throws {
-        // UI tests must launch the application that they test.
-        let roundNumber = 5
+    
+    func test2nBack25RoundsSoundClicks() throws {
+        let roundNumber = 25
         let nBack = 2
         
         let app = XCUIApplication()
@@ -34,10 +20,8 @@ class PlayGameUITests: XCTestCase {
         app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
         app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
         
-        
         let soundButton = app.buttons[AccessibilityIdentifier.Game.soundButton]
         _ = soundButton.waitForExistence(timeout: 5)
-        
         
         soundButton.tap()
 
@@ -57,12 +41,14 @@ class PlayGameUITests: XCTestCase {
         let value: Int = (Int(correctSelectionTextLabel) ?? 0) + (Int(incorrectSelectionSoundLabel) ?? 0)
         
         XCTAssertEqual(roundNumber - nBack, value)
+        
+        XCTAssertNotNil(correctSelectionTextLabel)
+        XCTAssertNotNil(incorrectSelectionSoundLabel)
     }
     
-    func test2nBack5RoundsPositionClicks() throws {
-        // UI tests must launch the application that they test.
-        let roundNumber = 5
-        let nBack = 2
+    func test2nBack25RoundsPositionClicks() throws {
+        let roundNumber = 25
+        let nBack = 1
         
         let app = XCUIApplication()
 
@@ -89,16 +75,19 @@ class PlayGameUITests: XCTestCase {
         _ = correctSelectionText.waitForExistence(timeout: 5)
         
         let correctSelectionTextLabel = correctSelectionText.label
+        XCTAssertNotNil(correctSelectionTextLabel)
+
         let incorrectSelectionPositionLabel = app.staticTexts[AccessibilityIdentifier.GameSummary.incorrectSelectionPositionText].label
-      
-        let value: Int = (Int(correctSelectionTextLabel) ?? 0) + (Int(incorrectSelectionPositionLabel) ?? 0)
+        XCTAssertNotNil(incorrectSelectionPositionLabel)
+
+        let value: Int = Int(correctSelectionTextLabel)! + Int(incorrectSelectionPositionLabel)!
         
         XCTAssertEqual(roundNumber - nBack, value)
+        
     }
     
-    func test2nBack5RoundsPositionAndSoundClicks() throws {
-        // UI tests must launch the application that they test.
-        let roundNumber = 5
+    func test2nBack25RoundsPositionAndSoundClicks() throws {
+        let roundNumber = 25
         let nBack = 2
         
         let app = XCUIApplication()
@@ -145,12 +134,14 @@ class PlayGameUITests: XCTestCase {
         let soundValue: Int = (Int(correctSelectionSoundTextLabel) ?? 0) + (Int(incorrectSelectionSoundLabel) ?? 0)
         
         XCTAssertEqual(roundNumber - nBack, soundValue)
+        
+        XCTAssertNotNil(correctSelectionSoundTextLabel)
+        XCTAssertNotNil(incorrectSelectionSoundLabel)
     }
     
     
     func testPositionClicksPlayTwiceAndBackToMenu() throws {
-        // UI tests must launch the application that they test.
-        let roundNumber = 5
+        let roundNumber = 25
         let nBack = 2
         
         let app = XCUIApplication()

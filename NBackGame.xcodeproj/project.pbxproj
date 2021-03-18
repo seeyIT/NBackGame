@@ -39,7 +39,6 @@
 		5FA863442529D996006B5F33 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA863432529D996006B5F33 /* MenuView.swift */; };
 		5FA863462529D997006B5F33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA863452529D997006B5F33 /* Assets.xcassets */; };
 		5FA863492529D997006B5F33 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA863482529D997006B5F33 /* Preview Assets.xcassets */; };
-		5FA8635F2529D997006B5F33 /* NBackGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8635E2529D997006B5F33 /* NBackGameUITests.swift */; };
 		5FA8636D2529E7B3006B5F33 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8636C2529E7B3006B5F33 /* GameView.swift */; };
 		5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */; };
 		5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */; };
@@ -121,7 +120,6 @@
 		5FA8634F2529D997006B5F33 /* NBackGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBackGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA863552529D997006B5F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA8635A2529D997006B5F33 /* NBackGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBackGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FA8635E2529D997006B5F33 /* NBackGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBackGameUITests.swift; sourceTree = "<group>"; };
 		5FA863602529D997006B5F33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5FA8636C2529E7B3006B5F33 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialText.swift; sourceTree = "<group>"; };
@@ -479,7 +477,6 @@
 		5FA8635D2529D997006B5F33 /* NBackGameUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5FA8635E2529D997006B5F33 /* NBackGameUITests.swift */,
 				5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */,
 				5FA492B525D54DD300BB2DE3 /* TutorialUITests.swift */,
 				5FA863602529D997006B5F33 /* Info.plist */,
@@ -919,7 +916,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FA8635F2529D997006B5F33 /* NBackGameUITests.swift in Sources */,
 				5FA492B625D54DD300BB2DE3 /* TutorialUITests.swift in Sources */,
 				5FA492A825D5447B00BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
 				5F69227525D2C9DB008A18C9 /* PlayGameUITests.swift in Sources */,

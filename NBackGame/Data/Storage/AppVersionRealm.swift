@@ -23,8 +23,8 @@ class AppVersionRealm: Object {
         self.version = version
     }
     
-    required init() {
-        
+    required override init() {
+        super.init()
     }
     
 }

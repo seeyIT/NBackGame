@@ -25,8 +25,8 @@ class UnlockedLevelRealm: Object {
         self.deleted = deleted
     }
     
-    required init() {
-        
+    required override init() {
+        super.init()
     }
 }
 

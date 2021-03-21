@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14BF07AF9499885B6404A68F /* Pods_NBackGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E894942F5E138253DAC5BC11 /* Pods_NBackGame.framework */; };
+		4B5A5E785C0A7582CF7E9309 /* Pods_NBackGame_NBackGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C650543D2636C0F3D031F41A /* Pods_NBackGame_NBackGameTests.framework */; };
 		5F05FB84256686E500984BD5 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05FB83256686E500984BD5 /* TutorialView.swift */; };
 		5F05FB86256686F500984BD5 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05FB85256686F500984BD5 /* TutorialViewModel.swift */; };
 		5F2C253C258CBDAE008D36F1 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C253B258CBDAE008D36F1 /* MainViewCoordinator.swift */; };
@@ -59,7 +60,6 @@
 		5FC62C6F2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */; };
 		5FCD41D82540A57F002635BC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD41D72540A57F002635BC /* GameViewModel.swift */; };
 		5FFDE6C225654BE8008E977F /* GameSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */; };
-		D594FD79F2AD2E5D731593C1 /* Pods_NBackGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0574F9DC965D1730C28A3D34 /* Pods_NBackGameTests.framework */; };
 		EDC210C5200312EA5588BFD4 /* Pods_NBackGame_NBackGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E22EDDD8CC3694953DB4148 /* Pods_NBackGame_NBackGameUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,7 +81,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0574F9DC965D1730C28A3D34 /* Pods_NBackGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBackGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DFC749EE9C52F4476F30E74 /* Pods-NBackGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame.debug.xcconfig"; path = "Target Support Files/Pods-NBackGame/Pods-NBackGame.debug.xcconfig"; sourceTree = "<group>"; };
 		2912016CC78A87B19C951874 /* Pods-NBackGame-NBackGameUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame-NBackGameUITests.release.xcconfig"; path = "Target Support Files/Pods-NBackGame-NBackGameUITests/Pods-NBackGame-NBackGameUITests.release.xcconfig"; sourceTree = "<group>"; };
 		49AEF06C035B0EEA70A51B16 /* Pods-NBackGame-NBackGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame-NBackGameTests.debug.xcconfig"; path = "Target Support Files/Pods-NBackGame-NBackGameTests/Pods-NBackGame-NBackGameTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -146,6 +145,7 @@
 		7E22EDDD8CC3694953DB4148 /* Pods_NBackGame_NBackGameUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBackGame_NBackGameUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D462294243F1BDB644B4566 /* Pods-NBackGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame.release.xcconfig"; path = "Target Support Files/Pods-NBackGame/Pods-NBackGame.release.xcconfig"; sourceTree = "<group>"; };
 		C410B54C6E191BE8E54A4F47 /* Pods-NBackGame-NBackGameUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame-NBackGameUITests.debug.xcconfig"; path = "Target Support Files/Pods-NBackGame-NBackGameUITests/Pods-NBackGame-NBackGameUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C650543D2636C0F3D031F41A /* Pods_NBackGame_NBackGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBackGame_NBackGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E894942F5E138253DAC5BC11 /* Pods_NBackGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBackGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0FC49705E4FA54378D939FD /* Pods-NBackGameTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGameTests.release.xcconfig"; path = "Target Support Files/Pods-NBackGameTests/Pods-NBackGameTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,7 +163,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D594FD79F2AD2E5D731593C1 /* Pods_NBackGameTests.framework in Frameworks */,
+				4B5A5E785C0A7582CF7E9309 /* Pods_NBackGame_NBackGameTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,7 +183,7 @@
 			children = (
 				E894942F5E138253DAC5BC11 /* Pods_NBackGame.framework */,
 				7E22EDDD8CC3694953DB4148 /* Pods_NBackGame_NBackGameUITests.framework */,
-				0574F9DC965D1730C28A3D34 /* Pods_NBackGameTests.framework */,
+				C650543D2636C0F3D031F41A /* Pods_NBackGame_NBackGameTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -649,6 +649,7 @@
 				5FA8634B2529D997006B5F33 /* Sources */,
 				5FA8634C2529D997006B5F33 /* Frameworks */,
 				5FA8634D2529D997006B5F33 /* Resources */,
+				E34107B5EE4444B7D7300FEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -827,6 +828,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E34107B5EE4444B7D7300FEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NBackGame-NBackGameTests/Pods-NBackGame-NBackGameTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NBackGame-NBackGameTests/Pods-NBackGame-NBackGameTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBackGame-NBackGameTests/Pods-NBackGame-NBackGameTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EEDCFF43B3492EE64A806EBF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -842,7 +860,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NBackGameTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NBackGame-NBackGameTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1108,7 +1126,7 @@
 		};
 		5FA863672529D997006B5F33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 665F932105FF04E69AD8ED71 /* Pods-NBackGameTests.debug.xcconfig */;
+			baseConfigurationReference = 49AEF06C035B0EEA70A51B16 /* Pods-NBackGame-NBackGameTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1131,7 +1149,7 @@
 		};
 		5FA863682529D997006B5F33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F0FC49705E4FA54378D939FD /* Pods-NBackGameTests.release.xcconfig */;
+			baseConfigurationReference = 684DC77CF42DA7353E9D0E0A /* Pods-NBackGame-NBackGameTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

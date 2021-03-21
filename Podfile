@@ -7,7 +7,7 @@ target 'NBackGame' do
   pod 'RealmSwift'
 
   target 'NBackGameTests' do
-    inherit! :search_paths
+#    inherit! :search_paths
     # Pods for testing
     use_frameworks!
   end

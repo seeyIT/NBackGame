@@ -9,10 +9,12 @@ target 'NBackGame' do
   target 'NBackGameTests' do
     inherit! :search_paths
     # Pods for testing
+    use_frameworks!
   end
 
   target 'NBackGameUITests' do
     # Pods for testing
+    use_frameworks!
   end
 
 end

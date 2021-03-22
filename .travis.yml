@@ -1,7 +1,4 @@
 before_install:
-  - gem install cocoapods
-install:
-  - brew update && brew upgrade swiftlint
   - pod install
 os: osx
 osx_image: xcode12.2
@@ -9,6 +6,3 @@ language: swift
 xcode_workspace: NBackGame.xcworkspace
 xcode_scheme: NBackGame
 xcode_destination: platform=iOS Simulator,OS=14.2,name=iPhone 11
-script:
- - swiftlint
- - xcodebuild clean build test -workspace NBackGame.xcworkspace -scheme "NBackGame" -destination "platform=iOS Simulator,OS=14.2,name=iPhone 11"

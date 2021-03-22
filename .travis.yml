@@ -1,4 +1,6 @@
 before_install:
+  - gem install cocoapods
+install:
   - pod install
 os: osx
 osx_image: xcode12.2

@@ -10,17 +10,16 @@ target 'NBackGame' do
 #    inherit! :search_paths
     # Pods for testing
     use_frameworks!
+    pod 'RealmSwift'
   end
 
   target 'NBackGameUITests' do
     # Pods for testing
     use_frameworks!
+    pod 'RealmSwift'
+
   end
   
-  post_install do |installer|
-    installer.pods_project.build_configurations.each do |config|
-      config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-    end
-  end
+  
 
 end

@@ -1,1 +1,1 @@
-Minor improves. If an update causes a problem, reinstall the app is needed. 
+Add option to cancel level selection or game and back to main menu.

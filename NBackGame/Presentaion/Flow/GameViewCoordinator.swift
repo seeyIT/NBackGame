@@ -27,12 +27,12 @@ struct GameViewCoordinator: View {
 
 extension GameViewCoordinator {
     func makeActionsForLevelSelection() -> LevelSelectionViewModelActions {
-        let actions = DefaultLevelSelectionViewModelActions(selectLevel: selectLevel)
+        let actions = DefaultLevelSelectionViewModelActions(selectLevel: selectLevel, showMenu: showMenu)
         return actions
     }
     
     func makeActionsForGame() -> GameViewModelActions {
-        let actions = DefaultGameViewModelActions(finishGame: finishGame)
+        let actions = DefaultGameViewModelActions(finishGame: finishGame, showMenu: showMenu)
         return actions
     }
     
@@ -63,6 +63,8 @@ extension GameViewCoordinator {
     }
     
     private func showMenu() {
-        menuViewState.state = .menu
+        withAnimation {
+            menuViewState.state = .menu
+        }
     }
 }

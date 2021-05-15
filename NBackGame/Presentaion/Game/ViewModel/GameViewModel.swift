@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(level: 0, actions: DefaultGameViewModelActions(finishGame: { _ in } ))
+        return GameViewModel(level: 0, actions: DefaultGameViewModelActions(finishGame: { _ in }, showMenu: {}))
     }
     
     func startGame() {
@@ -66,6 +66,11 @@ class GameViewModel: ObservableObject {
             return
         }
         soundClicked = true
+    }
+    
+    func showMenu() {
+        stopGame()
+        actions.showMenu()
     }
     
     // MARK: Private functions
@@ -95,9 +100,13 @@ class GameViewModel: ObservableObject {
         positionClicked = false
     }
     
-    private func finishGame() {
+    private func stopGame() {
         timer?.invalidate()
         timer = nil
+    }
+    
+    private func finishGame() {
+        stopGame()
         actions.finishGame(history)
     }
     

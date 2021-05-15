@@ -13,6 +13,7 @@ struct GameView: View {
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
+            GameBackButton(viewModel: viewModel)
             VStack {
                 Spacer()
                 HStack {

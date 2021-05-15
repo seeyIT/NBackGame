@@ -40,4 +40,8 @@ class LevelSelectionViewModel: ObservableObject {
         }
     }
     
+    func showMenu() {
+        actions.showMenu()
+    }
+    
 }

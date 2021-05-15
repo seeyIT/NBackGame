@@ -9,18 +9,22 @@ import Foundation
 
 protocol LevelSelectionViewModelActions {
     var selectLevel: (Int) -> Void  { get }
+    var showMenu: () -> Void { get }
 }
 
 struct DefaultLevelSelectionViewModelActions: LevelSelectionViewModelActions {
     var selectLevel: (Int) -> Void
+    var showMenu: () -> Void
 }
 
 protocol GameViewModelActions {
     var finishGame: ([HistoryItem]) -> Void  { get }
+    var showMenu: () -> Void  { get }
 }
 
 struct DefaultGameViewModelActions: GameViewModelActions {
     var finishGame: ([HistoryItem]) -> Void
+    var showMenu: () -> Void
 }
 
 protocol GameSummaryViewModelActions {

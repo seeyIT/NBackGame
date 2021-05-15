@@ -15,6 +15,24 @@ struct LevelSelectionView: View {
         ZStack {
             Color.black.ignoresSafeArea()
             VStack {
+                HStack {
+                    Button(action: {
+                        viewModel.showMenu()
+                    }, label: {
+                        VStack {
+                            Image(systemName: "arrow.backward")
+                                .font(.largeTitle)
+                                .foregroundColor(.blue)
+                                .padding()
+                        }
+                    })
+                    Spacer()
+                }
+                Spacer()
+            }
+            .accessibility(identifier: AccessibilityIdentifier.LevelSelection.showMenuButton)
+            
+            VStack {
                 Text("Choose N")
                     .font(.largeTitle)
                     .foregroundColor(.blue)

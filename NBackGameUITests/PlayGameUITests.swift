@@ -189,4 +189,24 @@ class PlayGameUITests: XCTestCase {
 //    func testUnlockLevel3FromLevel2() throws {
 //        
 //    }
+    
+    func testBackToMenu() throws {
+        let nBack = 2
+        let app = XCUIApplication()
+        
+        app.launch()
+        
+        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
+        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
+        
+        let soundButton = app.buttons[AccessibilityIdentifier.Game.soundButton]
+        _ = soundButton.waitForExistence(timeout: 5)
+        
+        soundButton.tap()
+        
+        app.buttons[AccessibilityIdentifier.Game.showMenuButton].tap()
+        
+        let playButtonFromMenu = app.buttons[AccessibilityIdentifier.Menu.playButton]
+        _ = playButtonFromMenu.waitForExistence(timeout: 3.0)
+    }
 }

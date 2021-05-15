@@ -14,9 +14,9 @@ class LevelSelectionViewModelTests: XCTestCase {
         // given
         let actions = LevelSelectionViewModelActionsMock(expectation: self.expectation(description: "Action executed"))
         let useCase = FetchHighestUnlockedLevelUseCaseMock()
-
         let useCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: useCase)
         let sut = LevelSelectionViewModel(actions: actions, useCases: useCases)
+        
         // when
         sut.onAppear()
         sut.selectLevel(0)
@@ -30,14 +30,30 @@ class LevelSelectionViewModelTests: XCTestCase {
         // given
         let actions = LevelSelectionViewModelActionsMock(expectation: nil)
         let useCase = FetchHighestUnlockedLevelUseCaseMock()
-
         let useCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: useCase)
         let sut = LevelSelectionViewModel(actions: actions, useCases: useCases)
+        
         // when
         sut.onAppear()
         
         // then
         XCTAssertEqual(sut.unlockedLevels, LevelSelectionViewModel.defaultLevelUnlocked)
+    }
+    
+    func test_whenBackToMenuClicked_thenShowMenu() throws {
+        // given
+        let actions = LevelSelectionViewModelActionsMock(expectation: self.expectation(description: "Action executed"))
+        let useCase = FetchHighestUnlockedLevelUseCaseMock()
+        let useCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: useCase)
+        let sut = LevelSelectionViewModel(actions: actions, useCases: useCases)
+
+        // when
+        sut.showMenu()
+        
+        waitForExpectations(timeout: 2.0, handler: nil)
+        
+        // then
+        XCTAssertTrue(true)
     }
     
    
@@ -57,16 +73,23 @@ class LevelSelectionViewModelTests: XCTestCase {
         var expectation: XCTestExpectation?
 
         var selectLevel: (Int) -> Void
-    
+        var showMenu: () -> Void
+
         init(expectation: XCTestExpectation?) {
             self.expectation = expectation
             selectLevel = { _ in }
+            showMenu = {}
             selectLevel = selectLevelMock
+            showMenu = showMenuMock
         }
         
         
         func selectLevelMock(_ level: Int) {
-            print("sleect mock")
+            print("select mock")
+            expectation?.fulfill()
+        }
+        
+        func showMenuMock() {
             expectation?.fulfill()
         }
     }

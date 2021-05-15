@@ -15,13 +15,14 @@ struct AccessibilityIdentifier {
     
     struct LevelSelection {
         static let levelPrefixButton = "AccessibilityIdentifierLevelPrefixButtonInLevelSelection"
+        static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInLevelSelection"
     }
     
     struct Game {
         static let fieldNumberPrefixButton = "AccessibilityIdentifierFieldNumberPrefixButtonInGame"
         static let positionButton = "AccessibilityIdentifierPositionButtonInGame"
         static let soundButton = "AccessibilityIdentifierSoundButtonInGame"
-        
+        static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInGame"
     }
     
     struct GameSummary {

@@ -18,6 +18,8 @@
 		5F2C2570258D1DEE008D36F1 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C256F258D1DEE008D36F1 /* GameInfo.swift */; };
 		5F2C2575258D1DFD008D36F1 /* GameDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */; };
 		5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3587D32565300B002BC31C /* GameSummaryView.swift */; };
+		5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */; };
+		5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */; };
 		5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */; };
 		5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */; };
 		5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* GameRepository.swift */; };
@@ -95,6 +97,8 @@
 		5F2C256F258D1DEE008D36F1 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDIContainer.swift; sourceTree = "<group>"; };
 		5F3587D32565300B002BC31C /* GameSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryView.swift; sourceTree = "<group>"; };
+		5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackButton.swift; sourceTree = "<group>"; };
+		5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionUITests.swift; sourceTree = "<group>"; };
 		5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevelRealm.swift; sourceTree = "<group>"; };
 		5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevel.swift; sourceTree = "<group>"; };
 		5F6921E425CB1C2D008A18C9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 				5FC62C1E26020E7300D03AD8 /* GameButton.swift */,
 				5FC62C2326020E9400D03AD8 /* MainBoard.swift */,
 				5FC62C2826020EA000D03AD8 /* GameBottomPanel.swift */,
+				5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 			children = (
 				5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */,
 				5FA492B525D54DD300BB2DE3 /* TutorialUITests.swift */,
+				5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */,
 				5FA863602529D997006B5F33 /* Info.plist */,
 			);
 			path = NBackGameUITests;
@@ -882,6 +888,7 @@
 				5FA8636D2529E7B3006B5F33 /* GameView.swift in Sources */,
 				5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */,
 				5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */,
+				5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */,
 				5FC62C1F26020E7300D03AD8 /* GameButton.swift in Sources */,
 				5FC62C2E26020EE400D03AD8 /* SummaryTable.swift in Sources */,
 				5FC38F97256C4B96007AF3EA /* LevelSelectionView.swift in Sources */,
@@ -917,6 +924,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA492B625D54DD300BB2DE3 /* TutorialUITests.swift in Sources */,
+				5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */,
 				5FA492A825D5447B00BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
 				5F69227525D2C9DB008A18C9 /* PlayGameUITests.swift in Sources */,
 			);

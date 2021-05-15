@@ -18,13 +18,23 @@ default_platform(:ios)
 platform :ios do
   desc "Push a new release build to the App Store"
   lane :release do
-  	
-    #increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+    #increment_build_number()
     #v = (get_version_number.to_i + 1).to_s + ".0"
     #increment_version_number(version_number: v)
-
+	version = get_version_number()
+	increment_version_number(version_number: version)
+	increment_version_number(bump_type: "major")
     build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
+    deliver(
+	    submit_for_review: true,
+	    automatic_release: true,
+	    force: true,
+	    submission_information: {
+     		export_compliance_uses_encryption: false,
+     		add_id_info_uses_idfa: false
+    	}
+	 )
     clean_build_artifacts
-    #upload_to_app_store
+
   end
 end

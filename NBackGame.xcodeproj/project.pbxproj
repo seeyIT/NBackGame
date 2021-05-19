@@ -21,6 +21,8 @@
 		5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */; };
 		5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */; };
 		5F3D21BB265550A200E1FCC6 /* LevelSelectionBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */; };
+		5F3D21C326559AF800E1FCC6 /* GameSoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */; };
+		5F3D21C826559B3B00E1FCC6 /* GamePositionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */; };
 		5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */; };
 		5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */; };
 		5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* GameRepository.swift */; };
@@ -101,6 +103,8 @@
 		5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackButton.swift; sourceTree = "<group>"; };
 		5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionUITests.swift; sourceTree = "<group>"; };
 		5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionBackButton.swift; sourceTree = "<group>"; };
+		5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSoundButton.swift; sourceTree = "<group>"; };
+		5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePositionButton.swift; sourceTree = "<group>"; };
 		5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevelRealm.swift; sourceTree = "<group>"; };
 		5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevel.swift; sourceTree = "<group>"; };
 		5F6921E425CB1C2D008A18C9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
@@ -282,6 +286,8 @@
 				5FC62C2326020E9400D03AD8 /* MainBoard.swift */,
 				5FC62C2826020EA000D03AD8 /* GameBottomPanel.swift */,
 				5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */,
+				5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */,
+				5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -875,6 +881,7 @@
 				5F69220225CB21AF008A18C9 /* ApplicationVersion.swift in Sources */,
 				5F69220925CB228F008A18C9 /* AppMigrationService.swift in Sources */,
 				5FA4929D25D53EA800BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
+				5F3D21C326559AF800E1FCC6 /* GameSoundButton.swift in Sources */,
 				5FC62C1A26020E3600D03AD8 /* CurrentGameItem.swift in Sources */,
 				5F2C2547258CC6BF008D36F1 /* MenuViewModel.swift in Sources */,
 				5F69221425CB25F9008A18C9 /* Utils.swift in Sources */,
@@ -894,6 +901,7 @@
 				5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */,
 				5FC62C1F26020E7300D03AD8 /* GameButton.swift in Sources */,
 				5FC62C2E26020EE400D03AD8 /* SummaryTable.swift in Sources */,
+				5F3D21C826559B3B00E1FCC6 /* GamePositionButton.swift in Sources */,
 				5FC38F97256C4B96007AF3EA /* LevelSelectionView.swift in Sources */,
 				5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */,
 				5F2C254F258CD7F8008D36F1 /* GameViewCoordinator.swift in Sources */,

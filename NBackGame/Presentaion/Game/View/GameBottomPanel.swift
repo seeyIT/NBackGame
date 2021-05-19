@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct GameBottomPanel: View {
-    
     @ObservedObject private var viewModel: GameViewModel
     
     init(viewModel: GameViewModel) {
@@ -18,26 +17,9 @@ struct GameBottomPanel: View {
     var body: some View {
         HStack {
             Spacer()
-            
-            Button(action: {
-                print("position clicked")
-                viewModel.selectPosition()
-            }, label: {
-                GameButton(pressed: $viewModel.positionClicked, text: "Position")
-            })
-            .disabled($viewModel.positionClicked.wrappedValue)
-            .accessibilityIdentifier(AccessibilityIdentifier.Game.positionButton)
-            
+            GamePositionButton(viewModel: viewModel)
             Spacer()
-            
-            Button(action: {
-                print("sound clicked")
-                viewModel.selectSound()
-            }, label: {
-                GameButton(pressed: $viewModel.soundClicked, text: "Sound")
-            })
-            .disabled($viewModel.soundClicked.wrappedValue)
-            .accessibilityIdentifier(AccessibilityIdentifier.Game.soundButton)
+            GameSoundButton(viewModel: viewModel)
             Spacer()
         }
     }

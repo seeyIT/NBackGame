@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct LevelSelectionView: View {
-    @State private var isShowingAlert = false
-    @State private var gridCount = 3
-    @ObservedObject var viewModel: LevelSelectionViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+    @ObservedObject var viewModel: LevelSelectionViewModel
+    
+    @State private var isShowingAlert = false
+    @State private var gridCount = 3
     
     var body: some View {
         ScrollView {

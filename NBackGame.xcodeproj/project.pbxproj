@@ -20,6 +20,7 @@
 		5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3587D32565300B002BC31C /* GameSummaryView.swift */; };
 		5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */; };
 		5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */; };
+		5F3D21BB265550A200E1FCC6 /* LevelSelectionBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */; };
 		5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */; };
 		5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */; };
 		5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* GameRepository.swift */; };
@@ -99,6 +100,7 @@
 		5F3587D32565300B002BC31C /* GameSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryView.swift; sourceTree = "<group>"; };
 		5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackButton.swift; sourceTree = "<group>"; };
 		5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionUITests.swift; sourceTree = "<group>"; };
+		5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionBackButton.swift; sourceTree = "<group>"; };
 		5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevelRealm.swift; sourceTree = "<group>"; };
 		5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevel.swift; sourceTree = "<group>"; };
 		5F6921E425CB1C2D008A18C9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				5FC38F96256C4B96007AF3EA /* LevelSelectionView.swift */,
+				5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -902,6 +905,7 @@
 				5F2C2557258D1D09008D36F1 /* States.swift in Sources */,
 				5FC62C64260244DF00D03AD8 /* FetchHighestUnlockedLevel.swift in Sources */,
 				5FFDE6C225654BE8008E977F /* GameSummaryViewModel.swift in Sources */,
+				5F3D21BB265550A200E1FCC6 /* LevelSelectionBackButton.swift in Sources */,
 				5F2C2575258D1DFD008D36F1 /* GameDIContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1069,6 +1073,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NBackGame/NBackGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
@@ -1083,8 +1088,9 @@
 				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1095,6 +1101,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NBackGame/NBackGame.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
@@ -1109,8 +1116,9 @@
 				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

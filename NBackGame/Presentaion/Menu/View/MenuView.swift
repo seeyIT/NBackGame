@@ -83,10 +83,12 @@ struct MenuView: View {
 
                 }
                 
-            }.navigationBarTitle("")
+            }
+            .navigationBarTitle("")
             .navigationBarHidden(true)
             .preferredColorScheme(.dark)
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
 }

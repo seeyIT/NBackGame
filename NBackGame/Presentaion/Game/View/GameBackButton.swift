@@ -8,26 +8,19 @@
 import SwiftUI
 
 struct GameBackButton: View {
-    
     let viewModel: GameViewModel
     
     var body: some View {
-        VStack {
-            HStack {
-                Button(action: {
-                    viewModel.showMenu()
-                }, label: {
-                    VStack {
-                        Image(systemName: "arrow.backward")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                            .padding()
-                    }
-                })
-                Spacer()
+        Button(action: {
+            viewModel.showMenu()
+        }, label: {
+            VStack {
+                Image(systemName: "arrow.backward")
+                    .font(.largeTitle)
+                    .foregroundColor(.blue)
+                    .padding()
             }
-            Spacer()
-        }
+        })
         .accessibilityIdentifier(AccessibilityIdentifier.Game.showMenuButton)
     }
 }

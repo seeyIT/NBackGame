@@ -13,7 +13,7 @@ struct MainBoard: View {
     var currentItemPosition: Int
     
     var body: some View {
-        LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: boardSize)) {
+        LazyVGrid(columns: Array(repeating: GridItem(.flexible(maximum: getMaximumFieldSize())), count: boardSize)) {
             ForEach(0..<cellsCount, id: \.self) { number in
                 ZStack {
                     Rectangle()
@@ -27,5 +27,12 @@ struct MainBoard: View {
             }
         }
         .padding()
+    }
+    
+    func getMaximumFieldSize() -> CGFloat {
+        let screenWidth = UIScreen.main.bounds.size.width
+        let screenHeight = UIScreen.main.bounds.size.height
+        let smallerSize = screenWidth > screenHeight ? screenHeight : screenWidth
+        return smallerSize * 0.2
     }
 }

@@ -21,17 +21,24 @@ class AppMigrationService {
         print("currentAppVersion: \(currentAppVersion)")
         if currentAppVersion > lastAppVersion {
             migrate(from: lastAppVersion)
+            
+            let newAppVersion = AppVersionRealm(version: currentAppVersion)
+            do {
+                try realmService.instance.write {
+                    realmService.instance.add(newAppVersion)
+                }
+            } catch {
+                print("Error: \(error)")
+            }
         }
     }
     
     private func migrate(from version: Int) {
         print("migrate from: v\(version)")
         if version < 2 {
-            let newAppVersion = AppVersionRealm(version: 2)
             let defaultUnlockedLevel = UnlockedLevelRealm(level: 2)
             do {
                 try realmService.instance.write {
-                    realmService.instance.add(newAppVersion)
                     realmService.instance.add(defaultUnlockedLevel)
                 }
             } catch {

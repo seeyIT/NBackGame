@@ -14,12 +14,10 @@ struct GameBackButton: View {
         Button(action: {
             viewModel.showMenu()
         }, label: {
-            VStack {
-                Image(systemName: "arrow.backward")
-                    .font(.largeTitle)
-                    .foregroundColor(.blue)
-                    .padding()
-            }
+            Image(systemName: "arrow.backward")
+                .font(.largeTitle)
+                .foregroundColor(.blue)
+                .padding()
         })
         .accessibilityIdentifier(AccessibilityIdentifier.Game.showMenuButton)
     }

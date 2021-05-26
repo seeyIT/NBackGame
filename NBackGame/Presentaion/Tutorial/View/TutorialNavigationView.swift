@@ -69,7 +69,7 @@ private struct TutorialNavigationBackButton: View {
     var body: some View {
         Button(action: {
             withAnimation {
-                viewModel.nextStep()
+                viewModel.previousStep()
                 scrollToIndex = viewModel.currentStep
             }
         }, label: {

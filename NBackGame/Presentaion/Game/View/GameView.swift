@@ -9,38 +9,24 @@ import SwiftUI
 
 struct GameView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
-    
+    @Environment(\.sizeCategory) var sizeCategory
+
     @ObservedObject var viewModel: GameViewModel
     
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            if verticalSizeClass == .compact  {
+            if verticalSizeClass == .compact {
                 VStack {
                     Spacer()
-                    HStack {
-                        GameBackButton(viewModel: viewModel)
-                        Spacer()
-                        Text("N: \(viewModel.level)")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                        Spacer()
-                        Text("Round: \(viewModel.currentRoundNumber)/\(viewModel.maxRounds)")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                        
-                    }
-                    .padding()
-                    
+                    GameTopPanel(viewModel: viewModel)
+                    Spacer()
                     HStack {
                         GamePositionButton(viewModel: viewModel)
                         MainBoard(boardSize: viewModel.boardSize, cellsCount: viewModel.cellsCount, currentItemPosition: viewModel.currentItem.position)
                         GameSoundButton(viewModel: viewModel)
-
                     }
                     Spacer()
-                    
-                    
                 }
             } else {
                 VStack {
@@ -48,30 +34,14 @@ struct GameView: View {
                         GameBackButton(viewModel: viewModel)
                         Spacer()
                     }
+                    GameTopPanel(viewModel: viewModel)
                     Spacer()
-                    HStack {
-                        Text("N: \(viewModel.level)")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                            .padding(.leading)
-                        Spacer()
-                        Text("Round: \(viewModel.currentRoundNumber)/\(viewModel.maxRounds)")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                            .padding(.trailing)
-
-                    }
-                    .padding()
-                    
                     MainBoard(boardSize: viewModel.boardSize, cellsCount: viewModel.cellsCount, currentItemPosition: viewModel.currentItem.position)
                     Spacer()
-                    
                     GameBottomPanel(viewModel: viewModel)
-                    
                 }
                 
             }
-            
         }
         .navigationBarHidden(true)
         .onAppear {

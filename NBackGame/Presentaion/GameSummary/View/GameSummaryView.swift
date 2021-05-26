@@ -14,48 +14,22 @@ struct GameSummaryView: View {
     @State private var cancellable = Set<AnyCancellable>()
     
     var body: some View {
-        
-        ZStack {
-            Color.black.ignoresSafeArea()
-            VStack {
-                Text("Results")
-                    .font(.largeTitle)
-                    .foregroundColor(.blue)
-                    .padding()
-                if resultsCalculated {
-                    SummaryTable(viewModel: viewModel)
-                } else {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
+        ScrollView(showsIndicators: false) {
+            ZStack {
+                Color.black.ignoresSafeArea()
+                VStack {
+                    Text("Results")
+                        .font(.largeTitle)
+                        .foregroundColor(.blue)
+                        .padding()
+                    if resultsCalculated {
+                        SummaryTable(viewModel: viewModel)
+                    } else {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                    }
+                    GameSummaryButtons(viewModel: viewModel)
                 }
-                
-                HStack {
-                    Spacer()
-                    Button(action: {
-                        withAnimation {
-                            viewModel.playAgain()
-                            
-                        }
-                    }, label: {
-                        MenuButton(iconName: "arrow.counterclockwise", text: "Play again")
-                            .frame(width: 120, height: 120)                           
-                    })
-                    .padding(.trailing)
-                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.playAgainButton)
-                    
-                    Spacer()
-                    Button(action: {
-                        withAnimation {
-                            viewModel.showMenu()
-                        }
-                    }, label: {
-                        MenuButton(iconName: "line.horizontal.3", text: "Menu")
-                            .frame(width: 120, height: 120)
-                    })
-                    .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.menuButton)
-                    Spacer()
-                }
-                .padding()
             }
         }
         .foregroundColor(.white)

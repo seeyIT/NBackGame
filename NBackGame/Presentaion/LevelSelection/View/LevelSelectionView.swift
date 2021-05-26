@@ -20,8 +20,8 @@ struct LevelSelectionView: View {
         ScrollView {
             ZStack {
                 Color.black.ignoresSafeArea()
-                LevelSelectionBackButton(viewModel: viewModel)
                 VStack {
+                    LevelSelectionBackButton(viewModel: viewModel)
                     Text("Choose N")
                         .font(.largeTitle)
                         .foregroundColor(.blue)

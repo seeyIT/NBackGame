@@ -30,6 +30,7 @@ struct PlayCircle: Shape {
 }
 
 struct MenuButton: View {
+    @ScaledMetric var imageSize: CGFloat = 40
     
     var iconName: String
     var text: String
@@ -41,13 +42,17 @@ struct MenuButton: View {
             if imageOnLeft {
                 Image(systemName: iconName)
                     .font(.largeTitle)
+                    .frame(width: imageSize, height: imageSize)
                 Text(text)
                     .font(.headline)
+                    .frame(alignment: .center)
             } else {
                 Text(text)
                     .font(.headline)
+                    .frame(alignment: .center)
                 Image(systemName: iconName)
                     .font(.largeTitle)
+                    .frame(width: imageSize, height: imageSize)
             }
         }
         .padding()
@@ -67,6 +72,15 @@ struct MenuView: View {
     @State private var press = false
     @ObservedObject var viewModel: MenuViewModel
     
+    private var buttonSize: CGFloat {
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            return 320
+        }
+        else {
+            return 220
+        }
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -77,13 +91,13 @@ struct MenuView: View {
                             viewModel.startGame()
                         }
                     }, label: {
-                        MenuButton(iconName: "play.fill", text: "Play", fixedWidth: 220)
+                        MenuButton(iconName: "play.fill", text: "Play", fixedWidth: buttonSize)
                     })
                     .padding(.bottom, 30)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
                     NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
-                        MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: 220)
+                        MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: buttonSize)
                     }
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
                 }

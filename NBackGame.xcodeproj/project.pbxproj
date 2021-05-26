@@ -23,6 +23,7 @@
 		5F3D21BB265550A200E1FCC6 /* LevelSelectionBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */; };
 		5F3D21C326559AF800E1FCC6 /* GameSoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */; };
 		5F3D21C826559B3B00E1FCC6 /* GamePositionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */; };
+		5F3D21CE265D2F2D00E1FCC6 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21CD265D2F2B00E1FCC6 /* ViewExtensions.swift */; };
 		5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */; };
 		5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */; };
 		5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* GameRepository.swift */; };
@@ -105,6 +106,7 @@
 		5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionBackButton.swift; sourceTree = "<group>"; };
 		5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSoundButton.swift; sourceTree = "<group>"; };
 		5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePositionButton.swift; sourceTree = "<group>"; };
+		5F3D21CD265D2F2B00E1FCC6 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevelRealm.swift; sourceTree = "<group>"; };
 		5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevel.swift; sourceTree = "<group>"; };
 		5F6921E425CB1C2D008A18C9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 		5F2C25AB258D2D62008D36F1 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				5F3D21CC265D2F1100E1FCC6 /* Extensions */,
 				5F949A9825FA045F00512ADE /* UseCases */,
 				5F2C25AC258D2D68008D36F1 /* Entities */,
 				5F69221325CB25F9008A18C9 /* Utils.swift */,
@@ -381,6 +384,14 @@
 				5FC62C1926020E3600D03AD8 /* CurrentGameItem.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		5F3D21CC265D2F1100E1FCC6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5F3D21CD265D2F2B00E1FCC6 /* ViewExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		5F6921D325CAF9EF008A18C9 /* Storage */ = {
@@ -915,6 +926,7 @@
 				5FFDE6C225654BE8008E977F /* GameSummaryViewModel.swift in Sources */,
 				5F3D21BB265550A200E1FCC6 /* LevelSelectionBackButton.swift in Sources */,
 				5F2C2575258D1DFD008D36F1 /* GameDIContainer.swift in Sources */,
+				5F3D21CE265D2F2D00E1FCC6 /* ViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

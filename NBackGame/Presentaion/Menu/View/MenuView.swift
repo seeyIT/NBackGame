@@ -33,23 +33,30 @@ struct MenuButton: View {
     
     var iconName: String
     var text: String
+    var imageOnLeft: Bool = true
+    var fixedWidth: CGFloat? = nil
     
     var body: some View {
-        
-        VStack {
-            Image(systemName: iconName)
-                .font(.largeTitle)
-                .foregroundColor(Color.blue)
-                .padding(.top, 20)
-            Text(text)
-                .font(.body)
-                .foregroundColor(Color.blue)
-                .padding()
+        HStack {
+            if imageOnLeft {
+                Image(systemName: iconName)
+                    .font(.largeTitle)
+                Text(text)
+                    .font(.headline)
+            } else {
+                Text(text)
+                    .font(.headline)
+                Image(systemName: iconName)
+                    .font(.largeTitle)
+            }
         }
-        .frame(width: 130, height: 130)
-        .overlay(
-            Circle()
+        .padding()
+        .foregroundColor(Color.blue)
+        .ifLet(fixedWidth) { $0.frame(width: $1) }
+        .background(
+            RoundedRectangle(cornerRadius: 16)
                 .stroke(Color.blue, lineWidth: 2)
+                .foregroundColor(Color.yellow)
         )
     }
 }
@@ -70,17 +77,15 @@ struct MenuView: View {
                             viewModel.startGame()
                         }
                     }, label: {
-                        MenuButton(iconName: "play.fill", text: "Play")
-                        
+                        MenuButton(iconName: "play.fill", text: "Play", fixedWidth: 220)
                     })
                     .padding(.bottom, 30)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
                     NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
-                        MenuButton(iconName: "book.fill", text: "Tutorial")
+                        MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: 220)
                     }
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
-
                 }
                 
             }

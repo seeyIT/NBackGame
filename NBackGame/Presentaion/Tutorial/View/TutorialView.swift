@@ -10,6 +10,10 @@ import SwiftUI
 struct TutorialView: View {
     @ObservedObject var viewModel: TutorialViewModel
     
+    @State private var scrollToIndex: Int?
+    
+    private let TUTORIAL_CONTENT_ID = 0
+    
     var steps: [Int: AnyView] = [
         1: AnyView(TutorialStep1()),
         2: AnyView(TutorialStep2()),
@@ -24,22 +28,29 @@ struct TutorialView: View {
     ]
     
     var body: some View {
-        ScrollView {
-            ZStack {
-                Color.black.ignoresSafeArea()
-                VStack {
-                    Spacer()
-                    steps[viewModel.currentStep]
-                    Spacer()
-                    TutorialNavigationView(viewModel: viewModel)
+        ScrollView(showsIndicators: false) {
+            ScrollViewReader { viewReader in
+                ZStack {
+                    Color.black.ignoresSafeArea()
+                    VStack {
+                        Spacer()
+                        steps[viewModel.currentStep]
+                            .id(TUTORIAL_CONTENT_ID)
+                        Spacer()
+                        TutorialNavigationView(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    }
                 }
-            }
-            .onAppear {
-                viewModel.currentStep = viewModel.firstStep
+                .onChange(of: scrollToIndex) { _ in
+                    withAnimation {
+                        viewReader.scrollTo(TUTORIAL_CONTENT_ID, anchor: .top)
+                    }
+                }
+                .onAppear {
+                    viewModel.currentStep = viewModel.firstStep
+                }
             }
         }
         .navigationBarHidden(true)
-        
     }
 }
 

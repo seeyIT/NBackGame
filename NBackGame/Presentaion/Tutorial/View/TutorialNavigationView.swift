@@ -8,59 +8,73 @@
 import SwiftUI
 
 struct TutorialNavigationView: View {
+    @Environment(\.sizeCategory) var sizeCategory
+    
     @ObservedObject var viewModel: TutorialViewModel
     
+    @Binding var scrollToIndex: Int?
+
     var body: some View {
-        HStack {
-            if viewModel.currentStep != viewModel.firstStep {
-                Spacer()
-                Button(action: {
-                    withAnimation {
-                        viewModel.previousStep()
-                    }
-                }, label: {
-                    ZStack {
-                        PlayCircle()
-                            .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                        VStack {
-                            Image(systemName: "arrow.left")
-                                .font(.largeTitle)
-                                .padding(0)
-                            Text("Back")
-                                .foregroundColor(.blue)
-                                .padding(0)
-                        }
-                    }
-                    .frame(width: 100, height: 100)
-                })
-                .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.previousButton)
-                Spacer()
+        if sizeCategory > ContentSizeCategory.extraExtraLarge {
+            VStack {
+                if viewModel.currentStep != viewModel.firstStep {
+                    TutorialNavigationBackButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                }
+                if viewModel.currentStep != viewModel.lastStep {
+                    TutorialNavigationNextButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                }
             }
-            if viewModel.currentStep != viewModel.lastStep {
-                Spacer()
-                
-                Button(action: {
-                    withAnimation {
-                        viewModel.nextStep()
-                    }
-                }, label: {
-                    ZStack {
-                        PlayCircle()
-                            .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                        VStack {
-                            Image(systemName: "arrow.right")
-                                .font(.largeTitle)
-                                .padding(0)
-                            Text("Next")
-                                .foregroundColor(.blue)
-                                .padding(0)
-                        }
-                    }
-                    .frame(width: 100, height: 100)
-                })
-                .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.nextButton)
-                Spacer()
+        } else {
+            HStack {
+                if viewModel.currentStep != viewModel.firstStep {
+                    Spacer()
+                    TutorialNavigationBackButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    Spacer()
+                }
+                if viewModel.currentStep != viewModel.lastStep {
+                    Spacer()
+                    TutorialNavigationNextButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    Spacer()
+                }
             }
         }
+        
+    }
+}
+
+private struct TutorialNavigationNextButton: View {
+    @ObservedObject var viewModel: TutorialViewModel
+    
+    @Binding var scrollToIndex: Int?
+
+    var body: some View {
+        Button(action: {
+            withAnimation {
+                viewModel.nextStep()
+                scrollToIndex = viewModel.currentStep
+            }
+        }, label: {
+            MenuButton(iconName: "arrow.right", text: "Next", imageOnLeft: false)
+        })
+        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.previousButton)
+    }
+}
+
+
+private struct TutorialNavigationBackButton: View {
+    @ObservedObject var viewModel: TutorialViewModel
+    
+    @Binding var scrollToIndex: Int?
+
+    var body: some View {
+        Button(action: {
+            withAnimation {
+                viewModel.nextStep()
+                scrollToIndex = viewModel.currentStep
+            }
+        }, label: {
+            MenuButton(iconName: "arrow.left", text: "Back")
+        })
+        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.nextButton)
     }
 }

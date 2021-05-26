@@ -231,22 +231,9 @@ struct TutorialStep10: View {
         Button(action: {
             presentationMode.wrappedValue.dismiss()
         }, label: {
-            ZStack {
-                PlayCircle()
-                    .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                VStack {
-                    Image(systemName: "line.horizontal.3")
-                        .font(.largeTitle)
-                        .padding(.bottom, 4)
-                    Text("Back to Menu")
-                        .foregroundColor(.blue)
-                        .padding(.horizontal, 2)
-                }
-                
-            }
-            .frame(width: 120, height: 120)
-            .padding()
+            MenuButton(iconName: "line.horizontal.3", text: "Back to Menu")
         })
+        .padding()
         .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.menuButton)
 
     }

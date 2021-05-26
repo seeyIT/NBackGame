@@ -20,7 +20,8 @@ struct GameButton: View {
                     .font(.title)
                     .bold()
                     .foregroundColor(Color.white)
-                
+                    .minimumScaleFactor(0.1)
+                    .lineLimit(1)
             } else {
                 PlayCircle()
                     .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
@@ -28,6 +29,8 @@ struct GameButton: View {
                     .font(.title)
                     .bold()
                     .foregroundColor(Color.blue)
+                    .minimumScaleFactor(0.1)
+                    .lineLimit(1)
             }
         }
         .frame(width: 140, height: 140)

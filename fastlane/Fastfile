@@ -37,4 +37,13 @@ platform :ios do
     clean_build_artifacts
 
   end
+
+  lane :screenshots do
+  	capture_ios_screenshots
+  end
+
+  lane :release_with_screenshots do
+      screenshots
+      release
+  end
 end

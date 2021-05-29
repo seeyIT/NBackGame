@@ -1,0 +1,21 @@
+
+devices([
+  "iPhone 8",
+  "iPhone SE (2nd generation)",
+  "iPhone 11",
+  "iPhone 11 Pro Max",
+  "iPhone 12 mini",
+  "iPhone 12 Pro Max",
+  "iPad Pro (12.9-inch) (4th generation)",
+  "iPad Pro (9.7-inch)"
+])
+
+scheme("FastlaneScreenshot")
+
+clear_previous_screenshots(true)
+
+override_status_bar(true)
+
+skip_open_summary(true)
+
+headless(true)

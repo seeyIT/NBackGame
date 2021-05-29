@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FA8633D2529D996006B5F33"
-               BuildableName = "NBackGame.app"
-               BlueprintName = "NBackGame"
+               BlueprintIdentifier = "5FA863592529D997006B5F33"
+               BuildableName = "NBackGameUITests.xctest"
+               BlueprintName = "NBackGameUITests"
                ReferencedContainer = "container:NBackGame.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,16 +32,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5FA8634E2529D997006B5F33"
-               BuildableName = "NBackGameTests.xctest"
-               BlueprintName = "NBackGameTests"
-               ReferencedContainer = "container:NBackGame.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5FA863592529D997006B5F33"
                BuildableName = "NBackGameUITests.xctest"
                BlueprintName = "NBackGameUITests"
@@ -49,7 +39,13 @@
             </BuildableReference>
             <SkippedTests>
                <Test
-                  Identifier = "SnapshotUITests">
+                  Identifier = "LevelSelectionUITests">
+               </Test>
+               <Test
+                  Identifier = "PlayGameUITests">
+               </Test>
+               <Test
+                  Identifier = "TutorialUITests">
                </Test>
             </SkippedTests>
          </TestableReference>
@@ -65,16 +61,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5FA8633D2529D996006B5F33"
-            BuildableName = "NBackGame.app"
-            BlueprintName = "NBackGame"
-            ReferencedContainer = "container:NBackGame.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -82,16 +68,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5FA8633D2529D996006B5F33"
-            BuildableName = "NBackGame.app"
-            BlueprintName = "NBackGame"
+            BlueprintIdentifier = "5FA863592529D997006B5F33"
+            BuildableName = "NBackGameUITests.xctest"
+            BlueprintName = "NBackGameUITests"
             ReferencedContainer = "container:NBackGame.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -48,6 +48,8 @@
 		5FA8636D2529E7B3006B5F33 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8636C2529E7B3006B5F33 /* GameView.swift */; };
 		5FA8B28D265E48A90026547A /* GameSummaryButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B28C265E48A90026547A /* GameSummaryButtons.swift */; };
 		5FA8B292265E4D440026547A /* GameTopPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B291265E4D440026547A /* GameTopPanel.swift */; };
+		5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B29C265FA4400026547A /* SnapshotHelper.swift */; };
+		5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */; };
 		5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */; };
 		5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */; };
 		5FBF32E2257E70080007FBA0 /* TutorialNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */; };
@@ -138,6 +140,8 @@
 		5FA8636C2529E7B3006B5F33 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		5FA8B28C265E48A90026547A /* GameSummaryButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryButtons.swift; sourceTree = "<group>"; };
 		5FA8B291265E4D440026547A /* GameTopPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopPanel.swift; sourceTree = "<group>"; };
+		5FA8B29C265FA4400026547A /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
+		5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUITests.swift; sourceTree = "<group>"; };
 		5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialText.swift; sourceTree = "<group>"; };
 		5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSteps.swift; sourceTree = "<group>"; };
 		5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialNavigationView.swift; sourceTree = "<group>"; };
@@ -508,12 +512,22 @@
 		5FA8635D2529D997006B5F33 /* NBackGameUITests */ = {
 			isa = PBXGroup;
 			children = (
+				5FA8B2A4265FA44E0026547A /* fastlane */,
 				5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */,
 				5FA492B525D54DD300BB2DE3 /* TutorialUITests.swift */,
 				5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */,
 				5FA863602529D997006B5F33 /* Info.plist */,
 			);
 			path = NBackGameUITests;
+			sourceTree = "<group>";
+		};
+		5FA8B2A4265FA44E0026547A /* fastlane */ = {
+			isa = PBXGroup;
+			children = (
+				5FA8B29C265FA4400026547A /* SnapshotHelper.swift */,
+				5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */,
+			);
+			path = fastlane;
 			sourceTree = "<group>";
 		};
 		5FBF32D2257E6F7F0007FBA0 /* Tutorial */ = {
@@ -955,6 +969,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */,
+				5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */,
 				5FA492B625D54DD300BB2DE3 /* TutorialUITests.swift in Sources */,
 				5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */,
 				5FA492A825D5447B00BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
@@ -1113,7 +1129,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -1141,7 +1157,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;

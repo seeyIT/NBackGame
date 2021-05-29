@@ -21,14 +21,14 @@ or alternatively using `brew install fastlane`
 fastlane ios release
 ```
 Push a new release build to the App Store
-### ios release_with_screenshots
-```
-fastlane ios release_with_screenshots
-```
-
 ### ios screenshots
 ```
 fastlane ios screenshots
+```
+
+### ios release_with_screenshots
+```
+fastlane ios release_with_screenshots
 ```
 
 

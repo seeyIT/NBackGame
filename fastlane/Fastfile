@@ -28,6 +28,7 @@ platform :ios do
     deliver(
 	    submit_for_review: true,
 	    automatic_release: true,
+	    overwrite_screenshots: true,
 	    force: true,
 	    submission_information: {
      		export_compliance_uses_encryption: false,

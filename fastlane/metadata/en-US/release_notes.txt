@@ -1,1 +1,1 @@
-Add option to cancel level selection or game and back to main menu.
+Add support for iPad and screen rotation.

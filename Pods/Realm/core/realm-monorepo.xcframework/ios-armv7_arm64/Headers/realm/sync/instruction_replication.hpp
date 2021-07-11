@@ -70,7 +70,7 @@ public:
     void add_class_with_primary_key(TableKey tk, StringData table_name, DataType pk_type, StringData pk_field,
                                     bool nullable) override;
     void create_object(const Table*, GlobalKey) override;
-    void create_object_with_primary_key(const Table*, GlobalKey, Mixed) override;
+    void create_object_with_primary_key(const Table*, ObjKey, Mixed) override;
     void erase_group_level_table(TableKey table_key, size_t num_tables) override;
     void rename_group_level_table(TableKey table_key, StringData new_name) override;
     void insert_column(const Table*, ColKey col_key, DataType type, StringData name, Table* target_table) override;
@@ -91,6 +91,7 @@ public:
     void set_clear(const CollectionBase& list) override;
 
     void dictionary_insert(const CollectionBase&, size_t ndx, Mixed key, Mixed val) override;
+    void dictionary_set(const CollectionBase&, size_t ndx, Mixed key, Mixed val) override;
     void dictionary_erase(const CollectionBase&, size_t ndx, Mixed key) override;
 
     void remove_object(const Table*, ObjKey) override;
@@ -148,6 +149,8 @@ private:
     void populate_path_instr(Instruction::PathInstruction&, const Table&, ObjKey key, ColKey field);
     void populate_path_instr(Instruction::PathInstruction&, const CollectionBase&);
     void populate_path_instr(Instruction::PathInstruction&, const CollectionBase&, uint32_t ndx);
+
+    void dictionary_update(const CollectionBase&, const Mixed& key, const Mixed& val);
 
     // Cache information for the purpose of avoiding excessive string comparisons / interning
     // lookups.

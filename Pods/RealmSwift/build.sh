@@ -68,7 +68,8 @@ command:
   test-catalyst:        tests Mac Catalyst framework
   test-catalyst-swift:  tests RealmSwift Mac Catalyst framework
   test-swiftpm:         tests ObjC and Swift macOS frameworks via SwiftPM
-  verify:               verifies docs, osx, osx-swift, ios-static, ios-dynamic, ios-swift, ios-device in both Debug and Release configurations, swiftlint
+  test-swiftui-ios:         tests SwiftUI framework UI tests
+  verify:               verifies docs, osx, osx-swift, ios-static, ios-dynamic, ios-swift, ios-device, swiftui-ios in both Debug and Release configurations, swiftlint
   verify-osx-object-server:  downloads the Realm Object Server and runs the Objective-C and Swift integration tests
   docs:                 builds docs in docs/output
   examples:             builds all examples
@@ -126,12 +127,8 @@ xc() {
 
 xctest() {
   local scheme="$1"
-  local test_plan="$(echo $1 | tr -d ' ')"
-  if (( $(xcode_version_major) < 12 )); then
-    test_plan="${test_plan}Xcode11"
-  fi
-  xc -scheme "$scheme" -testPlan "$test_plan" "${@:2}" build-for-testing
-  xc -scheme "$scheme" -testPlan "$test_plan" "${@:2}" test-without-building
+  xc -scheme "$scheme" "${@:2}" build-for-testing
+  xc -scheme "$scheme" "${@:2}" test-without-building
 }
 
 build_combined() {
@@ -265,9 +262,10 @@ build_docs() {
       --module-version "${version}" \
       --xcodebuild-arguments "${xcodebuild_arguments}" \
       --module "${module}" \
-      --root-url "https://realm.io/docs/${language}/${version}/api/" \
+      --root-url "https://docs.mongodb.com/realm-sdks/${language}/${version}/" \
       --output "docs/${language}_output" \
-      --head "$(cat docs/custom_head.html)"
+      --head "$(cat docs/custom_head.html)" \
+      --exclude 'RealmSwift/Impl/*'
 
     rm Realm/RLMPlatform.h
 }
@@ -359,17 +357,6 @@ download_common() {
         if [ ! -f core/version.txt ]; then
             printf %s "${version}" > core/version.txt
         fi
-
-        # Xcode 11 dsymutil crashes when given debugging symbols created by
-        # Xcode 12. Check if this breaks, and strip them if so.
-        local test_lib=core/realm-monorepo.xcframework/ios-*-simulator/librealm-monorepo.a
-        xcrun clang++ -Wl,-all_load -g -arch x86_64 -shared -target ios13.0 \
-          -isysroot $(xcrun --sdk iphonesimulator --show-sdk-path) -o tmp.dylib \
-          $test_lib -lz -framework Security
-        if ! dsymutil tmp.dylib -o tmp.dSYM 2> /dev/null; then
-            find core -name '*.a' -exec strip -x "{}" \; 2> /dev/null
-        fi
-        rm -r tmp.dylib tmp.dSYM
 
         mv core "${versioned_dir}"
     )
@@ -503,6 +490,10 @@ case "$COMMAND" in
         clean_retrieve "build/DerivedData/Realm/Build/Products/$CONFIGURATION/RealmSwift.framework" "$destination" "RealmSwift.framework"
         clean_retrieve "build/osx/Realm.framework" "$destination" "Realm.framework"
         exit 0
+        ;;
+
+    "swiftui")
+        xc -scheme SwiftUITestHost -configuration $CONFIGURATION -sdk iphonesimulator build
         ;;
 
     "catalyst")
@@ -662,6 +653,11 @@ case "$COMMAND" in
         exit 0
         ;;
 
+    "test-swiftui-ios")
+        xctest 'SwiftUITestHost' -configuration "$CONFIGURATION" -sdk iphonesimulator -destination 'name=iPhone 8'
+        exit 0
+        ;;
+
     "test-catalyst")
         export REALM_SDKROOT=iphoneos
         xctest Realm -configuration "$CONFIGURATION" -destination 'platform=macOS,variant=Mac Catalyst' CODE_SIGN_IDENTITY=''
@@ -701,6 +697,7 @@ case "$COMMAND" in
         sh build.sh verify-osx-object-server
         sh build.sh verify-catalyst
         sh build.sh verify-catalyst-swift
+        sh build.sh verify-swiftui-ios
         ;;
 
     "verify-cocoapods")
@@ -773,6 +770,11 @@ case "$COMMAND" in
 
     "verify-osx-swift")
         sh build.sh test-osx-swift
+        exit 0
+        ;;
+
+    "verify-swiftui-ios")
+        sh build.sh test-swiftui-ios
         exit 0
         ;;
 
@@ -915,8 +917,16 @@ case "$COMMAND" in
         workspace="examples/ios/objc/RealmExamples.xcworkspace"
         pod install --project-directory="$workspace/.." --no-repo-update
         examples="Simple TableView Migration Backlink GroupedTableView RACTableView Encryption Draw"
+        versions="0 1 2 3 4 5"
         for example in $examples; do
-            xc -workspace "$workspace" -scheme "$example" -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}"
+            if [ "$example" = "Migration" ]; then
+                # The migration example needs to be built for each schema version to ensure each compiles.
+                for version in $versions; do
+                    xc -workspace "$workspace" -scheme "$example" -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}" GCC_PREPROCESSOR_DEFINITIONS="\$(GCC_PREPROCESSOR_DEFINITIONS) SCHEMA_VERSION_$version"
+                done
+            else
+                xc -workspace "$workspace" -scheme "$example" -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}"
+            fi
         done
         if [ -n "${JENKINS_HOME}" ]; then
             xc -workspace "$workspace" -scheme Extension -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}"
@@ -932,8 +942,16 @@ case "$COMMAND" in
         fi
 
         examples="Simple TableView Migration Backlink GroupedTableView Encryption"
+        versions="0 1 2 3 4 5"
         for example in $examples; do
-            xc -workspace "$workspace" -scheme "$example" -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}"
+            if [ "$example" = "Migration" ]; then
+                # The migration example needs to be built for each schema version to ensure each compiles.
+                for version in $versions; do
+                    xc -workspace "$workspace" -scheme "$example" -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}" OTHER_SWIFT_FLAGS="\$(OTHER_SWIFT_FLAGS) -DSCHEMA_VERSION_$version"
+                done
+            else
+                xc -workspace "$workspace" -scheme "$example" -configuration "$CONFIGURATION" -sdk iphonesimulator build ARCHS=x86_64 "${CODESIGN_PARAMS[@]}"
+            fi
         done
 
         exit 0
@@ -1082,8 +1100,10 @@ case "$COMMAND" in
             export REALM_SKIP_PRELAUNCH=1
 
             if [[ "$target" = *"server"* ]] || [[ "$target" = "swiftpm"* ]]; then
+                mkdir .baas
+                mv build/stitch .baas
                 source "$(brew --prefix nvm)/nvm.sh" --no-use
-                nvm install 8.11.2
+                nvm install 13.14.0
                 sh build.sh setup-baas
             fi
 
@@ -1333,8 +1353,9 @@ x.y.z Release notes (yyyy-MM-dd)
 ### Compatibility
 * Realm Studio: 10.0.0 or later.
 * APIs are backwards compatible with all previous releases in the 10.x.y series.
-* Carthage release for Swift is built with Xcode 12.4.
+* Carthage release for Swift is built with Xcode 12.5.1.
 * CocoaPods: 1.10 or later.
+* Xcode: 12.2-13.0 beta 1.
 
 ### Internal
 * Upgraded realm-core from ? to ?

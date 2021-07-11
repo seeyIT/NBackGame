@@ -25,6 +25,7 @@
 #include <realm/unicode.hpp>
 #include <realm/binary_data.hpp>
 #include <realm/query_value.hpp>
+#include <realm/mixed.hpp>
 #include <realm/utilities.hpp>
 
 namespace realm {
@@ -36,11 +37,7 @@ enum Action {
     act_Min,
     act_Count,
     act_FindAll,
-    act_CallIdx,
     act_CallbackIdx,
-    act_CallbackVal,
-    act_CallbackNone,
-    act_CallbackBoth,
     act_Average
 };
 
@@ -48,30 +45,70 @@ class ClusterKeyArray;
 
 class QueryStateBase {
 public:
-    size_t m_match_count;
-    size_t m_limit;
-    int64_t m_minmax_index; // used only for min/max, to save index of current min/max value
+    int64_t m_minmax_key; // used only for min/max, to save index of current min/max value
     uint64_t m_key_offset;
     const ClusterKeyArray* m_key_values;
     QueryStateBase(size_t limit)
-        : m_match_count(0)
-        , m_limit(limit)
-        , m_minmax_index(-1)
+        : m_minmax_key(-1)
         , m_key_offset(0)
         , m_key_values(nullptr)
+        , m_match_count(0)
+        , m_limit(limit)
     {
     }
     virtual ~QueryStateBase()
     {
     }
 
+    // Called when we have a match.
+    // The return value indicates if the query should continue.
+    virtual bool match(size_t, Mixed) noexcept = 0;
+
+    virtual bool match_pattern(size_t, uint64_t)
+    {
+        return false;
+    }
+
+    inline size_t match_count() const noexcept
+    {
+        return m_match_count;
+    }
+
+    inline size_t limit() const noexcept
+    {
+        return m_limit;
+    }
+
+protected:
+    size_t m_match_count;
+    size_t m_limit;
+
 private:
     virtual void dyncast();
 };
 
 template <class>
-class QueryState;
+class QueryStateMin;
 
+template <class>
+class QueryStateMax;
+
+class QueryStateCount : public QueryStateBase {
+public:
+    QueryStateCount(size_t limit = -1)
+        : QueryStateBase(limit)
+    {
+    }
+    bool match(size_t, Mixed) noexcept final
+    {
+        ++m_match_count;
+        return (m_limit > m_match_count);
+    }
+    size_t get_count() const noexcept
+    {
+        return m_match_count;
+    }
+};
 
 // Array::VTable only uses the first 4 conditions (enums) in an array of function pointers
 enum { cond_Equal, cond_NotEqual, cond_Greater, cond_Less, cond_VTABLE_FINDER_COUNT, cond_None, cond_LeftNotNull };

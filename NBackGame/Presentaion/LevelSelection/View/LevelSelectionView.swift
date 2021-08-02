@@ -17,9 +17,9 @@ struct LevelSelectionView: View {
     @State private var gridCount = 3
     
     var body: some View {
-        ScrollView {
-            ZStack {
-                Color.black.ignoresSafeArea()
+        ZStack {
+            Color.black.ignoresSafeArea()
+            ScrollView {
                 VStack {
                     LevelSelectionBackButton(viewModel: viewModel)
                     Text("Choose N")

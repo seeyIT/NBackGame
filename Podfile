@@ -5,6 +5,7 @@ target 'NBackGame' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
    pod 'RealmSwift'
+   pod 'SwiftLint'
 
   target 'NBackGameTests' do
     inherit! :search_paths

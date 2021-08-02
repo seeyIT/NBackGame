@@ -677,6 +677,7 @@
 				5FA8633B2529D996006B5F33 /* Frameworks */,
 				5FA8633C2529D996006B5F33 /* Resources */,
 				3A18ED82AE6EAA56AA66730E /* [CP] Embed Pods Frameworks */,
+				5F40D19026B7DE16005013F3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -833,6 +834,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBackGame/Pods-NBackGame-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5F40D19026B7DE16005013F3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
 		6AE5F0317B77C5B9E585F61B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

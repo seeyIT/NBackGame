@@ -20,7 +20,6 @@ class LevelSelectionUITests: XCTestCase {
         
         _ = levelSelectionButton.waitForExistence(timeout: 5)
         
-        
         app.buttons[AccessibilityIdentifier.LevelSelection.showMenuButton].tap()
         
         let playButtonFromMenu = app.buttons[AccessibilityIdentifier.Menu.playButton]

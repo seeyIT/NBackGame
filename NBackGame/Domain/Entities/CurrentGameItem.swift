@@ -15,7 +15,7 @@ struct CurrentGameItem: Equatable {
         return CurrentGameItem(position: -1, sound: "")
     }
     
-    static func ==(lhs: CurrentGameItem, rhs: CurrentGameItem) -> Bool {
+    static func == (lhs: CurrentGameItem, rhs: CurrentGameItem) -> Bool {
         return lhs.position == rhs.position && lhs.sound == rhs.sound
     }
 }

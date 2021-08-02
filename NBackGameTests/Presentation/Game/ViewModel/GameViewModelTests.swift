@@ -58,7 +58,8 @@ class GameViewModelTests: XCTestCase {
     func test_whenSelectShowMenu_thenShowMenu() throws {
         // given
         let gameLevel = 2
-        let gameViewModelActions = GameViewModelActionsMock(expectation: self.expectation(description: "Action executed"))
+        let gameViewModelActions = GameViewModelActionsMock(expectation:
+                                                                self.expectation(description: "Action executed"))
         let sut = GameViewModel(level: gameLevel, actions: gameViewModelActions)
         
         // when
@@ -69,7 +70,6 @@ class GameViewModelTests: XCTestCase {
         // then
         XCTAssertTrue(true)
     }
-    
     
     // MARK: - Helpers
     
@@ -94,4 +94,3 @@ class GameViewModelTests: XCTestCase {
         }
     }
 }
-

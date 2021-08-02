@@ -14,7 +14,7 @@ struct GameTopPanel: View {
     @ObservedObject var viewModel: GameViewModel
     
     var body: some View {
-        if verticalSizeClass == .compact  {
+        if verticalSizeClass == .compact {
             HStack {
                 GameBackButton(viewModel: viewModel)
                 Spacer()

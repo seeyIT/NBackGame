@@ -13,7 +13,7 @@ struct SummaryTable: View {
     var body: some View {
         LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 4)) {
             Group {
-                Text("") /// Placeholer to move first row to the right
+                Text("") // Placeholer to move first row to the right
                 Text("Correct selection")
                     .minimumScaleFactor(0.1)
                     .lineLimit(2)
@@ -37,13 +37,11 @@ struct SummaryTable: View {
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.correctSelectionPositionText)
                 
-                
                 Text("\(viewModel.gameResults.incorrectSelectionPosition)")
                     .font(.title)
                     .foregroundColor(.red)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.incorrectSelectionPositionText)
-                
                 
                 Text("\(viewModel.gameResults.missedSelectionPosition)")
                     .font(.title)
@@ -60,7 +58,6 @@ struct SummaryTable: View {
                     .foregroundColor(.green)
                     .padding()
                     .accessibilityIdentifier(AccessibilityIdentifier.GameSummary.correctSelectionSoundText)
-                
                 
                 Text("\(viewModel.gameResults.incorrectSelectionSound)")
                     .font(.title)

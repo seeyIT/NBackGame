@@ -50,8 +50,6 @@ class FetchHighestUnlockedLevelUseCaseTests: XCTestCase {
         XCTAssertEqual(unlockedLevel, fallbackLevel)
     }
     
-   
-    
     // MARK: Helpers
     
     class GameRepositoryMock: GameRepository {

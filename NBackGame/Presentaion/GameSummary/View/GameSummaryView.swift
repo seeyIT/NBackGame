@@ -47,9 +47,3 @@ struct GameSummaryView: View {
         })
     }
 }
-
-//struct GameSummaryView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GameSummaryView(viewModel: GameSummaryViewModel(history: [], nBack: 0))
-//    }
-//}

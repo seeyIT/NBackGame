@@ -11,7 +11,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     
     private let appMigration = AppMigrationService()
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
             
         _ = RealmService().instance
 

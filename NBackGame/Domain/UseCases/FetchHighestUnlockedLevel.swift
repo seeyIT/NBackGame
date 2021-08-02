@@ -26,5 +26,3 @@ final class DefaultFetchHighestUnlockedLevelUseCase: FetchHighestUnlockedLevelUs
         }
     }
 }
-
-   

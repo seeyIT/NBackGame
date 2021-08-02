@@ -18,7 +18,6 @@ final class MenuDIContainer {
         return MenuViewModel(menuViewState: menuViewState)
     }
     
-   
     // MARK: - Tutorial
     func makeTutorialView() -> TutorialView {
         return TutorialView(viewModel: makeTutorialViewModel())
@@ -27,7 +26,6 @@ final class MenuDIContainer {
     func makeTutorialViewModel() -> TutorialViewModel {
         return TutorialViewModel()
     }
-    
     
     // MARK: - Game
     func makeGameView(menuViewState: ViewState<MenuViewState>) -> GameViewCoordinator {

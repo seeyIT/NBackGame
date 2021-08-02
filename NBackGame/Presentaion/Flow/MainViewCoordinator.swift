@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct MainViewCoordinator: View {
     
     let menuDIContainer: MenuDIContainer

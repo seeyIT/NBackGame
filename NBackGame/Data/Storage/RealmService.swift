@@ -10,6 +10,8 @@ import RealmSwift
 
 class RealmService {
     var instance: Realm {
-        return try! Realm()
+        // TODO Add handling when realm doesn't exist
+        let realm = try? Realm()
+        return realm!
     }
 }

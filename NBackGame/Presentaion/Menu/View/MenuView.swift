@@ -11,8 +11,8 @@ struct PlayShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         
-        path.move(to: CGPoint(x: rect.midX - rect.midX / 4 , y: rect.midY - rect.midY / 3))
-        path.addLine(to: CGPoint(x: rect.midX + rect.midX / 3 , y: rect.midY))
+        path.move(to: CGPoint(x: rect.midX - rect.midX / 4, y: rect.midY - rect.midY / 3))
+        path.addLine(to: CGPoint(x: rect.midX + rect.midX / 3, y: rect.midY))
         path.addLine(to: CGPoint(x: rect.midX - rect.midX / 4, y: rect.midY + rect.midY / 3))
         path.addLine(to: CGPoint(x: rect.midX - rect.midX / 4, y: rect.midY - rect.midY / 3))
         return path
@@ -35,7 +35,7 @@ struct MenuButton: View {
     var iconName: String
     var text: String
     var imageOnLeft: Bool = true
-    var fixedWidth: CGFloat? = nil
+    var fixedWidth: CGFloat?
     
     var body: some View {
         HStack {
@@ -66,7 +66,6 @@ struct MenuButton: View {
     }
 }
 
-
 struct MenuView: View {
     
     @State private var press = false
@@ -75,8 +74,7 @@ struct MenuView: View {
     private var buttonSize: CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
             return 320
-        }
-        else {
+        } else {
             return 220
         }
     }
@@ -111,9 +109,3 @@ struct MenuView: View {
     }
     
 }
-
-//struct MenuView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MenuView(viewModel: MenuViewModel(viewState: ViewState(.menu)))
-//    }
-//}

@@ -56,7 +56,6 @@ class LevelSelectionViewModelTests: XCTestCase {
         XCTAssertTrue(true)
     }
     
-   
     // MARK: - Helper
     
     func selectLevel(_ level: Int) {
@@ -82,7 +81,6 @@ class LevelSelectionViewModelTests: XCTestCase {
             selectLevel = selectLevelMock
             showMenu = showMenuMock
         }
-        
         
         func selectLevelMock(_ level: Int) {
             print("select mock")

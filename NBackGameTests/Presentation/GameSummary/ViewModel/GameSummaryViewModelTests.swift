@@ -59,13 +59,11 @@ class GameSummaryViewModelTests: XCTestCase {
         waitForExpectations(timeout: 2.0, handler: nil)
     }
     
-    
     // MARK: - Helpers
     
     private func actionsMock() {
         
     }
-    
     
     private enum UnlockNextLevelUseCaseError: Error {
         case cantUnlock

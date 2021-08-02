@@ -8,6 +8,7 @@
 import XCTest
 @testable import NBackGame
 
+// swiftlint:disable type_body_length
 class CalculateGameResultsUseCaseTests: XCTestCase {
     
     func test_whenGameHistoryEmpty_thenGameResultWithZeros() throws {
@@ -101,7 +102,6 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
             HistoryItem(position: 3, sound: "p", positionClicked: false, soundClicked: true)
         ]
         
-        
         let level = 2
         let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
@@ -132,7 +132,6 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
             HistoryItem(position: 3, sound: "p", positionClicked: true, soundClicked: false)
         ]
         
-        
         let level = 2
         let sut = DefaultCalculateGameResultsUseCase()
         var gameResults = GameResults()
@@ -154,7 +153,6 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
         XCTAssertEqual(gameResults.missedSelectionPosition, 0)
     }
     
-    
     func test_whenPlayerMissedSoundOnceInLevel2_thenSingleMiss() {
         // given
         let expectation = self.expectation(description: "Game result calculated")
@@ -163,7 +161,6 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
             HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
             HistoryItem(position: 3, sound: "k", positionClicked: false, soundClicked: false)
         ]
-        
         
         let level = 2
         let sut = DefaultCalculateGameResultsUseCase()
@@ -194,7 +191,6 @@ class CalculateGameResultsUseCaseTests: XCTestCase {
             HistoryItem(position: 2, sound: "l", positionClicked: false, soundClicked: false),
             HistoryItem(position: 1, sound: "p", positionClicked: false, soundClicked: false)
         ]
-        
         
         let level = 2
         let sut = DefaultCalculateGameResultsUseCase()

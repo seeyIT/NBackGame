@@ -19,9 +19,9 @@ final class DefaultCalculateGameResultsUseCase: CalculateGameResultsUseCase {
                  level: Int,
                  completion: @escaping (GameResults) -> Void) {
         var gameResults = GameResults()
-        for i in stride(from: history.count - 1, through: level, by: -1)  {
-            let currentItem = history[i]
-            let previousItem = history[i - level]
+        for historyItem in stride(from: history.count - 1, through: level, by: -1) {
+            let currentItem = history[historyItem]
+            let previousItem = history[historyItem - level]
             
             if currentItem.position == previousItem.position {
                 if currentItem.positionClicked {

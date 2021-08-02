@@ -60,7 +60,6 @@ private struct TutorialNavigationNextButton: View {
     }
 }
 
-
 private struct TutorialNavigationBackButton: View {
     @ObservedObject var viewModel: TutorialViewModel
     

@@ -19,7 +19,6 @@ class GameState<T>: ViewState<T> {
     var gameInfo: GameInfo = GameInfo(history: [], level: 0)
 }
 
-
 enum MenuViewState {
     case menu
     case tutorial

@@ -1,5 +1,7 @@
 disabled_rules:
-
-
+  - trailing_whitespace
+  - line_length
+  - todo
 excluded:
   - Pods
+  - NBackGameUITests/fastlane

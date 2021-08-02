@@ -12,7 +12,7 @@ struct TutorialView: View {
     
     @State private var scrollToIndex: Int?
     
-    private let TUTORIAL_CONTENT_ID = 0
+    private let tutorialContentId = 0
     
     var steps: [Int: AnyView] = [
         1: AnyView(TutorialStep1()),
@@ -24,7 +24,7 @@ struct TutorialView: View {
         7: AnyView(TutorialStep7()),
         8: AnyView(TutorialStep8()),
         9: AnyView(TutorialStep9()),
-        10: AnyView(TutorialStep10()),
+        10: AnyView(TutorialStep10())
     ]
     
     var body: some View {
@@ -35,14 +35,14 @@ struct TutorialView: View {
                     VStack {
                         Spacer()
                         steps[viewModel.currentStep]
-                            .id(TUTORIAL_CONTENT_ID)
+                            .id(tutorialContentId)
                         Spacer()
                         TutorialNavigationView(viewModel: viewModel, scrollToIndex: $scrollToIndex)
                     }
                 }
                 .onChange(of: scrollToIndex) { _ in
                     withAnimation {
-                        viewReader.scrollTo(TUTORIAL_CONTENT_ID, anchor: .top)
+                        viewReader.scrollTo(tutorialContentId, anchor: .top)
                     }
                 }
                 .onAppear {

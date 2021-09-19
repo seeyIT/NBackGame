@@ -26,7 +26,7 @@ struct TutorialStep1: View {
 
 struct TutorialStep2: View {
     var body: some View {
-        TutorialText("Let's assume that N is equal 1 and focus only on positions. This is the first round, so you can't compare it with previous but you need to remeber its position. It's right upper corner.")
+        TutorialText("Let's assume that N is equal 1 and focus only on positions. This is the first round, so you can't compare it with previous but you need to remember its position. It's right upper corner.")
         
         HStack {
             Text("N: 1")
@@ -115,7 +115,7 @@ struct TutorialStep5: View {
 
 struct TutorialStep6: View {
     var body: some View {
-        TutorialText("Now let's say N is equal 2. So you need to compar current position with two rounds ago. In the first round you just rember, center this time.")
+        TutorialText("Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just rember, center this time.")
         
         HStack {
             Text("N: 2")

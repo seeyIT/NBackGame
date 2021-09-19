@@ -12,7 +12,7 @@ struct NBackGameApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     let menuDIContainer = MenuDIContainer()
-    @StateObject var menuViewState: ViewState<MenuViewState>  = ViewState<MenuViewState>(MenuViewState.menu)
+    @StateObject var menuViewState: ViewState<MenuViewState> = ViewState<MenuViewState>(MenuViewState.menu)
     
     var body: some Scene {
         WindowGroup {

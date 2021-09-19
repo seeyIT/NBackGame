@@ -11,20 +11,20 @@ final class MenuDIContainer {
     
     // MARK: - Menu
     func makeMenuView(menuCoordinator: MenuViewCoordinator) -> MenuView {
-        return MenuView(menuCoordinator: menuCoordinator, viewModel: makeMenuViewModel())
+        return MenuView(viewModel: makeMenuViewModel(menuCoordinator: menuCoordinator))
     }
     
-    func makeMenuViewModel() -> MenuViewModel {
-        return MenuViewModel()
+    func makeMenuViewModel(menuCoordinator: MenuViewCoordinator) -> MenuViewModel {
+        return MenuViewModel(menuCoordinator: menuCoordinator)
     }
     
     // MARK: - Tutorial
     func makeTutorialView(menuCoordinator: MenuViewCoordinator) -> TutorialView {
-        return TutorialView(menuCoordinator: menuCoordinator, viewModel: makeTutorialViewModel())
+        return TutorialView(viewModel: makeTutorialViewModel(menuCoordinator: menuCoordinator))
     }
     
-    func makeTutorialViewModel() -> TutorialViewModel {
-        return TutorialViewModel()
+    func makeTutorialViewModel(menuCoordinator: MenuViewCoordinator) -> TutorialViewModel {
+        return TutorialViewModel(menuCoordinator: menuCoordinator)
     }
     
     // MARK: - Game

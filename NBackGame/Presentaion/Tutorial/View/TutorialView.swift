@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TutorialView: View {
-    let menuCoordinator: MenuViewCoordinator
     @ObservedObject var viewModel: TutorialViewModel
     
     @State private var scrollToIndex: Int?
@@ -37,7 +36,7 @@ struct TutorialView: View {
                         steps[viewModel.currentStep]
                             .id(tutorialContentId)
                         Spacer()
-                        TutorialNavigationView(menuCoordinator: menuCoordinator, viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                        TutorialNavigationView(viewModel: viewModel, scrollToIndex: $scrollToIndex)
                     }
                 }
                 .onChange(of: scrollToIndex) { _ in

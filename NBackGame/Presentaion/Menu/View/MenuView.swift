@@ -67,9 +67,6 @@ struct MenuButton: View {
 }
 
 struct MenuView: View {
-    let menuCoordinator: MenuViewCoordinator
-    
-    @State private var press = false
     @ObservedObject var viewModel: MenuViewModel
     
     private var buttonSize: CGFloat {
@@ -87,7 +84,7 @@ struct MenuView: View {
                 VStack {
                     Button(action: {
                         withAnimation {
-                            menuCoordinator.showGame()
+                            viewModel.showGame()
                         }
                     }, label: {
                         MenuButton(iconName: "play.fill", text: "Play", fixedWidth: buttonSize)
@@ -97,7 +94,7 @@ struct MenuView: View {
                     
                     Button(action: {
                         withAnimation {
-                            menuCoordinator.showTutorial()
+                            viewModel.showTutorial()
                         }
                     }, label: {
                         MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: buttonSize)

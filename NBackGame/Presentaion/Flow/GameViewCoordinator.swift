@@ -24,7 +24,10 @@ struct GameViewCoordinator: View {
             EmptyView()
         }
     }
-    
+}
+
+extension GameViewCoordinator {
+
     func showMenu() {
         menuCoordinator.showMenu()
     }
@@ -33,7 +36,7 @@ struct GameViewCoordinator: View {
         gameState.state = .levelSelection
     }
     
-    func selectLevel(forLevel level: Int) {
+    func selectLevel(_ level: Int) {
         gameState.gameInfo.level = level
         withAnimation {
             gameState.state = .game
@@ -50,48 +53,4 @@ struct GameViewCoordinator: View {
     func showGameSummary() {
         gameState.state = .summary
     }
-}
-
-extension GameViewCoordinator {
-//    func makeActionsForLevelSelection() -> LevelSelectionViewModelActions {
-//        let actions = DefaultLevelSelectionViewModelActions(selectLevel: selectLevel, showMenu: showMenu)
-//        return actions
-//    }
-//
-//    func makeActionsForGame() -> GameViewModelActions {
-//        let actions = DefaultGameViewModelActions(finishGame: finishGame, showMenu: showMenu)
-//        return actions
-//    }
-//
-//    func makeActionsForGameSummary() -> GameSummaryViewModelActions {
-//        let actions = DefaultGameSummaryViewModelActions(playAgain: playAgain, showMenu: showMenu)
-//        return actions
-//    }
-//
-//    private func selectLevel(_ level: Int) {
-//        gameState.gameInfo.level = level
-//        withAnimation {
-//            gameState.state = .game
-//        }
-//    }
-//
-//    private func finishGame(history: [HistoryItem]) {
-//        gameState.gameInfo.history = history
-//        withAnimation {
-//            gameState.state = .summary
-//        }
-//    }
-//
-//    private func playAgain() {
-//        gameState.gameInfo.history.removeAll()
-//        withAnimation {
-//            gameState.state = .game
-//        }
-//    }
-//
-//    private func showMenu() {
-//        withAnimation {
-//            menuCoordinator.showMenu()
-//        }
-//    }
 }

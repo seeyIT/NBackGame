@@ -11,7 +11,6 @@ struct LevelSelectionView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
-    let gameCoordinator: GameViewCoordinator
     @ObservedObject var viewModel: LevelSelectionViewModel
     
     @State private var isShowingAlert = false
@@ -22,7 +21,7 @@ struct LevelSelectionView: View {
             Color.black.ignoresSafeArea()
             ScrollView {
                 VStack {
-                    LevelSelectionBackButton(gameCoordinator: gameCoordinator)
+                    LevelSelectionBackButton(viewModel: viewModel)
                     Text("Choose N")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
@@ -32,7 +31,7 @@ struct LevelSelectionView: View {
                         ForEach(1...12, id: \.self) { number in
                             ZStack {
                                 Button(action: {
-                                    gameCoordinator.selectLevel(forLevel: number)
+                                    viewModel.selectLevel(number)
                                     if number > viewModel.unlockedLevels {
                                         isShowingAlert = true
                                     }

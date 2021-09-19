@@ -11,11 +11,11 @@ final class GameDIContainer {
     
     // MARK: - Level Selection
     func makeLevelSelectionView(gameCoordinator: GameViewCoordinator) -> LevelSelectionView {
-        return LevelSelectionView(gameCoordinator: gameCoordinator, viewModel: makeLevelSelectionViewModel())
+        return LevelSelectionView(viewModel: makeLevelSelectionViewModel(gameCoordinator: gameCoordinator))
     }
     
-    func makeLevelSelectionViewModel() -> LevelSelectionViewModel {
-        return LevelSelectionViewModel(useCases: makeLevelSelectionViewModelUseCases())
+    func makeLevelSelectionViewModel(gameCoordinator: GameViewCoordinator) -> LevelSelectionViewModel {
+        return LevelSelectionViewModel(gameCoordinator: gameCoordinator, useCases: makeLevelSelectionViewModelUseCases())
     }
     
     // MARK: - Game

@@ -11,28 +11,26 @@ struct TutorialNavigationView: View {
     @Environment(\.sizeCategory) var sizeCategory
     @ObservedObject var viewModel: TutorialViewModel
     
-    @Binding var scrollToIndex: Int?
-
     var body: some View {
         if sizeCategory > ContentSizeCategory.extraExtraLarge {
             VStack {
                 if viewModel.currentStep != viewModel.firstStep {
-                    TutorialNavigationBackButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    TutorialNavigationBackButton(viewModel: viewModel)
                 }
                 if viewModel.currentStep != viewModel.lastStep {
-                    TutorialNavigationNextButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    TutorialNavigationNextButton(viewModel: viewModel)
                 }
             }
         } else {
             HStack {
                 if viewModel.currentStep != viewModel.firstStep {
                     Spacer()
-                    TutorialNavigationBackButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    TutorialNavigationBackButton(viewModel: viewModel)
                     Spacer()
                 }
                 if viewModel.currentStep != viewModel.lastStep {
                     Spacer()
-                    TutorialNavigationNextButton(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                    TutorialNavigationNextButton(viewModel: viewModel)
                     Spacer()
                 }
             }
@@ -54,13 +52,10 @@ struct TutorialNavigationView: View {
 private struct TutorialNavigationNextButton: View {
     @ObservedObject var viewModel: TutorialViewModel
     
-    @Binding var scrollToIndex: Int?
-
     var body: some View {
         Button(action: {
             withAnimation {
                 viewModel.nextStep()
-                scrollToIndex = viewModel.currentStep
             }
         }, label: {
             MenuButton(iconName: "arrow.right", text: "Next", imageOnLeft: false)
@@ -72,13 +67,10 @@ private struct TutorialNavigationNextButton: View {
 private struct TutorialNavigationBackButton: View {
     @ObservedObject var viewModel: TutorialViewModel
     
-    @Binding var scrollToIndex: Int?
-
     var body: some View {
         Button(action: {
             withAnimation {
                 viewModel.previousStep()
-                scrollToIndex = viewModel.currentStep
             }
         }, label: {
             MenuButton(iconName: "arrow.left", text: "Back")

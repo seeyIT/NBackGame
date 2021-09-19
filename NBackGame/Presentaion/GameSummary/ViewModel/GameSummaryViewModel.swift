@@ -26,10 +26,12 @@ struct GameResults {
 class GameSummaryViewModel: ObservableObject {
     @Published var gameResults = GameResults()
     
+    let gameCoordinator: GameViewCoordinator
     let gameInfo: GameInfo
     let useCases: GameSummaryViewModelUseCases
     
-    init(gameInfo: GameInfo, useCases: GameSummaryViewModelUseCases) {
+    init(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo, useCases: GameSummaryViewModelUseCases) {
+        self.gameCoordinator = gameCoordinator
         self.gameInfo = gameInfo
         self.useCases = useCases
     }
@@ -55,5 +57,12 @@ class GameSummaryViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func showMenu() {
+        gameCoordinator.showMenu()
+    }
+    func playAgain() {
+        gameCoordinator.playAgain()
     }
 }

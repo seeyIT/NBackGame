@@ -9,7 +9,6 @@ import SwiftUI
 import Combine
 
 struct GameSummaryView: View {
-    let gameCoordinator: GameViewCoordinator
     @ObservedObject var viewModel: GameSummaryViewModel
     @State private var resultsCalculated = false
     @State private var cancellable = Set<AnyCancellable>()
@@ -29,7 +28,7 @@ struct GameSummaryView: View {
                         ProgressView()
                             .progressViewStyle(CircularProgressViewStyle())
                     }
-                    GameSummaryButtons(gameCoordinator: gameCoordinator)
+                    GameSummaryButtons(viewModel: viewModel)
                 }
             }
         }

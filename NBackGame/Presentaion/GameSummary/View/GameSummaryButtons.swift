@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct GameSummaryButtons: View {
-    let gameCoordinator: GameViewCoordinator
+    @ObservedObject var viewModel: GameSummaryViewModel
     @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         if sizeCategory >  ContentSizeCategory.extraExtraLarge {
             VStack {
-                PlayAgainButton(gameCoordinator: gameCoordinator)
-                BackToMenuButton(gameCoordinator: gameCoordinator)
+                PlayAgainButton(viewModel: viewModel)
+                BackToMenuButton(viewModel: viewModel)
             }
             .padding()
         } else {
             HStack {
                 Spacer()
-                PlayAgainButton(gameCoordinator: gameCoordinator)
+                PlayAgainButton(viewModel: viewModel)
                 Spacer()
-                BackToMenuButton(gameCoordinator: gameCoordinator)
+                BackToMenuButton(viewModel: viewModel)
                 Spacer()
 
             }
@@ -33,12 +33,12 @@ struct GameSummaryButtons: View {
 }
 
 private struct PlayAgainButton: View {
-    let gameCoordinator: GameViewCoordinator
+    @ObservedObject var viewModel: GameSummaryViewModel
 
     var body: some View {
         Button(action: {
             withAnimation {
-                gameCoordinator.playAgain()
+                viewModel.playAgain()
             }
         }, label: {
             MenuButton(iconName: "arrow.counterclockwise", text: "Play again")
@@ -50,12 +50,12 @@ private struct PlayAgainButton: View {
 }
 
 private struct BackToMenuButton: View {
-    let gameCoordinator: GameViewCoordinator
+    @ObservedObject var viewModel: GameSummaryViewModel
 
     var body: some View {
         Button(action: {
             withAnimation {
-                gameCoordinator.showMenu()
+                viewModel.showMenu()
             }
         }, label: {
             MenuButton(iconName: "line.horizontal.3", text: "Menu")

@@ -29,11 +29,11 @@ final class GameDIContainer {
     
     // MARK: - Summary
     func makeGameSummaryView(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameSummaryView {
-        return GameSummaryView(gameCoordinator: gameCoordinator, viewModel: makeGameSummaryViewModel(gameInfo: gameInfo))
+        return GameSummaryView(viewModel: makeGameSummaryViewModel(gameCoordinator: gameCoordinator, gameInfo: gameInfo))
     }
     
-    func makeGameSummaryViewModel(gameInfo: GameInfo) -> GameSummaryViewModel {
-        return GameSummaryViewModel(gameInfo: gameInfo, useCases: makeGameSummaryViewModelUseCases())
+    func makeGameSummaryViewModel(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameSummaryViewModel {
+        return GameSummaryViewModel(gameCoordinator: gameCoordinator, gameInfo: gameInfo, useCases: makeGameSummaryViewModelUseCases())
     }
     
     // MARK: - Repository

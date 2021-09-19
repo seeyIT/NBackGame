@@ -69,6 +69,7 @@ class GameViewModel: ObservableObject {
     }
     
     func showMenu() {
+        stopGame()
         gameCoordinator.showMenu()
     }
     

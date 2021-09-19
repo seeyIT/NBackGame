@@ -20,11 +20,11 @@ final class GameDIContainer {
     
     // MARK: - Game
     func makeGameView(gameCoordinator: GameViewCoordinator, level: Int) -> GameView {
-        return GameView(viewModel: makeGameViewModel(level: level, gameCoordinator: gameCoordinator))
+        return GameView(viewModel: makeGameViewModel(gameCoordinator: gameCoordinator, level: level))
     }
     
-    func makeGameViewModel(level: Int, gameCoordinator: GameViewCoordinator) -> GameViewModel {
-        return GameViewModel(level: level, gameCoordinator: gameCoordinator)
+    func makeGameViewModel(gameCoordinator: GameViewCoordinator, level: Int) -> GameViewModel {
+        return GameViewModel(gameCoordinator: gameCoordinator, level: level)
     }
     
     // MARK: - Summary

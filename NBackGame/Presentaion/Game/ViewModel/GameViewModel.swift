@@ -13,9 +13,9 @@ class GameViewModel: ObservableObject {
     let gameCoordinator: GameViewCoordinator
     let level: Int
     
-    init(level: Int, gameCoordinator: GameViewCoordinator) {
-        self.level = level
+    init(gameCoordinator: GameViewCoordinator, level: Int) {
         self.gameCoordinator = gameCoordinator
+        self.level = level
     }
     
     @Published var positionClicked = false
@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(level: 0, gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(menuDIContainer: MenuDIContainer(), menuViewState: .init(.game)), gameDIContainer: GameDIContainer()))
+        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(menuDIContainer: MenuDIContainer(), menuViewState: .init(.game)), gameDIContainer: GameDIContainer()), level: 0)
     }
     
     func startGame() {
@@ -66,6 +66,10 @@ class GameViewModel: ObservableObject {
             return
         }
         soundClicked = true
+    }
+    
+    func showMenu() {
+        gameCoordinator.showMenu()
     }
     
     // MARK: Private functions

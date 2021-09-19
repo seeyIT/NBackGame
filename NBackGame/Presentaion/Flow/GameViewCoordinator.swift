@@ -11,7 +11,6 @@ struct GameViewCoordinator: View {
     let menuCoordinator: MenuViewCoordinator
     let gameDIContainer: GameDIContainer
     @StateObject var gameState: GameState<GameViewState> = GameState<GameViewState>(.levelSelection)
-//    @ObservedObject var menuViewState: ViewState<MenuViewState>
     
     var body: some View {
         if gameState.state == .levelSelection {

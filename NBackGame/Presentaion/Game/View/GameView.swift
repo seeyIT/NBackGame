@@ -19,7 +19,7 @@ struct GameView: View {
             if verticalSizeClass == .compact {
                 VStack {
                     Spacer()
-//                    GameTopPanel(gameCoordinator: gameCoordinator)
+                    GameTopPanel(viewModel: viewModel)
                     Spacer()
                     HStack {
                         GamePositionButton(viewModel: viewModel)
@@ -31,7 +31,7 @@ struct GameView: View {
             } else {
                 VStack {
                     HStack {
-//                        GameBackButton(gameCoordinator: gameCoordinator)
+                        GameBackButton(viewModel: viewModel)
                         Spacer()
                     }
                     GameTopPanel(viewModel: viewModel)

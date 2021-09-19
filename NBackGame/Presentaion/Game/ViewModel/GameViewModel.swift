@@ -10,12 +10,12 @@ import Combine
 import AVFoundation
 
 class GameViewModel: ObservableObject {
+    let gameCoordinator: GameViewCoordinator
     let level: Int
-    var actions: GameViewModelActions
     
-    init(level: Int, actions: GameViewModelActions) {
+    init(level: Int, gameCoordinator: GameViewCoordinator) {
         self.level = level
-        self.actions = actions
+        self.gameCoordinator = gameCoordinator
     }
     
     @Published var positionClicked = false
@@ -30,7 +30,7 @@ class GameViewModel: ObservableObject {
     
     // TODO: fields to be injected
     let letters = "gmbpkldst"
-    let roundDuration: Double = 3.2
+    let roundDuration: Double = 0.2
     let maxRounds = 25
     let boardSize: Int = 3
     
@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(level: 0, actions: DefaultGameViewModelActions(finishGame: { _ in }, showMenu: {}))
+        return GameViewModel(level: 0, gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(menuDIContainer: MenuDIContainer(), menuViewState: .init(.game)), gameDIContainer: GameDIContainer()))
     }
     
     func startGame() {
@@ -66,11 +66,6 @@ class GameViewModel: ObservableObject {
             return
         }
         soundClicked = true
-    }
-    
-    func showMenu() {
-        stopGame()
-        actions.showMenu()
     }
     
     // MARK: Private functions
@@ -107,7 +102,7 @@ class GameViewModel: ObservableObject {
     
     private func finishGame() {
         stopGame()
-        actions.finishGame(history)
+        gameCoordinator.showGameSummary()
     }
     
     private func addHistory(_ currentGameItem: CurrentGameItem) {

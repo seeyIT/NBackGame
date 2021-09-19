@@ -10,30 +10,30 @@ import Foundation
 final class GameDIContainer {
     
     // MARK: - Level Selection
-    func makeLevelSelectionView(actions: LevelSelectionViewModelActions) -> LevelSelectionView {
-        return LevelSelectionView(viewModel: makeLevelSelectionViewModel(actions: actions))
+    func makeLevelSelectionView(gameCoordinator: GameViewCoordinator) -> LevelSelectionView {
+        return LevelSelectionView(gameCoordinator: gameCoordinator, viewModel: makeLevelSelectionViewModel())
     }
     
-    func makeLevelSelectionViewModel(actions: LevelSelectionViewModelActions) -> LevelSelectionViewModel {
-        return LevelSelectionViewModel(actions: actions, useCases: makeLevelSelectionViewModelUseCases())
+    func makeLevelSelectionViewModel() -> LevelSelectionViewModel {
+        return LevelSelectionViewModel(useCases: makeLevelSelectionViewModelUseCases())
     }
     
     // MARK: - Game
-    func makeGameView(level: Int, actions: GameViewModelActions) -> GameView {
-        return GameView(viewModel: makeGameViewModel(level: level, actions: actions))
+    func makeGameView(gameCoordinator: GameViewCoordinator, level: Int) -> GameView {
+        return GameView(viewModel: makeGameViewModel(level: level, gameCoordinator: gameCoordinator))
     }
     
-    func makeGameViewModel(level: Int, actions: GameViewModelActions) -> GameViewModel {
-        return GameViewModel(level: level, actions: actions)
+    func makeGameViewModel(level: Int, gameCoordinator: GameViewCoordinator) -> GameViewModel {
+        return GameViewModel(level: level, gameCoordinator: gameCoordinator)
     }
     
     // MARK: - Summary
-    func makeGameSummaryView(gameInfo: GameInfo, actions: GameSummaryViewModelActions) -> GameSummaryView {
-        return GameSummaryView(viewModel: makeGameSummaryViewModel(gameInfo: gameInfo, actions: actions))
+    func makeGameSummaryView(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameSummaryView {
+        return GameSummaryView(gameCoordinator: gameCoordinator, viewModel: makeGameSummaryViewModel(gameInfo: gameInfo))
     }
     
-    func makeGameSummaryViewModel(gameInfo: GameInfo, actions: GameSummaryViewModelActions) -> GameSummaryViewModel {
-        return GameSummaryViewModel(gameInfo: gameInfo, actions: actions, useCases: makeGameSummaryViewModelUseCases())
+    func makeGameSummaryViewModel(gameInfo: GameInfo) -> GameSummaryViewModel {
+        return GameSummaryViewModel(gameInfo: gameInfo, useCases: makeGameSummaryViewModelUseCases())
     }
     
     // MARK: - Repository

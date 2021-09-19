@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct GameBackButton: View {
-    let viewModel: GameViewModel
+//    let viewModel: GameViewModel
     
     var body: some View {
         Button(action: {
-            viewModel.showMenu()
+//            viewModel.showMenu()
         }, label: {
             Image(systemName: "arrow.backward")
                 .font(.largeTitle)

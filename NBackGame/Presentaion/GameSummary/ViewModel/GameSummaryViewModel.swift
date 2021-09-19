@@ -27,12 +27,10 @@ class GameSummaryViewModel: ObservableObject {
     @Published var gameResults = GameResults()
     
     let gameInfo: GameInfo
-    let actions: GameSummaryViewModelActions
     let useCases: GameSummaryViewModelUseCases
     
-    init(gameInfo: GameInfo, actions: GameSummaryViewModelActions, useCases: GameSummaryViewModelUseCases) {
+    init(gameInfo: GameInfo, useCases: GameSummaryViewModelUseCases) {
         self.gameInfo = gameInfo
-        self.actions = actions
         self.useCases = useCases
     }
     
@@ -58,13 +56,4 @@ class GameSummaryViewModel: ObservableObject {
             }
         }
     }
-    
-    func playAgain() {
-        actions.playAgain()
-    }
-    
-    func showMenu() {
-        actions.showMenu()
-    }
-    
 }

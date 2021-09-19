@@ -18,11 +18,9 @@ class LevelSelectionViewModel: ObservableObject {
 
     @Published private(set) var unlockedLevels = defaultLevelUnlocked
     
-    let actions: LevelSelectionViewModelActions
     let useCases: LevelSelectionViewModelUseCases
     
-    init(actions: LevelSelectionViewModelActions, useCases: LevelSelectionViewModelUseCases) {
-        self.actions = actions
+    init(useCases: LevelSelectionViewModelUseCases) {
         self.useCases = useCases
     }
     
@@ -30,18 +28,6 @@ class LevelSelectionViewModel: ObservableObject {
         self.useCases.fetchHighestUnlockedLevelUseCase.execute(fallbackLevel: LevelSelectionViewModel.defaultLevelUnlocked) { result in
             self.unlockedLevels = result
         }
-    }
-    
-    func selectLevel(_ level: Int) {
-        print("select level: \(level)")
-        selectedLevel = level
-        if level <= unlockedLevels {
-            actions.selectLevel(level)
-        }
-    }
-    
-    func showMenu() {
-        actions.showMenu()
     }
     
 }

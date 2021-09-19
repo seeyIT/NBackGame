@@ -16,7 +16,7 @@ struct GameTopPanel: View {
     var body: some View {
         if verticalSizeClass == .compact {
             HStack {
-                GameBackButton(viewModel: viewModel)
+//                GameBackButton(viewModel: viewModel)
                 Spacer()
                 Text("N: \(viewModel.level)")
                     .font(.largeTitle)

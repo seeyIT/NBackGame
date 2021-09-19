@@ -207,8 +207,6 @@ struct TutorialStep9: View {
 }
 
 struct TutorialStep10: View {
-    @Environment(\.presentationMode) var presentationMode
-    
     var body: some View {
         TutorialText("Do you remeber position from the third round? Yes, it's the same, this in the only one round when you should press Position button.")
         
@@ -227,14 +225,6 @@ struct TutorialStep10: View {
         .scaleEffect(0.5, anchor: .bottom)
         MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 1)
             .frame(width: 200, height: 200)
-        
-        Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }, label: {
-            MenuButton(iconName: "line.horizontal.3", text: "Back to Menu")
-        })
-        .padding()
-        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.menuButton)
 
     }
 }

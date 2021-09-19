@@ -9,14 +9,15 @@ import UIKit
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     
-    private let appMigration = AppMigrationService()
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
-            
         _ = RealmService().instance
-
-        appMigration.performMigration()
+        performMigration()
         
         return true
+    }
+        
+    private func performMigration() {
+        let appMigration = AppMigrationService()
+        appMigration.performMigration()
     }
 }

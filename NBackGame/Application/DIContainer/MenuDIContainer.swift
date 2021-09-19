@@ -10,17 +10,17 @@ import Foundation
 final class MenuDIContainer {
     
     // MARK: - Menu
-    func makeMenuView(menuViewState: ViewState<MenuViewState>) -> MenuView {
-        return MenuView(viewModel: makeMenuViewModel(menuViewState: menuViewState))
+    func makeMenuView(menuCoordinator: MenuViewCoordinator) -> MenuView {
+        return MenuView(menuCoordinator: menuCoordinator, viewModel: makeMenuViewModel())
     }
     
-    func makeMenuViewModel(menuViewState: ViewState<MenuViewState>) -> MenuViewModel {
-        return MenuViewModel(menuViewState: menuViewState)
+    func makeMenuViewModel() -> MenuViewModel {
+        return MenuViewModel()
     }
     
     // MARK: - Tutorial
-    func makeTutorialView() -> TutorialView {
-        return TutorialView(viewModel: makeTutorialViewModel())
+    func makeTutorialView(menuCoordinator: MenuViewCoordinator) -> TutorialView {
+        return TutorialView(menuCoordinator: menuCoordinator, viewModel: makeTutorialViewModel())
     }
     
     func makeTutorialViewModel() -> TutorialViewModel {
@@ -28,7 +28,11 @@ final class MenuDIContainer {
     }
     
     // MARK: - Game
-    func makeGameView(menuViewState: ViewState<MenuViewState>) -> GameViewCoordinator {
-        return GameViewCoordinator(gameDIContainer: GameDIContainer(), menuViewState: menuViewState)
+    func makeGameView(menuCoordinator: MenuViewCoordinator) -> GameViewCoordinator {
+        return GameViewCoordinator(menuCoordinator: menuCoordinator, gameDIContainer: makeGameDIContainer())
+    }
+    
+    func makeGameDIContainer() -> GameDIContainer {
+        return GameDIContainer()
     }
 }

@@ -14,13 +14,25 @@ struct MenuViewCoordinator: View {
     
     var body: some View {
         if menuViewState.state == .menu {
-            menuDIContainer.makeMenuView(menuViewState: menuViewState)
+            menuDIContainer.makeMenuView(menuCoordinator: self)
         } else if menuViewState.state == .game {
-            menuDIContainer.makeGameView(menuViewState: menuViewState)
+            menuDIContainer.makeGameView(menuCoordinator: self)
         } else if menuViewState.state == .tutorial {
-            menuDIContainer.makeTutorialView()
+            menuDIContainer.makeTutorialView(menuCoordinator: self)
         } else {
             EmptyView()
         }
+    }
+    
+    func showMenu() {
+        menuViewState.state = .menu
+    }
+    
+    func showGame() {
+        menuViewState.state = .game
+    }
+    
+    func showTutorial() {
+        menuViewState.state = .tutorial
     }
 }

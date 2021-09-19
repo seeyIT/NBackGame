@@ -8,13 +8,5 @@
 import SwiftUI
 
 class MenuViewModel: ObservableObject {
-    @Published var menuViewState: ViewState<MenuViewState>
     
-    init(menuViewState: ViewState<MenuViewState>) {
-        self.menuViewState = menuViewState
-    }
-    
-    func startGame() {
-        menuViewState.state = .game
-    }
 }

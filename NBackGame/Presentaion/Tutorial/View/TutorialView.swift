@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TutorialView: View {
+    let menuCoordinator: MenuViewCoordinator
     @ObservedObject var viewModel: TutorialViewModel
     
     @State private var scrollToIndex: Int?
-    
     private let tutorialContentId = 0
     
     var steps: [Int: AnyView] = [
@@ -37,7 +37,7 @@ struct TutorialView: View {
                         steps[viewModel.currentStep]
                             .id(tutorialContentId)
                         Spacer()
-                        TutorialNavigationView(viewModel: viewModel, scrollToIndex: $scrollToIndex)
+                        TutorialNavigationView(menuCoordinator: menuCoordinator, viewModel: viewModel, scrollToIndex: $scrollToIndex)
                     }
                 }
                 .onChange(of: scrollToIndex) { _ in
@@ -51,11 +51,5 @@ struct TutorialView: View {
             }
         }
         .navigationBarHidden(true)
-    }
-}
-
-struct TutorialView_Previews: PreviewProvider {
-    static var previews: some View {
-        TutorialView(viewModel: TutorialViewModel())
     }
 }

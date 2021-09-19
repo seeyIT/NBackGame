@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TutorialNavigationView: View {
+    let menuCoordinator: MenuViewCoordinator
     @Environment(\.sizeCategory) var sizeCategory
     
     @ObservedObject var viewModel: TutorialViewModel
@@ -38,7 +39,17 @@ struct TutorialNavigationView: View {
                 }
             }
         }
-        
+        if viewModel.currentStep == viewModel.lastStep {
+            Button(action: {
+                withAnimation {
+                    menuCoordinator.showMenu()
+                }
+            }, label: {
+                MenuButton(iconName: "line.horizontal.3", text: "Back to Menu")
+            })
+            .padding()
+            .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.menuButton)
+        }
     }
 }
 

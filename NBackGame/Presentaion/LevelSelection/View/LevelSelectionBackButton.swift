@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct LevelSelectionBackButton: View {
-    @ObservedObject var viewModel: LevelSelectionViewModel
+    let gameCoordinator: GameViewCoordinator
 
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
-                    viewModel.showMenu()
+                    gameCoordinator.showMenu()
                 }, label: {
                     VStack {
                         Image(systemName: "arrow.backward")

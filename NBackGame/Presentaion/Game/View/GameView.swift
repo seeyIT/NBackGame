@@ -10,7 +10,7 @@ import SwiftUI
 struct GameView: View {
     @Environment(\.verticalSizeClass) var verticalSizeClass
     @Environment(\.sizeCategory) var sizeCategory
-
+    
     @ObservedObject var viewModel: GameViewModel
     
     var body: some View {
@@ -19,7 +19,7 @@ struct GameView: View {
             if verticalSizeClass == .compact {
                 VStack {
                     Spacer()
-                    GameTopPanel(viewModel: viewModel)
+//                    GameTopPanel(gameCoordinator: gameCoordinator)
                     Spacer()
                     HStack {
                         GamePositionButton(viewModel: viewModel)
@@ -31,7 +31,7 @@ struct GameView: View {
             } else {
                 VStack {
                     HStack {
-                        GameBackButton(viewModel: viewModel)
+//                        GameBackButton(gameCoordinator: gameCoordinator)
                         Spacer()
                     }
                     GameTopPanel(viewModel: viewModel)

@@ -67,6 +67,7 @@ struct MenuButton: View {
 }
 
 struct MenuView: View {
+    let menuCoordinator: MenuViewCoordinator
     
     @State private var press = false
     @ObservedObject var viewModel: MenuViewModel
@@ -86,7 +87,7 @@ struct MenuView: View {
                 VStack {
                     Button(action: {
                         withAnimation {
-                            viewModel.startGame()
+                            menuCoordinator.showGame()
                         }
                     }, label: {
                         MenuButton(iconName: "play.fill", text: "Play", fixedWidth: buttonSize)
@@ -94,9 +95,13 @@ struct MenuView: View {
                     .padding(.bottom, 30)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
-                    NavigationLink(destination: TutorialView(viewModel: TutorialViewModel())) {
+                    Button(action: {
+                        withAnimation {
+                            menuCoordinator.showTutorial()
+                        }
+                    }, label: {
                         MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: buttonSize)
-                    }
+                    })
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
                 }
                 

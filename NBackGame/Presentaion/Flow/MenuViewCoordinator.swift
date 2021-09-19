@@ -1,5 +1,5 @@
 //
-//  MainViewCoordinator.swift
+//  MenuViewCoordinator.swift
 //  NBackGame
 //
 //  Created by Kornel Miszczak on 18/12/2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MainViewCoordinator: View {
+struct MenuViewCoordinator: View {
     
     let menuDIContainer: MenuDIContainer
     @ObservedObject var menuViewState: ViewState<MenuViewState>

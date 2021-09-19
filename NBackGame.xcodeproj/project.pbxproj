@@ -10,7 +10,7 @@
 		14BF07AF9499885B6404A68F /* Pods_NBackGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E894942F5E138253DAC5BC11 /* Pods_NBackGame.framework */; };
 		5F05FB84256686E500984BD5 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05FB83256686E500984BD5 /* TutorialView.swift */; };
 		5F05FB86256686F500984BD5 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05FB85256686F500984BD5 /* TutorialViewModel.swift */; };
-		5F2C253C258CBDAE008D36F1 /* MainViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C253B258CBDAE008D36F1 /* MainViewCoordinator.swift */; };
+		5F2C253C258CBDAE008D36F1 /* MenuViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C253B258CBDAE008D36F1 /* MenuViewCoordinator.swift */; };
 		5F2C2547258CC6BF008D36F1 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2546258CC6BF008D36F1 /* MenuViewModel.swift */; };
 		5F2C254F258CD7F8008D36F1 /* GameViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C254E258CD7F8008D36F1 /* GameViewCoordinator.swift */; };
 		5F2C2557258D1D09008D36F1 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2556258D1D09008D36F1 /* States.swift */; };
@@ -97,7 +97,7 @@
 		49AEF06C035B0EEA70A51B16 /* Pods-NBackGame-NBackGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame-NBackGameTests.debug.xcconfig"; path = "Target Support Files/Pods-NBackGame-NBackGameTests/Pods-NBackGame-NBackGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5F05FB83256686E500984BD5 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		5F05FB85256686F500984BD5 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
-		5F2C253B258CBDAE008D36F1 /* MainViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCoordinator.swift; sourceTree = "<group>"; };
+		5F2C253B258CBDAE008D36F1 /* MenuViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCoordinator.swift; sourceTree = "<group>"; };
 		5F2C2546258CC6BF008D36F1 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		5F2C254E258CD7F8008D36F1 /* GameViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewCoordinator.swift; sourceTree = "<group>"; };
 		5F2C2556258D1D09008D36F1 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
@@ -226,7 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				5F2C256F258D1DEE008D36F1 /* GameInfo.swift */,
-				5F2C253B258CBDAE008D36F1 /* MainViewCoordinator.swift */,
+				5F2C253B258CBDAE008D36F1 /* MenuViewCoordinator.swift */,
 				5F2C254E258CD7F8008D36F1 /* GameViewCoordinator.swift */,
 				5FC62C0F26020D5900D03AD8 /* Actions.swift */,
 			);
@@ -921,7 +921,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA8B28D265E48A90026547A /* GameSummaryButtons.swift in Sources */,
-				5F2C253C258CBDAE008D36F1 /* MainViewCoordinator.swift in Sources */,
+				5F2C253C258CBDAE008D36F1 /* MenuViewCoordinator.swift in Sources */,
 				5F6921FA25CB2114008A18C9 /* AppVersionRealm.swift in Sources */,
 				5F05FB84256686E500984BD5 /* TutorialView.swift in Sources */,
 				5F949A9F25FA159E00512ADE /* UnlockNextLevelUseCase.swift in Sources */,

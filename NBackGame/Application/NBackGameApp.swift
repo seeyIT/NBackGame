@@ -16,7 +16,7 @@ struct NBackGameApp: App {
     
     var body: some Scene {
         WindowGroup {
-            MainViewCoordinator(menuDIContainer: menuDIContainer, menuViewState: menuViewState)
+            MenuViewCoordinator(menuDIContainer: menuDIContainer, menuViewState: menuViewState)
         }
     }
 }

@@ -30,7 +30,7 @@ class GameViewModel: ObservableObject {
     
     // TODO: fields to be injected
     let letters = "gmbpkldst"
-    let roundDuration: Double = 0.2
+    let roundDuration: Double = 3.2
     let maxRounds = 25
     let boardSize: Int = 3
     

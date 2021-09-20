@@ -52,7 +52,7 @@ class GameSummaryViewModel: ObservableObject {
                 }
                 
                 self.useCases.getHighestUnlockedLevelUseCase.execute { heightestLevel in
-                    if self.gameInfo.level > heightestLevel ?? -1 {
+                    if self.gameInfo.level >= heightestLevel ?? -1 {
                         self.useCases.unlockNextLevelUseCase.execute(level: self.gameInfo.level) { result in
                             switch result {
                             case .success(let level):
@@ -60,8 +60,9 @@ class GameSummaryViewModel: ObservableObject {
                             case .failure(let error):
                                 print("Fail unlocking next level: \(error)")
                             }
-                            
                         }
+                    } else {
+                        print("Don't unlock next level becasue next level is unlocked already")
                     }
                     
                 }

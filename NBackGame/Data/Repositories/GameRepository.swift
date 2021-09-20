@@ -10,6 +10,7 @@ import Foundation
 protocol GameRepository {
     func fetchHighestUnlockedLevel(fallbackLevel: Int, completion: @escaping (Int) -> Void)
     func saveUnlocked(level: Int, completion: @escaping (Result<Int, Error>) -> Void)
+    func sameGame(gameInfo: GameInfo, completion: @escaping (Result<Int, Error>) -> Void)
 }
 
 class RealmGameRepository: GameRepository {
@@ -46,15 +47,33 @@ class RealmGameRepository: GameRepository {
             completion(.failure(error))
         }
     }
+    
+    func sameGame(gameInfo: GameInfo,
+                  completion: @escaping (Result<Int, Error>) -> Void) {
+        
+        let gameHistory = GameHistoryRealm(history: gameInfo.history, level: gameInfo.level, startTime: gameInfo.startTime, endTime: gameInfo.endTime)
+        do {
+            try realmService.instance.write {
+                realmService.instance.add(gameHistory)
+            }
+            completion(.success(0))
+        } catch {
+            print("Error: \(error)")
+            completion(.failure(GameRepositoryError.gameHistoryNotAdded(error.localizedDescription)))
+        }
+    }
 }
 
 enum GameRepositoryError: Error {
     case levelAlreadyUnlocked(Int)
+    case gameHistoryNotAdded(String)
     
     var description: String {
         switch self {
         case .levelAlreadyUnlocked(let level):
             return "Level \(level) is already unlocked."
+        case .gameHistoryNotAdded(let error):
+            return "Can't add game history item becasue: \(error)"
         }
     }
 }

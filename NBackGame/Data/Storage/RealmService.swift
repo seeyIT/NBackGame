@@ -14,4 +14,15 @@ class RealmService {
         let realm = try? Realm()
         return realm!
     }
+    
+    func performMigration() {
+        let config = Realm.Configuration(
+            schemaVersion: 1,
+            migrationBlock: { _, oldSchemaVersion in
+                if oldSchemaVersion < 1 {
+                    print("Perform Realm migration to v1")
+                }
+            })
+        Realm.Configuration.defaultConfiguration = config
+    }
 }

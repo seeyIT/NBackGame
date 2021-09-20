@@ -9,8 +9,9 @@ import SwiftUI
 import Combine
 
 struct GameSummaryViewModelUseCases {
-    let calculateGameResult: CalculateGameResultsUseCase
+    let calculateGameResultUseCase: CalculateGameResultsUseCase
     let unlockNextLevelUseCase: UnlockNextLevelUseCase
+    let saveGameUseCase: SaveGameUseCase
 }
 
 struct GameResults {
@@ -39,7 +40,8 @@ class GameSummaryViewModel: ObservableObject {
     // MARK: - Public functions
     
     func onAppear() {
-        useCases.calculateGameResult.execute(history: gameInfo.history, level: gameInfo.level) { gameResults in
+        saveGame()
+        useCases.calculateGameResultUseCase.execute(history: gameInfo.history, level: gameInfo.level) { gameResults in
             self.gameResults = gameResults
             
             DispatchQueue.global().async {
@@ -62,7 +64,21 @@ class GameSummaryViewModel: ObservableObject {
     func showMenu() {
         gameCoordinator.showMenu()
     }
+    
     func playAgain() {
         gameCoordinator.playAgain()
+    }
+    
+    private func saveGame() {
+        DispatchQueue.global().async {
+            self.useCases.saveGameUseCase.execute(gameInfo: self.gameInfo) { result in
+                switch result {
+                case .success:
+                    print("Game saved successfully")
+                case .failure(let error):
+                    print("Error saving game: \(error)")
+                }
+            }
+        }
     }
 }

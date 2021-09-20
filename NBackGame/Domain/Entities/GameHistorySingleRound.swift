@@ -1,10 +1,14 @@
 //
-//  Created by Kornel Miszczak on 17/03/2021.
+//  GameHistorySingleRound.swift
+//  NBackGame
+//
+//  Created by Kornel Miszczak on 20/09/2021.
 //
 
 import Foundation
 
-struct HistoryItem {
+struct GameHistorySingleRound {
+    let uuid: String
     let roundNumber: Int
     let position: Int
     let sound: String

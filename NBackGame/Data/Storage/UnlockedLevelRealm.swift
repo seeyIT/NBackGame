@@ -32,6 +32,9 @@ class UnlockedLevelRealm: Object {
 
 extension UnlockedLevelRealm {
     func toDomain() -> UnlockedLevel {
-        return UnlockedLevel(uuid: uuid, timestamp: timestamp, level: level, deleted: deleted)
+        return UnlockedLevel(uuid: uuid,
+                             timestamp: timestamp,
+                             level: level,
+                             deleted: deleted)
     }
 }

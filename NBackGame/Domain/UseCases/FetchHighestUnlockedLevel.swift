@@ -21,8 +21,6 @@ final class DefaultFetchHighestUnlockedLevelUseCase: FetchHighestUnlockedLevelUs
     
     func execute(fallbackLevel: Int,
                  completion: @escaping (Int) -> Void) {
-        gameRepository.fetchHighestUnlockedLevel(fallbackLevel: fallbackLevel) { result in
-            completion(result)
-        }
+        gameRepository.fetchHighestUnlockedLevel(fallbackLevel: fallbackLevel, completion: completion)
     }
 }

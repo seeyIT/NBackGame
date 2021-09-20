@@ -54,9 +54,11 @@ final class GameDIContainer {
     func makeGameSummaryViewModelUseCases() -> GameSummaryViewModelUseCases {
         let calculateGameResultUseCase: CalculateGameResultsUseCase = DefaultCalculateGameResultsUseCase()
         let unlockNextLevelUseCase: UnlockNextLevelUseCase = DefaultUnlockNextLevelUseCase(gameRepository: makeGameRepository())
+        let saveGameUseCase: SaveGameUseCase = DefaultSaveGameUseCase(gameRepository: makeGameRepository())
         
-        let gameSummaryViewModelUseCases = GameSummaryViewModelUseCases(calculateGameResult: calculateGameResultUseCase,
-                                                                        unlockNextLevelUseCase: unlockNextLevelUseCase)
+        let gameSummaryViewModelUseCases = GameSummaryViewModelUseCases(calculateGameResultUseCase: calculateGameResultUseCase,
+                                                                        unlockNextLevelUseCase: unlockNextLevelUseCase,
+                                                                        saveGameUseCase: saveGameUseCase)
         
         return gameSummaryViewModelUseCases
     }

@@ -9,7 +9,7 @@ import Foundation
 import RealmSwift
 
 class AppVersionRealm: Object {
-    @objc dynamic var uuid: String = UUID().uuidString
+    @objc dynamic var uuid: String = ""
     @objc dynamic var timestamp: Int64 = 0
     @objc dynamic var version: Int = 0
     
@@ -31,6 +31,8 @@ class AppVersionRealm: Object {
 
 extension AppVersionRealm {
     func toDomain() -> AppVersion {
-        return AppVersion(uuid: uuid, timestamp: timestamp, version: version)
+        return AppVersion(uuid: uuid,
+                          timestamp: timestamp,
+                          version: version)
     }
 }

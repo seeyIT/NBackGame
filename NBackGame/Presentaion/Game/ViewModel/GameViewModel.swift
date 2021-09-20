@@ -114,7 +114,7 @@ class GameViewModel: ObservableObject {
     }
     
     private func addHistory(_ currentGameItem: CurrentGameItem) {
-        let historyItem = HistoryItem(position: currentGameItem.position, sound: currentGameItem.sound, positionClicked: positionClicked, soundClicked: soundClicked)
+        let historyItem = HistoryItem(roundNumber: currentRoundNumber, position: currentGameItem.position, sound: currentGameItem.sound, positionClicked: positionClicked, soundClicked: soundClicked)
         history.append(historyItem)
     }
     

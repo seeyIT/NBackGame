@@ -21,4 +21,8 @@ class MenuViewModel: ObservableObject {
     func showTutorial() {
         menuCoordinator.showTutorial()
     }
+    
+    func showStatistics() {
+        menuCoordinator.showStatistics()
+    }
 }

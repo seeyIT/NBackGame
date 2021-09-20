@@ -23,6 +23,7 @@ enum MenuViewState {
     case menu
     case tutorial
     case game
+    case statistics
 }
 
 enum GameViewState {

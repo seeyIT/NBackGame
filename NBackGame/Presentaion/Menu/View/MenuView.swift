@@ -101,7 +101,19 @@ struct MenuView: View {
                     }, label: {
                         MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: buttonSize)
                     })
+                    .padding(.bottom, 30)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
+                    
+                    Button(action: {
+                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                        withAnimation {
+                            viewModel.showStatistics()
+                        }
+                    }, label: {
+                        MenuButton(iconName: "graduationcap.fill", text: "Statistics", fixedWidth: buttonSize)
+                    })
+                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
+                    
                 }
                 
             }

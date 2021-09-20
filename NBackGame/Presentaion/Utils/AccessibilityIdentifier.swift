@@ -11,6 +11,7 @@ struct AccessibilityIdentifier {
     struct Menu {
         static let playButton = "AccessibilityIdentifierPlayButtonInMenu"
         static let tutorialButton = "AccessibilityIdentifierTutorialButtonInMenu"
+        static let statisticsButton = "AccessibilityIdentifierStatisticsButtonInMenu"
     }
     
     struct LevelSelection {

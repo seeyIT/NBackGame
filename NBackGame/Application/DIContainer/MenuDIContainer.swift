@@ -35,4 +35,14 @@ final class MenuDIContainer {
     func makeGameDIContainer() -> GameDIContainer {
         return GameDIContainer()
     }
+    
+    // MARK: - Statistics
+    func makeStatisticsView(menuCoordinator: MenuViewCoordinator) -> StatisticsView {
+        return StatisticsView(viewModel: makeStatisticsViewModel(menuCoordinator: menuCoordinator))
+    }
+    
+    func makeStatisticsViewModel(menuCoordinator: MenuViewCoordinator) -> StatisticsViewModel {
+        return StatisticsViewModel(menuCoordinator: menuCoordinator)
+    }
+    
 }

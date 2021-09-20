@@ -19,6 +19,8 @@ struct MenuViewCoordinator: View {
             menuDIContainer.makeGameView(menuCoordinator: self)
         } else if menuViewState.state == .tutorial {
             menuDIContainer.makeTutorialView(menuCoordinator: self)
+        } else if menuViewState.state == .statistics {
+            menuDIContainer.makeStatisticsView(menuCoordinator: self)
         } else {
             EmptyView()
         }
@@ -34,5 +36,9 @@ struct MenuViewCoordinator: View {
     
     func showTutorial() {
         menuViewState.state = .tutorial
+    }
+    
+    func showStatistics() {
+        menuViewState.state = .statistics
     }
 }

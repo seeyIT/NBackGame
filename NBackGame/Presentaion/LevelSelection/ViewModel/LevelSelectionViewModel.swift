@@ -14,10 +14,10 @@ struct LevelSelectionViewModelUseCases {
 
 class LevelSelectionViewModel: ObservableObject {
     let gameCoordinator: GameViewCoordinator
-    static let defaultLevelUnlocked: Int = 2
+    let defaultLevelUnlocked: Int = 2
     var selectedLevel = 1
     
-    @Published private(set) var unlockedLevels = defaultLevelUnlocked
+    @Published private(set) var unlockedLevels: Int = -1
     
     let useCases: LevelSelectionViewModelUseCases
     
@@ -27,13 +27,20 @@ class LevelSelectionViewModel: ObservableObject {
     }
     
     func onAppear() {
-        self.useCases.getHighestUnlockedLevelUseCase.execute { result in
-            self.unlockedLevels = result ?? LevelSelectionViewModel.defaultLevelUnlocked
+        DispatchQueue.global().async {
+            self.useCases.getHighestUnlockedLevelUseCase.execute { result in
+                DispatchQueue.main.async {
+                    self.unlockedLevels = result ?? self.defaultLevelUnlocked
+                }
+            }
         }
     }
     
     func selectLevel(_ level: Int) {
-        gameCoordinator.selectLevel(level)
+        selectedLevel = level
+        if level <= unlockedLevels {
+            gameCoordinator.selectLevel(level)
+        }
     }
     
     func showMenu() {

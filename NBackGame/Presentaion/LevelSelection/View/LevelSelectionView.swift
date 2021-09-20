@@ -31,10 +31,9 @@ struct LevelSelectionView: View {
                         ForEach(1...12, id: \.self) { number in
                             ZStack {
                                 Button(action: {
+                                    viewModel.selectLevel(number)
                                     if number > viewModel.unlockedLevels {
                                         isShowingAlert = true
-                                    } else {
-                                        viewModel.selectLevel(number)
                                     }
                                 }, label: {
                                     if number <= viewModel.unlockedLevels {

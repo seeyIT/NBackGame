@@ -16,7 +16,7 @@ class FetchHighestUnlockedLevelUseCaseTests: XCTestCase {
         var unlockedLevel: Int = -1
         let fallbackLevel = 1
         let gameRepository = GameRepositoryMock()
-        let sut = DefaultFetchHighestUnlockedLevelUseCase(gameRepository: gameRepository)
+        let sut = DefaultGetHighestUnlockedLevelUseCase(gameRepository: gameRepository)
         
         // when
         sut.execute(fallbackLevel: fallbackLevel) { result in
@@ -36,7 +36,7 @@ class FetchHighestUnlockedLevelUseCaseTests: XCTestCase {
         var unlockedLevel: Int = -1
         let fallbackLevel = 2
         let gameRepository = GameRepositoryMock()
-        let sut = DefaultFetchHighestUnlockedLevelUseCase(gameRepository: gameRepository)
+        let sut = DefaultGetHighestUnlockedLevelUseCase(gameRepository: gameRepository)
         
         // when
         sut.execute(fallbackLevel: fallbackLevel) { result in

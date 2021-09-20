@@ -62,7 +62,7 @@ class LevelSelectionViewModelTests: XCTestCase {
         
     }
     
-    struct FetchHighestUnlockedLevelUseCaseMock: FetchHighestUnlockedLevelUseCase {
+    struct FetchHighestUnlockedLevelUseCaseMock: GetHighestUnlockedLevelUseCase {
         func execute(fallbackLevel: Int, completion: @escaping (Int) -> Void) {
             completion(fallbackLevel)
         }

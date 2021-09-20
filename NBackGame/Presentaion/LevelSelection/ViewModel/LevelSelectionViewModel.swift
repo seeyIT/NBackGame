@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct LevelSelectionViewModelUseCases {
-    let fetchHighestUnlockedLevelUseCase: FetchHighestUnlockedLevelUseCase
+    let fetchHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase
 }
 
 class LevelSelectionViewModel: ObservableObject {

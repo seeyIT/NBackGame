@@ -8,24 +8,21 @@
 import Foundation
 
 protocol GameRepository {
-    func fetchHighestUnlockedLevel(fallbackLevel: Int, completion: @escaping (Int) -> Void)
+    func fetchHighestUnlockedLevel(completion: @escaping (Int?) -> Void)
     func saveUnlocked(level: Int, completion: @escaping (Result<Int, Error>) -> Void)
-    func sameGame(gameInfo: GameInfo, completion: @escaping (Result<Int, Error>) -> Void)
+    func sameGame(gameHistory: GameHistoryRealm, completion: @escaping (Result<Int, Error>) -> Void)
 }
 
 class RealmGameRepository: GameRepository {
     // TODO Inject data source
     private var realmService: RealmService = RealmService()
-    
-    private let highestLevelFallback: Int = 2
-    
-    func fetchHighestUnlockedLevel(fallbackLevel: Int,
-                                   completion: @escaping (Int) -> Void) {
+
+    func fetchHighestUnlockedLevel(completion: @escaping (Int?) -> Void) {
         let level = realmService.instance
             .objects(UnlockedLevelRealm.self)
             .sorted(byKeyPath: "level")
             .last?
-            .level ?? fallbackLevel
+            .level
         completion(level)
     }
     
@@ -48,10 +45,8 @@ class RealmGameRepository: GameRepository {
         }
     }
     
-    func sameGame(gameInfo: GameInfo,
+    func sameGame(gameHistory: GameHistoryRealm,
                   completion: @escaping (Result<Int, Error>) -> Void) {
-        
-        let gameHistory = GameHistoryRealm(history: gameInfo.history, level: gameInfo.level, startTime: gameInfo.startTime, endTime: gameInfo.endTime)
         do {
             try realmService.instance.write {
                 realmService.instance.add(gameHistory)

@@ -14,7 +14,7 @@ struct LevelSelectionViewModelUseCases {
 
 class LevelSelectionViewModel: ObservableObject {
     let gameCoordinator: GameViewCoordinator
-    static let defaultLevelUnlocked: Int = 1
+    static let defaultLevelUnlocked: Int = 2
     var selectedLevel = 1
 
     @Published private(set) var unlockedLevels = defaultLevelUnlocked
@@ -27,8 +27,8 @@ class LevelSelectionViewModel: ObservableObject {
     }
     
     func onAppear() {
-        self.useCases.fetchHighestUnlockedLevelUseCase.execute(fallbackLevel: LevelSelectionViewModel.defaultLevelUnlocked) { result in
-            self.unlockedLevels = result
+        self.useCases.fetchHighestUnlockedLevelUseCase.execute { result in
+            self.unlockedLevels = result ?? LevelSelectionViewModel.defaultLevelUnlocked
         }
     }
     

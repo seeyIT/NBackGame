@@ -20,7 +20,9 @@ final class DefaultSaveGameUseCase: SaveGameUseCase {
     }
     
     func execute(gameInfo: GameInfo, completion: @escaping (Result<Int, Error>) -> Void) {
-        gameRepository.sameGame(gameInfo: gameInfo, completion: completion)
+        let gameHistory = GameHistoryRealm(history: gameInfo.history, level: gameInfo.level, startTime: gameInfo.startTime, endTime: gameInfo.endTime)
+
+        gameRepository.sameGame(gameHistory: gameHistory, completion: completion)
     }
     
 }

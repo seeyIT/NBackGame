@@ -19,6 +19,6 @@ final class DefaultGetHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCas
     }
     
     func execute(completion: @escaping (Int?) -> Void) {
-        gameRepository.fetchHighestUnlockedLevel(completion: completion)
+        gameRepository.getHighestUnlockedLevel(completion: completion)
     }
 }

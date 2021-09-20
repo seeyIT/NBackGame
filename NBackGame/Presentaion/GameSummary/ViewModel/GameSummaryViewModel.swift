@@ -11,6 +11,7 @@ import Combine
 struct GameSummaryViewModelUseCases {
     let calculateGameResultUseCase: CalculateGameResultsUseCase
     let unlockNextLevelUseCase: UnlockNextLevelUseCase
+    let getHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase
     let saveGameUseCase: SaveGameUseCase
 }
 
@@ -45,18 +46,26 @@ class GameSummaryViewModel: ObservableObject {
             self.gameResults = gameResults
             
             DispatchQueue.global().async {
-                self.useCases.unlockNextLevelUseCase.execute(level: self.gameInfo.level + 1, gameResults: self.gameResults) { result in
-                    switch result {
-                    case .success(let levelUnlocked):
-                        print("Level \(levelUnlocked) unlocked")
-                    case .failure(let error as UnlockNextLevelUseCaseError):
-                        print("Error unlocking level: \(error.description)")
-                    case .failure(let error as GameRepositoryError):
-                        print("Error in repository unlocking level: \(error.description)")
-                    case .failure(let error):
-                        print("Other error unlocking level: \(error)")
-                    }
+                if !self.canUnlockNextLevel(for: gameResults) {
+                    print("Can't try to unlock next level becasue user made mistake")
+                    return
                 }
+                
+                self.useCases.getHighestUnlockedLevelUseCase.execute { heightestLevel in
+                    if self.gameInfo.level > heightestLevel ?? -1 {
+                        self.useCases.unlockNextLevelUseCase.execute(level: self.gameInfo.level) { result in
+                            switch result {
+                            case .success(let level):
+                                print("Level \(level) unlocked successfully")
+                            case .failure(let error):
+                                print("Fail unlocking next level: \(error)")
+                            }
+                            
+                        }
+                    }
+                    
+                }
+                
             }
         }
     }
@@ -80,5 +89,14 @@ class GameSummaryViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    // MARK: - Private functions
+    
+    private func canUnlockNextLevel(for gameResults: GameResults) -> Bool {
+        return gameResults.missedSelectionSound == 0 &&
+            gameResults.missedSelectionPosition == 0 &&
+            gameResults.incorrectSelectionSound == 0 &&
+            gameResults.incorrectSelectionPosition == 0
     }
 }

@@ -9,7 +9,6 @@ import Foundation
 
 protocol UnlockNextLevelUseCase {
     func execute(level: Int,
-                 gameResults: GameResults,
                  completion: @escaping (Result<Int, Error>) -> Void)
 }
 
@@ -21,23 +20,11 @@ final class DefaultUnlockNextLevelUseCase: UnlockNextLevelUseCase {
     }
     
     func execute(level: Int,
-                 gameResults: GameResults,
                  completion: @escaping (Result<Int, Error>) -> Void) {
-        if canUnlockNextLevel(for: gameResults) {
-            gameRepository.saveUnlocked(level: level) { result in
-                completion(result)
-            }
-        } else {
-            completion(.failure(UnlockNextLevelUseCaseError.cantUnlockNextLevel(level)))
-        }
+        let nextLevel = 1
+        let unlockedLevel = UnlockedLevelRealm(level: level + nextLevel)
         
-    }
-    
-    private func canUnlockNextLevel(for gameResults: GameResults) -> Bool {
-        return gameResults.missedSelectionSound == 0 &&
-            gameResults.missedSelectionPosition == 0 &&
-            gameResults.incorrectSelectionSound == 0 &&
-            gameResults.incorrectSelectionPosition == 0
+        gameRepository.saveUnlockedLevel(unlockedLevel, completion: completion)
     }
 }
 

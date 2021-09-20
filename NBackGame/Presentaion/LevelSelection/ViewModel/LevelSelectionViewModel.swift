@@ -9,14 +9,14 @@ import Foundation
 import SwiftUI
 
 struct LevelSelectionViewModelUseCases {
-    let fetchHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase
+    let getHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase
 }
 
 class LevelSelectionViewModel: ObservableObject {
     let gameCoordinator: GameViewCoordinator
     static let defaultLevelUnlocked: Int = 2
     var selectedLevel = 1
-
+    
     @Published private(set) var unlockedLevels = defaultLevelUnlocked
     
     let useCases: LevelSelectionViewModelUseCases
@@ -27,7 +27,7 @@ class LevelSelectionViewModel: ObservableObject {
     }
     
     func onAppear() {
-        self.useCases.fetchHighestUnlockedLevelUseCase.execute { result in
+        self.useCases.getHighestUnlockedLevelUseCase.execute { result in
             self.unlockedLevels = result ?? LevelSelectionViewModel.defaultLevelUnlocked
         }
     }

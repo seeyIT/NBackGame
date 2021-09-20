@@ -8,16 +8,16 @@
 import Foundation
 
 protocol GameRepository {
-    func fetchHighestUnlockedLevel(completion: @escaping (Int?) -> Void)
-    func saveUnlocked(level: Int, completion: @escaping (Result<Int, Error>) -> Void)
-    func sameGame(gameHistory: GameHistoryRealm, completion: @escaping (Result<Int, Error>) -> Void)
+    func getHighestUnlockedLevel(completion: @escaping (Int?) -> Void)
+    func saveUnlockedLevel(_ unlockedLevel: UnlockedLevelRealm, completion: @escaping (Result<Int, Error>) -> Void)
+    func saveGameHistory(_ gameHistory: GameHistoryRealm, completion: @escaping (Result<Int, Error>) -> Void)
 }
 
 class RealmGameRepository: GameRepository {
     // TODO Inject data source
     private var realmService: RealmService = RealmService()
-
-    func fetchHighestUnlockedLevel(completion: @escaping (Int?) -> Void) {
+    
+    func getHighestUnlockedLevel(completion: @escaping (Int?) -> Void) {
         let level = realmService.instance
             .objects(UnlockedLevelRealm.self)
             .sorted(byKeyPath: "level")
@@ -26,27 +26,21 @@ class RealmGameRepository: GameRepository {
         completion(level)
     }
     
-    func saveUnlocked(level: Int,
-                      completion: @escaping (Result<Int, Error>) -> Void) {
+    func saveUnlockedLevel(_ unlockedLevel: UnlockedLevelRealm,
+                           completion: @escaping (Result<Int, Error>) -> Void) {
         do {
-            let previousUnlockedHigherLevels = realmService.instance.objects(UnlockedLevelRealm.self).filter("level >= %@", level)
-            if previousUnlockedHigherLevels.isEmpty {
-                let defaultUnlockedLevel = UnlockedLevelRealm(level: level)
-                try realmService.instance.write {
-                    realmService.instance.add(defaultUnlockedLevel)
-                }
-                completion(.success(level))
-            } else {
-                completion(.failure(GameRepositoryError.levelAlreadyUnlocked(level)))
+            try realmService.instance.write {
+                realmService.instance.add(unlockedLevel)
             }
+            completion(.success(unlockedLevel.level))
         } catch {
             print("Error: \(error)")
             completion(.failure(error))
         }
     }
     
-    func sameGame(gameHistory: GameHistoryRealm,
-                  completion: @escaping (Result<Int, Error>) -> Void) {
+    func saveGameHistory(_ gameHistory: GameHistoryRealm,
+                         completion: @escaping (Result<Int, Error>) -> Void) {
         do {
             try realmService.instance.write {
                 realmService.instance.add(gameHistory)
@@ -54,7 +48,7 @@ class RealmGameRepository: GameRepository {
             completion(.success(0))
         } catch {
             print("Error: \(error)")
-            completion(.failure(GameRepositoryError.gameHistoryNotAdded(error.localizedDescription)))
+            completion(.failure(error))
         }
     }
 }

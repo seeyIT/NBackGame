@@ -44,9 +44,9 @@ final class GameDIContainer {
     
     // MARK: - UseCase
     func makeLevelSelectionViewModelUseCases() -> LevelSelectionViewModelUseCases {
-        let fetchHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase = DefaultGetHighestUnlockedLevelUseCase(gameRepository: makeGameRepository())
+        let getHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase = DefaultGetHighestUnlockedLevelUseCase(gameRepository: makeGameRepository())
         
-        let levelSelectionViewModelUseCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: fetchHighestUnlockedLevelUseCase)
+        let levelSelectionViewModelUseCases = LevelSelectionViewModelUseCases(getHighestUnlockedLevelUseCase: getHighestUnlockedLevelUseCase)
         
         return levelSelectionViewModelUseCases
     }
@@ -55,9 +55,11 @@ final class GameDIContainer {
         let calculateGameResultUseCase: CalculateGameResultsUseCase = DefaultCalculateGameResultsUseCase()
         let unlockNextLevelUseCase: UnlockNextLevelUseCase = DefaultUnlockNextLevelUseCase(gameRepository: makeGameRepository())
         let saveGameUseCase: SaveGameUseCase = DefaultSaveGameUseCase(gameRepository: makeGameRepository())
-
+        let getHighestUnlockedLevelUseCase: GetHighestUnlockedLevelUseCase = DefaultGetHighestUnlockedLevelUseCase(gameRepository: makeGameRepository())
+        
         let gameSummaryViewModelUseCases = GameSummaryViewModelUseCases(calculateGameResultUseCase: calculateGameResultUseCase,
                                                                         unlockNextLevelUseCase: unlockNextLevelUseCase,
+                                                                        getHighestUnlockedLevelUseCase: getHighestUnlockedLevelUseCase,
                                                                         saveGameUseCase: saveGameUseCase)
         
         return gameSummaryViewModelUseCases

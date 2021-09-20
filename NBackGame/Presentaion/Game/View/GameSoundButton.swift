@@ -17,6 +17,7 @@ struct GameSoundButton: View {
     var body: some View {
         Button(action: {
             print("sound clicked")
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             viewModel.selectSound()
         }, label: {
             GameButton(pressed: $viewModel.soundClicked, text: "Sound")

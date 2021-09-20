@@ -14,6 +14,7 @@ struct LevelSelectionBackButton: View {
         VStack {
             HStack {
                 Button(action: {
+                    UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                     viewModel.showMenu()
                 }, label: {
                     VStack {

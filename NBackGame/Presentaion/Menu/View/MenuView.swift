@@ -83,6 +83,7 @@ struct MenuView: View {
                 Color.black.ignoresSafeArea()
                 VStack {
                     Button(action: {
+                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         withAnimation {
                             viewModel.showGame()
                         }
@@ -93,6 +94,7 @@ struct MenuView: View {
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
                     Button(action: {
+                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         withAnimation {
                             viewModel.showTutorial()
                         }

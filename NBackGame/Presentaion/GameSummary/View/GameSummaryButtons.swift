@@ -37,6 +37,7 @@ private struct PlayAgainButton: View {
 
     var body: some View {
         Button(action: {
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             withAnimation {
                 viewModel.playAgain()
             }
@@ -54,6 +55,7 @@ private struct BackToMenuButton: View {
 
     var body: some View {
         Button(action: {
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             withAnimation {
                 viewModel.showMenu()
             }

@@ -12,6 +12,7 @@ struct GameBackButton: View {
 
     var body: some View {
         Button(action: {
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             viewModel.showMenu()
         }, label: {
             Image(systemName: "arrow.backward")

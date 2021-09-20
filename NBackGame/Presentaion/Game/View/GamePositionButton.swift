@@ -17,6 +17,7 @@ struct GamePositionButton: View {
     var body: some View {
         Button(action: {
             print("position clicked")
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             viewModel.selectPosition()
         }, label: {
             GameButton(pressed: $viewModel.positionClicked, text: "Position")

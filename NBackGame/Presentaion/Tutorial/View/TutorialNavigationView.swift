@@ -37,6 +37,7 @@ struct TutorialNavigationView: View {
         }
         if viewModel.currentStep == viewModel.lastStep {
             Button(action: {
+                UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                 withAnimation {
                     viewModel.showMenu()
                 }
@@ -54,6 +55,7 @@ private struct TutorialNavigationNextButton: View {
     
     var body: some View {
         Button(action: {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             withAnimation {
                 viewModel.nextStep()
             }
@@ -69,6 +71,7 @@ private struct TutorialNavigationBackButton: View {
     
     var body: some View {
         Button(action: {
+            UIImpactFeedbackGenerator(style: .light).impactOccurred()
             withAnimation {
                 viewModel.previousStep()
             }

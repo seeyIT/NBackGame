@@ -34,6 +34,9 @@ struct LevelSelectionView: View {
                                     viewModel.selectLevel(number)
                                     if number > viewModel.unlockedLevels {
                                         isShowingAlert = true
+                                        UINotificationFeedbackGenerator().notificationOccurred(.error)
+                                    } else {
+                                        UIImpactFeedbackGenerator(style: .medium).impactOccurred()
                                     }
                                 }, label: {
                                     if number <= viewModel.unlockedLevels {

@@ -16,7 +16,7 @@ struct GameViewCoordinator: View {
         if gameState.state == .levelSelection {
             gameDIContainer.makeLevelSelectionView(gameCoordinator: self)
         } else if gameState.state == .game {
-            gameDIContainer.makeGameView(gameCoordinator: self, level: gameState.gameInfo.level)
+            gameDIContainer.makeGameView(gameCoordinator: self, gameInfo: gameState.gameInfo)
         } else if gameState.state == .summary {
             gameDIContainer.makeGameSummaryView(gameCoordinator: self, gameInfo: gameState.gameInfo)
         } else {
@@ -49,7 +49,8 @@ extension GameViewCoordinator {
         }
     }
     
-    func showGameSummary() {
+    func showGameSummary(gameInfo: GameInfo) {
+        gameState.gameInfo = gameInfo
         gameState.state = .summary
     }
 }

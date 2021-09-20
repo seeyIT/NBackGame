@@ -10,4 +10,6 @@ import Foundation
 struct GameInfo {
     var history: [HistoryItem]
     var level: Int
+    var startTime: Int64 = 0
+    var endTime: Int64 = 0
 }

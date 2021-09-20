@@ -18,7 +18,7 @@ struct GameTopPanel: View {
             HStack {
                 GameBackButton(viewModel: viewModel)
                 Spacer()
-                Text("N: \(viewModel.level)")
+                Text("N: \(viewModel.gameInfo.level)")
                     .font(.largeTitle)
                     .foregroundColor(.blue)
                 Spacer()
@@ -30,7 +30,7 @@ struct GameTopPanel: View {
         } else {
             if sizeCategory > ContentSizeCategory.extraExtraLarge {
                 VStack {
-                    Text("N: \(viewModel.level)")
+                    Text("N: \(viewModel.gameInfo.level)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                     Text("Round: \(viewModel.currentRoundNumber)/\(viewModel.maxRounds)")
@@ -39,7 +39,7 @@ struct GameTopPanel: View {
                 }
             } else {
                 HStack {
-                    Text("N: \(viewModel.level)")
+                    Text("N: \(viewModel.gameInfo.level)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                         .padding(.leading)

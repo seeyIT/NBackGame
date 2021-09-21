@@ -44,4 +44,8 @@ struct AccessibilityIdentifier {
         static let previousButton = "AccessibilityIdentifierPreviousButtonInTutorial"
         static let menuButton = "AccessibilityIdentifierMenuButtonInTutorial"
     }
+    
+    struct Statistics {
+        static let menuButton = "AccessibilityIdentifierMenuButtonInStatistics"
+    }
 }

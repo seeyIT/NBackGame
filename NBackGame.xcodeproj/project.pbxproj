@@ -62,6 +62,8 @@
 		5FC4560426F8809D0088E279 /* GameHistorySingleRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4560326F8809D0088E279 /* GameHistorySingleRound.swift */; };
 		5FC4560926F8A9B30088E279 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4560826F8A9B30088E279 /* StatisticsView.swift */; };
 		5FC4560B26F8A9C60088E279 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4560A26F8A9C60088E279 /* StatisticsViewModel.swift */; };
+		5FC4560D26F8B0670088E279 /* GetGamesHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4560C26F8B0670088E279 /* GetGamesHistoryUseCase.swift */; };
+		5FC4560F26F9E0F30088E279 /* StatisticsTopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC4560E26F9E0F20088E279 /* StatisticsTopPanelView.swift */; };
 		5FC62C1026020D5900D03AD8 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C0F26020D5900D03AD8 /* Actions.swift */; };
 		5FC62C1526020E0500D03AD8 /* HistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C1426020E0500D03AD8 /* HistoryItem.swift */; };
 		5FC62C1A26020E3600D03AD8 /* CurrentGameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C1926020E3600D03AD8 /* CurrentGameItem.swift */; };
@@ -161,6 +163,8 @@
 		5FC4560326F8809D0088E279 /* GameHistorySingleRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHistorySingleRound.swift; sourceTree = "<group>"; };
 		5FC4560826F8A9B30088E279 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		5FC4560A26F8A9C60088E279 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		5FC4560C26F8B0670088E279 /* GetGamesHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGamesHistoryUseCase.swift; sourceTree = "<group>"; };
+		5FC4560E26F9E0F20088E279 /* StatisticsTopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsTopPanelView.swift; sourceTree = "<group>"; };
 		5FC62C0F26020D5900D03AD8 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
 		5FC62C1426020E0500D03AD8 /* HistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryItem.swift; sourceTree = "<group>"; };
 		5FC62C1926020E3600D03AD8 /* CurrentGameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentGameItem.swift; sourceTree = "<group>"; };
@@ -465,6 +469,7 @@
 				5F949A9E25FA159E00512ADE /* UnlockNextLevelUseCase.swift */,
 				5FC62C63260244DF00D03AD8 /* GetHighestUnlockedLevel.swift */,
 				5FC455FB26F7B2150088E279 /* SaveGameUseCase.swift */,
+				5FC4560C26F8B0670088E279 /* GetGamesHistoryUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -599,6 +604,7 @@
 			isa = PBXGroup;
 			children = (
 				5FC4560826F8A9B30088E279 /* StatisticsView.swift */,
+				5FC4560E26F9E0F20088E279 /* StatisticsTopPanelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -973,6 +979,7 @@
 				5F949A9F25FA159E00512ADE /* UnlockNextLevelUseCase.swift in Sources */,
 				5FCD41D82540A57F002635BC /* GameViewModel.swift in Sources */,
 				5FC4560026F87CE40088E279 /* GameHistorySingleRoundRealm.swift in Sources */,
+				5FC4560F26F9E0F30088E279 /* StatisticsTopPanelView.swift in Sources */,
 				5FC62C2426020E9400D03AD8 /* MainBoard.swift in Sources */,
 				5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */,
 				5F69220225CB21AF008A18C9 /* ApplicationVersion.swift in Sources */,
@@ -997,6 +1004,7 @@
 				5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */,
 				5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */,
 				5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */,
+				5FC4560D26F8B0670088E279 /* GetGamesHistoryUseCase.swift in Sources */,
 				5FC62C1F26020E7300D03AD8 /* GameButton.swift in Sources */,
 				5FC62C2E26020EE400D03AD8 /* SummaryTable.swift in Sources */,
 				5FC455FE26F87C3B0088E279 /* GameHistoryRealm.swift in Sources */,

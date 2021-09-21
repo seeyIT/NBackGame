@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import RealmSwift
 
 protocol GameRepository {
     func getHighestUnlockedLevel(completion: @escaping (Int?) -> Void)
     func saveUnlockedLevel(_ unlockedLevel: UnlockedLevelRealm, completion: @escaping (Result<Int, Error>) -> Void)
     func saveGameHistory(_ gameHistory: GameHistoryRealm, completion: @escaping (Result<Int, Error>) -> Void)
+    func getGamesHistory(completion: @escaping ([GameHistory]) -> Void)
 }
 
 class RealmGameRepository: GameRepository {
@@ -50,6 +52,10 @@ class RealmGameRepository: GameRepository {
             print("Error: \(error)")
             completion(.failure(error))
         }
+    }
+    
+    func getGamesHistory(completion: @escaping ([GameHistory]) -> Void) {
+        completion(realmService.instance.objects(GameHistoryRealm.self).sorted(byKeyPath: "startTime").map { $0.toDomain() })
     }
 }
 

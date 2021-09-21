@@ -15,7 +15,9 @@ struct LevelSelectionBackButton: View {
             HStack {
                 Button(action: {
                     UIImpactFeedbackGenerator(style: .medium).impactOccurred()
-                    viewModel.showMenu()
+                    withAnimation {
+                        viewModel.showMenu()
+                    }
                 }, label: {
                     VStack {
                         Image(systemName: "arrow.backward")

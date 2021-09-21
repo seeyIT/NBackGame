@@ -6,12 +6,57 @@
 //
 
 import SwiftUI
+import Combine
 
 struct StatisticsView: View {
     
     @ObservedObject var viewModel: StatisticsViewModel
     
     var body: some View {
-        Text("Hello, World!")
+        VStack(spacing: 0) {
+            StatisticsTopPanelView(viewModel: viewModel)
+                .padding()
+            
+            ScrollView {
+                LazyVStack {
+                    ForEach(viewModel.history, id: \.uuid) { gameHistory in
+                        HStack {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text("Correct: \(gameHistory.level)")
+                                    .foregroundColor(.green)
+                                Text("Missed: \(gameHistory.level)")
+                                    .foregroundColor(.yellow)
+                                Text("Incorrect: \(gameHistory.level)")
+                                    .foregroundColor(.red)
+                            }
+                            .font(.headline)
+                            Spacer()
+                            VStack(alignment: .trailing) {
+                                Text(Date(timeIntervalSince1970: TimeInterval(gameHistory.startTime / 1000)), style: .date)
+                                    .foregroundColor(.white)
+                                Text(Date(timeIntervalSince1970: TimeInterval(gameHistory.startTime / 1000)), style: .time)
+                                    .foregroundColor(.white)
+                                Spacer()
+                                Text("Level: \(gameHistory.level)")
+                                    .foregroundColor(.white)
+                            }
+                        }
+                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 16)
+                                .stroke(Color.blue, lineWidth: 2)
+                        )
+                        .padding([.leading, .trailing, .bottom])
+                        
+                    }
+                }
+            }
+            
+        }
+        .background(Color.black.ignoresSafeArea())
+        
+        .onAppear(perform: {
+            viewModel.onAppear()
+        })
     }
 }

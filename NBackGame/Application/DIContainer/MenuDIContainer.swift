@@ -42,7 +42,18 @@ final class MenuDIContainer {
     }
     
     func makeStatisticsViewModel(menuCoordinator: MenuViewCoordinator) -> StatisticsViewModel {
-        return StatisticsViewModel(menuCoordinator: menuCoordinator)
+        return StatisticsViewModel(menuCoordinator: menuCoordinator, useCases: makeStatisticsViewModelUseCases())
     }
     
+    func makeStatisticsViewModelUseCases() -> StatisticsViewModelUseCases {
+        let getGamesHistoryUseCase = DefaultGetGamesHistoryUseCase(gameRepository: makeGameRepository())
+        
+        return StatisticsViewModelUseCases(getGamesHistoryUseCase: getGamesHistoryUseCase)
+    }
+    
+    // MARK: - Repository
+    
+    func makeGameRepository() -> GameRepository {
+        return RealmGameRepository()
+    }
 }

@@ -22,11 +22,11 @@ struct StatisticsView: View {
                     ForEach(viewModel.history, id: \.uuid) { gameHistory in
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Correct: \(gameHistory.level)")
+                                Text("Correct: \(gameHistory.correctSelectionSound + gameHistory.correctSelectionPosition)")
                                     .foregroundColor(.green)
-                                Text("Missed: \(gameHistory.level)")
+                                Text("Missed: \(gameHistory.missedSelectionSound + gameHistory.missedSelectionPosition)")
                                     .foregroundColor(.yellow)
-                                Text("Incorrect: \(gameHistory.level)")
+                                Text("Incorrect: \(gameHistory.incorrectSelectionSound + gameHistory.incorrectSelectionPosition)")
                                     .foregroundColor(.red)
                             }
                             .font(.headline)

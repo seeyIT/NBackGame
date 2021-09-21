@@ -14,12 +14,28 @@ class GameHistoryRealm: Object {
     @objc dynamic var level: Int = 0
     @objc dynamic var startTime: Int64 = 0
     @objc dynamic var endTime: Int64 = 0
-   
+    @objc dynamic var correctSelectionPosition: Int = 0
+    @objc dynamic var correctSelectionSound: Int = 0
+    @objc dynamic var incorrectSelectionPosition: Int = 0
+    @objc dynamic var incorrectSelectionSound: Int = 0
+    @objc dynamic var missedSelectionPosition: Int = 0
+    @objc dynamic var missedSelectionSound: Int = 0
+     
     override class func primaryKey() -> String? {
         "uuid"
     }
     
-    init(uuid: String = UUID().uuidString, history: [HistoryItem], level: Int, startTime: Int64, endTime: Int64) {
+    init(uuid: String = UUID().uuidString,
+         history: [HistoryItem],
+         level: Int,
+         startTime: Int64,
+         endTime: Int64,
+         correctSelectionPosition: Int,
+         correctSelectionSound: Int,
+         incorrectSelectionPosition: Int,
+         incorrectSelectionSound: Int,
+         missedSelectionPosition: Int,
+         missedSelectionSound: Int) {
         self.uuid = uuid
         let newHistory = List<GameHistorySingleRoundRealm>()
         history.forEach {
@@ -29,6 +45,12 @@ class GameHistoryRealm: Object {
         self.level = level
         self.startTime = startTime
         self.endTime = endTime
+        self.correctSelectionPosition = correctSelectionPosition
+        self.correctSelectionSound = correctSelectionSound
+        self.incorrectSelectionPosition = incorrectSelectionPosition
+        self.incorrectSelectionSound = incorrectSelectionSound
+        self.missedSelectionPosition = missedSelectionPosition
+        self.missedSelectionSound = missedSelectionSound
     }
     
     required override init() {
@@ -45,6 +67,12 @@ extension GameHistoryRealm {
                            history: historyDomain,
                            level: level,
                            startTime: startTime,
-                           endTime: endTime)
+                           endTime: endTime,
+                           correctSelectionPosition: correctSelectionPosition,
+                           correctSelectionSound: correctSelectionSound,
+                           incorrectSelectionPosition: incorrectSelectionPosition,
+                           incorrectSelectionSound: incorrectSelectionSound,
+                           missedSelectionPosition: missedSelectionPosition,
+                           missedSelectionSound: missedSelectionSound)
     }
 }

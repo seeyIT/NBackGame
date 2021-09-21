@@ -41,9 +41,9 @@ class GameSummaryViewModel: ObservableObject {
     // MARK: - Public functions
     
     func onAppear() {
-        saveGame()
         useCases.calculateGameResultUseCase.execute(history: gameInfo.history, level: gameInfo.level) { gameResults in
             self.gameResults = gameResults
+            self.saveGame()
             
             DispatchQueue.global().async {
                 if !self.canUnlockNextLevel(for: gameResults) {
@@ -81,7 +81,7 @@ class GameSummaryViewModel: ObservableObject {
     
     private func saveGame() {
         DispatchQueue.global().async {
-            self.useCases.saveGameUseCase.execute(gameInfo: self.gameInfo) { result in
+            self.useCases.saveGameUseCase.execute(gameInfo: self.gameInfo, gameResults: self.gameResults) { result in
                 switch result {
                 case .success:
                     print("Game saved successfully")

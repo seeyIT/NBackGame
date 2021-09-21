@@ -13,4 +13,10 @@ struct GameHistory {
     let level: Int
     let startTime: Int64
     let endTime: Int64
+    let correctSelectionPosition: Int
+    let correctSelectionSound: Int
+    let incorrectSelectionPosition: Int
+    let incorrectSelectionSound: Int
+    let missedSelectionPosition: Int
+    let missedSelectionSound: Int
 }

@@ -68,7 +68,8 @@ struct MenuButton: View {
 
 struct MenuView: View {
     @ObservedObject var viewModel: MenuViewModel
-    
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+
     private var buttonSize: CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
             return 320
@@ -114,8 +115,11 @@ struct MenuView: View {
                     })
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
                     
+                    if verticalSizeClass == .regular {
+                        QuotesView(viewModel: viewModel)
+                            .padding(.top, 30)
+                    }
                 }
-                
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)

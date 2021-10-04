@@ -51,6 +51,7 @@
 		5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B29C265FA4400026547A /* SnapshotHelper.swift */; };
 		5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */; };
 		5FB46DED270B625200B41F37 /* TutorialTopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */; };
+		5FB46DEF270B6CAD00B41F37 /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DEE270B6CAD00B41F37 /* QuotesView.swift */; };
 		5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */; };
 		5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */; };
 		5FBF32E2257E70080007FBA0 /* TutorialNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */; };
@@ -153,6 +154,7 @@
 		5FA8B29C265FA4400026547A /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUITests.swift; sourceTree = "<group>"; };
 		5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTopPanelView.swift; sourceTree = "<group>"; };
+		5FB46DEE270B6CAD00B41F37 /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
 		5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialText.swift; sourceTree = "<group>"; };
 		5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSteps.swift; sourceTree = "<group>"; };
 		5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialNavigationView.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				5FA863432529D996006B5F33 /* MenuView.swift */,
+				5FB46DEE270B6CAD00B41F37 /* QuotesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1009,6 +1012,7 @@
 				5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */,
 				5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */,
 				5FC4560D26F8B0670088E279 /* GetGamesHistoryUseCase.swift in Sources */,
+				5FB46DEF270B6CAD00B41F37 /* QuotesView.swift in Sources */,
 				5FC62C1F26020E7300D03AD8 /* GameButton.swift in Sources */,
 				5FC62C2E26020EE400D03AD8 /* SummaryTable.swift in Sources */,
 				5FC455FE26F87C3B0088E279 /* GameHistoryRealm.swift in Sources */,

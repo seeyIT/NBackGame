@@ -43,6 +43,7 @@ struct AccessibilityIdentifier {
         static let nextButton = "AccessibilityIdentifierNextButtonInTutorial"
         static let previousButton = "AccessibilityIdentifierPreviousButtonInTutorial"
         static let menuButton = "AccessibilityIdentifierMenuButtonInTutorial"
+        static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInGame"
     }
     
     struct Statistics {

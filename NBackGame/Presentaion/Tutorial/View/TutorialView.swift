@@ -28,20 +28,23 @@ struct TutorialView: View {
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
-            ScrollViewReader { viewReader in
-                ScrollView(showsIndicators: false) {
-                    VStack {
-                        Spacer()
-                        Text("")
-                            .id(tutorialContentId)
-                        steps[viewModel.currentStep]
-                        Spacer()
-                        TutorialNavigationView(viewModel: viewModel)
-                    }
-                    
-                    .onChange(of: viewModel.currentStep) { _ in
-                        withAnimation {
-                            viewReader.scrollTo(tutorialContentId)
+            VStack {
+                TutorialTopPanelView(viewModel: viewModel)
+                ScrollViewReader { viewReader in
+                    ScrollView(showsIndicators: false) {
+                        VStack {
+                            Spacer()
+                            Text("")
+                                .id(tutorialContentId)
+                            steps[viewModel.currentStep]
+                            Spacer()
+                            TutorialNavigationView(viewModel: viewModel)
+                        }
+                        
+                        .onChange(of: viewModel.currentStep) { _ in
+                            withAnimation {
+                                viewReader.scrollTo(tutorialContentId)
+                            }
                         }
                     }
                 }

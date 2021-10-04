@@ -50,6 +50,7 @@
 		5FA8B292265E4D440026547A /* GameTopPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B291265E4D440026547A /* GameTopPanel.swift */; };
 		5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B29C265FA4400026547A /* SnapshotHelper.swift */; };
 		5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */; };
+		5FB46DED270B625200B41F37 /* TutorialTopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */; };
 		5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */; };
 		5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */; };
 		5FBF32E2257E70080007FBA0 /* TutorialNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */; };
@@ -151,6 +152,7 @@
 		5FA8B291265E4D440026547A /* GameTopPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopPanel.swift; sourceTree = "<group>"; };
 		5FA8B29C265FA4400026547A /* SnapshotHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotHelper.swift; sourceTree = "<group>"; };
 		5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUITests.swift; sourceTree = "<group>"; };
+		5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTopPanelView.swift; sourceTree = "<group>"; };
 		5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialText.swift; sourceTree = "<group>"; };
 		5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSteps.swift; sourceTree = "<group>"; };
 		5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialNavigationView.swift; sourceTree = "<group>"; };
@@ -571,6 +573,7 @@
 				5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */,
 				5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */,
 				5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */,
+				5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -985,6 +988,7 @@
 				5F69220225CB21AF008A18C9 /* ApplicationVersion.swift in Sources */,
 				5F69220925CB228F008A18C9 /* AppMigrationService.swift in Sources */,
 				5FA4929D25D53EA800BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
+				5FB46DED270B625200B41F37 /* TutorialTopPanelView.swift in Sources */,
 				5F3D21C326559AF800E1FCC6 /* GameSoundButton.swift in Sources */,
 				5FC62C1A26020E3600D03AD8 /* CurrentGameItem.swift in Sources */,
 				5F2C2547258CC6BF008D36F1 /* MenuViewModel.swift in Sources */,

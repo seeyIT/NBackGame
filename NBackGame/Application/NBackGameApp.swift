@@ -11,12 +11,12 @@ import SwiftUI
 struct NBackGameApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
-    let menuDIContainer = MenuDIContainer()
+    let appDIContainer = AppDIContainer()
     @StateObject var menuViewState: ViewState<MenuViewState> = ViewState<MenuViewState>(MenuViewState.menu)
     
     var body: some Scene {
         WindowGroup {
-            MenuViewCoordinator(menuDIContainer: menuDIContainer, menuViewState: menuViewState)
+            MenuViewCoordinator(menuDIContainer: appDIContainer.makeMenuDIContainer(), menuViewState: menuViewState)
         }
     }
 }

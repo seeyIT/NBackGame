@@ -11,10 +11,12 @@ import AVFoundation
 
 class GameViewModel: ObservableObject {
     let gameCoordinator: GameViewCoordinator
+    let musicService: MusicService
     var gameInfo: GameInfo
     
-    init(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) {
+    init(gameCoordinator: GameViewCoordinator, musicService: MusicService, gameInfo: GameInfo) {
         self.gameCoordinator = gameCoordinator
+        self.musicService = musicService
         self.gameInfo = gameInfo
     }
     
@@ -39,11 +41,12 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(menuDIContainer: MenuDIContainer(), menuViewState: .init(.game)), gameDIContainer: GameDIContainer()), gameInfo: GameInfo(history: [], level: 0))
+        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(menuDIContainer: MenuDIContainer(dependencies: MenuDIContainer.Dependencies(musicService: MusicService())), menuViewState: .init(.game)), gameDIContainer: GameDIContainer(dependencies: GameDIContainer.Dependencies(musicService: MusicService()))), musicService: MusicService(), gameInfo: GameInfo(history: [], level: 0))
     }
     
     func startGame() {
         print("Start Game")
+        musicService.stopBackgroundMusic()
         gameInfo.startTime = getTimestamp()
         currentRoundNumber = 0
         positionClicked = false

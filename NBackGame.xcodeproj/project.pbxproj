@@ -52,6 +52,8 @@
 		5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */; };
 		5FB46DED270B625200B41F37 /* TutorialTopPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */; };
 		5FB46DEF270B6CAD00B41F37 /* QuotesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DEE270B6CAD00B41F37 /* QuotesView.swift */; };
+		5FB46DF5270C526700B41F37 /* MusicService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DF4270C526700B41F37 /* MusicService.swift */; };
+		5FB46DF7270C5C3300B41F37 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB46DF6270C5C3300B41F37 /* AppDIContainer.swift */; };
 		5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */; };
 		5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */; };
 		5FBF32E2257E70080007FBA0 /* TutorialNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */; };
@@ -155,6 +157,8 @@
 		5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotUITests.swift; sourceTree = "<group>"; };
 		5FB46DEC270B625200B41F37 /* TutorialTopPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialTopPanelView.swift; sourceTree = "<group>"; };
 		5FB46DEE270B6CAD00B41F37 /* QuotesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesView.swift; sourceTree = "<group>"; };
+		5FB46DF4270C526700B41F37 /* MusicService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicService.swift; sourceTree = "<group>"; };
+		5FB46DF6270C5C3300B41F37 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
 		5FBF32D4257E6FA00007FBA0 /* TutorialText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialText.swift; sourceTree = "<group>"; };
 		5FBF32DC257E6FCB0007FBA0 /* TutorialSteps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialSteps.swift; sourceTree = "<group>"; };
 		5FBF32E1257E70080007FBA0 /* TutorialNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialNavigationView.swift; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 			children = (
 				5F2C256A258D1D69008D36F1 /* MenuDIContainer.swift */,
 				5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */,
+				5FB46DF6270C5C3300B41F37 /* AppDIContainer.swift */,
 			);
 			path = DIContainer;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 		5F2C259E258D2C5A008D36F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FB46DF0270C4D4F00B41F37 /* Music */,
 				5FA863452529D997006B5F33 /* Assets.xcassets */,
 				5FA8634A2529D997006B5F33 /* Info.plist */,
 				5FA863472529D997006B5F33 /* Preview Content */,
@@ -445,6 +451,7 @@
 		5F6921E225CB1C01008A18C9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				5FB46DF3270C521800B41F37 /* Music */,
 				5F6921E325CB1C07008A18C9 /* Repositories */,
 				5F6921D325CAF9EF008A18C9 /* Storage */,
 			);
@@ -558,6 +565,21 @@
 				5FA8B2B0265FAEEE0026547A /* SnapshotUITests.swift */,
 			);
 			path = fastlane;
+			sourceTree = "<group>";
+		};
+		5FB46DF0270C4D4F00B41F37 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		5FB46DF3270C521800B41F37 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				5FB46DF4270C526700B41F37 /* MusicService.swift */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 		5FBF32D2257E6F7F0007FBA0 /* Tutorial */ = {
@@ -1009,6 +1031,7 @@
 				5FA863442529D996006B5F33 /* MenuView.swift in Sources */,
 				5FA8636D2529E7B3006B5F33 /* GameView.swift in Sources */,
 				5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */,
+				5FB46DF7270C5C3300B41F37 /* AppDIContainer.swift in Sources */,
 				5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */,
 				5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */,
 				5FC4560D26F8B0670088E279 /* GetGamesHistoryUseCase.swift in Sources */,
@@ -1022,6 +1045,7 @@
 				5FC4560426F8809D0088E279 /* GameHistorySingleRound.swift in Sources */,
 				5F2C254F258CD7F8008D36F1 /* GameViewCoordinator.swift in Sources */,
 				5FC62C1026020D5900D03AD8 /* Actions.swift in Sources */,
+				5FB46DF5270C526700B41F37 /* MusicService.swift in Sources */,
 				5FC62C2926020EA000D03AD8 /* GameBottomPanel.swift in Sources */,
 				5FC4560226F880640088E279 /* GameHistory.swift in Sources */,
 				5FA863422529D996006B5F33 /* NBackGameApp.swift in Sources */,

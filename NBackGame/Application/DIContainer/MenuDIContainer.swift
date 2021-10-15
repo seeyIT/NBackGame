@@ -9,13 +9,23 @@ import Foundation
 
 final class MenuDIContainer {
     
+    struct Dependencies {
+        let musicService: MusicService
+    }
+    
+    private let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+    }
+    
     // MARK: - Menu
     func makeMenuView(menuCoordinator: MenuViewCoordinator) -> MenuView {
         return MenuView(viewModel: makeMenuViewModel(menuCoordinator: menuCoordinator))
     }
     
     func makeMenuViewModel(menuCoordinator: MenuViewCoordinator) -> MenuViewModel {
-        return MenuViewModel(menuCoordinator: menuCoordinator)
+        return MenuViewModel(menuCoordinator: menuCoordinator, musicService: dependencies.musicService)
     }
     
     // MARK: - Tutorial
@@ -33,7 +43,8 @@ final class MenuDIContainer {
     }
     
     func makeGameDIContainer() -> GameDIContainer {
-        return GameDIContainer()
+        let dependencies = GameDIContainer.Dependencies(musicService: dependencies.musicService)
+        return GameDIContainer(dependencies: dependencies)
     }
     
     // MARK: - Statistics

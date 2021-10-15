@@ -9,6 +9,16 @@ import Foundation
 
 final class GameDIContainer {
     
+    struct Dependencies {
+        let musicService: MusicService
+    }
+    
+    private let dependencies: Dependencies
+    
+    init(dependencies: Dependencies) {
+        self.dependencies = dependencies
+    }
+    
     // MARK: - Level Selection
     func makeLevelSelectionView(gameCoordinator: GameViewCoordinator) -> LevelSelectionView {
         return LevelSelectionView(viewModel: makeLevelSelectionViewModel(gameCoordinator: gameCoordinator))
@@ -24,7 +34,7 @@ final class GameDIContainer {
     }
     
     func makeGameViewModel(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameViewModel {
-        return GameViewModel(gameCoordinator: gameCoordinator, gameInfo: gameInfo)
+        return GameViewModel(gameCoordinator: gameCoordinator, musicService: dependencies.musicService, gameInfo: gameInfo)
     }
     
     // MARK: - Summary

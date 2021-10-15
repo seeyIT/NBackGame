@@ -9,6 +9,7 @@ import SwiftUI
 
 class MenuViewModel: ObservableObject {
     let menuCoordinator: MenuViewCoordinator
+    private let musicService: MusicService
     
     @Published var currentQuote: (String, String) = ("", "")
     
@@ -26,12 +27,14 @@ class MenuViewModel: ObservableObject {
                                               ("The beautiful thing about learning is nobody can take it away from you.", "B.B. King")
     ]
 
-    init(menuCoordinator: MenuViewCoordinator) {
+    init(menuCoordinator: MenuViewCoordinator, musicService: MusicService) {
         self.menuCoordinator = menuCoordinator
+        self.musicService = musicService
     }
     
     func onAppear() {
         selectRandomQuote()
+        musicService.playBackgroundMusic()
     }
     
     func showGame() {

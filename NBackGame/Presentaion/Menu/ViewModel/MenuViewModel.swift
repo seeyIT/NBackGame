@@ -12,6 +12,7 @@ class MenuViewModel: ObservableObject {
     private let musicService: MusicService
     
     @Published var currentQuote: (String, String) = ("", "")
+    @Published var currentMusicIcon: String = ""
     
     private let quotes: [(String, String)] = [("We now accept the fact that learning is a lifelong process of keeping abreast of change. And the most pressing task is to teach people how to learn.", "Peter Drucker"),
                                               ("Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhil"),
@@ -27,12 +28,15 @@ class MenuViewModel: ObservableObject {
                                               ("The beautiful thing about learning is nobody can take it away from you.", "B.B. King")
     ]
 
+    private let musicButtonImages: [String] = ["speaker.wave.3", "speaker"]
+
     init(menuCoordinator: MenuViewCoordinator, musicService: MusicService) {
         self.menuCoordinator = menuCoordinator
         self.musicService = musicService
     }
     
     func onAppear() {
+        currentMusicIcon = musicButtonImages[0]
         selectRandomQuote()
         musicService.playBackgroundMusic()
     }
@@ -47,6 +51,11 @@ class MenuViewModel: ObservableObject {
     
     func showStatistics() {
         menuCoordinator.showStatistics()
+    }
+    
+    func toggleMusic() {
+        musicService.toggleMusic()
+        currentMusicIcon = musicService.musicIsPlaying ? musicButtonImages[0] : musicButtonImages[1]
     }
     
     // MARK: - Private functions

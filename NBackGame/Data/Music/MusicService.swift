@@ -11,6 +11,7 @@ import AVFoundation
 class MusicService {
     
     private var audioPlayer: AVAudioPlayer?
+    private(set) var musicIsPlaying: Bool = true
     private let fadeDuration: TimeInterval = TimeInterval(1)
     
     init() {
@@ -31,6 +32,7 @@ class MusicService {
     }
     
     func playBackgroundMusic() {
+        musicIsPlaying = true
         if let player = self.audioPlayer {
             player.play()
             player.setVolume(1, fadeDuration: fadeDuration)
@@ -40,10 +42,20 @@ class MusicService {
     }
     
     func stopBackgroundMusic() {
+        musicIsPlaying = false
         if let player = self.audioPlayer {
             player.setVolume(0, fadeDuration: fadeDuration)
         } else {
             print("Can't stop background music because audio player is nil")
+        }
+    }
+    
+    func toggleMusic() {
+        musicIsPlaying.toggle()
+        if musicIsPlaying {
+            playBackgroundMusic()
+        } else {
+            stopBackgroundMusic()
         }
     }
 }

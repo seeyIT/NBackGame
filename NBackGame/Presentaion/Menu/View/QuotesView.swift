@@ -31,7 +31,6 @@ struct QuotesView: View {
                 .$currentQuote
                 .assign(to: \.quote, on: self)
                 .store(in: &cancellable)
-            viewModel.onAppear()
         })
     }
 }

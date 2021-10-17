@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct PlayShape: Shape {
     func path(in rect: CGRect) -> Path {
@@ -69,6 +70,8 @@ struct MenuButton: View {
 struct MenuView: View {
     @ObservedObject var viewModel: MenuViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass
+    @State private var musicButtonIcon: String = "speaker.wave.3"
+    @State private var cancellable = Set<AnyCancellable>()
 
     private var buttonSize: CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -83,6 +86,19 @@ struct MenuView: View {
             ZStack {
                 Color.black.ignoresSafeArea()
                 VStack {
+                    HStack {
+                        Spacer()
+                        Button {
+                            viewModel.toggleMusic()
+                        } label: {
+                            Image(systemName: musicButtonIcon)
+                                .font(.largeTitle)
+                                .padding()
+                                .foregroundColor(.white)
+                        }
+                    }
+                    
+                    Spacer()
                     Button(action: {
                         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         withAnimation {
@@ -119,6 +135,10 @@ struct MenuView: View {
                         QuotesView(viewModel: viewModel)
                             .padding(.top, 30)
                     }
+                    Spacer()
+                    Text("Music powered by @gabriele_pollina")
+                        .foregroundColor(.blue)
+                        .padding()
                 }
             }
             .navigationBarTitle("")
@@ -126,6 +146,17 @@ struct MenuView: View {
             .preferredColorScheme(.dark)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .onAppear(perform: {
+            viewModel.onAppear()
+            viewModel
+                .$currentMusicIcon
+                .sink { icon in
+                    withAnimation {
+                        self.musicButtonIcon = icon
+                    }
+                }
+                .store(in: &cancellable)
+        })
     }
     
 }

@@ -26,7 +26,6 @@ struct GameViewCoordinator: View {
 }
 
 extension GameViewCoordinator {
-
     func showMenu() {
         menuCoordinator.showMenu()
     }

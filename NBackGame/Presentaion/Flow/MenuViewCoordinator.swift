@@ -6,39 +6,50 @@
 //
 
 import SwiftUI
+import Combine
 
-struct MenuViewCoordinator: View {
-    
-    let menuDIContainer: MenuDIContainer
-    @ObservedObject var menuViewState: ViewState<MenuViewState>
-    
-    var body: some View {
-        if menuViewState.state == .menu {
-            menuDIContainer.makeMenuView(menuCoordinator: self)
-        } else if menuViewState.state == .game {
-            menuDIContainer.makeGameView(menuCoordinator: self)
-        } else if menuViewState.state == .tutorial {
-            menuDIContainer.makeTutorialView(menuCoordinator: self)
-        } else if menuViewState.state == .statistics {
-            menuDIContainer.makeStatisticsView(menuCoordinator: self)
-        } else {
-            EmptyView()
-        }
-    }
+class MenuViewCoordinator: ObservableObject {
+    @Published var menuViewState: MenuViewState = .menu
     
     func showMenu() {
-        menuViewState.state = .menu
+        menuViewState = .menu
     }
     
     func showGame() {
-        menuViewState.state = .game
+        menuViewState = .game
     }
     
     func showTutorial() {
-        menuViewState.state = .tutorial
+        menuViewState = .tutorial
     }
     
     func showStatistics() {
-        menuViewState.state = .statistics
+        menuViewState = .statistics
+    }
+}
+
+struct MenuViewCoordinatorView: View {
+    @ObservedObject var menuCoordinator: MenuViewCoordinator
+    let menuDIContainer: MenuDIContainer
+    
+    init(menuDIContainer: MenuDIContainer, menuCoordinator: MenuViewCoordinator) {
+        self.menuDIContainer = menuDIContainer
+        self.menuCoordinator = menuCoordinator
+    }
+    
+    var body: some View {
+        VStack {
+            if menuCoordinator.menuViewState == .menu {
+                menuDIContainer.makeMenuView(menuCoordinator: menuCoordinator)
+            } else if menuCoordinator.menuViewState == .game {
+                menuDIContainer.makeGameView(menuCoordinator: menuCoordinator)
+            } else if menuCoordinator.menuViewState == .tutorial {
+                menuDIContainer.makeTutorialView(menuCoordinator: menuCoordinator)
+            } else if menuCoordinator.menuViewState == .statistics {
+                menuDIContainer.makeStatisticsView(menuCoordinator: menuCoordinator)
+            } else {
+                EmptyView()
+            }
+        }
     }
 }

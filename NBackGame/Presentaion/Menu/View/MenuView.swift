@@ -70,9 +70,7 @@ struct MenuButton: View {
 struct MenuView: View {
     @ObservedObject var viewModel: MenuViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass
-    @State private var musicButtonIcon: String = "speaker.wave.3"
-    @State private var cancellable = Set<AnyCancellable>()
-
+    
     private var buttonSize: CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
             return 320
@@ -91,13 +89,16 @@ struct MenuView: View {
                         Button {
                             viewModel.toggleMusic()
                         } label: {
-                            Image(systemName: musicButtonIcon)
+                            Image(systemName: viewModel.currentMusicIcon)
                                 .font(.largeTitle)
                                 .padding()
                                 .foregroundColor(.white)
                         }
+                        .frame(width: 60, height: 60)
                     }
-                    
+                    Spacer()
+                }
+                VStack {
                     Spacer()
                     Button(action: {
                         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
@@ -148,14 +149,6 @@ struct MenuView: View {
         .navigationViewStyle(StackNavigationViewStyle())
         .onAppear(perform: {
             viewModel.onAppear()
-            viewModel
-                .$currentMusicIcon
-                .sink { icon in
-                    withAnimation {
-                        self.musicButtonIcon = icon
-                    }
-                }
-                .store(in: &cancellable)
         })
     }
     

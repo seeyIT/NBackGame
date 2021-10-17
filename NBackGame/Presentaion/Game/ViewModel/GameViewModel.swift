@@ -41,7 +41,7 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(menuDIContainer: MenuDIContainer(dependencies: MenuDIContainer.Dependencies(musicService: MusicService())), menuViewState: .init(.game)), gameDIContainer: GameDIContainer(dependencies: GameDIContainer.Dependencies(musicService: MusicService()))), musicService: MusicService(), gameInfo: GameInfo(history: [], level: 0))
+        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(), gameDIContainer: GameDIContainer(dependencies: GameDIContainer.Dependencies(musicService: MusicService()))), musicService: MusicService(), gameInfo: GameInfo(history: [], level: 0))
     }
     
     func startGame() {

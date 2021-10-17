@@ -8,11 +8,12 @@
 import SwiftUI
 
 class MenuViewModel: ObservableObject {
-    let menuCoordinator: MenuViewCoordinator
-    private let musicService: MusicService
-    
+    @AppStorage("BackgroundMusicIsPlaying") private var backgroundMusicIsPlaying = true
     @Published var currentQuote: (String, String) = ("", "")
     @Published var currentMusicIcon: String = ""
+    
+    private let menuCoordinator: MenuViewCoordinator
+    private let musicService: MusicService
     
     private let quotes: [(String, String)] = [("We now accept the fact that learning is a lifelong process of keeping abreast of change. And the most pressing task is to teach people how to learn.", "Peter Drucker"),
                                               ("Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhil"),
@@ -27,18 +28,19 @@ class MenuViewModel: ObservableObject {
                                               ("Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.", "Richard Feynman"),
                                               ("The beautiful thing about learning is nobody can take it away from you.", "B.B. King")
     ]
-
+    
     private let musicButtonImages: [String] = ["speaker.wave.3", "speaker"]
-
+    
     init(menuCoordinator: MenuViewCoordinator, musicService: MusicService) {
+        debugPrint("Init MenuViewModel")
         self.menuCoordinator = menuCoordinator
         self.musicService = musicService
+        currentMusicIcon = backgroundMusicIsPlaying ? musicButtonImages[0] : musicButtonImages[1]
     }
     
     func onAppear() {
-        currentMusicIcon = musicButtonImages[0]
+        musicService.musicIsPlaying = backgroundMusicIsPlaying
         selectRandomQuote()
-        musicService.playBackgroundMusic()
     }
     
     func showGame() {
@@ -54,8 +56,13 @@ class MenuViewModel: ObservableObject {
     }
     
     func toggleMusic() {
-        musicService.toggleMusic()
-        currentMusicIcon = musicService.musicIsPlaying ? musicButtonImages[0] : musicButtonImages[1]
+        backgroundMusicIsPlaying.toggle()
+        musicService.musicIsPlaying = backgroundMusicIsPlaying
+        currentMusicIcon = backgroundMusicIsPlaying ? musicButtonImages[0] : musicButtonImages[1]
+    }
+    
+    deinit {
+        debugPrint("Deinit MenuViewModel")
     }
     
     // MARK: - Private functions
@@ -64,5 +71,5 @@ class MenuViewModel: ObservableObject {
         let randomNumber = Int.random(in: 0..<quotes.count)
         currentQuote = quotes[randomNumber]
     }
-   
+    
 }

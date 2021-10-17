@@ -225,6 +225,6 @@ struct TutorialStep10: View {
         .scaleEffect(0.5, anchor: .bottom)
         MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 1)
             .frame(width: 200, height: 200)
-
+        
     }
 }

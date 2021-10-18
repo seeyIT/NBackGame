@@ -40,18 +40,15 @@ struct MenuCoordinatorView: View {
     }
     
     var body: some View {
-        VStack {
-            if menuCoordinator.menuViewState == .menu {
-                menuDIContainer.makeMenuView(menuCoordinator: menuCoordinator)
-            } else if menuCoordinator.menuViewState == .game {
-                menuDIContainer.makeGameView(gameCoordinator: gameCoordinator)
-            } else if menuCoordinator.menuViewState == .tutorial {
-                menuDIContainer.makeTutorialView(menuCoordinator: menuCoordinator)
-            } else if menuCoordinator.menuViewState == .statistics {
-                menuDIContainer.makeStatisticsView(menuCoordinator: menuCoordinator)
-            } else {
-                EmptyView()
-            }
+        switch menuCoordinator.menuViewState {
+        case .menu:
+            menuDIContainer.makeMenuView(menuCoordinator: menuCoordinator)
+        case .game:
+            menuDIContainer.makeGameView(gameCoordinator: gameCoordinator)
+        case .tutorial:
+            menuDIContainer.makeTutorialView(menuCoordinator: menuCoordinator)
+        case .statistics:
+            menuDIContainer.makeStatisticsView(menuCoordinator: menuCoordinator)
         }
     }
 }

@@ -52,14 +52,13 @@ struct GameCoordinatorView: View {
     let gameDIContainer: GameDIContainer
     
     var body: some View {
-        if gameCoordinator.gameViewState == .levelSelection {
+        switch gameCoordinator.gameViewState {
+        case .levelSelection:
             gameDIContainer.makeLevelSelectionView(gameCoordinator: gameCoordinator)
-        } else if gameCoordinator.gameViewState == .game {
+        case .game:
             gameDIContainer.makeGameView(gameCoordinator: gameCoordinator)
-        } else if gameCoordinator.gameViewState == .summary {
+        case .summary:
             gameDIContainer.makeGameSummaryView(gameCoordinator: gameCoordinator)
-        } else {
-            EmptyView()
         }
     }
 }

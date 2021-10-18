@@ -7,26 +7,26 @@
 
 import Foundation
 
-struct AccessibilityIdentifier {
-    struct Menu {
+enum AccessibilityIdentifier {
+    enum Menu {
         static let playButton = "AccessibilityIdentifierPlayButtonInMenu"
         static let tutorialButton = "AccessibilityIdentifierTutorialButtonInMenu"
         static let statisticsButton = "AccessibilityIdentifierStatisticsButtonInMenu"
     }
     
-    struct LevelSelection {
+    enum LevelSelection {
         static let levelPrefixButton = "AccessibilityIdentifierLevelPrefixButtonInLevelSelection"
         static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInLevelSelection"
     }
     
-    struct Game {
+    enum Game {
         static let fieldNumberPrefixButton = "AccessibilityIdentifierFieldNumberPrefixButtonInGame"
         static let positionButton = "AccessibilityIdentifierPositionButtonInGame"
         static let soundButton = "AccessibilityIdentifierSoundButtonInGame"
         static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInGame"
     }
     
-    struct GameSummary {
+    enum GameSummary {
         static let playAgainButton = "AccessibilityIdentifierPlayAgainButtonInGameSummary"
         static let menuButton = "AccessibilityIdentifierMenuButtonInGameSummary"
         
@@ -39,14 +39,14 @@ struct AccessibilityIdentifier {
         
     }
     
-    struct Tutorial {
+    enum Tutorial {
         static let nextButton = "AccessibilityIdentifierNextButtonInTutorial"
         static let previousButton = "AccessibilityIdentifierPreviousButtonInTutorial"
         static let menuButton = "AccessibilityIdentifierMenuButtonInTutorial"
         static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInGame"
     }
     
-    struct Statistics {
+    enum Statistics {
         static let menuButton = "AccessibilityIdentifierMenuButtonInStatistics"
     }
 }

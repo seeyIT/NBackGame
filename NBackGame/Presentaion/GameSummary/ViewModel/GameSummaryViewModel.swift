@@ -28,10 +28,10 @@ struct GameResults {
 class GameSummaryViewModel: ObservableObject {
     @Published var gameResults = GameResults()
     
-    let gameCoordinator: GameViewCoordinator
+    let gameCoordinator: GameCoordinator
     let useCases: GameSummaryViewModelUseCases
     
-    init(gameCoordinator: GameViewCoordinator, useCases: GameSummaryViewModelUseCases) {
+    init(gameCoordinator: GameCoordinator, useCases: GameSummaryViewModelUseCases) {
         self.gameCoordinator = gameCoordinator
         self.useCases = useCases
     }

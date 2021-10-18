@@ -12,7 +12,7 @@ class MenuViewModel: ObservableObject {
     @Published var currentQuote: (String, String) = ("", "")
     @Published var currentMusicIcon: String = ""
     
-    private let menuCoordinator: MenuViewCoordinator
+    private let menuCoordinator: MenuCoordinator
     private let musicService: MusicService
     
     private let quotes: [(String, String)] = [("We now accept the fact that learning is a lifelong process of keeping abreast of change. And the most pressing task is to teach people how to learn.", "Peter Drucker"),
@@ -31,7 +31,7 @@ class MenuViewModel: ObservableObject {
     
     private let musicButtonImages: [String] = ["speaker.wave.3", "speaker"]
     
-    init(menuCoordinator: MenuViewCoordinator, musicService: MusicService) {
+    init(menuCoordinator: MenuCoordinator, musicService: MusicService) {
         debugPrint("Init MenuViewModel")
         self.menuCoordinator = menuCoordinator
         self.musicService = musicService

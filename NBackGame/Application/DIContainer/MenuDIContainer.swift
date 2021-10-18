@@ -20,26 +20,26 @@ final class MenuDIContainer {
     }
     
     // MARK: - Menu
-    func makeMenuView(menuCoordinator: MenuViewCoordinator) -> MenuView {
+    func makeMenuView(menuCoordinator: MenuCoordinator) -> MenuView {
         return MenuView(viewModel: makeMenuViewModel(menuCoordinator: menuCoordinator))
     }
     
-    func makeMenuViewModel(menuCoordinator: MenuViewCoordinator) -> MenuViewModel {
+    func makeMenuViewModel(menuCoordinator: MenuCoordinator) -> MenuViewModel {
         return MenuViewModel(menuCoordinator: menuCoordinator, musicService: dependencies.musicService)
     }
     
     // MARK: - Tutorial
-    func makeTutorialView(menuCoordinator: MenuViewCoordinator) -> TutorialView {
+    func makeTutorialView(menuCoordinator: MenuCoordinator) -> TutorialView {
         return TutorialView(viewModel: makeTutorialViewModel(menuCoordinator: menuCoordinator))
     }
     
-    func makeTutorialViewModel(menuCoordinator: MenuViewCoordinator) -> TutorialViewModel {
+    func makeTutorialViewModel(menuCoordinator: MenuCoordinator) -> TutorialViewModel {
         return TutorialViewModel(menuCoordinator: menuCoordinator)
     }
     
     // MARK: - Game
-    func makeGameView(gameViewCoordinator: GameViewCoordinator) -> GameViewCoordinatorView {
-        return GameViewCoordinatorView(gameViewCooridator: gameViewCoordinator, gameDIContainer: makeGameDIContainer())
+    func makeGameView(gameCoordinator: GameCoordinator) -> GameCoordinatorView {
+        return GameCoordinatorView(gameCoordinator: gameCoordinator, gameDIContainer: makeGameDIContainer())
     }
     
     func makeGameDIContainer() -> GameDIContainer {
@@ -48,11 +48,11 @@ final class MenuDIContainer {
     }
     
     // MARK: - Statistics
-    func makeStatisticsView(menuCoordinator: MenuViewCoordinator) -> StatisticsView {
+    func makeStatisticsView(menuCoordinator: MenuCoordinator) -> StatisticsView {
         return StatisticsView(viewModel: makeStatisticsViewModel(menuCoordinator: menuCoordinator))
     }
     
-    func makeStatisticsViewModel(menuCoordinator: MenuViewCoordinator) -> StatisticsViewModel {
+    func makeStatisticsViewModel(menuCoordinator: MenuCoordinator) -> StatisticsViewModel {
         return StatisticsViewModel(menuCoordinator: menuCoordinator, useCases: makeStatisticsViewModelUseCases())
     }
     

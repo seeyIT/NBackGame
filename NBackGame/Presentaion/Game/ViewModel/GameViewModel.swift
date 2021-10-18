@@ -10,10 +10,10 @@ import Combine
 import AVFoundation
 
 class GameViewModel: ObservableObject {
-    let gameCoordinator: GameViewCoordinator
+    let gameCoordinator: GameCoordinator
     let musicService: MusicService
     
-    init(gameCoordinator: GameViewCoordinator, musicService: MusicService) {
+    init(gameCoordinator: GameCoordinator, musicService: MusicService) {
         self.gameCoordinator = gameCoordinator
         self.musicService = musicService
     }
@@ -39,7 +39,7 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator()), musicService: MusicService())
+        return GameViewModel(gameCoordinator: GameCoordinator(menuCoordinator: MenuCoordinator()), musicService: MusicService())
     }
 
     func startGame() {

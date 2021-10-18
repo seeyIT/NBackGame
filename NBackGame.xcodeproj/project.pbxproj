@@ -10,9 +10,9 @@
 		14BF07AF9499885B6404A68F /* Pods_NBackGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E894942F5E138253DAC5BC11 /* Pods_NBackGame.framework */; };
 		5F05FB84256686E500984BD5 /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05FB83256686E500984BD5 /* TutorialView.swift */; };
 		5F05FB86256686F500984BD5 /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F05FB85256686F500984BD5 /* TutorialViewModel.swift */; };
-		5F2C253C258CBDAE008D36F1 /* MenuViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C253B258CBDAE008D36F1 /* MenuViewCoordinator.swift */; };
+		5F2C253C258CBDAE008D36F1 /* MenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C253B258CBDAE008D36F1 /* MenuCoordinator.swift */; };
 		5F2C2547258CC6BF008D36F1 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2546258CC6BF008D36F1 /* MenuViewModel.swift */; };
-		5F2C254F258CD7F8008D36F1 /* GameViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C254E258CD7F8008D36F1 /* GameViewCoordinator.swift */; };
+		5F2C254F258CD7F8008D36F1 /* GameCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C254E258CD7F8008D36F1 /* GameCoordinator.swift */; };
 		5F2C2557258D1D09008D36F1 /* States.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2556258D1D09008D36F1 /* States.swift */; };
 		5F2C256B258D1D69008D36F1 /* MenuDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C256A258D1D69008D36F1 /* MenuDIContainer.swift */; };
 		5F2C2570258D1DEE008D36F1 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C256F258D1DEE008D36F1 /* GameInfo.swift */; };
@@ -111,9 +111,9 @@
 		49AEF06C035B0EEA70A51B16 /* Pods-NBackGame-NBackGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBackGame-NBackGameTests.debug.xcconfig"; path = "Target Support Files/Pods-NBackGame-NBackGameTests/Pods-NBackGame-NBackGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5F05FB83256686E500984BD5 /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
 		5F05FB85256686F500984BD5 /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
-		5F2C253B258CBDAE008D36F1 /* MenuViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCoordinator.swift; sourceTree = "<group>"; };
+		5F2C253B258CBDAE008D36F1 /* MenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCoordinator.swift; sourceTree = "<group>"; };
 		5F2C2546258CC6BF008D36F1 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
-		5F2C254E258CD7F8008D36F1 /* GameViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewCoordinator.swift; sourceTree = "<group>"; };
+		5F2C254E258CD7F8008D36F1 /* GameCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCoordinator.swift; sourceTree = "<group>"; };
 		5F2C2556258D1D09008D36F1 /* States.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = States.swift; sourceTree = "<group>"; };
 		5F2C256A258D1D69008D36F1 /* MenuDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDIContainer.swift; sourceTree = "<group>"; };
 		5F2C256F258D1DEE008D36F1 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
@@ -255,8 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				5F2C256F258D1DEE008D36F1 /* GameInfo.swift */,
-				5F2C253B258CBDAE008D36F1 /* MenuViewCoordinator.swift */,
-				5F2C254E258CD7F8008D36F1 /* GameViewCoordinator.swift */,
+				5F2C253B258CBDAE008D36F1 /* MenuCoordinator.swift */,
+				5F2C254E258CD7F8008D36F1 /* GameCoordinator.swift */,
 				5FC62C0F26020D5900D03AD8 /* Actions.swift */,
 			);
 			path = Flow;
@@ -1004,7 +1004,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA8B28D265E48A90026547A /* GameSummaryButtons.swift in Sources */,
-				5F2C253C258CBDAE008D36F1 /* MenuViewCoordinator.swift in Sources */,
+				5F2C253C258CBDAE008D36F1 /* MenuCoordinator.swift in Sources */,
 				5FC455FC26F7B2150088E279 /* SaveGameUseCase.swift in Sources */,
 				5F6921FA25CB2114008A18C9 /* AppVersionRealm.swift in Sources */,
 				5F05FB84256686E500984BD5 /* TutorialView.swift in Sources */,
@@ -1047,7 +1047,7 @@
 				5FC38F97256C4B96007AF3EA /* LevelSelectionView.swift in Sources */,
 				5FBF32DD257E6FCB0007FBA0 /* TutorialSteps.swift in Sources */,
 				5FC4560426F8809D0088E279 /* GameHistorySingleRound.swift in Sources */,
-				5F2C254F258CD7F8008D36F1 /* GameViewCoordinator.swift in Sources */,
+				5F2C254F258CD7F8008D36F1 /* GameCoordinator.swift in Sources */,
 				5FC62C1026020D5900D03AD8 /* Actions.swift in Sources */,
 				5FB46DF5270C526700B41F37 /* MusicService.swift in Sources */,
 				5FC62C2926020EA000D03AD8 /* GameBottomPanel.swift in Sources */,

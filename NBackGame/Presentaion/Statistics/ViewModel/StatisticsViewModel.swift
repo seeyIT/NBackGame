@@ -12,12 +12,12 @@ struct StatisticsViewModelUseCases {
 }
 
 class StatisticsViewModel: ObservableObject {
-    var menuCoordinator: MenuViewCoordinator
+    var menuCoordinator: MenuCoordinator
     let useCases: StatisticsViewModelUseCases
     
     @Published var history: [GameHistory] = []
     
-    init(menuCoordinator: MenuViewCoordinator, useCases: StatisticsViewModelUseCases) {
+    init(menuCoordinator: MenuCoordinator, useCases: StatisticsViewModelUseCases) {
         self.menuCoordinator = menuCoordinator
         self.useCases = useCases
     }

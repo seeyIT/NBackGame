@@ -13,7 +13,7 @@ struct LevelSelectionViewModelUseCases {
 }
 
 class LevelSelectionViewModel: ObservableObject {
-    let gameCoordinator: GameViewCoordinator
+    let gameCoordinator: GameCoordinator
     let defaultLevelUnlocked: Int = 2
     var selectedLevel = 1
     
@@ -21,7 +21,7 @@ class LevelSelectionViewModel: ObservableObject {
     
     let useCases: LevelSelectionViewModelUseCases
     
-    init(gameCoordinator: GameViewCoordinator, useCases: LevelSelectionViewModelUseCases) {
+    init(gameCoordinator: GameCoordinator, useCases: LevelSelectionViewModelUseCases) {
         self.useCases = useCases
         self.gameCoordinator = gameCoordinator
     }

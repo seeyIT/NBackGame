@@ -12,18 +12,18 @@ struct NBackGameApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     let appDIContainer: AppDIContainer
-    let menuCoordinator: MenuViewCoordinator
-    let gameCoordinator: GameViewCoordinator
+    let menuCoordinator: MenuCoordinator
+    let gameCoordinator: GameCoordinator
     
     init() {
         appDIContainer = AppDIContainer()
-        menuCoordinator = MenuViewCoordinator()
-        gameCoordinator = GameViewCoordinator(menuCoordinator: menuCoordinator)
+        menuCoordinator = MenuCoordinator()
+        gameCoordinator = GameCoordinator(menuCoordinator: menuCoordinator)
     }
     
     var body: some Scene {
         WindowGroup {
-            MenuViewCoordinatorView(menuDIContainer: appDIContainer.makeMenuDIContainer(),
+            MenuCoordinatorView(menuDIContainer: appDIContainer.makeMenuDIContainer(),
                                     menuCoordinator: menuCoordinator,
                                     gameCoordinator: gameCoordinator)
         }

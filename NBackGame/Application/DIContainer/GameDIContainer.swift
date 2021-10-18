@@ -20,29 +20,29 @@ final class GameDIContainer {
     }
     
     // MARK: - Level Selection
-    func makeLevelSelectionView(gameCoordinator: GameViewCoordinator) -> LevelSelectionView {
+    func makeLevelSelectionView(gameCoordinator: GameCoordinator) -> LevelSelectionView {
         return LevelSelectionView(viewModel: makeLevelSelectionViewModel(gameCoordinator: gameCoordinator))
     }
     
-    func makeLevelSelectionViewModel(gameCoordinator: GameViewCoordinator) -> LevelSelectionViewModel {
+    func makeLevelSelectionViewModel(gameCoordinator: GameCoordinator) -> LevelSelectionViewModel {
         return LevelSelectionViewModel(gameCoordinator: gameCoordinator, useCases: makeLevelSelectionViewModelUseCases())
     }
     
     // MARK: - Game
-    func makeGameView(gameCoordinator: GameViewCoordinator) -> GameView {
+    func makeGameView(gameCoordinator: GameCoordinator) -> GameView {
         return GameView(viewModel: makeGameViewModel(gameCoordinator: gameCoordinator))
     }
     
-    func makeGameViewModel(gameCoordinator: GameViewCoordinator) -> GameViewModel {
+    func makeGameViewModel(gameCoordinator: GameCoordinator) -> GameViewModel {
         return GameViewModel(gameCoordinator: gameCoordinator, musicService: dependencies.musicService)
     }
     
     // MARK: - Summary
-    func makeGameSummaryView(gameCoordinator: GameViewCoordinator) -> GameSummaryView {
+    func makeGameSummaryView(gameCoordinator: GameCoordinator) -> GameSummaryView {
         return GameSummaryView(viewModel: makeGameSummaryViewModel(gameCoordinator: gameCoordinator))
     }
     
-    func makeGameSummaryViewModel(gameCoordinator: GameViewCoordinator) -> GameSummaryViewModel {
+    func makeGameSummaryViewModel(gameCoordinator: GameCoordinator) -> GameSummaryViewModel {
         return GameSummaryViewModel(gameCoordinator: gameCoordinator, useCases: makeGameSummaryViewModelUseCases())
     }
     

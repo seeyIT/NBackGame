@@ -1,5 +1,5 @@
 //
-//  MenuViewCoordinator.swift
+//  MenuCoordinator.swift
 //  NBackGame
 //
 //  Created by Kornel Miszczak on 18/12/2020.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class MenuViewCoordinator: ObservableObject {
+class MenuCoordinator: ObservableObject {
     @Published var menuViewState: MenuViewState = .menu
     
     func showMenu() {
@@ -28,15 +28,15 @@ class MenuViewCoordinator: ObservableObject {
     }
 }
 
-struct MenuViewCoordinatorView: View {
-    @ObservedObject var menuCoordinator: MenuViewCoordinator
-    var gameCooridator: GameViewCoordinator
+struct MenuCoordinatorView: View {
+    @ObservedObject var menuCoordinator: MenuCoordinator
+    var gameCoordinator: GameCoordinator
     let menuDIContainer: MenuDIContainer
     
-    init(menuDIContainer: MenuDIContainer, menuCoordinator: MenuViewCoordinator, gameCoordinator: GameViewCoordinator) {
+    init(menuDIContainer: MenuDIContainer, menuCoordinator: MenuCoordinator, gameCoordinator: GameCoordinator) {
         self.menuDIContainer = menuDIContainer
         self.menuCoordinator = menuCoordinator
-        self.gameCooridator = gameCoordinator
+        self.gameCoordinator = gameCoordinator
     }
     
     var body: some View {
@@ -44,7 +44,7 @@ struct MenuViewCoordinatorView: View {
             if menuCoordinator.menuViewState == .menu {
                 menuDIContainer.makeMenuView(menuCoordinator: menuCoordinator)
             } else if menuCoordinator.menuViewState == .game {
-                menuDIContainer.makeGameView(gameViewCoordinator: gameCooridator)
+                menuDIContainer.makeGameView(gameCoordinator: gameCoordinator)
             } else if menuCoordinator.menuViewState == .tutorial {
                 menuDIContainer.makeTutorialView(menuCoordinator: menuCoordinator)
             } else if menuCoordinator.menuViewState == .statistics {

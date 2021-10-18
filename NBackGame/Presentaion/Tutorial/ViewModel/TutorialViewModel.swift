@@ -8,12 +8,12 @@
 import Foundation
 
 class TutorialViewModel: ObservableObject {
-    let menuCoordinator: MenuViewCoordinator
+    let menuCoordinator: MenuCoordinator
     @Published var currentStep = 1
     let firstStep = 1
     let lastStep = 10
     
-    init(menuCoordinator: MenuViewCoordinator) {
+    init(menuCoordinator: MenuCoordinator) {
         self.menuCoordinator = menuCoordinator
         print("TutorialViewModel")
     }

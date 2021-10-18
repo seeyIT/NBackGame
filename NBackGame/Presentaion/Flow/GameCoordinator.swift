@@ -1,5 +1,5 @@
 //
-//  GameViewCoordinator.swift
+//  GameCoordinator.swift
 //  NBackGame
 //
 //  Created by Kornel Miszczak on 18/12/2020.
@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-class GameViewCoordinator: ObservableObject {
+class GameCoordinator: ObservableObject {
     @Published var gameViewState: GameViewState = .levelSelection
-    let menuCoordinator: MenuViewCoordinator
+    let menuCoordinator: MenuCoordinator
     var gameInfo: GameInfo = GameInfo(history: [], level: 0)
     
-    init(menuCoordinator: MenuViewCoordinator) {
-        debugPrint("Init GameViewCoordinator")
+    init(menuCoordinator: MenuCoordinator) {
+        debugPrint("Init GameCoordinator")
         self.menuCoordinator = menuCoordinator
     }
     
     deinit {
-        debugPrint("Deinit GameViewCoordinator")
+        debugPrint("Deinit GameCoordinator")
     }
     
     func showMenu() {
@@ -46,18 +46,18 @@ class GameViewCoordinator: ObservableObject {
     }
 }
 
-struct GameViewCoordinatorView: View {
-    @ObservedObject var gameViewCooridator: GameViewCoordinator
+struct GameCoordinatorView: View {
+    @ObservedObject var gameCoordinator: GameCoordinator
 
     let gameDIContainer: GameDIContainer
     
     var body: some View {
-        if gameViewCooridator.gameViewState == .levelSelection {
-            gameDIContainer.makeLevelSelectionView(gameCoordinator: gameViewCooridator)
-        } else if gameViewCooridator.gameViewState == .game {
-            gameDIContainer.makeGameView(gameCoordinator: gameViewCooridator)
-        } else if gameViewCooridator.gameViewState == .summary {
-            gameDIContainer.makeGameSummaryView(gameCoordinator: gameViewCooridator)
+        if gameCoordinator.gameViewState == .levelSelection {
+            gameDIContainer.makeLevelSelectionView(gameCoordinator: gameCoordinator)
+        } else if gameCoordinator.gameViewState == .game {
+            gameDIContainer.makeGameView(gameCoordinator: gameCoordinator)
+        } else if gameCoordinator.gameViewState == .summary {
+            gameDIContainer.makeGameSummaryView(gameCoordinator: gameCoordinator)
         } else {
             EmptyView()
         }

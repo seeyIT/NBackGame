@@ -14,9 +14,9 @@ struct GameSummaryView: View {
     @State private var cancellable = Set<AnyCancellable>()
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            ZStack {
-                Color.black.ignoresSafeArea()
+        ZStack {
+            Color.black.ignoresSafeArea()
+            ScrollView(showsIndicators: false) {
                 VStack {
                     Text("Results")
                         .font(.largeTitle)

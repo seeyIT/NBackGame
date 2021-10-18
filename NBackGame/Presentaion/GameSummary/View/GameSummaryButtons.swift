@@ -12,7 +12,7 @@ struct GameSummaryButtons: View {
     @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
-        if sizeCategory >  ContentSizeCategory.extraExtraLarge {
+        if sizeCategory > ContentSizeCategory.extraExtraLarge {
             VStack {
                 PlayAgainButton(viewModel: viewModel)
                 BackToMenuButton(viewModel: viewModel)

@@ -35,6 +35,8 @@
 		5F69221425CB25F9008A18C9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69221325CB25F9008A18C9 /* Utils.swift */; };
 		5F69227525D2C9DB008A18C9 /* PlayGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */; };
 		5F802ED425DFDF1600AF85EE /* GameSummaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */; };
+		5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807536271DBACE00563BAA /* PlayCircle.swift */; };
+		5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807538271DBBDA00563BAA /* MenuButton.swift */; };
 		5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949A9925FA0B3800512ADE /* CalculateGameResultsUseCase.swift */; };
 		5F949A9F25FA159E00512ADE /* UnlockNextLevelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949A9E25FA159E00512ADE /* UnlockNextLevelUseCase.swift */; };
 		5F949AA425FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949AA325FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift */; };
@@ -136,6 +138,8 @@
 		5F69221325CB25F9008A18C9 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameUITests.swift; sourceTree = "<group>"; };
 		5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewModelTests.swift; sourceTree = "<group>"; };
+		5F807536271DBACE00563BAA /* PlayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCircle.swift; sourceTree = "<group>"; };
+		5F807538271DBBDA00563BAA /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		5F949A9925FA0B3800512ADE /* CalculateGameResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateGameResultsUseCase.swift; sourceTree = "<group>"; };
 		5F949A9E25FA159E00512ADE /* UnlockNextLevelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockNextLevelUseCase.swift; sourceTree = "<group>"; };
 		5F949AA325FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateGameResultsUseCaseTests.swift; sourceTree = "<group>"; };
@@ -329,6 +333,7 @@
 				5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */,
 				5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */,
 				5FA8B291265E4D440026547A /* GameTopPanel.swift */,
+				5F807536271DBACE00563BAA /* PlayCircle.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 			children = (
 				5FA863432529D996006B5F33 /* MenuView.swift */,
 				5FB46DEE270B6CAD00B41F37 /* QuotesView.swift */,
+				5F807538271DBBDA00563BAA /* MenuButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1023,6 +1029,7 @@
 				5F2C2547258CC6BF008D36F1 /* MenuViewModel.swift in Sources */,
 				5F69221425CB25F9008A18C9 /* Utils.swift in Sources */,
 				5F2C256B258D1D69008D36F1 /* MenuDIContainer.swift in Sources */,
+				5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */,
 				5FC38F99256C4BC0007AF3EA /* LevelSelectionViewModel.swift in Sources */,
 				5FC4560B26F8A9C60088E279 /* StatisticsViewModel.swift in Sources */,
 				5F6921ED25CB1D41008A18C9 /* RealmService.swift in Sources */,
@@ -1032,6 +1039,7 @@
 				5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */,
 				5FBF32E2257E70080007FBA0 /* TutorialNavigationView.swift in Sources */,
 				5F6921F225CB1FDF008A18C9 /* AppDelegate.swift in Sources */,
+				5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */,
 				5FA863442529D996006B5F33 /* MenuView.swift in Sources */,
 				5FA8636D2529E7B3006B5F33 /* GameView.swift in Sources */,
 				5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */,

@@ -62,7 +62,7 @@ private struct TutorialNavigationNextButton: View {
         }, label: {
             MenuButton(iconName: "arrow.right", text: "Next", imageOnLeft: false)
         })
-        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.previousButton)
+        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.nextButton)
     }
 }
 
@@ -78,6 +78,6 @@ private struct TutorialNavigationBackButton: View {
         }, label: {
             MenuButton(iconName: "arrow.left", text: "Back")
         })
-        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.nextButton)
+        .accessibilityIdentifier(AccessibilityIdentifier.Tutorial.previousButton)
     }
 }

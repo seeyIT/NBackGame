@@ -43,7 +43,7 @@ enum AccessibilityIdentifier {
         static let nextButton = "AccessibilityIdentifierNextButtonInTutorial"
         static let previousButton = "AccessibilityIdentifierPreviousButtonInTutorial"
         static let menuButton = "AccessibilityIdentifierMenuButtonInTutorial"
-        static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInGame"
+        static let showMenuButton = "AccessibilityIdentifierShowMenuButtonInTutorial"
     }
     
     enum Statistics {

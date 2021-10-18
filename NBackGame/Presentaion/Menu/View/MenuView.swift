@@ -71,7 +71,7 @@ struct MenuView: View {
                     }, label: {
                         MenuButton(iconName: "graduationcap.fill", text: "Statistics", fixedWidth: buttonSize)
                     })
-                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
+                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.statisticsButton)
                     
                     if verticalSizeClass == .regular {
                         QuotesView(viewModel: viewModel)

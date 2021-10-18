@@ -12,12 +12,10 @@ import AVFoundation
 class GameViewModel: ObservableObject {
     let gameCoordinator: GameViewCoordinator
     let musicService: MusicService
-    var gameInfo: GameInfo
     
-    init(gameCoordinator: GameViewCoordinator, musicService: MusicService, gameInfo: GameInfo) {
+    init(gameCoordinator: GameViewCoordinator, musicService: MusicService) {
         self.gameCoordinator = gameCoordinator
         self.musicService = musicService
-        self.gameInfo = gameInfo
     }
     
     @Published var positionClicked = false
@@ -41,13 +39,13 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator(), gameDIContainer: GameDIContainer(dependencies: GameDIContainer.Dependencies(musicService: MusicService()))), musicService: MusicService(), gameInfo: GameInfo(history: [], level: 0))
+        return GameViewModel(gameCoordinator: GameViewCoordinator(menuCoordinator: MenuViewCoordinator()), musicService: MusicService())
     }
-    
+
     func startGame() {
-        print("Start Game")
+        debugPrint("Start Game")
         musicService.stopBackgroundMusic()
-        gameInfo.startTime = getTimestamp()
+        gameCoordinator.gameInfo.startTime = getTimestamp()
         currentRoundNumber = 0
         positionClicked = false
         soundClicked = false
@@ -111,9 +109,9 @@ class GameViewModel: ObservableObject {
     
     private func finishGame() {
         stopGame()
-        gameInfo.history = history
-        gameInfo.endTime = getTimestamp()
-        gameCoordinator.showGameSummary(gameInfo: gameInfo)
+        gameCoordinator.gameInfo.history = history
+        gameCoordinator.gameInfo.endTime = getTimestamp()
+        gameCoordinator.showGameSummary(gameInfo: gameCoordinator.gameInfo)
     }
     
     private func addHistory(_ currentGameItem: CurrentGameItem) {

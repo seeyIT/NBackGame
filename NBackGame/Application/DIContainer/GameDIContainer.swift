@@ -29,21 +29,21 @@ final class GameDIContainer {
     }
     
     // MARK: - Game
-    func makeGameView(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameView {
-        return GameView(viewModel: makeGameViewModel(gameCoordinator: gameCoordinator, gameInfo: gameInfo))
+    func makeGameView(gameCoordinator: GameViewCoordinator) -> GameView {
+        return GameView(viewModel: makeGameViewModel(gameCoordinator: gameCoordinator))
     }
     
-    func makeGameViewModel(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameViewModel {
-        return GameViewModel(gameCoordinator: gameCoordinator, musicService: dependencies.musicService, gameInfo: gameInfo)
+    func makeGameViewModel(gameCoordinator: GameViewCoordinator) -> GameViewModel {
+        return GameViewModel(gameCoordinator: gameCoordinator, musicService: dependencies.musicService)
     }
     
     // MARK: - Summary
-    func makeGameSummaryView(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameSummaryView {
-        return GameSummaryView(viewModel: makeGameSummaryViewModel(gameCoordinator: gameCoordinator, gameInfo: gameInfo))
+    func makeGameSummaryView(gameCoordinator: GameViewCoordinator) -> GameSummaryView {
+        return GameSummaryView(viewModel: makeGameSummaryViewModel(gameCoordinator: gameCoordinator))
     }
     
-    func makeGameSummaryViewModel(gameCoordinator: GameViewCoordinator, gameInfo: GameInfo) -> GameSummaryViewModel {
-        return GameSummaryViewModel(gameCoordinator: gameCoordinator, gameInfo: gameInfo, useCases: makeGameSummaryViewModelUseCases())
+    func makeGameSummaryViewModel(gameCoordinator: GameViewCoordinator) -> GameSummaryViewModel {
+        return GameSummaryViewModel(gameCoordinator: gameCoordinator, useCases: makeGameSummaryViewModelUseCases())
     }
     
     // MARK: - Repository

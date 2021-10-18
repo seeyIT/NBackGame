@@ -38,8 +38,8 @@ final class MenuDIContainer {
     }
     
     // MARK: - Game
-    func makeGameView(menuCoordinator: MenuViewCoordinator) -> GameViewCoordinator {
-        return GameViewCoordinator(menuCoordinator: menuCoordinator, gameDIContainer: makeGameDIContainer())
+    func makeGameView(gameViewCoordinator: GameViewCoordinator) -> GameViewCoordinatorView {
+        return GameViewCoordinatorView(gameViewCooridator: gameViewCoordinator, gameDIContainer: makeGameDIContainer())
     }
     
     func makeGameDIContainer() -> GameDIContainer {

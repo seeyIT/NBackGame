@@ -7,49 +7,59 @@
 
 import SwiftUI
 
-struct GameViewCoordinator: View {
+class GameViewCoordinator: ObservableObject {
+    @Published var gameViewState: GameViewState = .levelSelection
     let menuCoordinator: MenuViewCoordinator
-    let gameDIContainer: GameDIContainer
-    @StateObject var gameState: GameState<GameViewState> = GameState<GameViewState>(.levelSelection)
+    var gameInfo: GameInfo = GameInfo(history: [], level: 0)
     
-    var body: some View {
-        if gameState.state == .levelSelection {
-            gameDIContainer.makeLevelSelectionView(gameCoordinator: self)
-        } else if gameState.state == .game {
-            gameDIContainer.makeGameView(gameCoordinator: self, gameInfo: gameState.gameInfo)
-        } else if gameState.state == .summary {
-            gameDIContainer.makeGameSummaryView(gameCoordinator: self, gameInfo: gameState.gameInfo)
-        } else {
-            EmptyView()
-        }
+    init(menuCoordinator: MenuViewCoordinator) {
+        debugPrint("Init GameViewCoordinator")
+        self.menuCoordinator = menuCoordinator
     }
-}
-
-extension GameViewCoordinator {
+    
+    deinit {
+        debugPrint("Deinit GameViewCoordinator")
+    }
+    
     func showMenu() {
         menuCoordinator.showMenu()
+        gameViewState = .levelSelection
     }
     
     func showLevelSelection() {
-        gameState.state = .levelSelection
+        gameViewState = .levelSelection
     }
     
     func selectLevel(_ level: Int) {
-        gameState.gameInfo.level = level
-        withAnimation {
-            gameState.state = .game
-        }
+        gameInfo.level = level
+        gameViewState = .game
     }
     
     func playAgain() {
-        gameState.gameInfo.history.removeAll()
-        withAnimation {
-            gameState.state = .game
-        }
+        gameInfo.history.removeAll()
+        gameViewState = .game
     }
     
     func showGameSummary(gameInfo: GameInfo) {
-        gameState.gameInfo = gameInfo
-        gameState.state = .summary
+        self.gameInfo = gameInfo
+        gameViewState = .summary
+    }
+}
+
+struct GameViewCoordinatorView: View {
+    @ObservedObject var gameViewCooridator: GameViewCoordinator
+
+    let gameDIContainer: GameDIContainer
+    
+    var body: some View {
+        if gameViewCooridator.gameViewState == .levelSelection {
+            gameDIContainer.makeLevelSelectionView(gameCoordinator: gameViewCooridator)
+        } else if gameViewCooridator.gameViewState == .game {
+            gameDIContainer.makeGameView(gameCoordinator: gameViewCooridator)
+        } else if gameViewCooridator.gameViewState == .summary {
+            gameDIContainer.makeGameSummaryView(gameCoordinator: gameViewCooridator)
+        } else {
+            EmptyView()
+        }
     }
 }

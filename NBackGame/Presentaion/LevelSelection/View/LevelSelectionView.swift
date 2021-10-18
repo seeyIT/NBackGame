@@ -31,7 +31,9 @@ struct LevelSelectionView: View {
                         ForEach(1...12, id: \.self) { number in
                             ZStack {
                                 Button(action: {
-                                    viewModel.selectLevel(number)
+                                    withAnimation {
+                                        viewModel.selectLevel(number)
+                                    }
                                     if number > viewModel.unlockedLevels {
                                         isShowingAlert = true
                                         UINotificationFeedbackGenerator().notificationOccurred(.error)

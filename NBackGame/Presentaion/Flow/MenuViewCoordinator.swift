@@ -30,11 +30,13 @@ class MenuViewCoordinator: ObservableObject {
 
 struct MenuViewCoordinatorView: View {
     @ObservedObject var menuCoordinator: MenuViewCoordinator
+    var gameCooridator: GameViewCoordinator
     let menuDIContainer: MenuDIContainer
     
-    init(menuDIContainer: MenuDIContainer, menuCoordinator: MenuViewCoordinator) {
+    init(menuDIContainer: MenuDIContainer, menuCoordinator: MenuViewCoordinator, gameCoordinator: GameViewCoordinator) {
         self.menuDIContainer = menuDIContainer
         self.menuCoordinator = menuCoordinator
+        self.gameCooridator = gameCoordinator
     }
     
     var body: some View {
@@ -42,7 +44,7 @@ struct MenuViewCoordinatorView: View {
             if menuCoordinator.menuViewState == .menu {
                 menuDIContainer.makeMenuView(menuCoordinator: menuCoordinator)
             } else if menuCoordinator.menuViewState == .game {
-                menuDIContainer.makeGameView(menuCoordinator: menuCoordinator)
+                menuDIContainer.makeGameView(gameViewCoordinator: gameCooridator)
             } else if menuCoordinator.menuViewState == .tutorial {
                 menuDIContainer.makeTutorialView(menuCoordinator: menuCoordinator)
             } else if menuCoordinator.menuViewState == .statistics {

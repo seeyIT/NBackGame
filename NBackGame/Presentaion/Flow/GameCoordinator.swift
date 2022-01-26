@@ -7,10 +7,21 @@
 
 import SwiftUI
 
-class GameCoordinator: ObservableObject {
+protocol GameCoordinator {
+    func showMenu()
+    func showLevelSelection()
+    func selectLevel(_ level: Int)
+    func playAgain()
+    func showGameSummary(history: [HistoryItem], gameStartTime: Int64, gameEndTime: Int64)
+    
+    var gameInfo: GameInfo { get }
+    var gameViewState: GameViewState { get }
+}
+
+class DefaultGameCoordinator: GameCoordinator, ObservableObject {
     @Published var gameViewState: GameViewState = .levelSelection
     let menuCoordinator: MenuCoordinator
-    var gameInfo: GameInfo = GameInfo(history: [], level: 0)
+    private(set) var gameInfo: GameInfo = GameInfo(history: [], level: 0)
     
     init(menuCoordinator: MenuCoordinator) {
         debugPrint("Init GameCoordinator")
@@ -40,14 +51,16 @@ class GameCoordinator: ObservableObject {
         gameViewState = .game
     }
     
-    func showGameSummary(gameInfo: GameInfo) {
-        self.gameInfo = gameInfo
+    func showGameSummary(history: [HistoryItem], gameStartTime: Int64, gameEndTime: Int64) {
+        gameInfo.history = history
+        gameInfo.startTime = gameStartTime
+        gameInfo.endTime = gameEndTime
         gameViewState = .summary
     }
 }
 
 struct GameCoordinatorView: View {
-    @ObservedObject var gameCoordinator: GameCoordinator
+    @ObservedObject var gameCoordinator: DefaultGameCoordinator
 
     let gameDIContainer: GameDIContainer
     
@@ -58,7 +71,7 @@ struct GameCoordinatorView: View {
         case .game:
             gameDIContainer.makeGameView(gameCoordinator: gameCoordinator)
         case .summary:
-            gameDIContainer.makeGameSummaryView(gameCoordinator: gameCoordinator)
+            gameDIContainer.makeGameSummaryView(gameCoordinator: gameCoordinator, gameInfo: gameCoordinator.gameInfo)
         }
     }
 }

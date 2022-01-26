@@ -10,85 +10,131 @@ import XCTest
 
 class LevelSelectionViewModelTests: XCTestCase {
 
-//    func test_whenUnlockedLevelSelected_thenStartPlay() throws {
-//        // given
-//        let actions = LevelSelectionViewModelActionsMock(expectation: self.expectation(description: "Action executed"))
-//        let useCase = FetchHighestUnlockedLevelUseCaseMock()
-//        let useCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: useCase)
-//        let sut = LevelSelectionViewModel(actions: actions, useCases: useCases)
-//        
-//        // when
-//        sut.onAppear()
-//        sut.selectLevel(0)
-//        
-//        waitForExpectations(timeout: 2, handler: nil)
-//        // then
-//        XCTAssertTrue(true)
-//    }
-//    
-//    func test_whenLockedLevelSelected_thenDontStartPlay() throws {
-//        // given
-//        let actions = LevelSelectionViewModelActionsMock(expectation: nil)
-//        let useCase = FetchHighestUnlockedLevelUseCaseMock()
-//        let useCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: useCase)
-//        let sut = LevelSelectionViewModel(actions: actions, useCases: useCases)
-//        
-//        // when
-//        sut.onAppear()
-//        
-//        // then
-//        XCTAssertEqual(sut.unlockedLevels, LevelSelectionViewModel.defaultLevelUnlocked)
-//    }
-//    
-//    func test_whenBackToMenuClicked_thenShowMenu() throws {
-//        // given
-//        let actions = LevelSelectionViewModelActionsMock(expectation: self.expectation(description: "Action executed"))
-//        let useCase = FetchHighestUnlockedLevelUseCaseMock()
-//        let useCases = LevelSelectionViewModelUseCases(fetchHighestUnlockedLevelUseCase: useCase)
-//        let sut = LevelSelectionViewModel(actions: actions, useCases: useCases)
-//
-//        // when
-//        sut.showMenu()
-//        
-//        waitForExpectations(timeout: 2.0, handler: nil)
-//        
-//        // then
-//        XCTAssertTrue(true)
-//    }
-//    
-//    // MARK: - Helper
-//    
-//    func selectLevel(_ level: Int) {
-//        
-//    }
-//    
-//    struct FetchHighestUnlockedLevelUseCaseMock: GetHighestUnlockedLevelUseCase {
-//        func execute(fallbackLevel: Int, completion: @escaping (Int) -> Void) {
-//            completion(fallbackLevel)
-//        }
-//    }
-//    
-//    struct LevelSelectionViewModelActionsMock: LevelSelectionViewModelActions {
-//        var expectation: XCTestExpectation?
-//
-//        var selectLevel: (Int) -> Void
-//        var showMenu: () -> Void
-//
-//        init(expectation: XCTestExpectation?) {
-//            self.expectation = expectation
-//            selectLevel = { _ in }
-//            showMenu = {}
-//            selectLevel = selectLevelMock
-//            showMenu = showMenuMock
-//        }
-//        
-//        func selectLevelMock(_ level: Int) {
-//            print("select mock")
-//            expectation?.fulfill()
-//        }
-//        
-//        func showMenuMock() {
-//            expectation?.fulfill()
-//        }
-//    }
+    func test_whenViewModelLoad_thenDefaultLevelIsReturned() throws {
+        // given
+        let gameCoordiantor = GameCoordinatorMock(expectation: nil)
+        let useCase = GetHighestUnlockedLevelUseCaseMock()
+        let useCases = LevelSelectionViewModelUseCases(getHighestUnlockedLevelUseCase: useCase)
+        let sut = LevelSelectionViewModel(gameCoordinator: gameCoordiantor, useCases: useCases)
+        
+        // when
+        sut.onAppear()
+
+        // then
+        XCTAssertEqual(sut.unlockedLevels, sut.defaultLevelUnlocked)
+    }
+    
+    func test_whenUnlockedLevelSelected_thenStartPlay() throws {
+        // given
+        let expectation = self.expectation(description: "Level unlocked")
+        let gameCoordiantor = GameCoordinatorMock(expectation: expectation)
+        let useCase = GetHighestUnlockedLevelUseCaseMock()
+        let useCases = LevelSelectionViewModelUseCases(getHighestUnlockedLevelUseCase: useCase)
+        let sut = LevelSelectionViewModel(gameCoordinator: gameCoordiantor, useCases: useCases)
+        
+        // when
+        sut.onAppear()
+        sut.selectLevel(0)
+        
+        // then
+        waitForExpectations(timeout: 2, handler: nil)
+        XCTAssertEqual(gameCoordiantor.gameViewState, GameViewState.game)
+    }
+    
+    func test_whenLockedLevelSelected_thenDontStartPlay() throws {
+        // given
+        let gameCoordiantor = GameCoordinatorMock(expectation: nil)
+        let useCase = GetHighestUnlockedLevelUseCaseMock()
+        let useCases = LevelSelectionViewModelUseCases(getHighestUnlockedLevelUseCase: useCase)
+        let sut = LevelSelectionViewModel(gameCoordinator: gameCoordiantor, useCases: useCases)
+        
+        // when
+        sut.onAppear()
+        sut.selectLevel(Int.max)
+
+        // then
+        XCTAssertEqual(gameCoordiantor.gameViewState, GameViewState.levelSelection)
+    }
+
+    func test_whenBackToMenuClicked_thenShowMenu() throws {
+        // given
+        let expectation = self.expectation(description: "Level unlocked")
+        let gameCoordiantor = GameCoordinatorMock(expectation: expectation)
+        let useCase = GetHighestUnlockedLevelUseCaseMock()
+        let useCases = LevelSelectionViewModelUseCases(getHighestUnlockedLevelUseCase: useCase)
+        let sut = LevelSelectionViewModel(gameCoordinator: gameCoordiantor, useCases: useCases)
+
+        // when
+        sut.showMenu()
+
+        // then
+        waitForExpectations(timeout: 2.0, handler: nil)
+        XCTAssertTrue(true)
+    }
+    
+    // MARK: - Helper
+    
+    class GameCoordinatorMock: GameCoordinator {
+        var gameViewState: GameViewState = .levelSelection
+        
+        var gameInfo: GameInfo
+        var expectation: XCTestExpectation?
+        
+        init(expectation: XCTestExpectation?) {
+            self.expectation = expectation
+            gameInfo = GameInfo(history: [], level: 0)
+        }
+        
+        func showMenu() {
+            expectation?.fulfill()
+        }
+        
+        func showLevelSelection() {
+            expectation?.fulfill()
+        }
+        
+        func selectLevel(_ level: Int) {
+            gameViewState = .game
+            expectation?.fulfill()
+        }
+        
+        func playAgain() {
+            expectation?.fulfill()
+        }
+        
+        func showGameSummary(history: [HistoryItem], gameStartTime: Int64, gameEndTime: Int64) {
+            expectation?.fulfill()
+        }
+    }
+    
+    class MenuCoordinatorMock: MenuCoordinator {
+        var expectation: XCTestExpectation?
+        
+        init(expectation: XCTestExpectation?) {
+            self.expectation = expectation
+        
+        }
+        
+        func showMenu() {
+            expectation?.fulfill()
+        }
+        
+        func showGame() {
+            expectation?.fulfill()
+        }
+        
+        func showTutorial() {
+            expectation?.fulfill()
+        }
+        
+        func showStatistics() {
+            expectation?.fulfill()
+        }
+    }
+
+    struct GetHighestUnlockedLevelUseCaseMock: GetHighestUnlockedLevelUseCase {
+        func execute(completion: @escaping (Int?) -> Void) {
+            completion(2)
+        }
+    }
 }

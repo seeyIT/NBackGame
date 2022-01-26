@@ -27,6 +27,7 @@ class GameViewModel: ObservableObject {
     var cellsCount: Int {
         return boardSize * boardSize
     }
+    private var gameStartTime: Int64 = 0
     
     // TODO: fields to be injected
     let letters = "gmbpkldst"
@@ -39,13 +40,13 @@ class GameViewModel: ObservableObject {
     // MARK: Public functions
     
     static func placeholder() -> GameViewModel {
-        return GameViewModel(gameCoordinator: GameCoordinator(menuCoordinator: MenuCoordinator()), musicService: MusicService())
+        return GameViewModel(gameCoordinator: DefaultGameCoordinator(menuCoordinator: DefaultMenuCoordinator()), musicService: MusicService())
     }
 
     func startGame() {
         debugPrint("Start Game")
         musicService.stopBackgroundMusic()
-        gameCoordinator.gameInfo.startTime = getTimestamp()
+        gameStartTime = getTimestamp()
         currentRoundNumber = 0
         positionClicked = false
         soundClicked = false
@@ -102,16 +103,14 @@ class GameViewModel: ObservableObject {
         positionClicked = false
     }
     
-    private func stopGame() {
+    private func stopTimer() {
         timer?.invalidate()
         timer = nil
     }
     
     private func finishGame() {
-        stopGame()
-        gameCoordinator.gameInfo.history = history
-        gameCoordinator.gameInfo.endTime = getTimestamp()
-        gameCoordinator.showGameSummary(gameInfo: gameCoordinator.gameInfo)
+        stopTimer()
+        gameCoordinator.showGameSummary(history: history, gameStartTime: gameStartTime, gameEndTime: getTimestamp())
     }
     
     private func addHistory(_ currentGameItem: CurrentGameItem) {

@@ -27,12 +27,8 @@ class LevelSelectionViewModel: ObservableObject {
     }
     
     func onAppear() {
-        DispatchQueue.global().async {
-            self.useCases.getHighestUnlockedLevelUseCase.execute { result in
-                DispatchQueue.main.async {
-                    self.unlockedLevels = result ?? self.defaultLevelUnlocked
-                }
-            }
+        self.useCases.getHighestUnlockedLevelUseCase.execute { result in
+            self.unlockedLevels = result ?? self.defaultLevelUnlocked
         }
     }
     

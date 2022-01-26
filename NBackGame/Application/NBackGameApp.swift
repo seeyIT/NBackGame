@@ -12,13 +12,13 @@ struct NBackGameApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     let appDIContainer: AppDIContainer
-    let menuCoordinator: MenuCoordinator
-    let gameCoordinator: GameCoordinator
+    let menuCoordinator: DefaultMenuCoordinator
+    let gameCoordinator: DefaultGameCoordinator
     
     init() {
         appDIContainer = AppDIContainer()
-        menuCoordinator = MenuCoordinator()
-        gameCoordinator = GameCoordinator(menuCoordinator: menuCoordinator)
+        menuCoordinator = DefaultMenuCoordinator()
+        gameCoordinator = DefaultGameCoordinator(menuCoordinator: menuCoordinator)
     }
     
     var body: some Scene {

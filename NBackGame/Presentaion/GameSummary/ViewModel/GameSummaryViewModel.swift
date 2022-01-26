@@ -30,16 +30,20 @@ class GameSummaryViewModel: ObservableObject {
     
     let gameCoordinator: GameCoordinator
     let useCases: GameSummaryViewModelUseCases
+    let gameInfo: GameInfo
     
-    init(gameCoordinator: GameCoordinator, useCases: GameSummaryViewModelUseCases) {
+    init(gameCoordinator: GameCoordinator,
+         gameInfo: GameInfo,
+         useCases: GameSummaryViewModelUseCases) {
         self.gameCoordinator = gameCoordinator
         self.useCases = useCases
+        self.gameInfo = gameInfo
     }
     
     // MARK: - Public functions
     
     func onAppear() {
-        useCases.calculateGameResultUseCase.execute(history: gameCoordinator.gameInfo.history, level: gameCoordinator.gameInfo.level) { gameResults in
+        useCases.calculateGameResultUseCase.execute(history: gameInfo.history, level: gameInfo.level) { gameResults in
             self.gameResults = gameResults
             self.saveGame()
             
@@ -50,8 +54,8 @@ class GameSummaryViewModel: ObservableObject {
                 }
                 
                 self.useCases.getHighestUnlockedLevelUseCase.execute { heightestLevel in
-                    if self.gameCoordinator.gameInfo.level >= heightestLevel ?? -1 {
-                        self.useCases.unlockNextLevelUseCase.execute(level: self.gameCoordinator.gameInfo.level) { result in
+                    if self.gameInfo.level >= heightestLevel ?? -1 {
+                        self.useCases.unlockNextLevelUseCase.execute(level: self.gameInfo.level) { result in
                             switch result {
                             case .success(let level):
                                 print("Level \(level) unlocked successfully")
@@ -79,7 +83,7 @@ class GameSummaryViewModel: ObservableObject {
     
     private func saveGame() {
         DispatchQueue.global().async {
-            self.useCases.saveGameUseCase.execute(gameInfo: self.gameCoordinator.gameInfo, gameResults: self.gameResults) { result in
+            self.useCases.saveGameUseCase.execute(gameInfo: self.gameInfo, gameResults: self.gameResults) { result in
                 switch result {
                 case .success:
                     print("Game saved successfully")

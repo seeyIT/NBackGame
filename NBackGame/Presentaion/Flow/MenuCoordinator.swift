@@ -8,7 +8,14 @@
 import SwiftUI
 import Combine
 
-class MenuCoordinator: ObservableObject {
+protocol MenuCoordinator {
+    func showMenu()
+    func showGame()
+    func showTutorial()
+    func showStatistics()
+}
+
+class DefaultMenuCoordinator: MenuCoordinator, ObservableObject {
     @Published var menuViewState: MenuViewState = .menu
     
     func showMenu() {
@@ -29,11 +36,11 @@ class MenuCoordinator: ObservableObject {
 }
 
 struct MenuCoordinatorView: View {
-    @ObservedObject var menuCoordinator: MenuCoordinator
-    var gameCoordinator: GameCoordinator
+    @ObservedObject var menuCoordinator: DefaultMenuCoordinator
+    var gameCoordinator: DefaultGameCoordinator
     let menuDIContainer: MenuDIContainer
     
-    init(menuDIContainer: MenuDIContainer, menuCoordinator: MenuCoordinator, gameCoordinator: GameCoordinator) {
+    init(menuDIContainer: MenuDIContainer, menuCoordinator: DefaultMenuCoordinator, gameCoordinator: DefaultGameCoordinator) {
         self.menuDIContainer = menuDIContainer
         self.menuCoordinator = menuCoordinator
         self.gameCoordinator = gameCoordinator

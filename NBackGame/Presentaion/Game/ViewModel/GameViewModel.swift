@@ -72,7 +72,7 @@ class GameViewModel: ObservableObject {
     }
     
     func showMenu() {
-        stopGame()
+        stopTimer()
         gameCoordinator.showMenu()
     }
     

@@ -24,6 +24,7 @@
 		5F3D21C326559AF800E1FCC6 /* GameSoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */; };
 		5F3D21C826559B3B00E1FCC6 /* GamePositionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */; };
 		5F3D21CE265D2F2D00E1FCC6 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21CD265D2F2B00E1FCC6 /* ViewExtensions.swift */; };
+		5F4E0445286372B900AAE226 /* QuotesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4E0444286372B900AAE226 /* QuotesViewModelTests.swift */; };
 		5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */; };
 		5F6921DD25CB1AB9008A18C9 /* UnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */; };
 		5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6921E425CB1C2D008A18C9 /* GameRepository.swift */; };
@@ -126,6 +127,7 @@
 		5F3D21C226559AF700E1FCC6 /* GameSoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSoundButton.swift; sourceTree = "<group>"; };
 		5F3D21C726559B3B00E1FCC6 /* GamePositionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePositionButton.swift; sourceTree = "<group>"; };
 		5F3D21CD265D2F2B00E1FCC6 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		5F4E0444286372B900AAE226 /* QuotesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModelTests.swift; sourceTree = "<group>"; };
 		5F6921D725CB19D8008A18C9 /* UnlockedLevelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevelRealm.swift; sourceTree = "<group>"; };
 		5F6921DC25CB1AB9008A18C9 /* UnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockedLevel.swift; sourceTree = "<group>"; };
 		5F6921E425CB1C2D008A18C9 /* GameRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRepository.swift; sourceTree = "<group>"; };
@@ -441,6 +443,22 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5F4E04422863729800AAE226 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E0443286372A300AAE226 /* ViewModel */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		5F4E0443286372A300AAE226 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E0444286372B900AAE226 /* QuotesViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5F6921D325CAF9EF008A18C9 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +664,7 @@
 		5FC62C32260218BA00D03AD8 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				5F4E04422863729800AAE226 /* Menu */,
 				5FC62C5426022BC800D03AD8 /* LevelSelection */,
 				5FC62C4A2602269200D03AD8 /* Game */,
 				5FC62C33260218C900D03AD8 /* GameSummary */,
@@ -1077,6 +1096,7 @@
 				5FC62C5726022BE800D03AD8 /* LevelSelectionViewModelTests.swift in Sources */,
 				5FC62C4D260226A800D03AD8 /* GameViewModelTests.swift in Sources */,
 				5F949AA425FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift in Sources */,
+				5F4E0445286372B900AAE226 /* QuotesViewModelTests.swift in Sources */,
 				5FC62C6F2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift in Sources */,
 				5FC62C402602235E00D03AD8 /* TutorialViewModelTests.swift in Sources */,
 				5F802ED425DFDF1600AF85EE /* GameSummaryViewModelTests.swift in Sources */,

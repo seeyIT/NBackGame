@@ -43,6 +43,10 @@ platform :ios do
   	capture_ios_screenshots
   end
 
+  lane :test_build do
+	build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
+  end
+
   lane :release_with_screenshots do
       screenshots
       release

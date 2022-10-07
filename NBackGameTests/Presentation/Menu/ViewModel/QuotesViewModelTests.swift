@@ -8,7 +8,6 @@
 import XCTest
 
 class QuotesViewModel {
-    
     let quote: (author: String, content: String) = ("", "")
 }
 

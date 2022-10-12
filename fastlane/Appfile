@@ -1,8 +1,5 @@
-app_identifier("com.smashswift.nback") # The bundle identifier of your app
-apple_id("kornelmiszczak@gmail.com") # Your Apple email address
+app_identifier(ENV["DEVELOPER_APP_IDENTIFIER"])
+apple_id(ENV["FASTLANE_APPLE_ID"])
 
-itc_team_id("121847339") # App Store Connect Team ID
-team_id("JKY8VL4356") # Developer Portal Team ID
-
-# For more information about the Appfile, see:
-#     https://docs.fastlane.tools/advanced/#appfile
+itc_team_id(ENV["APP_STORE_CONNECT_TEAM_ID"])
+team_id(ENV["DEVELOPER_PORTAL_TEAM_ID"])

@@ -23,7 +23,7 @@ def create_temp_keychain(name, password)
     password: password,
     default_keychain: true,
     unlock: true,
-    unlock: false
+    lock_when_sleeps: false
   )
   puts "after creating keychain"
 end

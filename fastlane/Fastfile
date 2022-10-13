@@ -21,6 +21,8 @@ def create_temp_keychain(name, password)
   create_keychain(
     name: name,
     password: password,
+    default_keychain: true,
+    unlock: true,
     unlock: false
   )
   puts "after creating keychain"
@@ -48,7 +50,7 @@ platform :ios do
       in_house: false
     )
     
-    increment_build_number(xcodeproj: "your_project_name.xcodeproj")
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
     
     cocoapods(
       clean_install: true

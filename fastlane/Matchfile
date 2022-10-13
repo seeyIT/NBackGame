@@ -1,4 +1,4 @@
-git_url("git@github.com:seeyIT/NBackGame-certificates.git")
+git_url("https://github.com/seeyIT/NBackGame-certificates.git")
 
 storage_mode("git")
 

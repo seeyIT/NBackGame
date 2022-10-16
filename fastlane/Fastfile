@@ -66,40 +66,40 @@ platform :ios do
       api_key: api_key
     )
 
-    build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
-    deliver(
-      submit_for_review: true,
-      automatic_release: true,
-      overwrite_screenshots: true,
-      force: true,
-      submission_information: {
-        export_compliance_uses_encryption: false,
-        add_id_info_uses_idfa: false
+   #  build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
+   #  deliver(
+   #    submit_for_review: true,
+   #    automatic_release: true,
+   #    overwrite_screenshots: true,
+   #    force: true,
+   #    submission_information: {
+   #      export_compliance_uses_encryption: false,
+   #      add_id_info_uses_idfa: false
+   #    }
+   # )
+   #  clean_build_artifacts
+
+    gym(
+      configuration: "Release",
+      workspace: "NBackGame.xcworkspace",
+      scheme: "NBackGame",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: { 
+            DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
+        }
       }
-   )
-    clean_build_artifacts
+    )
 
-    # gym(
-    #   configuration: "Release",
-    #   workspace: "NBackGame.xcworkspace",
-    #   scheme: "NBackGame",
-    #   export_method: "app-store",
-    #   export_options: {
-    #     provisioningProfiles: { 
-    #         DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
-    #     }
-    #   }
-    # )
-
-    # pilot(
-    #   apple_id: "#{DEVELOPER_APP_ID}",
-    #   app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
-    #   skip_waiting_for_build_processing: true,
-    #   skip_submission: true,
-    #   distribute_external: false,
-    #   notify_external_testers: false,
-    #   ipa: "./NBackGame.ipa"
-    # )
+    pilot(
+      apple_id: "#{DEVELOPER_APP_ID}",
+      app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+      skip_waiting_for_build_processing: true,
+      skip_submission: true,
+      distribute_external: false,
+      notify_external_testers: false,
+      ipa: "./NBackGame.ipa"
+    )
 
     delete_temp_keychain(keychain_name)
   end

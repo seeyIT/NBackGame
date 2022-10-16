@@ -83,12 +83,7 @@ platform :ios do
       configuration: "Release",
       workspace: "NBackGame.xcworkspace",
       scheme: "NBackGame",
-      export_method: "app-store",
-      export_options: {
-        provisioningProfiles: { 
-            DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
-        }
-      }
+      export_method: "app-store"
     )
 
     pilot(

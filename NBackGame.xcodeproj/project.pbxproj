@@ -38,6 +38,8 @@
 		5F802ED425DFDF1600AF85EE /* GameSummaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */; };
 		5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807536271DBACE00563BAA /* PlayCircle.swift */; };
 		5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807538271DBBDA00563BAA /* MenuButton.swift */; };
+		5F81D4AA28FC1D94006CA44F /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 5F81D4A928FC1D94006CA44F /* Realm */; };
+		5F81D4AC28FC1D94006CA44F /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 5F81D4AB28FC1D94006CA44F /* RealmSwift */; };
 		5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949A9925FA0B3800512ADE /* CalculateGameResultsUseCase.swift */; };
 		5F949A9F25FA159E00512ADE /* UnlockNextLevelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949A9E25FA159E00512ADE /* UnlockNextLevelUseCase.swift */; };
 		5F949AA425FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949AA325FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift */; };
@@ -207,6 +209,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F81D4AC28FC1D94006CA44F /* RealmSwift in Frameworks */,
+				5F81D4AA28FC1D94006CA44F /* Realm in Frameworks */,
 				14BF07AF9499885B6404A68F /* Pods_NBackGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -780,7 +784,6 @@
 				5FA8633A2529D996006B5F33 /* Sources */,
 				5FA8633B2529D996006B5F33 /* Frameworks */,
 				5FA8633C2529D996006B5F33 /* Resources */,
-				3A18ED82AE6EAA56AA66730E /* [CP] Embed Pods Frameworks */,
 				5F40D19026B7DE16005013F3 /* ShellScript */,
 			);
 			buildRules = (
@@ -788,6 +791,10 @@
 			dependencies = (
 			);
 			name = NBackGame;
+			packageProductDependencies = (
+				5F81D4A928FC1D94006CA44F /* Realm */,
+				5F81D4AB28FC1D94006CA44F /* RealmSwift */,
+			);
 			productName = NBackGame;
 			productReference = 5FA8633E2529D996006B5F33 /* NBackGame.app */;
 			productType = "com.apple.product-type.application";
@@ -819,7 +826,6 @@
 				5FA863562529D997006B5F33 /* Sources */,
 				5FA863572529D997006B5F33 /* Frameworks */,
 				5FA863582529D997006B5F33 /* Resources */,
-				6AE5F0317B77C5B9E585F61B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -862,6 +868,9 @@
 				Base,
 			);
 			mainGroup = 5FA863352529D995006B5F33;
+			packageReferences = (
+				5F81D4A828FC1D94006CA44F /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -923,23 +932,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3A18ED82AE6EAA56AA66730E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NBackGame/Pods-NBackGame-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NBackGame/Pods-NBackGame-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBackGame/Pods-NBackGame-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5F40D19026B7DE16005013F3 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -956,23 +948,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
-		};
-		6AE5F0317B77C5B9E585F61B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NBackGame-NBackGameUITests/Pods-NBackGame-NBackGameUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NBackGame-NBackGameUITests/Pods-NBackGame-NBackGameUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NBackGame-NBackGameUITests/Pods-NBackGame-NBackGameUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 		C15A1F7ACC027621B626F577 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1436,6 +1411,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F81D4A828FC1D94006CA44F /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F81D4A928FC1D94006CA44F /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F81D4A828FC1D94006CA44F /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			productName = Realm;
+		};
+		5F81D4AB28FC1D94006CA44F /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F81D4A828FC1D94006CA44F /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5FA863362529D995006B5F33 /* Project object */;
 }

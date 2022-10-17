@@ -22,6 +22,7 @@ jobs:
         with:
           lane: closed_beta
         env:
+          BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'
           APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
           DEVELOPER_APP_ID: '${{ secrets.DEVELOPER_APP_ID }}'
           DEVELOPER_APP_IDENTIFIER: '${{ secrets.DEVELOPER_APP_IDENTIFIER }}'

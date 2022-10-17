@@ -1,5 +1,6 @@
 default_platform(:ios)
 
+BUNDLE_ID = ENV["BUNDLE_ID"]
 DEVELOPER_APP_ID = ENV["DEVELOPER_APP_ID"]
 DEVELOPER_APP_IDENTIFIER = ENV["DEVELOPER_APP_IDENTIFIER"]
 PROVISIONING_PROFILE_SPECIFIER = ENV["PROVISIONING_PROFILE_SPECIFIER"]
@@ -66,7 +67,7 @@ platform :ios do
       api_key: api_key
     )
 
-    # build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
+   #  build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
    #  deliver(
    #    submit_for_review: true,
    #    automatic_release: true,
@@ -77,19 +78,19 @@ platform :ios do
    #      add_id_info_uses_idfa: false
    #    }
    # )
-    # clean_build_artifacts
+   #  clean_build_artifacts
 
-    # gym(
-    #   configuration: "Release",
-    #   workspace: "NBackGame.xcworkspace",
-    #   scheme: "NBackGame",
-    #   export_method: "app-store",
-    #   export_options: {
-    #     provisioningProfiles: { 
-    #         DEVELOPER_APP_ID => PROVISIONING_PROFILE_SPECIFIER
-    #     }
-    #   }
-    # )
+    gym(
+      configuration: "Release",
+      workspace: "NBackGame.xcworkspace",
+      scheme: "NBackGame",
+      export_method: "app-store",
+      export_options: {
+        provisioningProfiles: { 
+            BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
+        }
+      }
+    )
 
     # pilot(
     #   apple_id: "#{DEVELOPER_APP_ID}",

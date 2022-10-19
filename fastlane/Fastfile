@@ -86,7 +86,7 @@ platform :ios do
       scheme: "NBackGame",
       export_method: "app-store",
       export_options: {
-        compileBitcode: false,
+        compileBitcode: true,
         provisioningProfiles: { 
             BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
         }

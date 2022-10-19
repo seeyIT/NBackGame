@@ -80,17 +80,18 @@ platform :ios do
    # )
    #  clean_build_artifacts
 
-    # gym(
-    #   configuration: "Release",
-    #   workspace: "NBackGame.xcworkspace",
-    #   scheme: "NBackGame",
-    #   export_method: "app-store",
-    #   export_options: {
-    #     provisioningProfiles: { 
-    #         BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
-    #     }
-    #   }
-    # )
+    gym(
+      configuration: "Release",
+      workspace: "NBackGame.xcworkspace",
+      scheme: "NBackGame",
+      export_method: "app-store",
+      export_options: {
+        compileBitcode: false,
+        provisioningProfiles: { 
+            BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
+        }
+      }
+    )
 
     # pilot(
     #   apple_id: "#{DEVELOPER_APP_ID}",

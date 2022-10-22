@@ -72,7 +72,7 @@ platform :ios do
     build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
     deliver(
       submit_for_review: true,
-      automatic_release: true,
+      automatic_release: false,
       overwrite_screenshots: true,
       force: true,
       submission_information: {

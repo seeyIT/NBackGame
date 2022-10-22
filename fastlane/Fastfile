@@ -20,11 +20,12 @@ end
 def create_temp_keychain(name, password)
   puts "before creating keychain"
   create_keychain(
-    name: name,
-    password: password,
-    default_keychain: true,
-    unlock: true,
-    lock_when_sleeps: false
+      name: "keychain",
+      password: "123456",
+      default_keychain: true,
+      unlock: true,
+      timeout: 3600,
+      lock_when_sleeps: false
   )
   puts "after creating keychain"
 end
@@ -62,8 +63,8 @@ platform :ios do
       app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
       git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
       readonly: true,
-      keychain_name: keychain_name,
-      keychain_password: keychain_password,
+      keychain_name: "keychain",
+      keychain_password: "123456",
       api_key: api_key
     )
     puts "-----MATCH FiNISHED"

@@ -74,7 +74,7 @@ platform :ios do
     deliver(
       submit_for_review: true,
       automatic_release: false, # change it after tests
-      overwrite_screenshots: true,
+      overwrite_screenshots: false, # change it after tests
       force: true,
       submission_information: {
         export_compliance_uses_encryption: false,

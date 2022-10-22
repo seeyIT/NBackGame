@@ -4,24 +4,24 @@ BUNDLE_ID = ENV["BUNDLE_ID"]
 DEVELOPER_APP_ID = ENV["DEVELOPER_APP_ID"]
 DEVELOPER_APP_IDENTIFIER = ENV["DEVELOPER_APP_IDENTIFIER"]
 PROVISIONING_PROFILE_SPECIFIER = ENV["PROVISIONING_PROFILE_SPECIFIER"]
-TEMP_KEYCHAIN_USER = ENV["TEMP_KEYCHAIN_USER"]
-TEMP_KEYCHAIN_PASSWORD = ENV["TEMP_KEYCHAIN_PASSWORD"]
+TEMP_KEYCHAIN_USER = "keychain"#ENV["TEMP_KEYCHAIN_USER"]
+TEMP_KEYCHAIN_PASSWORD = "123456"#ENV["TEMP_KEYCHAIN_PASSWORD"]
 APPLE_ISSUER_ID = ENV["APPLE_ISSUER_ID"]
 APPLE_KEY_ID = ENV["APPLE_KEY_ID"]
 APPLE_KEY_CONTENT = ENV["APPLE_KEY_CONTENT"]
 GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
 
-def delete_temp_keychain(name)
+def delete_temp_keychain()
   delete_keychain(
-    name: name
-  ) if File.exist? File.expand_path("~/Library/Keychains/#{name}-db")
+    name: TEMP_KEYCHAIN_USER
+  ) if File.exist? File.expand_path("~/Library/Keychains/#{TEMP_KEYCHAIN_USER}-db")
 end
 
-def create_temp_keychain(name, password)
+def create_temp_keychain()
   puts "before creating keychain"
   create_keychain(
-      name: "keychain",
-      password: "123456",
+      name: TEMP_KEYCHAIN_USER,
+      password: TEMP_KEYCHAIN_PASSWORD,
       default_keychain: true,
       unlock: true,
       timeout: 3600,
@@ -30,18 +30,16 @@ def create_temp_keychain(name, password)
   puts "after creating keychain"
 end
 
-def ensure_temp_keychain(name, password)
-  delete_temp_keychain(name)
-  create_temp_keychain(name, password)
+def ensure_temp_keychain()
+  delete_temp_keychain()
+  create_temp_keychain()
 end
 
 platform :ios do
   lane :closed_beta do
     puts "Close beta started"
-    keychain_name = TEMP_KEYCHAIN_USER
-    keychain_password = TEMP_KEYCHAIN_PASSWORD
     puts "Creds taken"
-    ensure_temp_keychain(keychain_name, keychain_password)
+    ensure_temp_keychain()
 
     puts "Keychain ensured"
     api_key = app_store_connect_api_key(
@@ -63,8 +61,8 @@ platform :ios do
       app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
       git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
       readonly: true,
-      keychain_name: "keychain",
-      keychain_password: "123456",
+      keychain_name: TEMP_KEYCHAIN_USER,
+      keychain_password: TEMP_KEYCHAIN_PASSWORD,
       api_key: api_key
     )
     puts "-----MATCH FiNISHED"

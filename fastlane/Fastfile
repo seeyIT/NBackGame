@@ -67,10 +67,13 @@ platform :ios do
     )
     puts "-----MATCH FiNISHED"
 
+    version = get_version_number()
+  increment_version_number(version_number: version)
+  increment_version_number(bump_type: "major")
     build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
     deliver(
       submit_for_review: true,
-      automatic_release: false,
+      automatic_release: false, # change it after tests
       overwrite_screenshots: true,
       force: true,
       submission_information: {
@@ -79,6 +82,7 @@ platform :ios do
       }
    )
     clean_build_artifacts
+
 
     # gym(
     #   configuration: "Release",

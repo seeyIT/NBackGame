@@ -1,7 +1,0 @@
-NBack game is an implementation of an N-back task where the player needs to match sound and selected position N times ago. It has been proved many times in many types of research that regular playing this type of games help to improve short and long term memory. 
-
-The game offers 25 rounds with different level of difficulty, you need to decide if the sound or/and position were the same N rounds ago, at the end of the game you will see a summary board with your results.
-
-When you complete a level successfully you unlock the next level.
-
-If you do not how to play you will find a tutorial explaining how to play with examples.

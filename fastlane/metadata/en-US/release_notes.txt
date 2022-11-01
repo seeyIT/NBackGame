@@ -1,1 +1,0 @@
-Updated the app to make features load faster and fix some crashes.

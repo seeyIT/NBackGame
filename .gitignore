@@ -35,3 +35,9 @@ fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
 fastlane/archives/
+
+# SPM
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/

@@ -105,6 +105,6 @@ platform :ios do
     #   ipa: "./NBackGame.ipa"
     # )
 
-    delete_temp_keychain(keychain_name)
+    delete_temp_keychain()
   end
 end

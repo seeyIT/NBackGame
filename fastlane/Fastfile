@@ -50,7 +50,7 @@ platform :ios do
       in_house: false
     )
     
-    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+    # increment_build_number(xcodeproj: "NBackGame.xcodeproj")
 
 
     match(
@@ -92,10 +92,7 @@ platform :ios do
         }
       }
     )
-    clean_build_artifacts
 
-    increment_build_number
-    commit_version_bump(message: "Bump build number")
     pilot(
       apple_id: "#{DEVELOPER_APP_ID}",
       app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
@@ -105,6 +102,8 @@ platform :ios do
       notify_external_testers: false,
       ipa: "./NBackGame.ipa"
     )
+    clean_build_artifacts
+
 
     delete_temp_keychain()
   end

@@ -100,7 +100,8 @@ platform :ios do
       skip_submission: false,
       distribute_external: true,
       groups: "Testers",
-      notify_external_testers: false,
+      changelog: "Test changelong",
+      notify_external_testers: true,
       ipa: "./NBackGame.ipa"
     )
     clean_build_artifacts

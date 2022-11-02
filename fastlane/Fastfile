@@ -80,7 +80,8 @@ platform :ios do
 
   increment_build_number(xcodeproj: "NBackGame.xcodeproj")
 
-  commit_version_bump(message: "Bump version")
+  git_commit(path: "./NBackGame.xcodeproj/project.pbxproj", message: "Version Bump")
+
 
     # build_app()
 

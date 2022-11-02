@@ -1,4 +1,4 @@
-name: Stable flow
+name: STABLE
 on:
   push:
     branches: [ stable ]

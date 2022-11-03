@@ -39,3 +39,5 @@ jobs:
           APPLE_KEY_ID: '${{ secrets.APPLE_KEY_ID }}'
           APPLE_ISSUER_ID: '${{ secrets.APPLE_ISSUER_ID }}'
           APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'

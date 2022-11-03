@@ -10,6 +10,8 @@ APPLE_ISSUER_ID = ENV["APPLE_ISSUER_ID"]
 APPLE_KEY_ID = ENV["APPLE_KEY_ID"]
 APPLE_KEY_CONTENT = ENV["APPLE_KEY_CONTENT"]
 GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
+GIT_USERNAME = ENV["GIT_USERNAME"]
+GIT_EMAIL = ENV["GIT_EMAIL"]
 
 def delete_temp_keychain()
   delete_keychain(
@@ -80,6 +82,9 @@ platform :ios do
 
 
   increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+
+  sh("git config user.name " + GIT_USERNAME)
+  sh("git config user.email " + GIT_EMAIL)
 
   sh("git checkout stable")
 

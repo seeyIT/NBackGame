@@ -86,7 +86,7 @@ platform :ios do
   sh("git config user.name " + GIT_USERNAME)
   sh("git config user.email " + GIT_EMAIL)
 
-  sh("git remote add origin https://" + GIT_USERNAME+ ":" + GIT_AUTHORIZATION+ "@github.com/" + GIT_USERNAME + "/NBackGame.git")
+  #sh("git remote add origin https://" + GIT_USERNAME+ ":" + GIT_AUTHORIZATION+ "@github.com/" + GIT_USERNAME + "/NBackGame.git")
 
   sh("git fetch --all")
 

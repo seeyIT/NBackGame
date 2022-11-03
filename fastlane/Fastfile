@@ -88,7 +88,7 @@ platform :ios do
 
   sh("git fetch --all")
 
-  sh("git checkout origin/stable")
+  sh("git checkout stable")
 
   sh("git branch -v -a")
   

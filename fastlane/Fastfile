@@ -86,9 +86,11 @@ platform :ios do
   sh("git config user.name " + GIT_USERNAME)
   sh("git config user.email " + GIT_EMAIL)
 
+  sh("git remote add origin https://" + GIT_USERNAME+ ":" + GIT_AUTHORIZATION+ "@github.com/" + GIT_USERNAME + "/NBackGame.git")
+
   sh("git fetch --all")
 
-  #sh("git checkout stable")
+  sh("git checkout stable")
 
   sh("git branch -v -a")
   
@@ -99,7 +101,7 @@ platform :ios do
 
   # git_commit(path: "./NBackGame.xcodeproj/project.pbxproj", message: "Version Bump")
 
-  sh("git push origin HEAD:stable")
+  sh("git push")
 
   # push_to_git_remote(
   #   remote: "origin",

@@ -86,7 +86,7 @@ platform :ios do
   sh("git config user.name " + GIT_USERNAME)
   sh("git config user.email " + GIT_EMAIL)
 
-  sh("git fetch origin")
+  sh("git fetch --all")
 
   sh("git checkout origin/stable")
 

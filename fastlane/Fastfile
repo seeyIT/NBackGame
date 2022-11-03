@@ -87,7 +87,7 @@ platform :ios do
   sh("git config user.email " + GIT_EMAIL)
 
 
-  sh("git checkout stable")
+  sh("git switch stable")
 
   sh("git branch -v -a")
   
@@ -98,7 +98,7 @@ platform :ios do
 
   # git_commit(path: "./NBackGame.xcodeproj/project.pbxproj", message: "Version Bump")
 
-  sh("git push --set-upstream origin stable")
+  sh("git push stable")
 
   # push_to_git_remote(
   #   remote: "origin",

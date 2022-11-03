@@ -88,7 +88,6 @@ platform :ios do
 
   push_to_git_remote(
     remote: "origin",
-    local_branch: "stable",
     remote_branch: "stable",
     tags: false
     )

@@ -82,6 +82,8 @@ platform :ios do
 
   sh("git checkout stable")
 
+  sh("git branch")
+  
   git_branch
 
   git_commit(path: "./NBackGame.xcodeproj/project.pbxproj", message: "Version Bump")

@@ -99,7 +99,7 @@ platform :ios do
 
   # git_commit(path: "./NBackGame.xcodeproj/project.pbxproj", message: "Version Bump")
 
-  sh("git push")
+  sh("git push origin HEAD:stable")
 
   # push_to_git_remote(
   #   remote: "origin",

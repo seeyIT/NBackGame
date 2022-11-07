@@ -83,8 +83,8 @@ platform :ios do
 
   increment_build_number(xcodeproj: "NBackGame.xcodeproj")
 
-  sh("git config user.name " + GIT_USERNAME)
-  sh("git config user.email " + GIT_EMAIL)
+  sh("git config --global user.name " + GIT_USERNAME)
+  sh("git config --global user.email " + GIT_EMAIL)
 
   #sh("git remote add origin https://" + GIT_USERNAME+ ":" + GIT_AUTHORIZATION+ "@github.com/" + GIT_USERNAME + "/NBackGame.git")
 

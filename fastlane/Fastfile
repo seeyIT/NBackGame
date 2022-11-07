@@ -98,6 +98,12 @@ platform :ios do
 
   sh("git push")
 
+  sh("git checkout dev")
+
+  sh("git pull origin stable")
+
+  sh("git push")
+
   # push_to_git_remote(
   #   remote: "origin",
   #   remote_branch: "stable",

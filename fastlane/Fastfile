@@ -90,6 +90,8 @@ platform :ios do
 
   sh("git checkout stable")
 
+  sh("git pull")
+  
   sh("git branch -v -a")
   
   git_branch
@@ -101,7 +103,7 @@ platform :ios do
 
   sh("git checkout dev")
 
-  sh("git merge stable")
+  sh("git merge stable --allow-unrelated-histories")
 
   sh("git push")
   

@@ -94,9 +94,9 @@ platform :ios do
 
   increment_build_number(xcodeproj: "NBackGame.xcodeproj")
     
-  build_number = get_build_number(xcodeproj: "Project.xcodeproj")
+  build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")
 
-  sh("git commit -am \"Bump version from: " + old_build_number + " to:\"" + build_number)
+  sh("git commit -am \"Bump version from: " + old_build_number + " to:" + build_number + "\"")
 
   sh("git push")
 

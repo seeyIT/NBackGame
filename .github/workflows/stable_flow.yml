@@ -19,10 +19,11 @@ jobs:
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '13.2.1'
-      - name: Deploy iOS Beta to TestFlight via Fastlane
+      - name: Deploy to TestFlight
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: deploy_to_testflight
+          lane: update_bump_stable_version
+          lane: push_new_stable_to_dev
         env:
           BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'
           APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'

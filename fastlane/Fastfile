@@ -102,11 +102,13 @@ platform :ios do
 
   sh("git push")
 
-  sh("git checkout dev")
+  sh("git push origin stable:dev")
 
-  sh("git merge stable")
+  # sh("git checkout dev")
 
-  sh("git push")
+  # sh("git merge stable")
+
+  # sh("git push")
   
 
   # push_to_git_remote(

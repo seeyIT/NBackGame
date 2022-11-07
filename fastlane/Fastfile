@@ -101,7 +101,7 @@ platform :ios do
 
   sh("git checkout dev")
 
-  sh("git pull origin stable")
+  sh("git pull origin stable --allow-unrelated-histories")
 
   sh("git push")
 

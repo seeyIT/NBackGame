@@ -80,7 +80,6 @@ end
 platform :ios do
   lane :deploy_to_testflight do
 
-
   sh("git config --global user.name " + GIT_USERNAME)
   sh("git config --global user.email " + GIT_EMAIL)
   sh("git config pull.rebase true")
@@ -91,14 +90,13 @@ platform :ios do
 
   sh("git pull")
 
+  old_build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")
+
   increment_build_number(xcodeproj: "NBackGame.xcodeproj")
-  
-  sh("git branch -v -a")
-  
-  git_branch
+    
+  build_number = get_build_number(xcodeproj: "Project.xcodeproj")
 
-
-  sh("git commit -am \"Bump version\"")
+  sh("git commit -am \"Bump version from: " + old_build_number + " to:\"" + build_number)
 
   sh("git push")
 

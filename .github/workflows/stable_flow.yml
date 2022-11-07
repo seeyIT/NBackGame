@@ -23,6 +23,7 @@ jobs:
         uses: maierj/fastlane-action@v1.4.0
         with:
           lane: update_bump_stable_version
+        with:
           lane: push_new_stable_to_dev
         env:
           BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'

@@ -22,7 +22,7 @@ jobs:
       - name: Deploy to TestFlight
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: update_bump_stable_version
+          lane: deploy_to_testflight
         env:
           BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'
           APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'

@@ -45,8 +45,14 @@ jobs:
         uses: maierj/fastlane-action@v1.4.0
         with:
           lane: update_bump_stable_version
+        env: 
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
       - name: Push changes to dev
         uses: maierj/fastlane-action@v1.4.0
         with:
           lane: push_new_stable_to_dev
+        env:
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
 

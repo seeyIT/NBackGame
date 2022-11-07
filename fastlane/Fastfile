@@ -104,7 +104,7 @@ platform :ios do
 
   sh("git checkout dev")
 
-  sh("git merge stable --allow-unrelated-histories")
+  sh("git merge stable")
 
   sh("git push")
   

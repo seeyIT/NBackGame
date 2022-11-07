@@ -102,6 +102,8 @@ platform :ios do
 
   sh("git push")
 
+  sh("git pull origin dev")
+
   sh("git push origin stable:dev")
 
   # sh("git checkout dev")

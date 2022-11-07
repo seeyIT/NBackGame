@@ -90,7 +90,6 @@ platform :ios do
 
   sh("git checkout stable")
 
-  sh("git pull")
   
   sh("git branch -v -a")
   

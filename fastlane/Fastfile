@@ -92,8 +92,6 @@ platform :ios do
 
     sh("git checkout stable")
 
-    sh("git pull")
-
     old_build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")
 
     increment_build_number(xcodeproj: "NBackGame.xcodeproj")

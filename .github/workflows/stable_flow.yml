@@ -23,8 +23,6 @@ jobs:
         uses: maierj/fastlane-action@v1.4.0
         with:
           lane: update_bump_stable_version
-        with:
-          lane: push_new_stable_to_dev
         env:
           BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'
           APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
@@ -43,3 +41,12 @@ jobs:
           APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+      - name: Bump stable xcode-version
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: update_bump_stable_version
+      - name: Push changes to dev
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: push_new_stable_to_dev
+

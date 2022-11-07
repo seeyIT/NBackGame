@@ -84,6 +84,7 @@ platform :ios do
 
   sh("git config --global user.name " + GIT_USERNAME)
   sh("git config --global user.email " + GIT_EMAIL)
+  sh("git config pull.rebase false")
 
   sh("git fetch --all")
 

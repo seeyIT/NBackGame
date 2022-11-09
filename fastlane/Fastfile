@@ -91,7 +91,7 @@ platform :ios do
     increment_version_number(bump_type: "major")
     increment_build_number(build_number: 1)
 
-    build_app(workspace: "NBackGame.xcworkspace", scheme: "NBackGame")
+    build_app(project: "NBackGame.xcodeproj", scheme: "NBackGame")
     deliver(
       submit_for_review: true,
       automatic_release: true,

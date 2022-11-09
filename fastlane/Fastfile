@@ -103,8 +103,6 @@ platform :ios do
       }
    )
     clean_build_artifacts
-
-    clear_data()
   end
 
   lane :update_bump_stable_version do

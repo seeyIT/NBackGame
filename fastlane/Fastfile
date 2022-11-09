@@ -35,7 +35,7 @@ def ensure_temp_keychain()
   create_temp_keychain()
 end
 
-def build_app()
+def build_app_locally()
   ensure_temp_keychain()
 
   api_key = app_store_connect_api_key(
@@ -85,7 +85,7 @@ end
 
 platform :ios do
 
-  lane :deploy_to_appstore do
+  lane :deploy_to_appstore2 do
     version = get_version_number()
     increment_version_number(version_number: version)
     increment_version_number(bump_type: "major")
@@ -103,7 +103,7 @@ platform :ios do
       }
    )
     clean_build_artifacts
-    
+
   end
 
   lane :update_bump_stable_version do
@@ -131,7 +131,7 @@ platform :ios do
   end
 
   lane :deploy_to_testflight do
-    build_app()
+    build_app_locally()
 
     pilot(
       apple_id: "#{DEVELOPER_APP_ID}",

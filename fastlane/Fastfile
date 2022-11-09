@@ -87,10 +87,10 @@ platform :ios do
 
   lane :deploy_to_appstore2 do
     ensure_temp_keychain()
-    
+
     version = get_version_number()
     increment_version_number(version_number: version)
-    increment_version_number(bump_type: "major")
+    increment_version_number(bump_type: "minor") #TODO change to major
     increment_build_number(build_number: 1)
 
     # build_app(project: "NBackGame.xcodeproj", scheme: "NBackGame")
@@ -129,7 +129,7 @@ platform :ios do
     deliver(
       submit_for_review: true,
       automatic_release: true,
-      overwrite_screenshots: true,
+      overwrite_screenshots: false, ## it was true
       force: true,
       submission_information: {
         export_compliance_uses_encryption: false,
@@ -137,6 +137,26 @@ platform :ios do
       }
    )
     clean_build_artifacts
+
+    update_bump_main_verion
+  end
+
+  lane :update_bump_main_verion do
+    setup_git_config()
+
+    sh("git fetch --all")
+
+    sh("git checkout main")
+
+    old_build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")
+
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+      
+    build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")
+
+    sh("git commit -am \"Bump version from: " + old_build_number + " to: " + build_number + "\"")
+
+    sh("git push")
 
   end
 

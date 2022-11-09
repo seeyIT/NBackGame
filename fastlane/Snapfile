@@ -1,0 +1,17 @@
+
+devices([
+  "iPhone 8 Plus",
+  "iPhone 12 Pro Max",
+  "iPad Pro (12.9-inch) (4th generation)",
+  "iPad Pro (12.9-inch) (2nd generation)"
+])
+
+scheme("FastlaneScreenshot")
+
+clear_previous_screenshots(true)
+
+override_status_bar(true)
+
+skip_open_summary(true)
+
+headless(true)

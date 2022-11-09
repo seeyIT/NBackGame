@@ -1,7 +1,7 @@
 name: Stable flow
 on:
-  push:
-    branches: [ stable ]
+  # push:
+  #   branches: [ stable ]
   # pull_request:
   #   branches: [ stable ] # Remove it later
 

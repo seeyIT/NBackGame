@@ -16,6 +16,16 @@ or alternatively using `brew install fastlane`
 
 # Available Actions
 ## iOS
+### ios deploy_to_appstore2
+```
+fastlane ios deploy_to_appstore2
+```
+
+### ios update_bump_main_version
+```
+fastlane ios update_bump_main_version
+```
+
 ### ios update_bump_stable_version
 ```
 fastlane ios update_bump_stable_version
@@ -24,6 +34,11 @@ fastlane ios update_bump_stable_version
 ### ios push_new_stable_to_dev
 ```
 fastlane ios push_new_stable_to_dev
+```
+
+### ios push_new_main_to_stable
+```
+fastlane ios push_new_main_to_stable
 ```
 
 ### ios deploy_to_testflight

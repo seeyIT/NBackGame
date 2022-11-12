@@ -1,9 +1,9 @@
 name: Main flow
 on:
   push:
-    branches: [ stable ]
+    branches: [ main ]
   pull_request:
-    branches: [ stable ] # Remove it later
+    branches: [ main ] # Remove it later
 
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:

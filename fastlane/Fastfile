@@ -137,7 +137,7 @@ platform :ios do
         add_id_info_uses_idfa: false
       },
       precheck_include_in_app_purchases: false,
-      build_number: "latest
+      build_number: "latest"
     )
      
     clean_build_artifacts

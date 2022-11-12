@@ -136,8 +136,7 @@ platform :ios do
         export_compliance_uses_encryption: false,
         add_id_info_uses_idfa: false
       },
-      precheck_include_in_app_purchases: false,
-      build_number: "latest"
+      precheck_include_in_app_purchases: false
     )
      
     clean_build_artifacts

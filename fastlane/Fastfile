@@ -140,8 +140,6 @@ platform :ios do
     )
      
     clean_build_artifacts
-
-    # update_bump_main_verion
   end
 
   lane :update_bump_main_verion do
@@ -185,6 +183,12 @@ platform :ios do
     setup_git_config()
 
     sh("git push --force origin stable:dev")
+  end
+
+  lane :push_new_main_to_stable do
+    setup_git_config()
+
+    sh("git push --force origin main:stable")
   end
 
   lane :deploy_to_testflight do

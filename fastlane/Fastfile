@@ -142,7 +142,7 @@ platform :ios do
     clean_build_artifacts
   end
 
-  lane :update_bump_main_verion do
+  lane :update_bump_main_version do
     setup_git_config()
 
     sh("git fetch --all")

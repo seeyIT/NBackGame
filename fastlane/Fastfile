@@ -141,7 +141,7 @@ platform :ios do
      
     clean_build_artifacts
 
-    update_bump_main_verion
+    # update_bump_main_verion
   end
 
   lane :update_bump_main_verion do

@@ -134,7 +134,8 @@ platform :ios do
       submission_information: {
         export_compliance_uses_encryption: false,
         add_id_info_uses_idfa: false
-      }
+      },
+      run_precheck_before_submit: false
    )
     clean_build_artifacts
 

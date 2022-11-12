@@ -104,40 +104,40 @@ platform :ios do
   )
   
 
-  match(
-    type: 'appstore',
-    app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
-    git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
-    readonly: true,
-    keychain_name: TEMP_KEYCHAIN_USER,
-    keychain_password: TEMP_KEYCHAIN_PASSWORD,
-    api_key: api_key
-  )
+  # match(
+  #   type: 'appstore',
+  #   app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
+  #   git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
+  #   readonly: true,
+  #   keychain_name: TEMP_KEYCHAIN_USER,
+  #   keychain_password: TEMP_KEYCHAIN_PASSWORD,
+  #   api_key: api_key
+  # )
 
-  gym(
-    configuration: "Release",
-    project: "NBackGame.xcodeproj",
-    scheme: "NBackGame",
-    export_method: "app-store",
-    export_options: {
-      compileBitcode: true,
-      provisioningProfiles: { 
-          BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
-      }
-    }
-  )
-    deliver(
-      submit_for_review: true,
-      automatic_release: true,
-      overwrite_screenshots: false, ## it was true
-      force: true,
-      submission_information: {
-        export_compliance_uses_encryption: false,
-        add_id_info_uses_idfa: false
-      },
-      run_precheck_before_submit: false
-   )
-    clean_build_artifacts
+  # gym(
+  #   configuration: "Release",
+  #   project: "NBackGame.xcodeproj",
+  #   scheme: "NBackGame",
+  #   export_method: "app-store",
+  #   export_options: {
+  #     compileBitcode: true,
+  #     provisioningProfiles: { 
+  #         BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
+  #     }
+  #   }
+  # )
+  #   deliver(
+  #     submit_for_review: true,
+  #     automatic_release: true,
+  #     overwrite_screenshots: false, ## it was true
+  #     force: true,
+  #     submission_information: {
+  #       export_compliance_uses_encryption: false,
+  #       add_id_info_uses_idfa: false
+  #     },
+  #     run_precheck_before_submit: false
+  #  )
+  #   clean_build_artifacts
 
     update_bump_main_verion
   end
@@ -146,7 +146,7 @@ platform :ios do
     setup_git_config()
 
     sh("git fetch --all")
-
+    sh("git branch")
     sh("git checkout main")
 
     old_build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")

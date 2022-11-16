@@ -1,54 +1,72 @@
 fastlane documentation
-================
+----
+
 # Installation
 
 Make sure you have the latest version of the Xcode command line tools installed:
 
-```
+```sh
 xcode-select --install
 ```
 
-Install _fastlane_ using
-```
-[sudo] gem install fastlane -NV
-```
-or alternatively using `brew install fastlane`
+For _fastlane_ installation instructions, see [Installing _fastlane_](https://docs.fastlane.tools/#installing-fastlane)
 
 # Available Actions
+
 ## iOS
-### ios deploy_to_appstore2
+
+### ios deploy_to_appstore
+
+```sh
+[bundle exec] fastlane ios deploy_to_appstore
 ```
-fastlane ios deploy_to_appstore2
-```
+
+
 
 ### ios update_bump_main_version
+
+```sh
+[bundle exec] fastlane ios update_bump_main_version
 ```
-fastlane ios update_bump_main_version
-```
+
+
 
 ### ios update_bump_stable_version
+
+```sh
+[bundle exec] fastlane ios update_bump_stable_version
 ```
-fastlane ios update_bump_stable_version
-```
+
+
 
 ### ios push_new_stable_to_dev
+
+```sh
+[bundle exec] fastlane ios push_new_stable_to_dev
 ```
-fastlane ios push_new_stable_to_dev
-```
+
+
 
 ### ios push_new_main_to_stable
-```
-fastlane ios push_new_main_to_stable
+
+```sh
+[bundle exec] fastlane ios push_new_main_to_stable
 ```
 
+
+
 ### ios deploy_to_testflight
+
+```sh
+[bundle exec] fastlane ios deploy_to_testflight
 ```
-fastlane ios deploy_to_testflight
-```
+
 
 
 ----
 
-This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
-More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
-The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).
+This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
+
+More information about _fastlane_ can be found on [fastlane.tools](https://fastlane.tools).
+
+The documentation of _fastlane_ can be found on [docs.fastlane.tools](https://docs.fastlane.tools).

@@ -45,11 +45,9 @@ def build_app_locally()
     duration: 1200,            
     in_house: false
   )
-  
-  increment_build_number(xcodeproj: "NBackGame.xcodeproj")
 
   match(
-    type: 'appstore',
+    type: "appstore",
     app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
     git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
     readonly: true,
@@ -85,47 +83,15 @@ end
 
 platform :ios do
 
-  lane :deploy_to_appstore2 do
+  lane :deploy_to_appstore do
     ensure_temp_keychain()
 
     version = get_version_number()
     increment_version_number(version_number: version)
-    increment_version_number(bump_type: "minor") #TODO change to major
+    increment_version_number(bump_type: "major")
     increment_build_number(build_number: 1)
 
-    # build_app(project: "NBackGame.xcodeproj", scheme: "NBackGame")
-
-    api_key = app_store_connect_api_key(
-      key_id: APPLE_KEY_ID,
-      issuer_id: APPLE_ISSUER_ID,
-      key_content: APPLE_KEY_CONTENT,            
-      duration: 1200,            
-      in_house: false
-    )
-    
-
-    match(
-      type: 'appstore',
-      app_identifier: "#{DEVELOPER_APP_IDENTIFIER}",
-      git_basic_authorization: Base64.strict_encode64(GIT_AUTHORIZATION),
-      readonly: true,
-      keychain_name: TEMP_KEYCHAIN_USER,
-      keychain_password: TEMP_KEYCHAIN_PASSWORD,
-      api_key: api_key
-    )
-
-    gym(
-      configuration: "Release",
-      project: "NBackGame.xcodeproj",
-      scheme: "NBackGame",
-      export_method: "app-store",
-      export_options: {
-        compileBitcode: true,
-        provisioningProfiles: { 
-            BUNDLE_ID => PROVISIONING_PROFILE_SPECIFIER
-        }
-      }
-    )
+    build_app_locally()
 
     deliver(
       submit_for_review: true,
@@ -139,7 +105,7 @@ platform :ios do
       precheck_include_in_app_purchases: false
     )
      
-    clean_build_artifacts
+    clear_data()
   end
 
   lane :update_bump_main_version do
@@ -192,6 +158,8 @@ platform :ios do
   end
 
   lane :deploy_to_testflight do
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+
     build_app_locally()
 
     pilot(

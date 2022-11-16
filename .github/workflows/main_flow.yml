@@ -39,3 +39,17 @@ jobs:
           APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+      - name: Bump main xcode-version
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: update_bump_main_version
+        env: 
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+      - name: Push changes to dev
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: push_new_main_to_stable
+        env:
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'

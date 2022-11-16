@@ -35,7 +35,7 @@ def ensure_temp_keychain()
   create_temp_keychain()
 end
 
-def build_app_locally()
+def build_app_locally(increament_build_numer)
   ensure_temp_keychain()
 
   api_key = app_store_connect_api_key(
@@ -45,6 +45,10 @@ def build_app_locally()
     duration: 1200,            
     in_house: false
   )
+
+  if increament_build_numer
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+  end
 
   match(
     type: "appstore",
@@ -91,7 +95,7 @@ platform :ios do
     increment_version_number(bump_type: "major")
     increment_build_number(build_number: 1)
 
-    build_app_locally()
+    build_app_locally(false)
 
     deliver(
       submit_for_review: true,
@@ -158,9 +162,7 @@ platform :ios do
   end
 
   lane :deploy_to_testflight do
-    # increment_build_number(xcodeproj: "NBackGame.xcodeproj")
-
-    # build_app_locally()
+    # build_app_locally(true)
 
     # pilot(
     #   apple_id: "#{DEVELOPER_APP_ID}",
@@ -174,6 +176,6 @@ platform :ios do
     #   ipa: "./NBackGame.ipa"
     # )
 
-    clear_data()
+    #clear_data()
   end
 end

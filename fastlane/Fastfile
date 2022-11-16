@@ -176,6 +176,6 @@ platform :ios do
     #   ipa: "./NBackGame.ipa"
     # )
 
-    #clear_data()
+    clear_data()
   end
 end

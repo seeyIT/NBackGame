@@ -87,9 +87,6 @@ platform :ios do
   lane :deploy_to_appstore do
     ensure_temp_keychain()
 
-    version = get_version_number()
-    increment_version_number(version_number: version)
-    increment_version_number(bump_type: "major")
     increment_build_number(build_number: 1)
 
     build_app_locally()
@@ -110,6 +107,10 @@ platform :ios do
       },
       precheck_include_in_app_purchases: false
     )
+
+    version = get_version_number()
+    increment_version_number(version_number: version)
+    increment_version_number(bump_type: "major")
      
     clear_data()
   end
@@ -162,8 +163,6 @@ platform :ios do
   end
 
   lane :deploy_to_testflight do
-    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
-
     build_app_locally()
 
     pilot(
@@ -177,6 +176,8 @@ platform :ios do
       notify_external_testers: true,
       ipa: "./NBackGame.ipa"
     )
+
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
 
     clear_data()
   end

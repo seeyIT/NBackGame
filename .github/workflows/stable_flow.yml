@@ -6,16 +6,7 @@ on:
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:
 
-jobs:
-  test:
-    name: Run tests
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build
-      run: xcodebuild clean test -workspace NBackGame.xcworkspace -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
-
+jobs:   
   deploy:
     name: Deploying to Testflight
     runs-on: macOS-latest
@@ -27,7 +18,7 @@ jobs:
         with:
           xcode-version: '13.2.1'
       - name: Build
-        run: xcodebuild clean test -workspace NBackGame.xcworkspace -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+        run: xcodebuild clean build test -workspace NBackGame.xcworkspace -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
       - name: Deploy to TestFlight
         uses: maierj/fastlane-action@v1.4.0
         with:

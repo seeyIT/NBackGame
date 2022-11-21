@@ -94,11 +94,16 @@ platform :ios do
 
     build_app_locally()
 
+    capture_ios_screenshots
+
     deliver(
       submit_for_review: true,
       automatic_release: true,
-      overwrite_screenshots: false, ## it was true
+      overwrite_screenshots: true,
       force: true,
+      release_notes: {
+        'default' => PR_BODY,
+      },
       submission_information: {
         export_compliance_uses_encryption: false,
         add_id_info_uses_idfa: false

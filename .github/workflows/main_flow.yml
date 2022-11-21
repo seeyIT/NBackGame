@@ -13,10 +13,12 @@ jobs:
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '13.2.1'
+      - name: Test
+        run: xcodebuild clean test -workspace NBackGame.xcworkspace -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
       - name: Deploy to TestFlight
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -39,6 +41,7 @@ jobs:
           APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+          PR_BODY: '${{ github.event.pull_request.body }}'
       - name: Bump main xcode-version
         uses: maierj/fastlane-action@v1.4.0
         with:

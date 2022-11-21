@@ -12,6 +12,7 @@ APPLE_KEY_CONTENT = ENV["APPLE_KEY_CONTENT"]
 GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
 GIT_USERNAME = ENV["GIT_USERNAME"]
 GIT_EMAIL = ENV["GIT_EMAIL"]
+PR_BODY = ENV["PR_BODY"]
 
 def delete_temp_keychain()
   delete_keychain(
@@ -167,7 +168,7 @@ platform :ios do
       skip_submission: false,
       distribute_external: true,
       groups: "Testers",
-      changelog: "Test changelong",
+      changelog: PR_BODY,
       notify_external_testers: true,
       ipa: "./NBackGame.ipa"
     )

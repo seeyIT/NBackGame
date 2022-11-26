@@ -17,8 +17,8 @@ jobs:
       - uses: maxim-lobanov/setup-xcode@v1
         with:
           xcode-version: '13.2.1'
-      # - name: Build
-      #   run: xcodebuild clean build test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+      - name: Build
+        run: xcodebuild clean build test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
       - name: Deploy to TestFlight
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -43,18 +43,18 @@ jobs:
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
           PR_BODY: '${{ github.event.head_commit.message }}'
           ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD: true
-      # - name: Bump stable xcode-version
-      #   uses: maierj/fastlane-action@v1.4.0
-      #   with:
-      #     lane: update_bump_stable_version
-      #   env: 
-      #     GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
-      #     GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
-      # - name: Push changes to dev
-      #   uses: maierj/fastlane-action@v1.4.0
-      #   with:
-      #     lane: push_new_stable_to_dev
-      #   env:
-      #     GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
-      #     GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+      - name: Bump stable xcode-version
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: update_bump_stable_version
+        env: 
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+      - name: Push changes to dev
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: push_new_stable_to_dev
+        env:
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
 

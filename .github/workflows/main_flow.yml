@@ -42,6 +42,7 @@ jobs:
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
           PR_BODY: '${{ github.event.pull_request.body }}'
+          ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD: true
       - name: Bump main xcode-version
         uses: maierj/fastlane-action@v1.4.0
         with:

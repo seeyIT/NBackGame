@@ -6,15 +6,7 @@ on:
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:
 
-jobs:
-  test:
-    name: Run tests
-    runs-on: macos-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Build
-    run: xcodebuild clean test -workspace NBackGame.xcworkspace -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+jobs:   
 
   deploy:
     name: Deploying to Testflight
@@ -27,7 +19,7 @@ jobs:
         with:
           xcode-version: '13.2.1'
       - name: Build
-        run: xcodebuild clean test -workspace NBackGame.xcworkspace -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+        run: xcodebuild clean build test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
       - name: Deploy to TestFlight
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -50,7 +42,8 @@ jobs:
           APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
-          PR_BODY: '${{ github.event.pull_request.body }}'
+          PR_BODY: '${{ github.event.head_commit.message }}'
+          ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD: true
       - name: Bump stable xcode-version
         uses: maierj/fastlane-action@v1.4.0
         with:
@@ -65,4 +58,3 @@ jobs:
         env:
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
-

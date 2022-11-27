@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MenuButton: View {
-    @ScaledMetric var imageSize: CGFloat = 40
+    @ScaledMetric var imageSize: CGFloat = 16
     
     var iconName: String
     var text: String
@@ -19,7 +19,6 @@ struct MenuButton: View {
         HStack {
             if imageOnLeft {
                 Image(systemName: iconName)
-                    .font(.largeTitle)
                     .frame(width: imageSize, height: imageSize)
                 Text(text)
                     .font(.headline)
@@ -29,7 +28,6 @@ struct MenuButton: View {
                     .font(.headline)
                     .frame(alignment: .center)
                 Image(systemName: iconName)
-                    .font(.largeTitle)
                     .frame(width: imageSize, height: imageSize)
             }
         }

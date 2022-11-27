@@ -7,10 +7,12 @@
 
 import SwiftUI
 import Combine
+import MessageUI
 
 struct MenuView: View {
     @ObservedObject var viewModel: MenuViewModel
     @Environment(\.verticalSizeClass) var verticalSizeClass
+    @State var isShowingMailView = false
     
     private var buttonSize: CGFloat {
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -49,7 +51,7 @@ struct MenuView: View {
                     }, label: {
                         MenuButton(iconName: "play.fill", text: "Play", fixedWidth: buttonSize)
                     })
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 16)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
                     Button(action: {
@@ -60,7 +62,7 @@ struct MenuView: View {
                     }, label: {
                         MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: buttonSize)
                     })
-                    .padding(.bottom, 30)
+                    .padding(.bottom, 16)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
                     
                     Button(action: {
@@ -71,11 +73,21 @@ struct MenuView: View {
                     }, label: {
                         MenuButton(iconName: "graduationcap.fill", text: "Statistics", fixedWidth: buttonSize)
                     })
+                    .padding(.bottom, 16)
                     .accessibilityIdentifier(AccessibilityIdentifier.Menu.statisticsButton)
+                    
+                    if MFMailComposeViewController.canSendMail() {
+                        Button(action: {
+                            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                            isShowingMailView.toggle()
+                        }, label: {
+                            MenuButton(iconName: "pencil", text: "Stay in touch", fixedWidth: buttonSize)
+                        })
+                    }
                     
                     if verticalSizeClass == .regular {
                         QuotesView(viewModel: viewModel)
-                            .padding(.top, 30)
+                            .padding(.top, 16)
                     }
                     Spacer()
                     Text("Music powered by @gabriele_pollina")
@@ -88,6 +100,9 @@ struct MenuView: View {
             .preferredColorScheme(.dark)
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .sheet(isPresented: $isShowingMailView) {
+            MailView()
+        }
         .onAppear(perform: {
             viewModel.onAppear()
         })

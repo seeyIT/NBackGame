@@ -107,5 +107,4 @@ struct MenuView: View {
             viewModel.onAppear()
         })
     }
-    
 }

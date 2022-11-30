@@ -87,7 +87,8 @@ platform :ios do
   lane :deploy_to_appstore do
     ensure_temp_keychain()
 
-    increment_build_number(build_number: 1)
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+
 
     build_app_locally()
 
@@ -108,10 +109,9 @@ platform :ios do
       precheck_include_in_app_purchases: false
     )
 
-    version = get_version_number()
-    increment_version_number(version_number: version)
     increment_version_number(bump_type: "major")
-     
+    increment_build_number(build_number: 1)
+
     clear_data()
   end
 

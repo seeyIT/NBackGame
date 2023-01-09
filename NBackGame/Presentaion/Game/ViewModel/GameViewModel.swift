@@ -28,7 +28,8 @@ class GameViewModel: ObservableObject {
         return boardSize * boardSize
     }
     private var gameStartTime: Int64 = 0
-    
+    private let synthesizer = AVSpeechSynthesizer()
+
     // TODO: fields to be injected
     let letters = "gmbpkldst"
     let roundDuration: Double = 3.2
@@ -123,7 +124,6 @@ class GameViewModel: ObservableObject {
         let utterance = AVSpeechUtterance(string: currentItem.sound)
         utterance.voice = AVSpeechSynthesisVoice(language: "en")
         utterance.rate = 0.5
-        let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
     

@@ -23,14 +23,25 @@ class MusicService {
     private let fadeDuration: TimeInterval = TimeInterval(1)
     
     init() {
-        prepareBackgroundPlayer()
+        preparePlayer()
     }
     
-    private func prepareBackgroundPlayer() {
+    private func preparePlayer() {
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback, options: .duckOthers)
+        } catch {
+            print("Can't set proper category, error: \(error)")
+        }
+    }
+    
+    func playBackgroundMusic() {
         if let audioURL = Bundle.main.url(forResource: "background", withExtension: "m4a") {
             do {
-                try self.audioPlayer = AVAudioPlayer(contentsOf: audioURL)
-                self.audioPlayer?.numberOfLoops = -1
+                audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+                audioPlayer?.numberOfLoops = -1
+
+                audioPlayer?.play()
+
             } catch {
                 print("Couldn't play audio, error: \(error)")
             }
@@ -39,20 +50,25 @@ class MusicService {
         }
     }
     
-    func playBackgroundMusic() {
+    func stopBackgroundMusic() {
         if let player = self.audioPlayer {
-            player.play()
-            player.setVolume(1, fadeDuration: fadeDuration)
+            player.stop()
         } else {
-            print("Can't play background music because audio player is nil")
+            print("Can't stop background music because audio player is nil")
         }
     }
     
-    func stopBackgroundMusic() {
-        if let player = self.audioPlayer {
-            player.setVolume(0, fadeDuration: fadeDuration)
+    func playLetter(_ letter: String) {
+        if let audioURL = Bundle.main.url(forResource: letter, withExtension: "wav") {
+            do {
+                audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
+                audioPlayer?.numberOfLoops = 0
+                audioPlayer?.play()
+            } catch {
+                print("Can't play audio, error: \(error)")
+            }
         } else {
-            print("Can't stop background music because audio player is nil")
+            print("No audio file found")
         }
     }
 }

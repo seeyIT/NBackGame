@@ -22,17 +22,11 @@ struct LevelSelectionView: View {
             ScrollView {
                 VStack {
                     LevelSelectionBackButton(viewModel: viewModel)
-                    VStack {
-                        Text("Choose N")
-                            .font(.largeTitle)
-                            .foregroundColor(.blue)
-                            .padding()
-                        Text("Before playing, make sure you have Silent Mode off in your iPhone to be able to hear game sounds.")
-                            .foregroundColor(.white)
-                            .padding(.horizontal)
-                    }
-                    
-                    
+                    Text("Choose N")
+                        .font(.largeTitle)
+                        .foregroundColor(.blue)
+                        .padding()
+
                     LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: gridCount)) {
                         ForEach(1...12, id: \.self) { number in
                             ZStack {

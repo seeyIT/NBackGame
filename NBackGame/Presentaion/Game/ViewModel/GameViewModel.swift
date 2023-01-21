@@ -120,11 +120,6 @@ class GameViewModel: ObservableObject {
     }
     
     private func speak() {
-        print("speak")
-        let utterance = AVSpeechUtterance(string: currentItem.sound)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en")
-        utterance.rate = 0.5
-        synthesizer.speak(utterance)
+        musicService.playLetter(currentItem.sound)
     }
-    
 }

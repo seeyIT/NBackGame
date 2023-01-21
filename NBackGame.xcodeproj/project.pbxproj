@@ -37,6 +37,16 @@
 		5F802ED425DFDF1600AF85EE /* GameSummaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */; };
 		5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807536271DBACE00563BAA /* PlayCircle.swift */; };
 		5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807538271DBBDA00563BAA /* MenuButton.swift */; };
+		5F85D2F4297C65E2002A85CD /* b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EB297C65E1002A85CD /* b.wav */; };
+		5F85D2F5297C65E2002A85CD /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EC297C65E1002A85CD /* g.wav */; };
+		5F85D2F6297C65E2002A85CD /* s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2ED297C65E1002A85CD /* s.wav */; };
+		5F85D2F7297C65E2002A85CD /* m.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EE297C65E1002A85CD /* m.wav */; };
+		5F85D2F8297C65E2002A85CD /* d.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EF297C65E1002A85CD /* d.wav */; };
+		5F85D2F9297C65E2002A85CD /* t.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2F0297C65E1002A85CD /* t.wav */; };
+		5F85D2FA297C65E2002A85CD /* p.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2F1297C65E1002A85CD /* p.wav */; };
+		5F85D2FB297C65E2002A85CD /* k.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2F2297C65E1002A85CD /* k.wav */; };
+		5F85D2FC297C65E2002A85CD /* l.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2F3297C65E1002A85CD /* l.wav */; };
+		5F85D2FE297C67DC002A85CD /* s.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2FD297C67DC002A85CD /* s.mp3 */; };
 		5F949A9A25FA0B3800512ADE /* CalculateGameResultsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949A9925FA0B3800512ADE /* CalculateGameResultsUseCase.swift */; };
 		5F949A9F25FA159E00512ADE /* UnlockNextLevelUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949A9E25FA159E00512ADE /* UnlockNextLevelUseCase.swift */; };
 		5F949AA425FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F949AA325FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift */; };
@@ -137,6 +147,16 @@
 		5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewModelTests.swift; sourceTree = "<group>"; };
 		5F807536271DBACE00563BAA /* PlayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCircle.swift; sourceTree = "<group>"; };
 		5F807538271DBBDA00563BAA /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		5F85D2EB297C65E1002A85CD /* b.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = b.wav; sourceTree = "<group>"; };
+		5F85D2EC297C65E1002A85CD /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
+		5F85D2ED297C65E1002A85CD /* s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s.wav; sourceTree = "<group>"; };
+		5F85D2EE297C65E1002A85CD /* m.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = m.wav; sourceTree = "<group>"; };
+		5F85D2EF297C65E1002A85CD /* d.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = d.wav; sourceTree = "<group>"; };
+		5F85D2F0297C65E1002A85CD /* t.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = t.wav; sourceTree = "<group>"; };
+		5F85D2F1297C65E1002A85CD /* p.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = p.wav; sourceTree = "<group>"; };
+		5F85D2F2297C65E1002A85CD /* k.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = k.wav; sourceTree = "<group>"; };
+		5F85D2F3297C65E1002A85CD /* l.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = l.wav; sourceTree = "<group>"; };
+		5F85D2FD297C67DC002A85CD /* s.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = s.mp3; sourceTree = "<group>"; };
 		5F949A9925FA0B3800512ADE /* CalculateGameResultsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateGameResultsUseCase.swift; sourceTree = "<group>"; };
 		5F949A9E25FA159E00512ADE /* UnlockNextLevelUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockNextLevelUseCase.swift; sourceTree = "<group>"; };
 		5F949AA325FA64AF00512ADE /* CalculateGameResultsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateGameResultsUseCaseTests.swift; sourceTree = "<group>"; };
@@ -587,6 +607,16 @@
 		5FB46DF0270C4D4F00B41F37 /* Music */ = {
 			isa = PBXGroup;
 			children = (
+				5F85D2FD297C67DC002A85CD /* s.mp3 */,
+				5F85D2EB297C65E1002A85CD /* b.wav */,
+				5F85D2EF297C65E1002A85CD /* d.wav */,
+				5F85D2EC297C65E1002A85CD /* g.wav */,
+				5F85D2F2297C65E1002A85CD /* k.wav */,
+				5F85D2F3297C65E1002A85CD /* l.wav */,
+				5F85D2EE297C65E1002A85CD /* m.wav */,
+				5F85D2F1297C65E1002A85CD /* p.wav */,
+				5F85D2ED297C65E1002A85CD /* s.wav */,
+				5F85D2F0297C65E1002A85CD /* t.wav */,
 				5FB46DF9271A082F00B41F37 /* background.m4a */,
 			);
 			path = Music;
@@ -858,9 +888,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F85D2FB297C65E2002A85CD /* k.wav in Resources */,
+				5F85D2F9297C65E2002A85CD /* t.wav in Resources */,
+				5F85D2F6297C65E2002A85CD /* s.wav in Resources */,
+				5F85D2FE297C67DC002A85CD /* s.mp3 in Resources */,
 				5FA863492529D997006B5F33 /* Preview Assets.xcassets in Resources */,
+				5F85D2F7297C65E2002A85CD /* m.wav in Resources */,
 				5FB46DFA271A082F00B41F37 /* background.m4a in Resources */,
+				5F85D2F5297C65E2002A85CD /* g.wav in Resources */,
+				5F85D2F8297C65E2002A85CD /* d.wav in Resources */,
 				5FA863462529D997006B5F33 /* Assets.xcassets in Resources */,
+				5F85D2FC297C65E2002A85CD /* l.wav in Resources */,
+				5F85D2F4297C65E2002A85CD /* b.wav in Resources */,
+				5F85D2FA297C65E2002A85CD /* p.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

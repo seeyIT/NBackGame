@@ -106,7 +106,7 @@ struct TutorialStep5: View {
             
         }
         .scaleEffect(0.5, anchor: .bottom)
-        MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 0)
+        MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 2)
             .frame(width: 200, height: 200)
     }
 }

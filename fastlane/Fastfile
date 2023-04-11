@@ -135,7 +135,9 @@ platform :ios do
     sh "git reset --hard"
     sh "git status"
 
-    increment_version_number(bump_type: "major")
+    v = (get_version_number.to_i + 1).to_s + ".0"
+    increment_version_number(version_number: v)
+    increment_build_number(build_number: 1)
 
     commit_version_bump(
       message: "Version Bump"

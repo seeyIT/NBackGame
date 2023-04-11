@@ -133,6 +133,7 @@ platform :ios do
   lane :bump_verion do
     sh "git status"
     sh "git checkout ."
+    sh "git reset --hard"
     sh "git status"
     sh "git diff"
 

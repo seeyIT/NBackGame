@@ -144,7 +144,7 @@ platform :ios do
     push_to_git_remote
 
     sh "git checkout test"
-    sh "git pull --no-rebase origin test2 --allow-unrelated-histories"
+    sh "git pull --no-rebase origin test2"
     sh "git push"
 
   end

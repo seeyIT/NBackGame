@@ -139,7 +139,9 @@ platform :ios do
     increment_version_number(version_number: v)
     increment_build_number(build_number: 1)
 
-    sh "git add ."
+    sh "cat ../.Gemfile.lock"
+
+
 
     commit_version_bump(
       message: "Version Bump"

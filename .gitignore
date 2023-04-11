@@ -39,7 +39,7 @@ fastlane/archives/
 # SPM
 /.build
 /Packages
-/*.xcodeproj
+# /*.xcodeproj
 xcuserdata/
 
 

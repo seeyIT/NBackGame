@@ -41,6 +41,3 @@ fastlane/archives/
 /Packages
 /*.xcodeproj
 xcuserdata/
-
-# Ignore bundler config
-/.bundle

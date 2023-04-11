@@ -144,8 +144,8 @@ platform :ios do
 
     push_to_git_remote
 
-    sh "git checkout test"
-    sh "git pull --no-rebase origin test2"
+    sh "git checkout test2"
+    sh "git pull --no-rebase origin test"
     sh "git push"
 
 

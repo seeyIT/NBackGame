@@ -226,6 +226,7 @@ struct TutorialStep10: View {
         MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 1)
             .frame(width: 200, height: 200)
         
+        
     }
 }
 

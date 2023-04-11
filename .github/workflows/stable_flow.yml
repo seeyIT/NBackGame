@@ -1,7 +1,7 @@
 name: Stable flow
 on:
   push:
-    branches: [ stable ]
+    branches: [ ]
 
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:

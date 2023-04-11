@@ -143,7 +143,6 @@ platform :ios do
 
     push_to_git_remote
 
-
     sh "git checkout test2"
     sh "git pull --rebase origin test"
     sh "git push"

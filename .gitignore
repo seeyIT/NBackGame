@@ -39,7 +39,7 @@ fastlane/archives/
 # SPM
 /.build
 /Packages
-# /*.xcodeproj
+# /*.xcodeproj It's commented because it was creating issues with Github Actions and fastlane commit_version_bump command
 xcuserdata/
 
 

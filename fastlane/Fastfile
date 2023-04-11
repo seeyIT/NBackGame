@@ -132,6 +132,16 @@ platform :ios do
 
   lane :bump_verion do
     sh "git status"
+    sh "git reset -hard"
+    sh "git status"
+
+    increment_version_number(bump_type: "major")
+
+    commit_version_bump(
+      message: "Version Bump"
+    )
+
+    push_to_git_remote
 
   end
 

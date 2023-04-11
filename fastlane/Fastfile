@@ -131,6 +131,7 @@ platform :ios do
   end
 
   lane :bump_verion do
+    sh "git fetch --all --unshallow"
     git_pull
 
     v = (get_version_number.to_i + 1).to_s + ".0"

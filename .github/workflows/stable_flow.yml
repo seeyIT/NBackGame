@@ -1,7 +1,7 @@
 name: Stable flow
 on:
   push:
-    branches: [ none ]
+    branches: [ test ]
 
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:
@@ -47,14 +47,15 @@ jobs:
       - name: Bump stable xcode-version
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: update_bump_stable_version
+          lane: bump_verion
+#          lane: update_bump_stable_version
         env: 
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
-      - name: Push changes to dev
-        uses: maierj/fastlane-action@v1.4.0
-        with:
-          lane: push_new_stable_to_dev
-        env:
-          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
-          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+#      - name: Push changes to dev
+#        uses: maierj/fastlane-action@v1.4.0
+#        with:
+#          lane: push_new_stable_to_dev
+#        env:
+#          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+#          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'

@@ -145,7 +145,7 @@ platform :ios do
 
 
     sh "git checkout test2"
-    sh "git pull --rebase test"
+    sh "git pull --rebase origin test"
     sh "git push"
 
   end

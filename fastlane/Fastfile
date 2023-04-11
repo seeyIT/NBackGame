@@ -131,18 +131,11 @@ platform :ios do
   end
 
   lane :bump_verion do
-    sh "git status"
-    # sh "git checkout ."
-    # sh "git reset --hard"
-    # sh "git status"
-    sh "git diff"
+    git_pull
 
     v = (get_version_number.to_i + 1).to_s + ".0"
     increment_version_number(version_number: v)
     increment_build_number(build_number: 1)
-
-
-
 
     commit_version_bump(
       message: "Version Bump"

@@ -132,7 +132,7 @@ platform :ios do
 
   lane :bump_verion do
     sh "git status"
-    sh "git reset --hard"
+    sh "git checkout ."
     sh "git status"
 
     v = (get_version_number.to_i + 1).to_s + ".0"

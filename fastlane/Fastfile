@@ -207,7 +207,7 @@ platform :ios do
   lane :create_pr_to_stable do 
 
     create_pull_request(
-      api_bearer: Base64.strict_encode64(GIT_AUTHORIZATION),
+      api_bearer: GIT_AUTHORIZATION,
       repo: "NBackGame",
       title: "Test PR from fastlane",
       base: "stable"

@@ -23,3 +23,5 @@ jobs:
         uses: maierj/fastlane-action@v1.4.0
         with:
           lane: create_pr_to_stable
+        env:
+          GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'

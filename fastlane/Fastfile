@@ -139,7 +139,7 @@ platform :ios do
     increment_build_number(build_number: 1)
 
     commit_version_bump(
-      message: "Version Bump"
+      message: "Version Bump to: " + v
     )
 
     push_to_git_remote

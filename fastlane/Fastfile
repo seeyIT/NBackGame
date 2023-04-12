@@ -144,11 +144,6 @@ platform :ios do
 
     push_to_git_remote
 
-    sh "git checkout test2"
-    sh "git pull --no-rebase origin test"
-    sh "git push"
-
-
   end
 
   
@@ -167,9 +162,14 @@ platform :ios do
   end
 
   lane :push_new_stable_to_dev do
-    setup_git_config()
+    # setup_git_config()
 
-    sh("git push --force origin stable:dev")
+    # sh("git push --force origin stable:dev")
+    sh "git fetch --all --unshallow"
+
+    sh "git checkout dev"
+    sh "git pull --no-rebase origin stable"
+    sh "git push"
   end
 
   lane :push_new_main_to_stable do

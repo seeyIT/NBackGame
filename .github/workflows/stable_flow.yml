@@ -58,4 +58,4 @@ jobs:
           lane: push_new_stable_to_dev
         env:
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
-         GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'

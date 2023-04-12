@@ -215,6 +215,7 @@ platform :ios do
       api_token: GIT_AUTHORIZATION,
       repo: "seeyIT/NBackGame",
       title: "Dev -> Stable",
+      body: GENERIC_MESSAGE,
       base: "stable"
     )
   end

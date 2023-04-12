@@ -205,13 +205,11 @@ platform :ios do
   end
 
   lane :create_pr_to_stable do 
-
     create_pull_request(
       api_token: GIT_AUTHORIZATION,
       repo: "seeyIT/NBackGame",
-      title: "Test PR from fastlane",
+      title: "Dev -> Stable",
       base: "stable"
-      )
-
+    )
   end
 end

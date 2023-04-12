@@ -208,7 +208,7 @@ platform :ios do
 
     create_pull_request(
       api_token: Base64.strict_encode64(GIT_AUTHORIZATION),
-      repo: "NBackGame",
+      repo: "seeyIT/NBackGame",
       title: "Test PR from fastlane",
       base: "stable"
       )

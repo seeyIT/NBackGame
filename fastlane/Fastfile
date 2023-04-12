@@ -165,7 +165,7 @@ platform :ios do
     # setup_git_config()
 
     # sh("git push --force origin stable:dev")
-    sh "git fetch --all --unshallow"
+    # sh "git fetch --all --unshallow"
 
     sh "git checkout dev"
     sh "git pull --no-rebase origin stable"

@@ -210,6 +210,7 @@ platform :ios do
       api_token: GIT_AUTHORIZATION,
       repo: "seeyIT/NBackGame",
       title: "Test PR from fastlane",
+      base: "stable"
       )
 
   end

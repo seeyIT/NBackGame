@@ -90,7 +90,6 @@ platform :ios do
 
     increment_build_number(xcodeproj: "NBackGame.xcodeproj")
 
-
     build_app_locally()
 
    # capture_ios_screenshots
@@ -110,28 +109,10 @@ platform :ios do
       precheck_include_in_app_purchases: false
     )
 
-    increment_version_number(bump_type: "major")
-    increment_build_number(build_number: 1)
-
     clear_data()
   end
 
   lane :bump_main_version_number do
-    sh "git fetch --all --unshallow"
-    git_pull
-
-    increment_version_number(bump_type: "major")
-    increment_build_number(build_number: 1)
-
-    commit_version_bump(
-      message: "Bump version number to: " + get_version_number
-    )
-
-    push_to_git_remote
-
-  end
-
-  lane :bump_verion do
     sh "git fetch --all --unshallow"
     git_pull
 
@@ -140,7 +121,7 @@ platform :ios do
     increment_build_number(build_number: 1)
 
     commit_version_bump(
-      message: "Bump build number to: " + v
+      message: "Bump version number to: " + get_version_number
     )
 
     push_to_git_remote

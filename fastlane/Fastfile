@@ -109,6 +109,9 @@ platform :ios do
       precheck_include_in_app_purchases: false
     )
 
+    increment_version_number(bump_type: "major")
+    increment_build_number(build_number: 1)
+
     clear_data()
   end
 
@@ -117,6 +120,11 @@ platform :ios do
     git_pull
 
     v = (get_version_number.to_i + 1).to_s + ".0"
+    increment_version_number_in_xcodeproj(
+      version_number: v,
+      xcodeproj: "NBackGame.xcodeproj",
+      target: 'NBackGame'
+    )  
     increment_version_number(version_number: v)
     increment_build_number(build_number: 1)
 
@@ -139,20 +147,6 @@ platform :ios do
     )
 
     push_to_git_remote
-  end
-  
-  lane :update_bump_stable_version do
-    setup_git_config()
-
-    sh("git fetch --all")
-
-    sh("git checkout stable")
-      
-    build_number = get_build_number(xcodeproj: "NBackGame.xcodeproj")
-
-    sh("git commit -am \"Bump build version to: " + build_number + "\"")
-
-    sh("git push")
   end
 
   lane :push_new_stable_to_dev do

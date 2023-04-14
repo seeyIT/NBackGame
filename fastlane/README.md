@@ -31,26 +31,10 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 
 
-### ios bump_verion
-
-```sh
-[bundle exec] fastlane ios bump_verion
-```
-
-
-
 ### ios bump_stable_build_number
 
 ```sh
 [bundle exec] fastlane ios bump_stable_build_number
-```
-
-
-
-### ios update_bump_stable_version
-
-```sh
-[bundle exec] fastlane ios update_bump_stable_version
 ```
 
 

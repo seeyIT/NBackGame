@@ -870,7 +870,7 @@
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -1158,7 +1158,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
@@ -1187,7 +1187,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
@@ -1213,6 +1213,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1235,6 +1236,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1256,6 +1258,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1276,6 +1279,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1333,7 +1337,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1346,12 +1350,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

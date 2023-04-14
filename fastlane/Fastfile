@@ -13,6 +13,7 @@ GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
 GIT_USERNAME = ENV["GIT_USERNAME"]
 GIT_EMAIL = ENV["GIT_EMAIL"]
 PR_BODY = ENV["PR_BODY"]
+GENERIC_MESSAGE = "Updated the app to make features load faster and fix some crashes."
 
 def delete_temp_keychain()
   delete_keychain(
@@ -146,6 +147,18 @@ platform :ios do
 
   end
 
+  lane :bump_stable_build_number do 
+    sh "git fetch --all --unshallow"
+    git_pull
+
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+
+    commit_version_bump(
+      message: "Build version bump to: " + get_build_number
+    )
+
+    push_to_git_remote
+  end
   
   lane :update_bump_stable_version do
     setup_git_config()
@@ -162,11 +175,6 @@ platform :ios do
   end
 
   lane :push_new_stable_to_dev do
-    # setup_git_config()
-
-    # sh("git push --force origin stable:dev")
-    # sh "git fetch --all --unshallow"
-
     sh "git checkout dev"
     sh "git pull --no-rebase origin stable"
     sh "git push"
@@ -199,8 +207,26 @@ platform :ios do
       ipa: "./NBackGame.ipa"
     )
 
-    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
-
     clear_data()
+  end
+
+  lane :create_pr_to_stable do 
+    create_pull_request(
+      api_token: GIT_AUTHORIZATION,
+      repo: "seeyIT/NBackGame",
+      title: "Dev -> Stable",
+      body: GENERIC_MESSAGE,
+      base: "stable"
+    )
+  end
+
+  lane :create_pr_to_main do 
+    create_pull_request(
+      api_token: GIT_AUTHORIZATION,
+      repo: "seeyIT/NBackGame",
+      title: "Stable -> Main",
+      body: GENERIC_MESSAGE,
+      base: "main"
+    )
   end
 end

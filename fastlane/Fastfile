@@ -176,14 +176,14 @@ platform :ios do
 
   lane :push_new_stable_to_dev do
     sh "git checkout dev"
-    sh "git status"
-    sh "git diff"
+    sh "git pull"
     sh "git pull --no-rebase origin stable"
     sh "git push"
   end
 
   lane :push_new_main_to_stable do
     sh "git checkout stable"
+    sh "git pull"
     sh "git pull --no-rebase origin main"
     sh "git push"
   end

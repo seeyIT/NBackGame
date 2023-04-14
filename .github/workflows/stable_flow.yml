@@ -47,8 +47,7 @@ jobs:
       - name: Bump stable xcode-version
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: bump_verion
-#          lane: update_bump_stable_version
+          lane: bump_stable_build_number
         env: 
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'

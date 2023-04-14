@@ -1,7 +1,7 @@
 name: Stable flow
 on:
   push:
-    branches: [ testtest ]
+    branches: [ stable ]
 
   # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:
@@ -47,8 +47,7 @@ jobs:
       - name: Bump stable xcode-version
         uses: maierj/fastlane-action@v1.4.0
         with:
-          lane: bump_verion
-#          lane: update_bump_stable_version
+          lane: bump_stable_build_number
         env: 
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
@@ -59,3 +58,9 @@ jobs:
         env:
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+      - name: Create PR to Main
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: create_pr_to_main
+        env:
+          GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'

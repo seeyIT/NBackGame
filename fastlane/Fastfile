@@ -13,6 +13,7 @@ GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
 GIT_USERNAME = ENV["GIT_USERNAME"]
 GIT_EMAIL = ENV["GIT_EMAIL"]
 PR_BODY = ENV["PR_BODY"]
+GENERIC_MESSAGE = "Updated the app to make features load faster and fix some crashes."
 
 def delete_temp_keychain()
   delete_keychain(
@@ -115,18 +116,18 @@ platform :ios do
     clear_data()
   end
 
-  lane :update_bump_main_version do
-    setup_git_config()
+  lane :bump_main_version_number do
+    sh "git fetch --all --unshallow"
+    git_pull
 
-    sh("git fetch --all")
+    increment_version_number(bump_type: "major")
+    increment_build_number(build_number: 1)
 
-    sh("git checkout main")
+    commit_version_bump(
+      message: "Bump version number to: " + get_version_number
+    )
 
-    version = get_version_number()
-
-    sh("git commit -am \"Bump version to: " + version + "\"")
-
-    sh("git push")
+    push_to_git_remote
 
   end
 
@@ -139,18 +140,25 @@ platform :ios do
     increment_build_number(build_number: 1)
 
     commit_version_bump(
-      message: "Version Bump to: " + v
+      message: "Bump build number to: " + v
     )
 
     push_to_git_remote
 
-    sh "git checkout test2"
-    sh "git pull --no-rebase origin test"
-    sh "git push"
-
-
   end
 
+  lane :bump_stable_build_number do 
+    sh "git fetch --all --unshallow"
+    git_pull
+
+    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
+
+    commit_version_bump(
+      message: "Build version bump to: " + get_build_number
+    )
+
+    push_to_git_remote
+  end
   
   lane :update_bump_stable_version do
     setup_git_config()
@@ -167,15 +175,15 @@ platform :ios do
   end
 
   lane :push_new_stable_to_dev do
-    setup_git_config()
-
-    sh("git push --force origin stable:dev")
+    sh "git checkout dev"
+    sh "git pull --no-rebase origin stable"
+    sh "git push"
   end
 
   lane :push_new_main_to_stable do
-    setup_git_config()
-
-    sh("git push --force origin main:stable")
+    sh "git checkout stable"
+    sh "git pull --no-rebase origin main"
+    sh "git push"
   end
 
   lane :push_new_main_to_dev do
@@ -199,8 +207,26 @@ platform :ios do
       ipa: "./NBackGame.ipa"
     )
 
-    increment_build_number(xcodeproj: "NBackGame.xcodeproj")
-
     clear_data()
+  end
+
+  lane :create_pr_to_stable do 
+    create_pull_request(
+      api_token: GIT_AUTHORIZATION,
+      repo: "seeyIT/NBackGame",
+      title: "Dev -> Stable",
+      body: GENERIC_MESSAGE,
+      base: "stable"
+    )
+  end
+
+  lane :create_pr_to_main do 
+    create_pull_request(
+      api_token: GIT_AUTHORIZATION,
+      repo: "seeyIT/NBackGame",
+      title: "Stable -> Main",
+      body: GENERIC_MESSAGE,
+      base: "main"
+    )
   end
 end

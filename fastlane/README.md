@@ -23,10 +23,26 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 
 
-### ios update_bump_main_version
+### ios bump_main_version_number
 
 ```sh
-[bundle exec] fastlane ios update_bump_main_version
+[bundle exec] fastlane ios bump_main_version_number
+```
+
+
+
+### ios bump_verion
+
+```sh
+[bundle exec] fastlane ios bump_verion
+```
+
+
+
+### ios bump_stable_build_number
+
+```sh
+[bundle exec] fastlane ios bump_stable_build_number
 ```
 
 
@@ -55,18 +71,26 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 
 
-### ios push_new_main_to_dev
-
-```sh
-[bundle exec] fastlane ios push_new_main_to_dev
-```
-
-
-
 ### ios deploy_to_testflight
 
 ```sh
 [bundle exec] fastlane ios deploy_to_testflight
+```
+
+
+
+### ios create_pr_to_stable
+
+```sh
+[bundle exec] fastlane ios create_pr_to_stable
+```
+
+
+
+### ios create_pr_to_main
+
+```sh
+[bundle exec] fastlane ios create_pr_to_main
 ```
 
 

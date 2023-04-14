@@ -116,18 +116,18 @@ platform :ios do
     clear_data()
   end
 
-  lane :update_bump_main_version do
-    setup_git_config()
+  lane :bump_main_version_number do
+    sh "git fetch --all --unshallow"
+    git_pull
 
-    sh("git fetch --all")
+    increment_version_number(bump_type: "major")
+    increment_build_number(build_number: 1)
 
-    sh("git checkout main")
+    commit_version_bump(
+      message: "Bump version number to: " + get_version_number
+    )
 
-    version = get_version_number()
-
-    sh("git commit -am \"Bump version to: " + version + "\"")
-
-    sh("git push")
+    push_to_git_remote
 
   end
 
@@ -140,7 +140,7 @@ platform :ios do
     increment_build_number(build_number: 1)
 
     commit_version_bump(
-      message: "Version Bump to: " + v
+      message: "Bump build number to: " + v
     )
 
     push_to_git_remote
@@ -181,9 +181,9 @@ platform :ios do
   end
 
   lane :push_new_main_to_stable do
-    setup_git_config()
-
-    sh("git push --force origin main:stable")
+    sh "git checkout stable"
+    sh "git pull --no-rebase origin main"
+    sh "git push"
   end
 
   lane :push_new_main_to_dev do

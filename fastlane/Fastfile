@@ -176,6 +176,7 @@ platform :ios do
 
   lane :push_new_stable_to_dev do
     sh "git checkout dev"
+    sh "git status"
     sh "git pull --rebase origin stable"
     sh "git push"
   end
@@ -184,12 +185,6 @@ platform :ios do
     sh "git checkout stable"
     sh "git pull --rebase origin main"
     sh "git push"
-  end
-
-  lane :push_new_main_to_dev do
-    setup_git_config()
-
-    sh("git push --force origin main:dev")
   end
 
   lane :deploy_to_testflight do

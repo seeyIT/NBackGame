@@ -20,7 +20,7 @@ jobs:
 #      - name: Build
 #        run: xcodebuild clean build test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
       - name: Deploy to TestFlight
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@vv2.3.0
         with:
           xcode-version: '14.1'
           lane: deploy_to_testflight
@@ -42,24 +42,24 @@ jobs:
           APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
-          PR_BODY: '${{ github.event.head_commit.message }}'
+          PR_BODY: '${{ github.event.pull_request.body }}'
           ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD: false
       - name: Bump stable xcode-version
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@v2.3.0
         with:
           lane: bump_stable_build_number
         env: 
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
       - name: Push changes to dev
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@v2.3.0
         with:
           lane: push_new_stable_to_dev
         env:
           GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
           GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
       - name: Create PR to Main
-        uses: maierj/fastlane-action@v1.4.0
+        uses: maierj/fastlane-action@v2.3.0
         with:
           lane: create_pr_to_main
         env:

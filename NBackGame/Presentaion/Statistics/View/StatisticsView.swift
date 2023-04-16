@@ -11,7 +11,8 @@ import Combine
 struct StatisticsView: View {
     
     @ObservedObject var viewModel: StatisticsViewModel
-    
+    @State private var isShowingAlert = false
+
     var body: some View {
         VStack(spacing: 0) {
             StatisticsTopPanelView(viewModel: viewModel)
@@ -40,6 +41,16 @@ struct StatisticsView: View {
                                 Text("Level: \(gameHistory.level)")
                                     .foregroundColor(.white)
                             }
+                            VStack {
+                                Button {
+                                    viewModel.selectedGameHistory = gameHistory
+                                    isShowingAlert.toggle()
+                                } label: {
+                                    Image(systemName: "multiply")
+                                        .foregroundColor(.red)
+                                }
+                               Spacer()
+                            }
                         }
                         .padding()
                         .overlay(
@@ -54,7 +65,14 @@ struct StatisticsView: View {
             
         }
         .background(Color.black.ignoresSafeArea())
-        
+        .alert(isPresented: $isShowingAlert) {
+            Alert(
+                title: Text(""),
+                message: Text("Are you sure you want to remove this game history record?"),
+                primaryButton: .destructive(Text("Yes, delete"), action: { viewModel.deleteSelectedGameHistory() }),
+                secondaryButton: .default(Text("No, cancel"))
+            )
+        }
         .onAppear(perform: {
             viewModel.onAppear()
         })

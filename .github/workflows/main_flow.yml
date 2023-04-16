@@ -19,31 +19,31 @@ jobs:
           xcode-version: '14.1'
 #      - name: Test
 #        run: xcodebuild clean test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=16.1,name=iPhone 14" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
-      # - name: Deploy to App Store
-      #   uses: maierj/fastlane-action@v2.3.0
-      #   with:
-      #     xcode-version: '14.1'
-      #     lane: deploy_to_appstore
-      #   env:
-      #     BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'
-      #     APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
-      #     DEVELOPER_APP_ID: '${{ secrets.DEVELOPER_APP_ID }}'
-      #     DEVELOPER_APP_IDENTIFIER: '${{ secrets.DEVELOPER_APP_IDENTIFIER }}'
-      #     DEVELOPER_PORTAL_TEAM_ID: '${{ secrets.DEVELOPER_PORTAL_TEAM_ID }}'
-      #     FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
-      #     FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
-      #     MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
-      #     GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
-      #     PROVISIONING_PROFILE_SPECIFIER: '${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}'
-      #     TEMP_KEYCHAIN_PASSWORD: '${{ secrets.TEMP_KEYCHAIN_PASSWORD }}'
-      #     TEMP_KEYCHAIN_USER: '${{ secrets.TEMP_KEYCHAIN_USER }}'
-      #     APPLE_KEY_ID: '${{ secrets.APPLE_KEY_ID }}'
-      #     APPLE_ISSUER_ID: '${{ secrets.APPLE_ISSUER_ID }}'
-      #     APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
-      #     GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
-      #     GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
-      #     PR_BODY: '${{ github.event.pull_request.body }}'
-      #     ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD: false
+      - name: Deploy to App Store
+        uses: maierj/fastlane-action@v2.3.0
+        with:
+          xcode-version: '14.1'
+          lane: deploy_to_appstore
+        env:
+          BUNDLE_ID: '${{ secrets.BUNDLE_ID }}'
+          APP_STORE_CONNECT_TEAM_ID: '${{ secrets.APP_STORE_CONNECT_TEAM_ID }}'
+          DEVELOPER_APP_ID: '${{ secrets.DEVELOPER_APP_ID }}'
+          DEVELOPER_APP_IDENTIFIER: '${{ secrets.DEVELOPER_APP_IDENTIFIER }}'
+          DEVELOPER_PORTAL_TEAM_ID: '${{ secrets.DEVELOPER_PORTAL_TEAM_ID }}'
+          FASTLANE_APPLE_ID: '${{ secrets.FASTLANE_APPLE_ID }}'
+          FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: '${{ secrets.FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD }}'
+          MATCH_PASSWORD: '${{ secrets.MATCH_PASSWORD }}'
+          GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
+          PROVISIONING_PROFILE_SPECIFIER: '${{ secrets.PROVISIONING_PROFILE_SPECIFIER }}'
+          TEMP_KEYCHAIN_PASSWORD: '${{ secrets.TEMP_KEYCHAIN_PASSWORD }}'
+          TEMP_KEYCHAIN_USER: '${{ secrets.TEMP_KEYCHAIN_USER }}'
+          APPLE_KEY_ID: '${{ secrets.APPLE_KEY_ID }}'
+          APPLE_ISSUER_ID: '${{ secrets.APPLE_ISSUER_ID }}'
+          APPLE_KEY_CONTENT: '${{ secrets.APPLE_KEY_CONTENT }}'
+          GIT_USERNAME: '${{ secrets.GIT_USERNAME }}'
+          GIT_EMAIL: '${{ secrets.GIT_EMAIL }}'
+          PR_BODY: '${{ github.event.pull_request.body }}'
+          ITMSTRANSPORTER_FORCE_ITMS_PACKAGE_UPLOAD: false
       - name: Bump main xcode-version
         uses: maierj/fastlane-action@v2.3.0
         with:

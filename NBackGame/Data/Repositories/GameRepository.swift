@@ -13,6 +13,7 @@ protocol GameRepository {
     func saveUnlockedLevel(_ unlockedLevel: UnlockedLevelRealm, completion: @escaping (Result<Int, Error>) -> Void)
     func saveGameHistory(_ gameHistory: GameHistoryRealm, completion: @escaping (Result<Int, Error>) -> Void)
     func getGamesHistory(completion: @escaping ([GameHistory]) -> Void)
+    func removeGameHistory(_ uuid: String)
 }
 
 class RealmGameRepository: GameRepository {
@@ -56,6 +57,18 @@ class RealmGameRepository: GameRepository {
     
     func getGamesHistory(completion: @escaping ([GameHistory]) -> Void) {
         completion(realmService.instance.objects(GameHistoryRealm.self).sorted(byKeyPath: "startTime").map { $0.toDomain() })
+    }
+    
+    func removeGameHistory(_ uuid: String) {
+        do {
+            let objectToRemove = realmService.instance.objects(GameHistoryRealm.self).filter("uuid = %@", uuid)
+
+            try realmService.instance.write {
+                realmService.instance.delete(objectToRemove)
+            }
+        } catch {
+            print("Error: \(error)")
+        }
     }
 }
 

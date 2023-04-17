@@ -58,8 +58,12 @@ final class MenuDIContainer {
     
     func makeStatisticsViewModelUseCases() -> StatisticsViewModelUseCases {
         let getGamesHistoryUseCase = DefaultGetGamesHistoryUseCase(gameRepository: makeGameRepository())
+        let removeGameHistoryUseCase = DefaultRemoveGameHistoryUseCase(gameRepository: makeGameRepository())
         
-        return StatisticsViewModelUseCases(getGamesHistoryUseCase: getGamesHistoryUseCase)
+        return StatisticsViewModelUseCases(
+            getGamesHistoryUseCase: getGamesHistoryUseCase,
+            removeGameHistoryUseCase: removeGameHistoryUseCase
+        )
     }
     
     // MARK: - Repository

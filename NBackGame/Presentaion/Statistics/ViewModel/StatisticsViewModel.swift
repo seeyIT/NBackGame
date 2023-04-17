@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StatisticsViewModelUseCases {
     let getGamesHistoryUseCase: GetGamesHistoryUseCase
+    let removeGameHistoryUseCase: RemoveGameHistoryUseCase
 }
 
 class StatisticsViewModel: ObservableObject {
@@ -16,6 +17,8 @@ class StatisticsViewModel: ObservableObject {
     let useCases: StatisticsViewModelUseCases
     
     @Published var history: [GameHistory] = []
+    
+    var selectedGameHistory: GameHistory? = nil
     
     init(menuCoordinator: MenuCoordinator, useCases: StatisticsViewModelUseCases) {
         self.menuCoordinator = menuCoordinator
@@ -30,10 +33,28 @@ class StatisticsViewModel: ObservableObject {
         menuCoordinator.showMenu()
     }
     
+    func deleteSelectedGameHistory() {
+        DispatchQueue.global().async {
+            // memory leak
+            if let uuid = self.selectedGameHistory?.uuid {
+                self.useCases.removeGameHistoryUseCase.execute(uuid: uuid)
+                
+                self.useCases.getGamesHistoryUseCase.execute { result in
+                    DispatchQueue.main.async {
+                        // memory leak
+                        self.history = result.reversed()
+                    }
+                }
+            }
+        }
+    }
+    
     private func loadHistory() {
         DispatchQueue.global().async {
+            // memory leak
             self.useCases.getGamesHistoryUseCase.execute { result in
                 DispatchQueue.main.async {
+                    // memory leak
                     self.history = result.reversed()
                 }
             }

@@ -37,6 +37,7 @@
 		5F802ED425DFDF1600AF85EE /* GameSummaryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */; };
 		5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807536271DBACE00563BAA /* PlayCircle.swift */; };
 		5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807538271DBBDA00563BAA /* MenuButton.swift */; };
+		5F8503C429EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */; };
 		5F85D2F4297C65E2002A85CD /* b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EB297C65E1002A85CD /* b.wav */; };
 		5F85D2F5297C65E2002A85CD /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EC297C65E1002A85CD /* g.wav */; };
 		5F85D2F6297C65E2002A85CD /* s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2ED297C65E1002A85CD /* s.wav */; };
@@ -147,6 +148,7 @@
 		5F802ED325DFDF1600AF85EE /* GameSummaryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewModelTests.swift; sourceTree = "<group>"; };
 		5F807536271DBACE00563BAA /* PlayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCircle.swift; sourceTree = "<group>"; };
 		5F807538271DBBDA00563BAA /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveGameHistoryUseCase.swift; sourceTree = "<group>"; };
 		5F85D2EB297C65E1002A85CD /* b.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = b.wav; sourceTree = "<group>"; };
 		5F85D2EC297C65E1002A85CD /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
 		5F85D2ED297C65E1002A85CD /* s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s.wav; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 				5FC62C63260244DF00D03AD8 /* GetHighestUnlockedLevel.swift */,
 				5FC455FB26F7B2150088E279 /* SaveGameUseCase.swift */,
 				5FC4560C26F8B0670088E279 /* GetGamesHistoryUseCase.swift */,
+				5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -870,7 +873,7 @@
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -938,6 +941,7 @@
 				5FC62C2426020E9400D03AD8 /* MainBoard.swift in Sources */,
 				5F6921D825CB19D8008A18C9 /* UnlockedLevelRealm.swift in Sources */,
 				5F69220225CB21AF008A18C9 /* ApplicationVersion.swift in Sources */,
+				5F8503C429EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift in Sources */,
 				5F69220925CB228F008A18C9 /* AppMigrationService.swift in Sources */,
 				5FA4929D25D53EA800BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
 				5FB46DED270B625200B41F37 /* TutorialTopPanelView.swift in Sources */,
@@ -1158,7 +1162,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
@@ -1187,7 +1191,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
@@ -1213,7 +1217,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1236,7 +1240,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1258,7 +1262,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1279,7 +1283,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1337,7 +1341,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1350,12 +1354,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -34,8 +34,8 @@ struct MenuView: View {
                         } label: {
                             Image(systemName: viewModel.currentMusicIcon)
                                 .font(.largeTitle)
-                                .padding()
                                 .foregroundColor(.white)
+                                .padding()
                         }
                         .frame(width: 60, height: 60)
                     }
@@ -43,46 +43,61 @@ struct MenuView: View {
                 }
                 VStack {
                     Spacer()
-                    Button(action: {
-                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                        withAnimation {
-                            viewModel.showGame()
+                    MenuButton(
+                        leftIconName: "play.fill",
+                        text: "Play",
+                        fixedWidth: buttonSize,
+                        accessibilityIdentifier: AccessibilityIdentifier.Menu.playButton,
+                        onTapFeedbackImpact: .heavy,
+                        onTap: {
+                            withAnimation {
+                                viewModel.showGame()
+                            }
                         }
-                    }, label: {
-                        MenuButton(iconName: "play.fill", text: "Play", fixedWidth: buttonSize)
-                    })
+                    )
                     .padding(.bottom, 16)
-                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.playButton)
                     
-                    Button(action: {
-                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                        withAnimation {
-                            viewModel.showTutorial()
+                    MenuButton(
+                        leftIconName: "book.fill",
+                        text: "Tutorial",
+                        fixedWidth: buttonSize,
+                        accessibilityIdentifier: AccessibilityIdentifier.Menu.tutorialButton,
+                        onTapFeedbackImpact: .heavy,
+                        onTap: {
+                            withAnimation {
+                                viewModel.showTutorial()
+                            }
                         }
-                    }, label: {
-                        MenuButton(iconName: "book.fill", text: "Tutorial", fixedWidth: buttonSize)
-                    })
+                    )
                     .padding(.bottom, 16)
-                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.tutorialButton)
                     
-                    Button(action: {
-                        UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                        withAnimation {
-                            viewModel.showStatistics()
+                    MenuButton(
+                        leftIconName: "graduationcap.fill",
+                        text: "Statistics",
+                        fixedWidth: buttonSize,
+                        accessibilityIdentifier: AccessibilityIdentifier.Menu.statisticsButton,
+                        onTapFeedbackImpact: .heavy,
+                        onTap: {
+                            withAnimation {
+                                viewModel.showStatistics()
+                            }
                         }
-                    }, label: {
-                        MenuButton(iconName: "graduationcap.fill", text: "Statistics", fixedWidth: buttonSize)
-                    })
+                    )
                     .padding(.bottom, 16)
-                    .accessibilityIdentifier(AccessibilityIdentifier.Menu.statisticsButton)
                     
                     if MFMailComposeViewController.canSendMail() {
-                        Button(action: {
-                            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                            isShowingMailView.toggle()
-                        }, label: {
-                            MenuButton(iconName: "pencil", text: "Stay in touch", fixedWidth: buttonSize)
-                        })
+                        MenuButton(
+                            leftIconName: "pencil",
+                            text: "Stay in touch",
+                            fixedWidth: buttonSize,
+                            accessibilityIdentifier: AccessibilityIdentifier.Menu.statisticsButton,
+                            onTapFeedbackImpact: .heavy,
+                            onTap: {
+                                isShowingMailView.toggle()
+                            }
+                        )
+                        .padding(.bottom, 16)
+                    
                     }
                     
                     if verticalSizeClass == .regular {

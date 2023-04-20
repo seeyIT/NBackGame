@@ -187,21 +187,18 @@ class PlayGameUITests: XCTestCase {
         
         app.launch()
         
-        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
-        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
-        
-        let soundButton = app.buttons[AccessibilityIdentifier.Game.soundButton]
-        _ = soundButton.waitForExistence(timeout: 5)
-        
-        soundButton.tap()
-        
-        let backButton = app.buttons[AccessibilityIdentifier.Game.showMenuButton]
-        _ = backButton.waitForExistence(timeout: 3.0)
-        backButton.tap()
-        
-        let playButtonFromMenu = app.buttons[AccessibilityIdentifier.Menu.playButton]
-        _ = playButtonFromMenu.waitForExistence(timeout: 3.0)
+        app.tapButton(AccessibilityIdentifier.Menu.playButton)
+        app.tapButton("\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)")
+        app.tapButton(AccessibilityIdentifier.Game.soundButton)
+        app.tapButton(AccessibilityIdentifier.Game.showMenuButton)
+        app.tapButton(AccessibilityIdentifier.Menu.playButton)
     }
 }
 
-
+extension XCUIApplication {
+    func tapButton(_ id: String) {
+        let backButton = buttons[id]
+        _ = backButton.waitForExistence(timeout: 5.0)
+        backButton.tap()
+    }
+}

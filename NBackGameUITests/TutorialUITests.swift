@@ -1,90 +1,62 @@
-////
-////  TutorialUITests.swift
-////  NBackGameUITests
-////
-////  Created by Kornel Miszczak on 11/02/2021.
-////
 //
-//import XCTest
+//  TutorialUITests.swift
+//  NBackGameUITests
 //
-//class TutorialUITests: XCTestCase {
-//   
-//    func testTutorialTwoForwardOneBackwardClicks() throws {
-//        // UI tests must launch the application that they test.
+//  Created by Kornel Miszczak on 11/02/2021.
 //
-//        let app = XCUIApplication()
-//
-//        app.launch()
-//               
-//        app.buttons[AccessibilityIdentifier.Menu.tutorialButton].tap()
-//        
-//        let nextButton = app.buttons[AccessibilityIdentifier.Tutorial.nextButton]
-//        let previousButton = app.buttons[AccessibilityIdentifier.Tutorial.previousButton]
-//
-//        _ = nextButton.waitForExistence(timeout: 3.0)
-//        nextButton.tap()
-//        
-//        _ = previousButton.waitForExistence(timeout: 3.0)
-//        previousButton.tap()
-//        
-//        for _ in 0..<9 {
-//            Thread.sleep(forTimeInterval: 1.0)
-//            nextButton.tap()
-//            Thread.sleep(forTimeInterval: 1.0)
-//            previousButton.tap()
-//            Thread.sleep(forTimeInterval: 1.0)
-//            nextButton.tap()
-//        }
-//        
-//        Thread.sleep(forTimeInterval: 1.0)
-//        
-//        app.buttons[AccessibilityIdentifier.Tutorial.menuButton].tap()
-//        
-//        XCTAssert(app.buttons[AccessibilityIdentifier.Menu.tutorialButton].exists)
-//
-//    }
-//    
-//    func testTutorialStraightAway() throws {
-//        let app = XCUIApplication()
-//
-//        app.launch()
-//               
-//        app.buttons[AccessibilityIdentifier.Menu.tutorialButton].tap()
-//        
-//        let nextButton = app.buttons[AccessibilityIdentifier.Tutorial.nextButton]
-//        _ = nextButton.waitForExistence(timeout: 3.0)
-//        
-//        for _ in 0..<9 {
-//            nextButton.tap()
-//            Thread.sleep(forTimeInterval: 1.0)
-//        }
-//        
-//        app.buttons[AccessibilityIdentifier.Tutorial.menuButton].tap()
-//    
-//        XCTAssert(app.buttons[AccessibilityIdentifier.Menu.tutorialButton].exists)
-//
-//    }
-//    
-//    func testDoTutorial3TimesStraightAway() throws {
-//        let app = XCUIApplication()
-//
-//        app.launch()
-//               
-//        for _ in 0..<3 {
-//            app.buttons[AccessibilityIdentifier.Menu.tutorialButton].tap()
-//            
-//            let nextButton = app.buttons[AccessibilityIdentifier.Tutorial.nextButton]
-//            _ = nextButton.waitForExistence(timeout: 3.0)
-//            
-//            for _ in 0..<9 {
-//                nextButton.tap()
-//                Thread.sleep(forTimeInterval: 1.0)
-//            }
-//            
-//            app.buttons[AccessibilityIdentifier.Tutorial.menuButton].tap()
-//        }
-//       
-//        XCTAssert(app.buttons[AccessibilityIdentifier.Menu.tutorialButton].exists)
-//    }
-//    
-//}
+
+import XCTest
+
+class TutorialUITests: XCTestCase {
+   
+    func testTutorialTwoForwardOneBackwardClicks() throws {
+        let app = XCUIApplication()
+        app.launch()
+               
+        app.tapButton(AccessibilityIdentifier.Menu.tutorialButton)
+        
+        for _ in 0..<9 {
+            app.tapButton(AccessibilityIdentifier.Tutorial.nextButton, swipeUpBeforeTap: true)
+            
+            app.tapButton(AccessibilityIdentifier.Tutorial.previousButton, swipeUpBeforeTap: true)
+            
+            app.tapButton(AccessibilityIdentifier.Tutorial.nextButton, swipeUpBeforeTap: true)
+        }
+        
+        app.tapButton(AccessibilityIdentifier.Tutorial.menuButton)
+        
+        XCTAssert(app.buttons[AccessibilityIdentifier.Menu.tutorialButton].exists)
+    }
+    
+    func testTutorialStraightAway() throws {
+        let app = XCUIApplication()
+        app.launch()
+               
+        app.tapButton(AccessibilityIdentifier.Menu.tutorialButton)
+
+        for _ in 0..<9 {
+            app.tapButton(AccessibilityIdentifier.Tutorial.nextButton, swipeUpBeforeTap: true)
+
+        }
+        
+        app.tapButton(AccessibilityIdentifier.Tutorial.menuButton)
+    
+        XCTAssert(app.buttons[AccessibilityIdentifier.Menu.tutorialButton].exists)
+    }
+    
+    func testDoTutorial3TimesStraightAway() throws {
+        let app = XCUIApplication()
+
+        app.launch()
+               
+        for _ in 0..<3 {
+            app.tapButton(AccessibilityIdentifier.Menu.tutorialButton)
+            
+            for _ in 0..<9 {
+                app.tapButton(AccessibilityIdentifier.Tutorial.nextButton, swipeUpBeforeTap: true)
+            }
+            app.tapButton(AccessibilityIdentifier.Tutorial.menuButton)
+        }
+        XCTAssert(app.buttons[AccessibilityIdentifier.Menu.tutorialButton].exists)
+    }
+}

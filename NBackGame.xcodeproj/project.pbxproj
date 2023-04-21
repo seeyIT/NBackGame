@@ -38,6 +38,7 @@
 		5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807536271DBACE00563BAA /* PlayCircle.swift */; };
 		5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807538271DBBDA00563BAA /* MenuButton.swift */; };
 		5F8503C429EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */; };
+		5F8503C629F1861D006CBFDC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8503C529F1861D006CBFDC /* Helpers.swift */; };
 		5F85D2F4297C65E2002A85CD /* b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EB297C65E1002A85CD /* b.wav */; };
 		5F85D2F5297C65E2002A85CD /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EC297C65E1002A85CD /* g.wav */; };
 		5F85D2F6297C65E2002A85CD /* s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2ED297C65E1002A85CD /* s.wav */; };
@@ -149,6 +150,7 @@
 		5F807536271DBACE00563BAA /* PlayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCircle.swift; sourceTree = "<group>"; };
 		5F807538271DBBDA00563BAA /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveGameHistoryUseCase.swift; sourceTree = "<group>"; };
+		5F8503C529F1861D006CBFDC /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		5F85D2EB297C65E1002A85CD /* b.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = b.wav; sourceTree = "<group>"; };
 		5F85D2EC297C65E1002A85CD /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
 		5F85D2ED297C65E1002A85CD /* s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s.wav; sourceTree = "<group>"; };
@@ -593,6 +595,7 @@
 				5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */,
 				5FA492B525D54DD300BB2DE3 /* TutorialUITests.swift */,
 				5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */,
+				5F8503C529F1861D006CBFDC /* Helpers.swift */,
 				5FA863602529D997006B5F33 /* Info.plist */,
 			);
 			path = NBackGameUITests;
@@ -873,7 +876,7 @@
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -1013,6 +1016,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */,
+				5F8503C629F1861D006CBFDC /* Helpers.swift in Sources */,
 				5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */,
 				5FA492B625D54DD300BB2DE3 /* TutorialUITests.swift in Sources */,
 				5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */,
@@ -1341,7 +1345,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1354,12 +1358,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

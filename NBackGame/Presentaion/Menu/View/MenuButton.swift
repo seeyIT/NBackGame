@@ -71,9 +71,6 @@ struct MenuButton: View {
             )
         })
         .padding(.bottom, 16)
-        .accessibilityIdentifier(accessibilityIdentifier)
-        
-        
-        
+        .accessibilityIdentifier(accessibilityIdentifier)        
     }
 }

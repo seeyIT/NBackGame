@@ -25,3 +25,4 @@ jobs:
           lane: create_pr_to_stable
         env:
           GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
+          COMMIT_TITLE: '${{ github.event.head_commit.message }}'

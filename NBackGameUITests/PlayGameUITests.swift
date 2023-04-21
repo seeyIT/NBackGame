@@ -14,21 +14,16 @@ class PlayGameUITests: XCTestCase {
         let nBack = 2
         
         let app = XCUIApplication()
-
         app.launch()
                
-        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
-        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
-        
-        let soundButton = app.buttons[AccessibilityIdentifier.Game.soundButton]
-        _ = soundButton.waitForExistence(timeout: 5)
-        
-        soundButton.tap()
+        app.tapButton(AccessibilityIdentifier.Menu.playButton)
+        app.tapButton("\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)")
+        app.tapButton(AccessibilityIdentifier.Game.soundButton)
 
+        let soundButton = app.buttons[AccessibilityIdentifier.Game.soundButton]
         for _ in 1..<roundNumber {
             expectation(for: NSPredicate(format: "isEnabled == true"), evaluatedWith: soundButton, handler: nil)
             waitForExpectations(timeout: 10.0, handler: nil)
-            
             soundButton.tap()
         }
                 
@@ -51,16 +46,13 @@ class PlayGameUITests: XCTestCase {
         let nBack = 1
         
         let app = XCUIApplication()
-
         app.launch()
                
-        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
-        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
-        
+        app.tapButton(AccessibilityIdentifier.Menu.playButton)
+        app.tapButton("\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)")
+        app.tapButton(AccessibilityIdentifier.Game.positionButton)
+
         let positionButton = app.buttons[AccessibilityIdentifier.Game.positionButton]
-        _ = positionButton.waitForExistence(timeout: 5)
-        
-        positionButton.tap()
 
         for _ in 1..<roundNumber {
             expectation(for: NSPredicate(format: "isEnabled == true"), evaluatedWith: positionButton, handler: nil)
@@ -92,16 +84,14 @@ class PlayGameUITests: XCTestCase {
 
         app.launch()
                
-        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
-        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
-        
+        app.tapButton(AccessibilityIdentifier.Menu.playButton)
+        app.tapButton("\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)")
+
+        app.tapButton(AccessibilityIdentifier.Game.positionButton)
+        app.tapButton(AccessibilityIdentifier.Game.soundButton)
+
         let positionButton = app.buttons[AccessibilityIdentifier.Game.positionButton]
         let soundButton = app.buttons[AccessibilityIdentifier.Game.soundButton]
-        _ = positionButton.waitForExistence(timeout: 5)
-        _ = soundButton.waitForExistence(timeout: 5)
-
-        positionButton.tap()
-        soundButton.tap()
         
         for _ in 1..<roundNumber {
             expectation(for: NSPredicate(format: "isEnabled == true"), evaluatedWith: positionButton, handler: nil)
@@ -142,13 +132,12 @@ class PlayGameUITests: XCTestCase {
 
         app.launch()
                
-        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
-        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
         
+        app.tapButton(AccessibilityIdentifier.Menu.playButton)
+        app.tapButton("\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)")
+        app.tapButton(AccessibilityIdentifier.Game.positionButton)
+
         let positionButton = app.buttons[AccessibilityIdentifier.Game.positionButton]
-        _ = positionButton.waitForExistence(timeout: 5)
-        
-        positionButton.tap()
 
         for _ in 1..<roundNumber {
             expectation(for: NSPredicate(format: "isEnabled == true"), evaluatedWith: positionButton, handler: nil)
@@ -192,13 +181,5 @@ class PlayGameUITests: XCTestCase {
         app.tapButton(AccessibilityIdentifier.Game.soundButton)
         app.tapButton(AccessibilityIdentifier.Game.showMenuButton)
         app.tapButton(AccessibilityIdentifier.Menu.playButton)
-    }
-}
-
-extension XCUIApplication {
-    func tapButton(_ id: String) {
-        let backButton = buttons[id]
-        _ = backButton.waitForExistence(timeout: 5.0)
-        backButton.tap()
     }
 }

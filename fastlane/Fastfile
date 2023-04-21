@@ -183,13 +183,15 @@ platform :ios do
   end
 
   lane :create_pr_to_stable do 
-    create_pull_request(
-      api_token: GIT_AUTHORIZATION,
-      repo: "seeyIT/NBackGame",
-      title: "Dev -> Stable: " + COMMIT_MESSAGE,
-      body: GENERIC_MESSAGE,
-      base: "stable"
-    )
+    put COMMIT_MESSAGE
+
+    # create_pull_request(
+    #   api_token: GIT_AUTHORIZATION,
+    #   repo: "seeyIT/NBackGame",
+    #   title: "Dev -> Stable: " + COMMIT_MESSAGE,
+    #   body: GENERIC_MESSAGE,
+    #   base: "stable"
+    # )
   end
 
   lane :create_pr_to_main do 

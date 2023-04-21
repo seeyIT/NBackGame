@@ -183,7 +183,7 @@ platform :ios do
   end
 
   lane :create_pr_to_stable do 
-    put COMMIT_MESSAGE
+    puts COMMIT_MESSAGE
 
     # create_pull_request(
     #   api_token: GIT_AUTHORIZATION,

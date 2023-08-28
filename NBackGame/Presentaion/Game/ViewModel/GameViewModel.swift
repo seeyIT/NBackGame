@@ -45,6 +45,7 @@ class GameViewModel: ObservableObject {
     }
 
     func startGame() {
+        log("Game startGame")
         debugPrint("Start Game")
         musicService.stopBackgroundMusic()
         gameStartTime = getTimestamp()
@@ -59,20 +60,25 @@ class GameViewModel: ObservableObject {
     }
     
     func selectPosition() {
+        log("Game selectPosition")
         if positionClicked {
             return
         }
+        log("Game position selected")
         positionClicked = true
     }
     
     func selectSound() {
+        log("Game selectSound")
         if soundClicked {
             return
         }
+        log("Game sound selected")
         soundClicked = true
     }
     
     func showMenu() {
+        log("Game showMenu")
         stopTimer()
         gameCoordinator.showMenu()
     }

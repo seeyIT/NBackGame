@@ -1,14 +1,14 @@
-////
-////  LevelSelectionUITests.swift
-////  NBackGameUITests
-////
-////  Created by Kornel Miszczak on 12/05/2021.
-////
 //
-//import XCTest
+//  LevelSelectionUITests.swift
+//  NBackGameUITests
 //
-//class LevelSelectionUITests: XCTestCase {
+//  Created by Kornel Miszczak on 12/05/2021.
 //
+
+import XCTest
+
+class LevelSelectionUITests: XCTestCase {
+
 //    func testBackToMenu() throws {
 //        let nBack = 2
 //        let app = XCUIApplication()
@@ -25,5 +25,5 @@
 //        let playButtonFromMenu = app.buttons[AccessibilityIdentifier.Menu.playButton]
 //        _ = playButtonFromMenu.waitForExistence(timeout: 3.0)
 //    }
-//
-//}
+
+}

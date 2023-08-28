@@ -26,10 +26,12 @@ class StatisticsViewModel: ObservableObject {
     }
     
     func onAppear() {
+        log("Statistics onAppear")
         loadHistory()
     }
     
     func showMenu() {
+        log("Statistics showMenu")
         menuCoordinator.showMenu()
     }
     

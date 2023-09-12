@@ -173,7 +173,7 @@ platform :ios do
       skip_waiting_for_build_processing: false,
       skip_submission: false,
       distribute_external: true,
-      groups: "Testers",
+      groups: "ExternalTesters",
       changelog: PR_BODY,
       notify_external_testers: true,
       ipa: "./NBackGame.ipa"

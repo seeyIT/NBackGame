@@ -64,3 +64,5 @@ jobs:
           lane: create_pr_to_main
         env:
           GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
+          COMMIT_MESSAGE: '${{ github.event.head_commit.message }}'
+

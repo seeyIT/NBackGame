@@ -13,6 +13,7 @@ GIT_AUTHORIZATION = ENV["GIT_AUTHORIZATION"]
 GIT_USERNAME = ENV["GIT_USERNAME"]
 GIT_EMAIL = ENV["GIT_EMAIL"]
 PR_BODY = ENV["PR_BODY"]
+COMMIT_MESSAGE = ENV["COMMIT_MESSAGE"]
 GENERIC_MESSAGE = "Updated the app to make features load faster and fix some crashes."
 
 def delete_temp_keychain()
@@ -172,7 +173,7 @@ platform :ios do
       skip_waiting_for_build_processing: false,
       skip_submission: false,
       distribute_external: true,
-      groups: "Testers",
+      groups: "ExternalTesters",
       changelog: PR_BODY,
       notify_external_testers: true,
       ipa: "./NBackGame.ipa"
@@ -185,7 +186,7 @@ platform :ios do
     create_pull_request(
       api_token: GIT_AUTHORIZATION,
       repo: "seeyIT/NBackGame",
-      title: "Dev -> Stable",
+      title: "Dev -> Stable: " + COMMIT_MESSAGE,
       body: GENERIC_MESSAGE,
       base: "stable"
     )
@@ -195,7 +196,7 @@ platform :ios do
     create_pull_request(
       api_token: GIT_AUTHORIZATION,
       repo: "seeyIT/NBackGame",
-      title: "Stable -> Main",
+      title: "Stable -> Main: " + COMMIT_MESSAGE,
       body: GENERIC_MESSAGE,
       base: "main"
     )

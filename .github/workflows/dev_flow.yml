@@ -2,26 +2,23 @@ name: Dev flow
 on:
   push:
     branches: [ dev ]
-
-  # Allows you to run this workflow manually from the Actions a tab
   workflow_dispatch:
-
 jobs:
   deploy:
     name: Run tests
     runs-on: macOS-latest
-    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
       - uses: maxim-lobanov/setup-xcode@v1
         with:
-          xcode-version: '13.2.1'
+          xcode-version: '14.1'
       # - name: Test
-      #   run: xcodebuild clean test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.2,name=iPhone 11" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
+      #   run: xcodebuild clean build test -project NBackGame.xcodeproj -scheme "NBackGame" -sdk iphonesimulator -destination "platform=iOS Simulator,OS=16.1,name=iPhone 14" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO
       - name: Create PR to Stable
         uses: maierj/fastlane-action@v1.4.0
         with:
           lane: create_pr_to_stable
         env:
           GIT_AUTHORIZATION: '${{ secrets.GIT_AUTHORIZATION }}'
+          COMMIT_MESSAGE: '${{ github.event.head_commit.message }}'

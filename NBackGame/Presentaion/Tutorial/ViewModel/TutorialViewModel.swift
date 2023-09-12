@@ -19,6 +19,7 @@ class TutorialViewModel: ObservableObject {
     }
     
     public func previousStep() {
+        log("Tutorial previousStep")
         if currentStep <= 1 {
             return
         }
@@ -26,6 +27,7 @@ class TutorialViewModel: ObservableObject {
     }
     
     public func nextStep() {
+        log("Tutorial nextStep")
         if currentStep >= lastStep {
             return
         }
@@ -33,6 +35,7 @@ class TutorialViewModel: ObservableObject {
     }
     
     func showMenu() {
+        log("Tutorial showMenu")
         menuCoordinator.showMenu()
     }
 }

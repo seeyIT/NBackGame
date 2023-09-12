@@ -39,23 +39,28 @@ class MenuViewModel: ObservableObject {
     }
     
     func onAppear() {
+        log("Main view onAppear")
         musicService.musicIsPlaying = backgroundMusicIsPlaying
         selectRandomQuote()
     }
     
     func showGame() {
+        log("Main view showGame")
         menuCoordinator.showGame()
     }
     
     func showTutorial() {
+        log("Main view showTutorial")
         menuCoordinator.showTutorial()
     }
     
     func showStatistics() {
+        log("Main view showStatistics")
         menuCoordinator.showStatistics()
     }
     
     func toggleMusic() {
+        log("Main view toggleMusic")
         backgroundMusicIsPlaying.toggle()
         musicService.musicIsPlaying = backgroundMusicIsPlaying
         currentMusicIcon = backgroundMusicIsPlaying ? musicButtonImages[0] : musicButtonImages[1]

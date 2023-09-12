@@ -17,6 +17,8 @@
 		5F2C2570258D1DEE008D36F1 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C256F258D1DEE008D36F1 /* GameInfo.swift */; };
 		5F2C2575258D1DFD008D36F1 /* GameDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */; };
 		5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3587D32565300B002BC31C /* GameSummaryView.swift */; };
+		5F3C13DF2A97847E0034B161 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */; };
+		5F3C13FA2A9C94DC0034B161 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C13F92A9C94DC0034B161 /* Logger.swift */; };
 		5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */; };
 		5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */; };
 		5F3D21BB265550A200E1FCC6 /* LevelSelectionBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */; };
@@ -38,6 +40,7 @@
 		5F807537271DBACE00563BAA /* PlayCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807536271DBACE00563BAA /* PlayCircle.swift */; };
 		5F807539271DBBDA00563BAA /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F807538271DBBDA00563BAA /* MenuButton.swift */; };
 		5F8503C429EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */; };
+		5F8503C629F1861D006CBFDC /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8503C529F1861D006CBFDC /* Helpers.swift */; };
 		5F85D2F4297C65E2002A85CD /* b.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EB297C65E1002A85CD /* b.wav */; };
 		5F85D2F5297C65E2002A85CD /* g.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2EC297C65E1002A85CD /* g.wav */; };
 		5F85D2F6297C65E2002A85CD /* s.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5F85D2ED297C65E1002A85CD /* s.wav */; };
@@ -128,6 +131,8 @@
 		5F2C256F258D1DEE008D36F1 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDIContainer.swift; sourceTree = "<group>"; };
 		5F3587D32565300B002BC31C /* GameSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryView.swift; sourceTree = "<group>"; };
+		5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5F3C13F92A9C94DC0034B161 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackButton.swift; sourceTree = "<group>"; };
 		5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionUITests.swift; sourceTree = "<group>"; };
 		5F3D21BA265550A200E1FCC6 /* LevelSelectionBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionBackButton.swift; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 		5F807536271DBACE00563BAA /* PlayCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayCircle.swift; sourceTree = "<group>"; };
 		5F807538271DBBDA00563BAA /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
 		5F8503C329EC0C78006CBFDC /* RemoveGameHistoryUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveGameHistoryUseCase.swift; sourceTree = "<group>"; };
+		5F8503C529F1861D006CBFDC /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		5F85D2EB297C65E1002A85CD /* b.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = b.wav; sourceTree = "<group>"; };
 		5F85D2EC297C65E1002A85CD /* g.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = g.wav; sourceTree = "<group>"; };
 		5F85D2ED297C65E1002A85CD /* s.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = s.wav; sourceTree = "<group>"; };
@@ -404,6 +410,7 @@
 		5F2C259E258D2C5A008D36F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */,
 				5FB46DF0270C4D4F00B41F37 /* Music */,
 				5FA863452529D997006B5F33 /* Assets.xcassets */,
 				5FA8634A2529D997006B5F33 /* Info.plist */,
@@ -419,6 +426,7 @@
 				5F949A9825FA045F00512ADE /* UseCases */,
 				5F2C25AC258D2D68008D36F1 /* Entities */,
 				5F69221325CB25F9008A18C9 /* Utils.swift */,
+				5F3C13F92A9C94DC0034B161 /* Logger.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -593,6 +601,7 @@
 				5F69227425D2C9DB008A18C9 /* PlayGameUITests.swift */,
 				5FA492B525D54DD300BB2DE3 /* TutorialUITests.swift */,
 				5F3D20F4264BDC1100E1FCC6 /* LevelSelectionUITests.swift */,
+				5F8503C529F1861D006CBFDC /* Helpers.swift */,
 				5FA863602529D997006B5F33 /* Info.plist */,
 			);
 			path = NBackGameUITests;
@@ -873,7 +882,7 @@
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -904,6 +913,7 @@
 				5F85D2FC297C65E2002A85CD /* l.wav in Resources */,
 				5F85D2F4297C65E2002A85CD /* b.wav in Resources */,
 				5F85D2FA297C65E2002A85CD /* p.wav in Resources */,
+				5F3C13DF2A97847E0034B161 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -935,6 +945,7 @@
 				5F6921FA25CB2114008A18C9 /* AppVersionRealm.swift in Sources */,
 				5F05FB84256686E500984BD5 /* TutorialView.swift in Sources */,
 				5F949A9F25FA159E00512ADE /* UnlockNextLevelUseCase.swift in Sources */,
+				5F3C13FA2A9C94DC0034B161 /* Logger.swift in Sources */,
 				5FCD41D82540A57F002635BC /* GameViewModel.swift in Sources */,
 				5FC4560026F87CE40088E279 /* GameHistorySingleRoundRealm.swift in Sources */,
 				5FC4560F26F9E0F30088E279 /* StatisticsTopPanelView.swift in Sources */,
@@ -1013,6 +1024,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */,
+				5F8503C629F1861D006CBFDC /* Helpers.swift in Sources */,
 				5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */,
 				5FA492B625D54DD300BB2DE3 /* TutorialUITests.swift in Sources */,
 				5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */,
@@ -1071,7 +1083,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1162,7 +1174,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
@@ -1172,7 +1184,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 21.0;
+				MARKETING_VERSION = 27.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.smashswift.nback";
@@ -1191,9 +1203,10 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = NBackGame/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1201,10 +1214,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 21.0;
+				MARKETING_VERSION = 27.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.smashswift.nback";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = "match AppStore com.smashswift.nback";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1217,7 +1231,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1240,7 +1254,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1262,7 +1276,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1283,7 +1297,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1341,7 +1355,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1354,12 +1368,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

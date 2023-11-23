@@ -106,6 +106,7 @@
 		5FC62C64260244DF00D03AD8 /* GetHighestUnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C63260244DF00D03AD8 /* GetHighestUnlockedLevel.swift */; };
 		5FC62C6F2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */; };
 		5FCD41D82540A57F002635BC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD41D72540A57F002635BC /* GameViewModel.swift */; };
+		5FD6A66C2B0FB69B002160EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */; };
 		5FFDE6C225654BE8008E977F /* GameSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +224,7 @@
 		5FC62C63260244DF00D03AD8 /* GetHighestUnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHighestUnlockedLevel.swift; sourceTree = "<group>"; };
 		5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHighestUnlockedLevelUseCaseTests.swift; sourceTree = "<group>"; };
 		5FCD41D72540A57F002635BC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,6 +424,7 @@
 		5F2C259E258D2C5A008D36F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */,
 				5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */,
 				5FB46DF0270C4D4F00B41F37 /* Music */,
 				5FA863452529D997006B5F33 /* Assets.xcassets */,
@@ -926,6 +929,7 @@
 				5F85D2FB297C65E2002A85CD /* k.wav in Resources */,
 				5F85D2F9297C65E2002A85CD /* t.wav in Resources */,
 				5F85D2F6297C65E2002A85CD /* s.wav in Resources */,
+				5FD6A66C2B0FB69B002160EC /* LaunchScreen.storyboard in Resources */,
 				5F85D2FE297C67DC002A85CD /* s.mp3 in Resources */,
 				5FA863492529D997006B5F33 /* Preview Assets.xcassets in Resources */,
 				5F85D2F7297C65E2002A85CD /* m.wav in Resources */,

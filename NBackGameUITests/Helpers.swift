@@ -11,7 +11,7 @@ extension XCUIApplication {
     func tapButton(_ id: String, swipeUpBeforeTap: Bool = false) {
         let button = buttons[id]
         _ = button.waitForExistence(timeout: 5.0)
-        if swipeUpBeforeTap{
+        if swipeUpBeforeTap {
             swipeUp()
         }
         button.tap()

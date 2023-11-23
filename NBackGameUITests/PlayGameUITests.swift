@@ -54,16 +54,16 @@ class PlayGameUITests: XCTestCase {
 
         let positionButton = app.buttons[AccessibilityIdentifier.Game.positionButton]
         print("before for: \(Date().timeIntervalSince1970)")
-        for i in 1..<roundNumber {
-            print("start for: \(Date().timeIntervalSince1970), i: \(i)")
+        for number in 1..<roundNumber {
+            print("start for: \(Date().timeIntervalSince1970), i: \(number)")
 
             expectation(for: NSPredicate(format: "isEnabled == true"), evaluatedWith: positionButton, handler: nil)
             waitForExpectations(timeout: 10.0, handler: nil)
             
-            print("before tap: \(Date().timeIntervalSince1970), i: \(i)")
+            print("before tap: \(Date().timeIntervalSince1970), i: \(number)")
 
             positionButton.tap()
-            print("after tap: \(Date().timeIntervalSince1970), i: \(i)")
+            print("after tap: \(Date().timeIntervalSince1970), i: \(number)")
 
         }
                 

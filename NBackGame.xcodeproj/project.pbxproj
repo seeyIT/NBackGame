@@ -1240,10 +1240,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 28.0;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-Wl,-ld_classic",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match Development com.smashswift.nback";
@@ -1275,10 +1272,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 28.0;
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-Wl,-ld_classic",
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.smashswift.nback";

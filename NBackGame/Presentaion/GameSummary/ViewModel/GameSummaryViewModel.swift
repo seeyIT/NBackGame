@@ -106,4 +106,3 @@ class GameSummaryViewModel: ObservableObject {
             gameResults.incorrectSelectionPosition == 0
     }
 }
-

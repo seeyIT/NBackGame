@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -106,6 +106,7 @@
 		5FC62C64260244DF00D03AD8 /* GetHighestUnlockedLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C63260244DF00D03AD8 /* GetHighestUnlockedLevel.swift */; };
 		5FC62C6F2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */; };
 		5FCD41D82540A57F002635BC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD41D72540A57F002635BC /* GameViewModel.swift */; };
+		5FD6A66C2B0FB69B002160EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */; };
 		5FFDE6C225654BE8008E977F /* GameSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -223,6 +224,7 @@
 		5FC62C63260244DF00D03AD8 /* GetHighestUnlockedLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHighestUnlockedLevel.swift; sourceTree = "<group>"; };
 		5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHighestUnlockedLevelUseCaseTests.swift; sourceTree = "<group>"; };
 		5FCD41D72540A57F002635BC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -422,6 +424,7 @@
 		5F2C259E258D2C5A008D36F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */,
 				5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */,
 				5FB46DF0270C4D4F00B41F37 /* Music */,
 				5FA863452529D997006B5F33 /* Assets.xcassets */,
@@ -812,7 +815,7 @@
 				5FA8633A2529D996006B5F33 /* Sources */,
 				5FA8633B2529D996006B5F33 /* Frameworks */,
 				5FA8633C2529D996006B5F33 /* Resources */,
-				5F1F6ED32B0121B800727FFB /* ShellScript */,
+				5F1F6ED32B0121B800727FFB /* Crashlytics Script */,
 			);
 			buildRules = (
 			);
@@ -875,8 +878,9 @@
 		5FA863362529D995006B5F33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1200;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					5FA8633D2529D996006B5F33 = {
 						CreatedOnToolsVersion = 12.0;
@@ -901,8 +905,8 @@
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
-				5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -923,6 +927,7 @@
 				5F85D2FB297C65E2002A85CD /* k.wav in Resources */,
 				5F85D2F9297C65E2002A85CD /* t.wav in Resources */,
 				5F85D2F6297C65E2002A85CD /* s.wav in Resources */,
+				5FD6A66C2B0FB69B002160EC /* LaunchScreen.storyboard in Resources */,
 				5F85D2FE297C67DC002A85CD /* s.mp3 in Resources */,
 				5FA863492529D997006B5F33 /* Preview Assets.xcassets in Resources */,
 				5F85D2F7297C65E2002A85CD /* m.wav in Resources */,
@@ -954,8 +959,9 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		5F1F6ED32B0121B800727FFB /* ShellScript */ = {
+		5F1F6ED32B0121B800727FFB /* Crashlytics Script */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
@@ -968,6 +974,7 @@
 				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
 				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
 			);
+			name = "Crashlytics Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -1131,6 +1138,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1192,6 +1200,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1219,10 +1228,11 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = NBackGame/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1249,11 +1259,12 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				INFOPLIST_FILE = NBackGame/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1278,7 +1289,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1301,7 +1312,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1323,7 +1334,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1344,7 +1355,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				INFOPLIST_FILE = NBackGameUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1402,15 +1413,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.17.0;
+				branch = master;
+				kind = branch;
 			};
 		};
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1423,42 +1434,42 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F1F6ED12B0120D500727FFB /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		5F1F6ED42B01273600727FFB /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		5F1F6ED62B01273600727FFB /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 		5F1F6ED82B01273600727FFB /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		5F1F6EDA2B01276900727FFB /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 		5F1F6EDC2B01276900727FFB /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

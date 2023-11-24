@@ -18,7 +18,7 @@ class StatisticsViewModel: ObservableObject {
     
     @Published var history: [GameHistory] = []
     
-    var selectedGameHistory: GameHistory? = nil
+    var selectedGameHistory: GameHistory?
     
     init(menuCoordinator: MenuCoordinator, useCases: StatisticsViewModelUseCases) {
         self.menuCoordinator = menuCoordinator

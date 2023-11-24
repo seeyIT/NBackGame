@@ -123,5 +123,3 @@ struct MenuView: View {
         })
     }
 }
-
-

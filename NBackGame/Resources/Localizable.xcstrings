@@ -1,2809 +1,2809 @@
 {
-    "sourceLanguage": "en",
-    "strings": {
-        "-": {
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": " - "
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": " - "
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": " - "
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": " - "
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": " - "
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": " - "
-                    }
-                }
-            }
-        },
-        "%@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "%@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "%@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "%@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "%@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "%@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "%@"
-                    }
-                }
-            }
-        },
-        "Are you sure you want to remove this game history record?": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Sind Sie sicher, dass Sie diesen Eintrag aus dem Spielverlauf entfernen m\u00f6chten?"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Are you sure you want to remove this game history record?"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u00bfEst\u00e1s seguro de que quieres eliminar este registro del historial del juego?"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc774 \uac8c\uc784 \uae30\ub85d \uae30\ub85d\uc744 \uc0ad\uc81c\ud558\uc2dc\uaca0\uc2b5\ub2c8\uae4c?"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Czy na pewno chcesz usun\u0105\u0107 ten zapis historii gry?"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u60a8\u786e\u5b9a\u8981\u5220\u9664\u6b64\u6e38\u620f\u5386\u53f2\u8bb0\u5f55\u5417\uff1f"
-                    }
-                }
-            }
-        },
-        "author_1": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Peter Drucker"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Peter Drucker"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Peter Drucker"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Peter Drucker"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud53c\ud130 \ub4dc\ub7ec\ucee4"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5f7c\u5f97-\u5fb7\u9c81\u514b"
-                    }
-                }
-            }
-        },
-        "author_2": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Mahatma Gandhil"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Mahatma Gandhil"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Mahatma Gandhil"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Mahatma Gandhil"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub9c8\ud558\ud2b8\ub9c8 \uac04\ub51c"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5723\u96c4\u7518\u5730"
-                    }
-                }
-            }
-        },
-        "author_3": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Winston Churchill"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Winston Churchill"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Winston Churchill"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Winston Churchill"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc708\uc2a4\ud134 \ucc98\uce60"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u90b1\u5409\u5c14"
-                    }
-                }
-            }
-        },
-        "author_4": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Albert Einstein"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Albert Einstein"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Albert Einstein"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Albert Einstein"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc54c\ubc84\ud2b8 \uc544\uc778\uc288\ud0c0\uc778"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u963f\u5c14\u4f2f\u7279-\u7231\u56e0\u65af\u5766"
-                    }
-                }
-            }
-        },
-        "author_5": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Frank Herbert"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Frank Herbert"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Frank Herbert"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Frank Herbert"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud504\ub7ad\ud06c \ud5c8\ubc84\ud2b8"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5f17\u5170\u514b-\u8d6b\u4f2f\u7279"
-                    }
-                }
-            }
-        },
-        "author_6": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Benjamin Franklin"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Benjamin Franklin"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Benjamin Franklin"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Benjamin Franklin"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ubca4\uc790\ubbfc \ud504\ub7ad\ud074\ub9b0"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u672c\u6770\u660e-\u5bcc\u5170\u514b\u6797"
-                    }
-                }
-            }
-        },
-        "author_7": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Anthony J. D\u2019Angelo"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Anthony J. D'Angelo"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Anthony J. D'Angelo"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Anthony J. D'Angelo"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc564\uc11c\ub2c8 J. \ub514\uc548\uc824\ub85c"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5b89\u4e1c\u5c3c-J-\u8fbe\u6770\u6d1b"
-                    }
-                }
-            }
-        },
-        "author_8": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Marvin Minsky"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Marvin Minsky"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Marvin Minsky"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Marvin Minsky"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub9c8\ube48 \ubbfc\uc2a4\ud0a4"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u9a6c\u6587-\u660e\u65af\u57fa"
-                    }
-                }
-            }
-        },
-        "author_9": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "John Cleese"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "John Cleese"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "John Cleese"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "John Cleese"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc874 \ud074\ub9ac\uc988"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7ea6\u7ff0-\u514b\u83b1\u65af"
-                    }
-                }
-            }
-        },
-        "author_10": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Henry Ford"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Henry Ford"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Henry Ford"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Henry Ford"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud5e8\ub9ac \ud3ec\ub4dc"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4ea8\u5229-\u798f\u7279"
-                    }
-                }
-            }
-        },
-        "author_11": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Richard Feynman"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Richard Feynman"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Richard Feynman"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Richard Feynman"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub9ac\ucc98\ub4dc \ud30c\uc778\ub9cc"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7406\u67e5\u5fb7-\u8d39\u66fc"
-                    }
-                }
-            }
-        },
-        "author_12": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "B.B. King"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "B.B. King"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "B.B. King"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "B.B. King"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "B.B. King"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "B.B. \u91d1"
-                    }
-                }
-            }
-        },
-        "Back": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Back"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Powr\u00f3t"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Zur\u00fcck"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Volver"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub4a4\ub85c"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u8fd4\u56de"
-                    }
-                }
-            }
-        },
-        "Back to Menu": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Back to Menu"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Powr\u00f3t do menu"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Zur\u00fcck zum Men\u00fc"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Volver al men\u00fa"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uba54\ub274\ub85c \ub3cc\uc544\uac00\uae30"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u8fd4\u56de\u83dc\u5355"
-                    }
-                }
-            }
-        },
-        "Below the board there are two buttons: Position and Sound.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Below the board there are two buttons: Position and Sound."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Poni\u017cej tablicy znajduj\u0105 si\u0119 dwa przyciski: Pozycja i D\u017awi\u0119k."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Unterhalb der Platine befinden sich zwei Tasten: Position und Ton."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Debajo del tablero hay dos botones: Posici\u00f3n y Sonido."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ubcf4\ub4dc \uc544\ub798\uc5d0\ub294 \ub450 \uac1c\uc758 \ubc84\ud2bc\uc774 \uc788\uc2b5\ub2c8\ub2e4: \uc704\uce58 \ubc0f \uc0ac\uc6b4\ub4dc\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7535\u8def\u677f\u4e0b\u65b9\u6709\u4e24\u4e2a\u6309\u94ae\uff1a\u4f4d\u7f6e\u548c\u58f0\u97f3\u3002"
-                    }
-                }
-            }
-        },
-        "Choose N": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "W\u00e4hlen Sie N"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Choose N"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Elija N"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N \uc120\ud0dd"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wybierz N"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u9009\u62e9 N"
-                    }
-                }
-            }
-        },
-        "Correct selection": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Richtige Auswahl"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Correct selection"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Selecci\u00f3n correcta"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc62c\ubc14\ub978 \uc120\ud0dd"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Prawid\u0142owy wyb\u00f3r"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6b63\u786e\u9009\u62e9"
-                    }
-                }
-            }
-        },
-        "Correct: %@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Richtig: %@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Correct: %@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Correcto: %@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc815\ub2f5: %@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Poprawnie: %@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6b63\u786e\uff1a%@"
-                    }
-                }
-            }
-        },
-        "Do you remeber position from the third round? Yes, it's the same, this in the only one round when you should press Position button.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Do you remeber position from the third round? Yes, it's the same, this in the only one round when you should press Position button."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Pami\u0119tasz pozycj\u0119 z trzeciej rundy? Tak, jest taka sama, to jedyna runda, w kt\u00f3rej nale\u017cy nacisn\u0105\u0107 przycisk pozycji."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Erinnern Sie sich an die Position in der dritten Runde? Ja, das ist dasselbe. Das ist die einzige Runde, in der Sie die Positionstaste dr\u00fccken sollten."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u00bfRecuerdas la posici\u00f3n de la tercera ronda? S\u00ed, es lo mismo, esta es la \u00fanica ronda en la que debes pulsar el bot\u00f3n Posici\u00f3n."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc138 \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc758 \uc704\uce58\ub97c \uae30\uc5b5\ud558\uc2dc\ub098\uc694? \ub124, \ud3ec\uc9c0\uc158 \ubc84\ud2bc\uc744 \ub20c\ub7ec\uc57c \ud558\ub294 \uc720\uc77c\ud55c \ub77c\uc6b4\ub4dc\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u8fd8\u8bb0\u5f97\u7b2c\u4e09\u8f6e\u7684\u4f4d\u7f6e\u5417\uff1f\u662f\u7684\uff0c\u662f\u4e00\u6837\u7684\uff0c\u53ea\u6709\u8fd9\u4e00\u8f6e\u60a8\u5e94\u8be5\u6309 '\u4f4d\u7f6e '\u6309\u94ae\u3002"
-                    }
-                }
-            }
-        },
-        "Do you see what is difficult in this game? Everytime N is increading the game becoming harder and harder.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Do you see what is difficult in this game? Everytime N is increading the game becoming harder and harder."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Czy widzisz, co jest trudne w tej grze? Za ka\u017cdym razem, gdy N ro\u015bnie, gra staje si\u0119 coraz trudniejsza."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Siehst du, was in diesem Spiel schwierig ist? Jedes Mal, wenn N inkrementiert, wird das Spiel schwieriger und schwieriger."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u00bfVes lo que es dif\u00edcil en este juego? Cada vez que N se incrementa el juego se vuelve m\u00e1s y m\u00e1s dif\u00edcil."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc774 \uac8c\uc784\uc5d0\uc11c \ubb34\uc5c7\uc774 \uc5b4\ub824\uc6b4\uc9c0 \ubcf4\uc774\uc2dc\ub098\uc694? N\uc774 \uc810\uc810 \ub354 \uc5b4\ub824\uc6cc\uc9c8 \ub54c\ub9c8\ub2e4 \uac8c\uc784\uc774 \uc810\uc810 \ub354 \uc5b4\ub824\uc6cc\uc9d1\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4f60\u77e5\u9053\u8fd9\u4e2a\u6e38\u620f\u96be\u5728\u54ea\u91cc\u5417\uff1f\u6bcf\u589e\u52a0\u4e00\u4e2a N\uff0c\u6e38\u620f\u5c31\u4f1a\u53d8\u5f97\u8d8a\u6765\u8d8a\u96be\u3002"
-                    }
-                }
-            }
-        },
-        "Dual N-Back is a game with square board divided smaller squeres, by default it's 3x3.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Dual N-Back is a game with square board divided smaller squeres, by default it's 3x3."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Dual N-Back to gra z kwadratow\u0105 plansz\u0105 podzielon\u0105 na mniejsze kwadraty, domy\u015blnie 3x3."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Dual N-Back ist ein Spiel mit quadratischem Spielbrett, das in kleinere Quadrate unterteilt ist, standardm\u00e4\u00dfig ist es 3x3."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Dual N-Back es un juego con tablero cuadrado dividido en cuadrados m\u00e1s peque\u00f1os, por defecto es 3x3."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub4c0\uc5bc \uc5d4\ubc31\uc740 \uc815\uc0ac\uac01\ud615 \ubcf4\ub4dc\ub97c \ub354 \uc791\uc740 \uc0ac\uac01\ud615\uc73c\ub85c \ub098\ub208 \uac8c\uc784\uc73c\ub85c, \uae30\ubcf8\uc801\uc73c\ub85c 3x3\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Dual N-Back \u662f\u4e00\u6b3e\u5c06\u65b9\u5f62\u68cb\u76d8\u5206\u5272\u6210\u66f4\u5c0f\u65b9\u683c\u7684\u6e38\u620f\uff0c\u9ed8\u8ba4\u4e3a 3x3\u3002"
-                    }
-                }
-            }
-        },
-        "Incorrect selection": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Falsche Auswahl"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Incorrect selection"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Selecci\u00f3n incorrecta"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc798\ubabb\ub41c \uc120\ud0dd"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nieprawid\u0142owy wyb\u00f3r"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u9009\u62e9\u4e0d\u6b63\u786e"
-                    }
-                }
-            }
-        },
-        "Incorrect: %@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Falsch: %@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Incorrect: %@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Incorrecto: %@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc798\ubabb\ub428: %@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nieprawid\u0142owo: %@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4e0d\u6b63\u786e\uff1a%@"
-                    }
-                }
-            }
-        },
-        "Let's assume that N is equal 1 and focus only on positions. This is the first round, so you can't compare it with previous but you need to remember its position. It's right upper corner.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Let's assume that N is equal 1 and focus only on positions. This is the first round, so you can't compare it with previous but you need to remember its position. It's right upper corner."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Za\u0142\u00f3\u017cmy, \u017ce N jest r\u00f3wne 1 i skupmy si\u0119 tylko na pozycjach. Jest to pierwsza runda, wi\u0119c nie mo\u017cna jej por\u00f3wna\u0107 z poprzednimi, ale trzeba zapami\u0119ta\u0107 jej pozycj\u0119. Jest to prawy g\u00f3rny r\u00f3g."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Gehen wir davon aus, dass N gleich 1 ist, und konzentrieren wir uns nur auf die Positionen. Dies ist die erste Runde, also kann man sie nicht mit den vorherigen vergleichen, aber man muss sich ihre Position merken. Es ist die rechte obere Ecke."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Supongamos que N es igual a 1 y centr\u00e9monos s\u00f3lo en las posiciones. Esta es la primera ronda, por lo que no se puede comparar con las anteriores, pero hay que recordar su posici\u00f3n. Es la esquina superior derecha."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N\uc774 1\uc774\ub77c\uace0 \uac00\uc815\ud558\uace0 \ud3ec\uc9c0\uc158\uc5d0\ub9cc \uc9d1\uc911\ud574 \ubd05\uc2dc\ub2e4. \uc774\ubc88\uc774 \uccab \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc774\ubbc0\ub85c \uc774\uc804 \ub77c\uc6b4\ub4dc\uc640 \ube44\uad50\ud560 \uc218\ub294 \uc5c6\uc9c0\ub9cc \uc704\uce58\ub97c \uae30\uc5b5\ud574\uc57c \ud569\ub2c8\ub2e4. \uc624\ub978\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5047\u8bbe N \u7b49\u4e8e 1\uff0c\u53ea\u5173\u6ce8\u4f4d\u7f6e\u3002\u8fd9\u662f\u7b2c\u4e00\u8f6e\uff0c\u6240\u4ee5\u4e0d\u80fd\u4e0e\u524d\u4e00\u8f6e\u6bd4\u8f83\uff0c\u4f46\u9700\u8981\u8bb0\u4f4f\u5b83\u7684\u4f4d\u7f6e\u3002\u5b83\u5728\u53f3\u4e0a\u89d2\u3002"
-                    }
-                }
-            }
-        },
-        "Level: %@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ebene: %@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Level: %@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nivel: %@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub808\ubca8: %@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Poziom: %@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7ea7\u522b\uff1a %@"
-                    }
-                }
-            }
-        },
-        "Menu": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Menu"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Menu"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Men\u00fc"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Men\u00fa"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uba54\ub274"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u83dc\u5355"
-                    }
-                }
-            }
-        },
-        "Missed": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Verpasst"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Missed"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Falta"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub204\ub77d\ub428"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Brakuje"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u9519\u8fc7"
-                    }
-                }
-            }
-        },
-        "Missed: %@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Verfehlt: %@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Missed: %@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Falta: %@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ubd80\uc7ac\uc911: %@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Brak: %@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u9519\u8fc7\uff1a%@"
-                    }
-                }
-            }
-        },
-        "Music powered by @gabriele_pollina": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Musik powered by @gabierele_pollina"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Music powered by @gabierele_pollina"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "M\u00fasica de @gabierele_pollina"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uac00\ube44\uc5d8\ub808 \ud3f4\ub9ac\ub098 \uc81c\uacf5 \uc74c\uc545"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Muzyka dostarczona przez @gabierele_pollina"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u97f3\u4e50\u7531 @gabierele_pollina \u63d0\u4f9b"
-                    }
-                }
-            }
-        },
-        "N: %@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: %@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: %@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: %@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: %@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: %@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: %@"
-                    }
-                }
-            }
-        },
-        "N: 1": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 1"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 1"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 1"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 1"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 1"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 1"
-                    }
-                }
-            }
-        },
-        "N: 2": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 2"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 2"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 2"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 2"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 2"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "N: 2"
-                    }
-                }
-            }
-        },
-        "Next": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Next"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nast\u0119pny"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Weiter"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Siguiente"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub2e4\uc74c"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4e0b\u4e00\u9875"
-                    }
-                }
-            }
-        },
-        "No, cancel": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nein, abbrechen"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "No, cancel"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "No, cancelar"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc544\ub2c8\uc694, \ucde8\uc18c"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nie, anuluj"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5426\uff0c\u53d6\u6d88"
-                    }
-                }
-            }
-        },
-        "Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just remember, the center this time.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just remember, the center this time."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Za\u0142\u00f3\u017cmy, \u017ce N jest r\u00f3wne 2. Musisz wi\u0119c por\u00f3wna\u0107 aktualn\u0105 pozycj\u0119 z pozycj\u0105 sprzed dw\u00f3ch rund. W pierwszej rundzie po prostu zapami\u0119ta\u0142e\u015b, \u017ce tym razem jest to \u015brodek."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nehmen wir nun an, N ist gleich 2. Dann m\u00fcssen Sie die aktuelle Position mit der von vor zwei Runden vergleichen. In der ersten Runde erinnerst du dich einfach daran, dass du dieses Mal in der Mitte warst."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ahora digamos que N es igual a 2. Entonces necesitas comparar la posici\u00f3n actual con la de hace dos rondas. En la primera ronda que acaba de recordar, el centro esta vez."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc774\uc81c N\uc774 2\uc640 \uac19\ub2e4\uace0 \uac00\uc815\ud574 \ubd05\uc2dc\ub2e4. \ub530\ub77c\uc11c \ud604\uc7ac \uc704\uce58\ub97c \ub450 \ub77c\uc6b4\ub4dc \uc804\uacfc \ube44\uad50\ud574\uc57c \ud569\ub2c8\ub2e4. \uccab \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc5d0\uc11c\ub294 \uc774\ubc88\uc5d0\ub294 \uc911\uc2ec\uc744 \uae30\uc5b5\ud558\uc138\uc694."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u73b0\u5728\u5047\u8bbe N \u7b49\u4e8e 2\u3002\u56e0\u6b64\uff0c\u60a8\u9700\u8981\u5c06\u5f53\u524d\u4f4d\u7f6e\u4e0e\u4e24\u8f6e\u4e4b\u524d\u7684\u4f4d\u7f6e\u8fdb\u884c\u6bd4\u8f83\u3002\u5728\u7b2c\u4e00\u8f6e\u4e2d\uff0c\u4f60\u53ea\u9700\u8bb0\u4f4f\uff0c\u8fd9\u6b21\u7684\u4e2d\u5fc3\u70b9\u3002"
-                    }
-                }
-            }
-        },
-        "Now, you need to compare current position with the position from the second round. What it the same? No, it's right center, and there was bottom right.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Now, you need to compare current position with the position from the second round. What it the same? No, it's right center, and there was bottom right."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Teraz nale\u017cy por\u00f3wna\u0107 aktualn\u0105 pozycj\u0119 z pozycj\u0105 z drugiej rundy. Czy jest taka sama? Nie, to prawy \u015brodek, a tam by\u0142 prawy dolny r\u00f3g."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nun m\u00fcssen Sie die aktuelle Position mit der Position aus der zweiten Runde vergleichen. Ist es die gleiche? Nein, es ist rechts in der Mitte, und dort war unten rechts."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ahora, tienes que comparar la posici\u00f3n actual con la posici\u00f3n de la segunda ronda. \u00bfEs la misma? No, es centro derecha, y hab\u00eda abajo a la derecha."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc774\uc81c \ud604\uc7ac \uc704\uce58\uc640 \ub450 \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc758 \uc704\uce58\ub97c \ube44\uad50\ud574\uc57c \ud569\ub2c8\ub2e4. \ub611\uac19\ub098\uc694? \uc544\ub2c8\uc694, \uc624\ub978\ucabd \uc911\uc559\uc5d0 \uc788\uace0 \uc624\ub978\ucabd \uc544\ub798\uc5d0 \uc788\uc2b5\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u73b0\u5728\uff0c\u60a8\u9700\u8981\u5c06\u5f53\u524d\u4f4d\u7f6e\u4e0e\u7b2c\u4e8c\u8f6e\u7684\u4f4d\u7f6e\u8fdb\u884c\u6bd4\u8f83\u3002\u4e00\u6837\u5417\uff1f\u4e0d\uff0c\u662f\u53f3\u8fb9\u4e2d\u95f4\uff0c\u8fd8\u6709\u53f3\u4e0b\u89d2\u3002"
-                    }
-                }
-            }
-        },
-        "OK": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "OK"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "OK"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "OK"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud655\uc778"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "OK"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u597d\u7684"
-                    }
-                }
-            }
-        },
-        "On each round one of the squares is selected and one letter is spoken. Your job is to decide if position or sound or both was/were the same N round(s) ago. Let's see example on next screen...": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "On each round one of the squares is selected and one letter is spoken. Your job is to decide if position or sound or both was/were the same N round(s) ago. Let's see example on next screen..."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "W ka\u017cdej rundzie wybierane jest jedno z p\u00f3l i wypowiadana jest jedna litera. Twoim zadaniem jest zdecydowa\u0107, czy pozycja lub d\u017awi\u0119k lub oba by\u0142y takie same N rund temu. Zobaczmy przyk\u0142ad na nast\u0119pnym ekranie..."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "In jeder Runde wird eines der Quadrate ausgew\u00e4hlt und ein Buchstabe gesprochen. Deine Aufgabe ist es, zu entscheiden, ob die Position oder der Klang oder beides vor N Runden gleich war(en). Sehen wir uns das Beispiel auf dem n\u00e4chsten Bildschirm an..."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "En cada ronda se selecciona una de las casillas y se pronuncia una letra. Tu trabajo es decidir si la posici\u00f3n, el sonido o ambos eran los mismos hace N rondas. Veamos un ejemplo en la siguiente pantalla..."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uac01 \ub77c\uc6b4\ub4dc\uc5d0\uc11c \uc0ac\uac01\ud615 \uc911 \ud558\ub098\ub97c \uc120\ud0dd\ud558\uace0 \ud55c \uae00\uc790\ub97c \ub9d0\ud569\ub2c8\ub2e4. \uc5ec\ub7ec\ubd84\uc758 \uc784\ubb34\ub294 \uc704\uce58\ub098 \uc18c\ub9ac \ub610\ub294 \ub458 \ub2e4 N \ub77c\uc6b4\ub4dc \uc804\uc5d0 \uac19\uc740\uc9c0 \uc544\ub2cc\uc9c0\ub97c \uacb0\uc815\ud558\ub294 \uac83\uc785\ub2c8\ub2e4. \ub2e4\uc74c \ud654\uba74\uc5d0\uc11c \uc608\uc2dc\ub97c \ubcf4\uaca0\uc2b5\ub2c8\ub2e4..."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6bcf\u8f6e\u9009\u62e9\u4e00\u4e2a\u65b9\u683c\u5e76\u8bf4\u51fa\u4e00\u4e2a\u5b57\u6bcd\u3002\u60a8\u7684\u4efb\u52a1\u662f\u5224\u65ad N \u8f6e\u4e4b\u524d\u7684\u4f4d\u7f6e\u3001\u58f0\u97f3\u6216\u4e24\u8005\u662f\u5426\u76f8\u540c\u3002\u8bf7\u770b\u4e0b\u4e00\u5c4f\u7684\u793a\u4f8b..."
-                    }
-                }
-            }
-        },
-        "Play": {
-            "extractionState": "manual",
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Spielen"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Play"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Jugar"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud50c\ub808\uc774"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Gra\u0107"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6e38\u620f"
-                    }
-                }
-            }
-        },
-        "Play again": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Play again"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Zagraj ponownie"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Erneut spielen"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Reproducir de nuevo"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub2e4\uc2dc \uc7ac\uc0dd"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u518d\u6b21\u64ad\u653e"
-                    }
-                }
-            }
-        },
-        "Position": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Position"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Position"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Posici\u00f3n"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc704\uce58"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Pozycja"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u804c\u4f4d"
-                    }
-                }
-            }
-        },
-        "quote_1": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "We now accept the fact that learning is a lifelong process of keeping abreast of change. And the most pressing task is to teach people how to learn."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Obecnie akceptujemy fakt, \u017ce uczenie si\u0119 jest trwaj\u0105cym ca\u0142e \u017cycie procesem nad\u0105\u017cania za zmianami. A najpilniejszym zadaniem jest nauczenie ludzi, jak si\u0119 uczy\u0107."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wir akzeptieren heute die Tatsache, dass Lernen ein lebenslanger Prozess ist, bei dem es darum geht, mit dem Wandel Schritt zu halten. Und die vordringlichste Aufgabe besteht darin, den Menschen das Lernen beizubringen."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ahora aceptamos el hecho de que el aprendizaje es un proceso que dura toda la vida para mantenerse al d\u00eda de los cambios. Y la tarea m\u00e1s apremiante es ense\u00f1ar a aprender."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc774\uc81c \uc6b0\ub9ac\ub294 \ud559\uc2b5\uc774 \ubcc0\ud654\ub97c \ub530\ub77c\uc7a1\uae30 \uc704\ud55c \ud3c9\uc0dd\uc758 \uacfc\uc815\uc774\ub77c\ub294 \uc0ac\uc2e4\uc744 \uc778\uc815\ud569\ub2c8\ub2e4. \uadf8\ub9ac\uace0 \uac00\uc7a5 \uc2dc\uae09\ud55c \uacfc\uc81c\ub294 \uc0ac\ub78c\ub4e4\uc5d0\uac8c \ud559\uc2b5\ud558\ub294 \ubc29\ubc95\uc744 \uac00\ub974\uce58\ub294 \uac83\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6211\u4eec\u73b0\u5728\u5df2\u7ecf\u8ba4\u8bc6\u5230\uff0c\u5b66\u4e60\u662f\u4e00\u4e2a\u4e0e\u65f6\u4ff1\u8fdb\u7684\u7ec8\u8eab\u8fc7\u7a0b\u3002\u800c\u5f53\u52a1\u4e4b\u6025\u662f\u6559\u4f1a\u4eba\u4eec\u5982\u4f55\u5b66\u4e60\u3002"
-                    }
-                }
-            }
-        },
-        "quote_2": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Live as if you were to die tomorrow. Learn as if you were to live forever."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u017byj tak, jakby\u015b mia\u0142 umrze\u0107 jutro. Ucz si\u0119 tak, jakby\u015b mia\u0142 \u017cy\u0107 wiecznie."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Lebe so, als w\u00fcrdest du morgen sterben. Lerne so, als w\u00fcrdest du ewig leben."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Vive como si fueras a morir ma\u00f1ana. Aprende como si fueras a vivir para siempre."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub0b4\uc77c \uc8fd\ub294\ub2e4\ub294 \uc0dd\uac01\uc73c\ub85c \uc0b4\uc544\uac00\uc138\uc694. \uc601\uc6d0\ud788 \uc0b4 \uac83\ucc98\ub7fc \ubc30\uc6b0\uc138\uc694."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5c31\u50cf\u660e\u5929\u5c31\u4f1a\u6b7b\u53bb\u4e00\u6837\u751f\u6d3b\u3002\u5b66\u4e60\u5c31\u50cf\u6c38\u751f\u4e00\u6837\u3002"
-                    }
-                }
-            }
-        },
-        "quote_3": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "I am always ready to learn although I do not always like being taught."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Zawsze jestem gotowy do nauki, cho\u0107 nie zawsze lubi\u0119 by\u0107 nauczany."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ich bin immer bereit zu lernen, auch wenn ich nicht immer gerne belehrt werde."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Siempre estoy dispuesto a aprender, aunque no siempre me gusta que me ense\u00f1en."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc800\ub294 \ud56d\uc0c1 \uac00\ub974\uce68\uc744 \ubc1b\ub294 \uac83\uc744 \uc88b\uc544\ud558\uc9c0\ub294 \uc54a\uc9c0\ub9cc \ud56d\uc0c1 \ubc30\uc6b8 \uc900\ube44\uac00 \ub418\uc5b4 \uc788\uc2b5\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u867d\u7136\u6211\u5e76\u4e0d\u603b\u662f\u559c\u6b22\u522b\u4eba\u6559\u6211\uff0c\u4f46\u6211\u603b\u662f\u4e50\u4e8e\u5b66\u4e60\u3002"
-                    }
-                }
-            }
-        },
-        "quote_4": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wisdom is not a product of schooling but of the lifelong attempt to acquire it."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "M\u0105dro\u015b\u0107 nie jest efektem nauki, lecz trwaj\u0105cych ca\u0142e \u017cycie pr\u00f3b jej zdobycia."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Weisheit ist kein Produkt der Schulbildung, sondern des lebenslangen Versuchs, sie zu erwerben."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "La sabidur\u00eda no es producto de la escolarizaci\u00f3n, sino del intento permanente de adquirirla."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc9c0\ud61c\ub294 \ud559\uad50 \uad50\uc721\uc758 \uc0b0\ubb3c\uc774 \uc544\ub2c8\ub77c \ud3c9\uc0dd\uc5d0 \uac78\uce5c \ub178\ub825\uc758 \uc0b0\ubb3c\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u667a\u6167\u4e0d\u662f\u5b66\u6821\u6559\u80b2\u7684\u4ea7\u7269\uff0c\u800c\u662f\u7ec8\u8eab\u52aa\u529b\u83b7\u53d6\u7684\u7ed3\u679c\u3002"
-                    }
-                }
-            }
-        },
-        "quote_5": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "One learns from books and example only that certain things can be done. Actual learning requires that you do those things."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Z ksi\u0105\u017cek i przyk\u0142ad\u00f3w dowiadujemy si\u0119 jedynie, \u017ce pewne rzeczy mo\u017cna zrobi\u0107. Rzeczywista nauka wymaga robienia tych rzeczy."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Aus B\u00fcchern und Beispielen lernt man nur, dass man bestimmte Dinge tun kann. Tats\u00e4chliches Lernen erfordert, dass man diese Dinge tut."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "De los libros y del ejemplo s\u00f3lo se aprende que se pueden hacer ciertas cosas. El aprendizaje real requiere hacer esas cosas."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ucc45\uacfc \uc608\uc2dc\ub97c \ud1b5\ud574\uc11c\ub9cc \ud2b9\uc815 \uc77c\uc744 \ud560 \uc218 \uc788\ub2e4\ub294 \uac83\uc744 \ubc30\uc6c1\ub2c8\ub2e4. \uc2e4\uc81c \ud559\uc2b5\uc5d0\ub294 \uc9c1\uc811 \ud574\ubcf4\ub294 \uac83\uc774 \ud544\uc694\ud569\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4e00\u4e2a\u4eba\u4ece\u4e66\u672c\u548c\u5b9e\u4f8b\u4e2d\u5b66\u5230\u7684\u53ea\u662f\u67d0\u4e9b\u4e8b\u60c5\u662f\u53ef\u4ee5\u505a\u5230\u7684\u3002\u771f\u6b63\u7684\u5b66\u4e60\u9700\u8981\u4f60\u53bb\u505a\u8fd9\u4e9b\u4e8b\u60c5\u3002"
-                    }
-                }
-            }
-        },
-        "quote_6": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Tell me and I forget, teach me and I may remember, involve me and I learn."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Powiedz mi, a zapomn\u0119, naucz mnie, a mo\u017ce zapami\u0119tam, zaanga\u017cuj mnie, a si\u0119 naucz\u0119."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Sage es mir und ich vergesse es, lehre es mich und ich kann mich erinnern, beziehe es mit ein und ich lerne."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "D\u00edmelo y lo olvido, ens\u00e9\u00f1amelo y puede que lo recuerde, invol\u00facrame y lo aprendo."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc54c\ub824\uc8fc\uba74 \uc78a\uc5b4\ubc84\ub9ac\uace0, \uac00\ub974\uccd0\uc8fc\uba74 \uae30\uc5b5\ud558\uace0, \ucc38\uc5ec\ud558\uba74 \ubc30\uc6b0\uac8c \ub429\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u544a\u8bc9\u6211\uff0c\u6211\u4f1a\u5fd8\u8bb0\uff1b\u6559\u6211\uff0c\u6211\u4f1a\u8bb0\u4f4f\uff1b\u8ba9\u6211\u53c2\u4e0e\uff0c\u6211\u4f1a\u5b66\u4f1a\u3002"
-                    }
-                }
-            }
-        },
-        "quote_7": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Develop a passion for learning. If you do, you will never cease to grow."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Rozwijaj w sobie pasj\u0119 do nauki. Je\u015bli to zrobisz, nigdy nie przestaniesz si\u0119 rozwija\u0107."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Entwickeln Sie eine Leidenschaft f\u00fcr das Lernen. Wenn Sie das tun, werden Sie nie aufh\u00f6ren zu wachsen."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Desarrolla la pasi\u00f3n por aprender. Si lo haces, nunca dejar\u00e1s de crecer."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ubc30\uc6c0\uc5d0 \ub300\ud55c \uc5f4\uc815\uc744 \ud0a4\uc6b0\uc138\uc694. \uadf8\ub807\uac8c \ud558\uba74 \uc131\uc7a5\uc744 \uba48\ucd94\uc9c0 \uc54a\uc744 \uac83\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u57f9\u517b\u5b66\u4e60\u70ed\u60c5\u3002\u53ea\u6709\u8fd9\u6837\uff0c\u4f60\u624d\u80fd\u4e0d\u65ad\u6210\u957f\u3002"
-                    }
-                }
-            }
-        },
-        "quote_8": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "You don\u2019t understand anything until you learn it more than one way."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nie zrozumiesz niczego, dop\u00f3ki nie nauczysz si\u0119 tego na wi\u0119cej ni\u017c jeden spos\u00f3b."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Man versteht etwas erst, wenn man es auf mehr als eine Weise lernt."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "No entiendes nada hasta que lo aprendes de m\u00e1s de una manera."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud55c \uac00\uc9c0 \uc774\uc0c1\uc758 \ubc29\ubc95\uc744 \ubc30\uc6b0\uae30 \uc804\uae4c\uc9c0\ub294 \uc544\ubb34\uac83\ub3c4 \uc774\ud574\ud558\uc9c0 \ubabb\ud569\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u53ea\u6709\u901a\u8fc7\u591a\u79cd\u9014\u5f84\u5b66\u4e60\uff0c\u4f60\u624d\u80fd\u7406\u89e3\u4efb\u4f55\u4e8b\u60c5\u3002"
-                    }
-                }
-            }
-        },
-        "quote_9": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "He who laughs most, learns best."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ten, kto \u015bmieje si\u0119 najwi\u0119cej, uczy si\u0119 najlepiej."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wer am meisten lacht, lernt am besten."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Quien m\u00e1s r\u00ede, mejor aprende."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uac00\uc7a5 \ub9ce\uc774 \uc6c3\ub294 \uc0ac\ub78c\uc774 \uac00\uc7a5 \uc798 \ubc30\uc6c1\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7b11\u5f97\u6700\u591a\u7684\u4eba\uff0c\u5b66\u5f97\u6700\u597d\u3002"
-                    }
-                }
-            }
-        },
-        "quote_10": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ka\u017cdy, kto przestaje si\u0119 uczy\u0107, jest stary, niezale\u017cnie od tego, czy ma dwadzie\u015bcia czy osiemdziesi\u0105t lat. Ka\u017cdy, kto ci\u0105gle si\u0119 uczy, pozostaje m\u0142ody. Najwa\u017cniejsz\u0105 rzecz\u0105 w \u017cyciu jest zachowanie m\u0142odego umys\u0142u."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wer aufh\u00f6rt zu lernen, ist alt, ob mit zwanzig oder achtzig. Wer st\u00e4ndig lernt, bleibt jung. Das Gr\u00f6\u00dfte im Leben ist es, seinen Geist jung zu halten."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Quien deja de aprender envejece, tenga veinte u ochenta a\u00f1os. Quien sigue aprendiendo se mantiene joven. Lo mejor de la vida es mantener la mente joven."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc2a4\ubb34 \uc0b4\uc774\ub4e0 \uc5ec\ub4e0 \uc0b4\uc774\ub4e0 \ubc30\uc6c0\uc744 \uba48\ucd94\ub294 \uc0ac\ub78c\uc740 \ub299\uc2b5\ub2c8\ub2e4. \uacc4\uc18d \ubc30\uc6b0\ub294 \uc0ac\ub78c\uc740 \uc80a\uc74c\uc744 \uc720\uc9c0\ud569\ub2c8\ub2e4. \uc778\uc0dd\uc5d0\uc11c \uac00\uc7a5 \uc911\uc694\ud55c \uac83\uc740 \ub9c8\uc74c\uc744 \uc80a\uac8c \uc720\uc9c0\ud558\ub294 \uac83\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4efb\u4f55\u505c\u6b62\u5b66\u4e60\u7684\u4eba\u90fd\u4f1a\u8001\u53bb\uff0c\u65e0\u8bba\u662f\u4e8c\u5341\u5c81\u8fd8\u662f\u516b\u5341\u5c81\u3002\u4e0d\u65ad\u5b66\u4e60\u7684\u4eba\u6c38\u8fdc\u5e74\u8f7b\u3002\u751f\u547d\u4e2d\u6700\u4f1f\u5927\u7684\u4e8b\u60c5\u5c31\u662f\u4fdd\u6301\u601d\u60f3\u5e74\u8f7b\u3002"
-                    }
-                }
-            }
-        },
-        "quote_11": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Study hard what interests you the most in the most undisciplined, irreverent and original manner possible."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Studiuj intensywnie to, co interesuje ci\u0119 najbardziej, w najbardziej niezdyscyplinowany, lekcewa\u017c\u0105cy i oryginalny spos\u00f3b."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Studieren Sie das, was Sie am meisten interessiert, auf m\u00f6glichst undisziplinierte, respektlose und originelle Weise."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Estudia con ah\u00ednco lo que m\u00e1s te interese de la forma m\u00e1s indisciplinada, irreverente y original posible."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uac00\uc7a5 \uad00\uc2ec \uc788\ub294 \ubd84\uc57c\ub97c \uac00\uc7a5 \uc790\uc720\ubd84\ubc29\ud558\uace0 \uacbd\uac74\ud558\uba70 \ub3c5\ucc3d\uc801\uc778 \ubc29\uc2dd\uc73c\ub85c \uc5f4\uc2ec\ud788 \uacf5\ubd80\ud558\uc138\uc694."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u4ee5\u6700\u65e0\u62d8\u65e0\u675f\u3001\u6700\u4e0d\u7f81\u3001\u6700\u65b0\u9896\u7684\u65b9\u5f0f\uff0c\u52aa\u529b\u5b66\u4e60\u4f60\u6700\u611f\u5174\u8da3\u7684\u4e1c\u897f\u3002"
-                    }
-                }
-            }
-        },
-        "quote_12": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "The beautiful thing about learning is nobody can take it away from you."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Pi\u0119kn\u0105 rzecz\u0105 w nauce jest to, \u017ce nikt nie mo\u017ce ci jej odebra\u0107."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Das Sch\u00f6ne am Lernen ist, dass es einem niemand wegnehmen kann."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Lo bonito de aprender es que nadie te lo puede quitar."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ubc30\uc6c0\uc758 \uc544\ub984\ub2e4\uc6b4 \uc810\uc740 \ub204\uad6c\ub3c4 \ube7c\uc557\uc744 \uc218 \uc5c6\ub2e4\ub294 \uac83\uc785\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5b66\u4e60\u7684\u7f8e\u5999\u4e4b\u5904\u5728\u4e8e\uff0c\u6ca1\u6709\u4eba\u80fd\u593a\u8d70\u5b83\u3002"
-                    }
-                }
-            }
-        },
-        "Results": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ergebnisse"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Results"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Resultados"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uacb0\uacfc"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wyniki"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6210\u679c"
-                    }
-                }
-            }
-        },
-        "Round 2. Now position is left upper corner. N is equal to 1 so you need to remember only previous position. Was the previous left upper corner? It wasn't, it was right upper corner, so you don't press the 'Position' button.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Round 2. Now position is left upper corner. N is equal to 1 so you need to remember only previous position. Was the previous left upper corner? It wasn't, it was right upper corner, so you don't press the 'Position' button."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runda 2. Teraz pozycj\u0105 jest lewy g\u00f3rny r\u00f3g. N jest r\u00f3wne 1, wi\u0119c musisz zapami\u0119ta\u0107 tylko poprzedni\u0105 pozycj\u0119. Czy poprzedni\u0105 pozycj\u0105 by\u0142 lewy g\u00f3rny r\u00f3g? Nie, to by\u0142 prawy g\u00f3rny r\u00f3g, wi\u0119c nie naciskasz przycisku 'Pozycja'."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runde 2. Jetzt ist die Position die linke obere Ecke. N ist gleich 1, also musst du dir nur die vorherige Position merken. War die vorherige linke obere Ecke? Nein, es war die rechte obere Ecke, also dr\u00fcckst du nicht auf die Schaltfl\u00e4che 'Position'."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Segundo asalto. Ahora la posici\u00f3n es la esquina superior izquierda. N es igual a 1 por lo que s\u00f3lo necesita recordar la posici\u00f3n anterior. \u00bfLa anterior era la esquina superior izquierda? No lo era, era la esquina superior derecha, as\u00ed que no pulses el bot\u00f3n 'Posici\u00f3n'."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "2\ub77c\uc6b4\ub4dc. \uc774\uc81c \uc704\uce58\ub294 \uc67c\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc785\ub2c8\ub2e4. N\uc740 1\uacfc \uac19\uc73c\ubbc0\ub85c \uc774\uc804 \uc704\uce58\ub9cc \uae30\uc5b5\ud558\uba74 \ub429\ub2c8\ub2e4. \uc774\uc804 \uc704\uce58\uac00 \uc67c\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc600\ub098\uc694? \uc544\ub2c8\uc694, \uc624\ub978\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc600\uc73c\ubbc0\ub85c '\uc704\uce58' \ubc84\ud2bc\uc744 \ub204\ub974\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7b2c 2 \u8f6e\u3002\u73b0\u5728\u7684\u4f4d\u7f6e\u662f\u5de6\u4e0a\u89d2\u3002N \u7b49\u4e8e 1\uff0c\u56e0\u6b64\u60a8\u53ea\u9700\u8bb0\u4f4f\u4e4b\u524d\u7684\u4f4d\u7f6e\u3002\u4e0a\u4e00\u4e2a\u4f4d\u7f6e\u662f\u5de6\u4e0a\u89d2\u5417\uff1f\u4e0d\u662f\uff0c\u662f\u53f3\u4e0a\u89d2\uff0c\u6240\u4ee5\u4f60\u4e0d\u80fd\u6309 '\u4f4d\u7f6e '\u6309\u94ae\u3002"
-                    }
-                }
-            }
-        },
-        "Round 3. Now position is right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It wasn't it was left upper corner, so you don't press the 'Position' button.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Round 3. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It wasn't it was left upper corner, so you don't press the 'Position' button."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runda 3. Teraz pozycja jest ponownie w prawym g\u00f3rnym rogu. N jest r\u00f3wne 1, wi\u0119c sprawd\u017a tylko ostatni. Czy by\u0142 to prawy g\u00f3rny r\u00f3g? Nie, to by\u0142 lewy g\u00f3rny r\u00f3g, wi\u0119c nie naciskasz przycisku 'Pozycja'."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runde 3. Jetzt ist die Position wieder die rechte obere Ecke. N ist gleich 1, also pr\u00fcfe nur die letzte. War es die rechte obere Ecke? War es nicht, es war die linke obere Ecke, also dr\u00fcckst du nicht auf die Schaltfl\u00e4che 'Position'."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ronda 3. Ahora la posici\u00f3n es de nuevo la esquina superior derecha. N es igual a 1, as\u00ed que comprueba s\u00f3lo la \u00faltima. \u00bfEra la esquina superior derecha? No, era la esquina superior izquierda, as\u00ed que no pulses el bot\u00f3n 'Posici\u00f3n'."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "3\ub77c\uc6b4\ub4dc. \uc774\uc81c \uc704\uce58\ub294 \ub2e4\uc2dc \uc624\ub978\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc785\ub2c8\ub2e4. N\uc740 1\uacfc \uac19\uc73c\ubbc0\ub85c \ub9c8\uc9c0\ub9c9 \ud558\ub098\ub9cc \ud655\uc778\ud569\ub2c8\ub2e4. \uc624\ub978\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc600\ub098\uc694? \uc67c\ucabd \uc704 \ubaa8\uc11c\ub9ac\uac00 \uc544\ub2c8\uc5c8\uc73c\ubbc0\ub85c '\uc704\uce58' \ubc84\ud2bc\uc744 \ub204\ub974\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7b2c 3 \u8f6e\u3002\u73b0\u5728\u4f4d\u7f6e\u53c8\u662f\u53f3\u4e0a\u89d2\u3002N \u7b49\u4e8e 1\uff0c\u6240\u4ee5\u53ea\u68c0\u67e5\u6700\u540e\u4e00\u4e2a\u3002\u662f\u53f3\u4e0a\u89d2\u5417\uff1f\u4e0d\u662f\uff0c\u662f\u5de6\u4e0a\u89d2\uff0c\u6240\u4ee5\u4e0d\u7528\u6309 '\u4f4d\u7f6e '\u6309\u94ae\u3002"
-                    }
-                }
-            }
-        },
-        "Round 4. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It was, so you should press the 'Position' button.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Round 4. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It was, so you should press the 'Position' button."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runda 4. Teraz pozycja jest ponownie w prawym g\u00f3rnym rogu. N jest r\u00f3wne 1, wi\u0119c sprawd\u017a tylko ostatni. Czy by\u0142 to prawy g\u00f3rny r\u00f3g? Tak, wi\u0119c powiniene\u015b nacisn\u0105\u0107 przycisk 'Pozycja'."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runde 4. Jetzt ist die Position wieder die rechte obere Ecke. N ist gleich 1, also pr\u00fcfe nur die letzte. War es die rechte obere Ecke? Ja, also solltest du die Schaltfl\u00e4che 'Position' dr\u00fccken."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ronda 4. Ahora la posici\u00f3n es de nuevo la esquina superior derecha. N es igual a 1, as\u00ed que comprueba s\u00f3lo la \u00faltima. \u00bfEra la esquina superior derecha? S\u00ed, as\u00ed que pulsa el bot\u00f3n 'Posici\u00f3n'."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "4\ub77c\uc6b4\ub4dc. \uc774\uc81c \uc704\uce58\ub294 \ub2e4\uc2dc \uc624\ub978\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc785\ub2c8\ub2e4. N\uc740 1\uacfc \uac19\uc73c\ubbc0\ub85c \ub9c8\uc9c0\ub9c9 \ud558\ub098\ub9cc \ud655\uc778\ud569\ub2c8\ub2e4. \uc624\ub978\ucabd \uc0c1\ub2e8 \ubaa8\uc11c\ub9ac\uc600\ub098\uc694? \ub9de\uc558\uc73c\ubbc0\ub85c '\uc704\uce58' \ubc84\ud2bc\uc744 \ub20c\ub7ec\uc57c \ud569\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7b2c 4 \u8f6e\u3002\u73b0\u5728\u4f4d\u7f6e\u53c8\u662f\u53f3\u4e0a\u89d2\u3002N \u7b49\u4e8e 1\uff0c\u6240\u4ee5\u53ea\u68c0\u67e5\u6700\u540e\u4e00\u4e2a\u3002\u662f\u53f3\u4e0a\u89d2\u5417\uff1f\u662f\u7684\uff0c\u6240\u4ee5\u4f60\u5e94\u8be5\u6309\u4e0b '\u4f4d\u7f6e '\u6309\u94ae\u3002"
-                    }
-                }
-            }
-        },
-        "Round: %@/%@": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runde: %1$@/%2$@"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "new",
-                        "value": "Round: %1$@/%2$@"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ronda: %1$@/%2$@"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub77c\uc6b4\ub4dc: %1$@/%2$@"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Runda: %1$@/%2$@"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u56de\u5408\uff1a%1$@/%2$@"
-                    }
-                }
-            }
-        },
-        "Sound": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ton"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Sound"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Sonido"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc0ac\uc6b4\ub4dc"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "D\u017awi\u0119k"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u58f0\u97f3"
-                    }
-                }
-            }
-        },
-        "Statistics": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Statistik"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Statistics"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Estad\u00edsticas"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud1b5\uacc4"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Statystyki"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7edf\u8ba1\u8d44\u6599"
-                    }
-                }
-            }
-        },
-        "The second round. Do you compare it the previous? No, you don't because N is equal to 2. This round you also only remember the position.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "The second round. Do you compare it the previous? No, you don't because N is equal to 2. This round you also only remember the position."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Druga runda. Czy por\u00f3wnujesz j\u0105 z poprzedni\u0105? Nie, poniewa\u017c N jest r\u00f3wne 2. W tej rundzie pami\u0119tasz tylko pozycj\u0119."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Die zweite Runde. Vergleichen Sie sie mit der vorherigen? Nein, denn N ist gleich 2. Auch in dieser Runde merken Sie sich nur die Position."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "La segunda ronda. \u00bfLa comparas con la anterior? No, no lo haces porque N es igual a 2. En esta ronda tambi\u00e9n s\u00f3lo recuerdas la posici\u00f3n."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ub450 \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc785\ub2c8\ub2e4. \uc774\uc804 \ub77c\uc6b4\ub4dc\uc640 \ube44\uad50\ud558\uc2dc\ub098\uc694? \uc544\ub2c8\uc694, N\uc774 2\uc640 \uac19\uae30 \ub54c\ubb38\uc5d0 \ube44\uad50\ud558\uc9c0 \uc54a\uc2b5\ub2c8\ub2e4. \uc774\ubc88 \ub77c\uc6b4\ub4dc\uc5d0\uc11c\ub3c4 \uc704\uce58\ub9cc \uae30\uc5b5\ud569\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7b2c\u4e8c\u8f6e\u3002\u4f60\u4f1a\u548c\u4e0a\u4e00\u8f6e\u6bd4\u8f83\u5417\uff1f\u8fd9\u4e00\u8f6e\u4f60\u4e5f\u53ea\u8bb0\u4f4f\u4e86\u4f4d\u7f6e\u3002"
-                    }
-                }
-            }
-        },
-        "The third round. Now, you need to compare current position with the position from the first round. What it the same? No, in the first round position was the center.": {
-            "extractionState": "manual",
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "The third round. Now, you need to compare current position with the position from the first round. What it the same? No, in the first round position was the center."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Trzecia runda. Teraz nale\u017cy por\u00f3wna\u0107 aktualn\u0105 pozycj\u0119 z pozycj\u0105 z pierwszej rundy. Czy jest taka sama? Nie, w pierwszej rundzie pozycja by\u0142a \u015brodkowa."
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Die dritte Runde. Jetzt m\u00fcssen Sie die aktuelle Position mit der Position aus der ersten Runde vergleichen. Ist es die gleiche? Nein, in der ersten Runde war die Position die Mitte."
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "La tercera ronda. Ahora, tienes que comparar la posici\u00f3n actual con la posici\u00f3n de la primera ronda. \u00bfQu\u00e9 es lo mismo? No, en la primera ronda la posici\u00f3n era el centro."
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc138 \ubc88\uc9f8 \ub77c\uc6b4\ub4dc. \uc774\uc81c \ud604\uc7ac \uc704\uce58\uc640 \uccab \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc758 \uc704\uce58\ub97c \ube44\uad50\ud574\uc57c \ud569\ub2c8\ub2e4. \ub611\uac19\ub098\uc694? \uc544\ub2c8\uc694, \uccab \ubc88\uc9f8 \ub77c\uc6b4\ub4dc\uc758 \uc704\uce58\ub294 \uc911\uc559\uc774\uc5c8\uc2b5\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u7b2c\u4e09\u8f6e\u3002\u73b0\u5728\uff0c\u4f60\u9700\u8981\u5c06\u5f53\u524d\u4f4d\u7f6e\u4e0e\u7b2c\u4e00\u8f6e\u7684\u4f4d\u7f6e\u8fdb\u884c\u6bd4\u8f83\u3002\u4e00\u6837\u5417\uff1f\u4e0d\u4e00\u6837\uff0c\u7b2c\u4e00\u8f6e\u7684\u4f4d\u7f6e\u662f\u4e2d\u950b\u3002"
-                    }
-                }
-            }
-        },
-        "Tutorial": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Tutorial"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Tutorial"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Tutorial"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\ud29c\ud1a0\ub9ac\uc5bc"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Samouczek"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u6559\u7a0b"
-                    }
-                }
-            }
-        },
-        "Yes, delete": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Ja, l\u00f6schen"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Yes, delete"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "S\u00ed, borrar"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc608, \uc0ad\uc81c"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Tak, usu\u0144"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u662f\uff0c\u5220\u9664"
-                    }
-                }
-            }
-        },
-        "You haven't unlock this level yet": {
-            "localizations": {
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Du hast dieses Level noch nicht freigeschaltet"
-                    }
-                },
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "You haven't unlock this level yet"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "A\u00fan no has desbloqueado este nivel"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uc544\uc9c1 \uc774 \ub808\ubca8\uc744 \uc7a0\uae08 \ud574\uc81c\ud558\uc9c0 \uc54a\uc558\uc2b5\ub2c8\ub2e4."
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Nie odblokowa\u0142e\u015b jeszcze tego poziomu"
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u60a8\u5c1a\u672a\u89e3\u9501\u8fd9\u4e00\u5173\u5361"
-                    }
-                }
-            }
-        },
-        "You need to finish the level %@ before that": {
-            "localizations": {
-                "en": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "You need to finish the level %@ before that"
-                    }
-                },
-                "pl": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Wcze\u015bniej musisz uko\u0144czy\u0107 poziom %@"
-                    }
-                },
-                "de": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Du musst das Level %@ vorher beenden"
-                    }
-                },
-                "es": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "Tienes que terminar el nivel %@ antes de que"
-                    }
-                },
-                "ko": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\uadf8 \uc804\uc5d0 %@ \ub808\ubca8\uc744 \uc644\ub8cc\ud574\uc57c \ud569\ub2c8\ub2e4."
-                    }
-                },
-                "zh-Hans": {
-                    "stringUnit": {
-                        "state": "translated",
-                        "value": "\u5728\u6b64\u4e4b\u524d\uff0c\u60a8\u9700\u8981\u5b8c\u6210 %@ \u5173\u5361"
-                    }
-                }
-            }
+  "sourceLanguage" : "en",
+  "strings" : {
+    "-" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " - "
+          }
         }
+      }
     },
-    "version": "1.0"
+    "%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "Are you sure you want to remove this game history record?" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sind Sie sicher, dass Sie diesen Eintrag aus dem Spielverlauf entfernen möchten?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Are you sure you want to remove this game history record?"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Estás seguro de que quieres eliminar este registro del historial del juego?"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 게임 기록 기록을 삭제하시겠습니까?"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czy na pewno chcesz usunąć ten zapis historii gry?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您确定要删除此游戏历史记录吗？"
+          }
+        }
+      }
+    },
+    "author_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peter Drucker"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peter Drucker"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peter Drucker"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "피터 드러커"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peter Drucker"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "彼得-德鲁克"
+          }
+        }
+      }
+    },
+    "author_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mahatma Gandhil"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mahatma Gandhil"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mahatma Gandhil"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마하트마 간딜"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mahatma Gandhil"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圣雄甘地"
+          }
+        }
+      }
+    },
+    "author_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Winston Churchill"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Winston Churchill"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Winston Churchill"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "윈스턴 처칠"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Winston Churchill"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "邱吉尔"
+          }
+        }
+      }
+    },
+    "author_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albert Einstein"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albert Einstein"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albert Einstein"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알버트 아인슈타인"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Albert Einstein"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "阿尔伯特-爱因斯坦"
+          }
+        }
+      }
+    },
+    "author_5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frank Herbert"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frank Herbert"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frank Herbert"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "프랭크 허버트"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Frank Herbert"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "弗兰克-赫伯特"
+          }
+        }
+      }
+    },
+    "author_6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benjamin Franklin"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benjamin Franklin"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benjamin Franklin"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벤자민 프랭클린"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benjamin Franklin"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "本杰明-富兰克林"
+          }
+        }
+      }
+    },
+    "author_7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthony J. D'Angelo"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthony J. D’Angelo"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthony J. D'Angelo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앤서니 J. 디안젤로"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anthony J. D'Angelo"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安东尼-J-达杰洛"
+          }
+        }
+      }
+    },
+    "author_8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marvin Minsky"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marvin Minsky"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marvin Minsky"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마빈 민스키"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marvin Minsky"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "马文-明斯基"
+          }
+        }
+      }
+    },
+    "author_9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "John Cleese"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "John Cleese"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "John Cleese"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "존 클리즈"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "John Cleese"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "约翰-克莱斯"
+          }
+        }
+      }
+    },
+    "author_10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henry Ford"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henry Ford"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henry Ford"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "헨리 포드"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henry Ford"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "亨利-福特"
+          }
+        }
+      }
+    },
+    "author_11" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richard Feynman"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richard Feynman"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richard Feynman"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "리처드 파인만"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richard Feynman"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "理查德-费曼"
+          }
+        }
+      }
+    },
+    "author_12" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B.B. King"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B.B. King"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B.B. King"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B.B. King"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B.B. King"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "B.B. 金"
+          }
+        }
+      }
+    },
+    "Back" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "뒤로"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powrót"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "返回"
+          }
+        }
+      }
+    },
+    "Back to Menu" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zurück zum Menü"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to Menu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver al menú"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴로 돌아가기"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powrót do menu"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "返回菜单"
+          }
+        }
+      }
+    },
+    "Below the board there are two buttons: Position and Sound." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unterhalb der Platine befinden sich zwei Tasten: Position und Ton."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Below the board there are two buttons: Position and Sound."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Debajo del tablero hay dos botones: Posición y Sonido."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보드 아래에는 두 개의 버튼이 있습니다: 위치 및 사운드입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poniżej tablicy znajdują się dwa przyciski: Pozycja i Dźwięk."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电路板下方有两个按钮：位置和声音。"
+          }
+        }
+      }
+    },
+    "Choose N" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wählen Sie N"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose N"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elija N"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N 선택"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz N"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择 N"
+          }
+        }
+      }
+    },
+    "Correct selection" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtige Auswahl"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correct selection"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selección correcta"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "올바른 선택"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prawidłowy wybór"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正确选择"
+          }
+        }
+      }
+    },
+    "Correct: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Richtig: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correct: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Correcto: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정답: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poprawnie: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正确：%@"
+          }
+        }
+      }
+    },
+    "Do you remeber position from the third round? Yes, it's the same, this in the only one round when you should press Position button." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erinnern Sie sich an die Position in der dritten Runde? Ja, das ist dasselbe. Das ist die einzige Runde, in der Sie die Positionstaste drücken sollten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you remeber position from the third round? Yes, it's the same, this in the only one round when you should press Position button."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Recuerdas la posición de la tercera ronda? Sí, es lo mismo, esta es la única ronda en la que debes pulsar el botón Posición."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세 번째 라운드의 위치를 기억하시나요? 네, 포지션 버튼을 눌러야 하는 유일한 라운드입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pamiętasz pozycję z trzeciej rundy? Tak, jest taka sama, to jedyna runda, w której należy nacisnąć przycisk pozycji."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还记得第三轮的位置吗？是的，是一样的，只有这一轮您应该按 '位置 '按钮。"
+          }
+        }
+      }
+    },
+    "Do you see what is difficult in this game? Everytime N is increading the game becoming harder and harder." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siehst du, was in diesem Spiel schwierig ist? Jedes Mal, wenn N inkrementiert, wird das Spiel schwieriger und schwieriger."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do you see what is difficult in this game? Everytime N is increading the game becoming harder and harder."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Ves lo que es difícil en este juego? Cada vez que N se incrementa el juego se vuelve más y más difícil."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 게임에서 무엇이 어려운지 보이시나요? N이 점점 더 어려워질 때마다 게임이 점점 더 어려워집니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czy widzisz, co jest trudne w tej grze? Za każdym razem, gdy N rośnie, gra staje się coraz trudniejsza."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你知道这个游戏难在哪里吗？每增加一个 N，游戏就会变得越来越难。"
+          }
+        }
+      }
+    },
+    "Dual N-Back is a game with square board divided smaller squeres, by default it's 3x3." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual N-Back ist ein Spiel mit quadratischem Spielbrett, das in kleinere Quadrate unterteilt ist, standardmäßig ist es 3x3."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual N-Back is a game with square board divided smaller squeres, by default it's 3x3."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual N-Back es un juego con tablero cuadrado dividido en cuadrados más pequeños, por defecto es 3x3."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "듀얼 엔백은 정사각형 보드를 더 작은 사각형으로 나눈 게임으로, 기본적으로 3x3입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual N-Back to gra z kwadratową planszą podzieloną na mniejsze kwadraty, domyślnie 3x3."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dual N-Back 是一款将方形棋盘分割成更小方格的游戏，默认为 3x3。"
+          }
+        }
+      }
+    },
+    "Incorrect selection" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falsche Auswahl"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incorrect selection"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selección incorrecta"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잘못된 선택"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieprawidłowy wybór"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择不正确"
+          }
+        }
+      }
+    },
+    "Incorrect: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falsch: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incorrect: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Incorrecto: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잘못됨: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieprawidłowo: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不正确：%@"
+          }
+        }
+      }
+    },
+    "Let's assume that N is equal 1 and focus only on positions. This is the first round, so you can't compare it with previous but you need to remember its position. It's right upper corner." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gehen wir davon aus, dass N gleich 1 ist, und konzentrieren wir uns nur auf die Positionen. Dies ist die erste Runde, also kann man sie nicht mit den vorherigen vergleichen, aber man muss sich ihre Position merken. Es ist die rechte obere Ecke."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Let's assume that N is equal 1 and focus only on positions. This is the first round, so you can't compare it with previous but you need to remember its position. It's right upper corner."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supongamos que N es igual a 1 y centrémonos sólo en las posiciones. Esta es la primera ronda, por lo que no se puede comparar con las anteriores, pero hay que recordar su posición. Es la esquina superior derecha."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N이 1이라고 가정하고 포지션에만 집중해 봅시다. 이번이 첫 번째 라운드이므로 이전 라운드와 비교할 수는 없지만 위치를 기억해야 합니다. 오른쪽 상단 모서리입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Załóżmy, że N jest równe 1 i skupmy się tylko na pozycjach. Jest to pierwsza runda, więc nie można jej porównać z poprzednimi, ale trzeba zapamiętać jej pozycję. Jest to prawy górny róg."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "假设 N 等于 1，只关注位置。这是第一轮，所以不能与前一轮比较，但需要记住它的位置。它在右上角。"
+          }
+        }
+      }
+    },
+    "Level: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ebene: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Level: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nivel: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "레벨: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poziom: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "级别： %@"
+          }
+        }
+      }
+    },
+    "Menu" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menü"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menú"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menu"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "菜单"
+          }
+        }
+      }
+    },
+    "Missed" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verpasst"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missed"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falta"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "누락됨"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brakuje"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "错过"
+          }
+        }
+      }
+    },
+    "Missed: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verfehlt: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missed: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Falta: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "부재중: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "错过：%@"
+          }
+        }
+      }
+    },
+    "Music powered by @gabriele_pollina" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Musik powered by @gabierele_pollina"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Music powered by @gabierele_pollina"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Música de @gabierele_pollina"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가비엘레 폴리나 제공 음악"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muzyka dostarczona przez @gabierele_pollina"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "音乐由 @gabierele_pollina 提供"
+          }
+        }
+      }
+    },
+    "N: %@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: %@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: %@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: %@"
+          }
+        }
+      }
+    },
+    "N: 1" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 1"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 1"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 1"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 1"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 1"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 1"
+          }
+        }
+      }
+    },
+    "N: 2" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 2"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 2"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 2"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 2"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 2"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "N: 2"
+          }
+        }
+      }
+    },
+    "Next" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Next"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siguiente"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Następny"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下一页"
+          }
+        }
+      }
+    },
+    "No, cancel" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nein, abbrechen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No, cancel"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No, cancelar"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아니요, 취소"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie, anuluj"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "否，取消"
+          }
+        }
+      }
+    },
+    "Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just remember, the center this time." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nehmen wir nun an, N ist gleich 2. Dann müssen Sie die aktuelle Position mit der von vor zwei Runden vergleichen. In der ersten Runde erinnerst du dich einfach daran, dass du dieses Mal in der Mitte warst."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just remember, the center this time."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora digamos que N es igual a 2. Entonces necesitas comparar la posición actual con la de hace dos rondas. En la primera ronda que acaba de recordar, el centro esta vez."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 N이 2와 같다고 가정해 봅시다. 따라서 현재 위치를 두 라운드 전과 비교해야 합니다. 첫 번째 라운드에서는 이번에는 중심을 기억하세요."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Załóżmy, że N jest równe 2. Musisz więc porównać aktualną pozycję z pozycją sprzed dwóch rund. W pierwszej rundzie po prostu zapamiętałeś, że tym razem jest to środek."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在假设 N 等于 2。因此，您需要将当前位置与两轮之前的位置进行比较。在第一轮中，你只需记住，这次的中心点。"
+          }
+        }
+      }
+    },
+    "Now, you need to compare current position with the position from the second round. What it the same? No, it's right center, and there was bottom right." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nun müssen Sie die aktuelle Position mit der Position aus der zweiten Runde vergleichen. Ist es die gleiche? Nein, es ist rechts in der Mitte, und dort war unten rechts."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now, you need to compare current position with the position from the second round. What it the same? No, it's right center, and there was bottom right."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora, tienes que comparar la posición actual con la posición de la segunda ronda. ¿Es la misma? No, es centro derecha, y había abajo a la derecha."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 현재 위치와 두 번째 라운드의 위치를 비교해야 합니다. 똑같나요? 아니요, 오른쪽 중앙에 있고 오른쪽 아래에 있습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teraz należy porównać aktualną pozycję z pozycją z drugiej rundy. Czy jest taka sama? Nie, to prawy środek, a tam był prawy dolny róg."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在，您需要将当前位置与第二轮的位置进行比较。一样吗？不，是右边中间，还有右下角。"
+          }
+        }
+      }
+    },
+    "OK" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好的"
+          }
+        }
+      }
+    },
+    "On each round one of the squares is selected and one letter is spoken. Your job is to decide if position or sound or both was/were the same N round(s) ago. Let's see example on next screen..." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In jeder Runde wird eines der Quadrate ausgewählt und ein Buchstabe gesprochen. Deine Aufgabe ist es, zu entscheiden, ob die Position oder der Klang oder beides vor N Runden gleich war(en). Sehen wir uns das Beispiel auf dem nächsten Bildschirm an..."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On each round one of the squares is selected and one letter is spoken. Your job is to decide if position or sound or both was/were the same N round(s) ago. Let's see example on next screen..."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En cada ronda se selecciona una de las casillas y se pronuncia una letra. Tu trabajo es decidir si la posición, el sonido o ambos eran los mismos hace N rondas. Veamos un ejemplo en la siguiente pantalla..."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "각 라운드에서 사각형 중 하나를 선택하고 한 글자를 말합니다. 여러분의 임무는 위치나 소리 또는 둘 다 N 라운드 전에 같은지 아닌지를 결정하는 것입니다. 다음 화면에서 예시를 보겠습니다..."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W każdej rundzie wybierane jest jedno z pól i wypowiadana jest jedna litera. Twoim zadaniem jest zdecydować, czy pozycja lub dźwięk lub oba były takie same N rund temu. Zobaczmy przykład na następnym ekranie..."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每轮选择一个方格并说出一个字母。您的任务是判断 N 轮之前的位置、声音或两者是否相同。请看下一屏的示例..."
+          }
+        }
+      }
+    },
+    "Play" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spielen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jugar"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "플레이"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Grać"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "游戏"
+          }
+        }
+      }
+    },
+    "Play again" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erneut spielen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play again"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir de nuevo"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 재생"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zagraj ponownie"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次播放"
+          }
+        }
+      }
+    },
+    "Position" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Position"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Position"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posición"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pozycja"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "职位"
+          }
+        }
+      }
+    },
+    "quote_1" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wir akzeptieren heute die Tatsache, dass Lernen ein lebenslanger Prozess ist, bei dem es darum geht, mit dem Wandel Schritt zu halten. Und die vordringlichste Aufgabe besteht darin, den Menschen das Lernen beizubringen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We now accept the fact that learning is a lifelong process of keeping abreast of change. And the most pressing task is to teach people how to learn."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora aceptamos el hecho de que el aprendizaje es un proceso que dura toda la vida para mantenerse al día de los cambios. Y la tarea más apremiante es enseñar a aprender."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 우리는 학습이 변화를 따라잡기 위한 평생의 과정이라는 사실을 인정합니다. 그리고 가장 시급한 과제는 사람들에게 학습하는 방법을 가르치는 것입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obecnie akceptujemy fakt, że uczenie się jest trwającym całe życie procesem nadążania za zmianami. A najpilniejszym zadaniem jest nauczenie ludzi, jak się uczyć."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我们现在已经认识到，学习是一个与时俱进的终身过程。而当务之急是教会人们如何学习。"
+          }
+        }
+      }
+    },
+    "quote_2" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebe so, als würdest du morgen sterben. Lerne so, als würdest du ewig leben."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Live as if you were to die tomorrow. Learn as if you were to live forever."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vive como si fueras a morir mañana. Aprende como si fueras a vivir para siempre."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내일 죽는다는 생각으로 살아가세요. 영원히 살 것처럼 배우세요."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Żyj tak, jakbyś miał umrzeć jutro. Ucz się tak, jakbyś miał żyć wiecznie."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "就像明天就会死去一样生活。学习就像永生一样。"
+          }
+        }
+      }
+    },
+    "quote_3" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ich bin immer bereit zu lernen, auch wenn ich nicht immer gerne belehrt werde."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I am always ready to learn although I do not always like being taught."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siempre estoy dispuesto a aprender, aunque no siempre me gusta que me enseñen."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저는 항상 가르침을 받는 것을 좋아하지는 않지만 항상 배울 준비가 되어 있습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zawsze jestem gotowy do nauki, choć nie zawsze lubię być nauczany."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "虽然我并不总是喜欢别人教我，但我总是乐于学习。"
+          }
+        }
+      }
+    },
+    "quote_4" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weisheit ist kein Produkt der Schulbildung, sondern des lebenslangen Versuchs, sie zu erwerben."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wisdom is not a product of schooling but of the lifelong attempt to acquire it."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La sabiduría no es producto de la escolarización, sino del intento permanente de adquirirla."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지혜는 학교 교육의 산물이 아니라 평생에 걸친 노력의 산물입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mądrość nie jest efektem nauki, lecz trwających całe życie prób jej zdobycia."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "智慧不是学校教育的产物，而是终身努力获取的结果。"
+          }
+        }
+      }
+    },
+    "quote_5" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aus Büchern und Beispielen lernt man nur, dass man bestimmte Dinge tun kann. Tatsächliches Lernen erfordert, dass man diese Dinge tut."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "One learns from books and example only that certain things can be done. Actual learning requires that you do those things."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De los libros y del ejemplo sólo se aprende que se pueden hacer ciertas cosas. El aprendizaje real requiere hacer esas cosas."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "책과 예시를 통해서만 특정 일을 할 수 있다는 것을 배웁니다. 실제 학습에는 직접 해보는 것이 필요합니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z książek i przykładów dowiadujemy się jedynie, że pewne rzeczy można zrobić. Rzeczywista nauka wymaga robienia tych rzeczy."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一个人从书本和实例中学到的只是某些事情是可以做到的。真正的学习需要你去做这些事情。"
+          }
+        }
+      }
+    },
+    "quote_6" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sage es mir und ich vergesse es, lehre es mich und ich kann mich erinnern, beziehe es mit ein und ich lerne."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tell me and I forget, teach me and I may remember, involve me and I learn."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dímelo y lo olvido, enséñamelo y puede que lo recuerde, involúcrame y lo aprendo."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알려주면 잊어버리고, 가르쳐주면 기억하고, 참여하면 배우게 됩니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiedz mi, a zapomnę, naucz mnie, a może zapamiętam, zaangażuj mnie, a się nauczę."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "告诉我，我会忘记；教我，我会记住；让我参与，我会学会。"
+          }
+        }
+      }
+    },
+    "quote_7" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entwickeln Sie eine Leidenschaft für das Lernen. Wenn Sie das tun, werden Sie nie aufhören zu wachsen."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Develop a passion for learning. If you do, you will never cease to grow."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desarrolla la pasión por aprender. Si lo haces, nunca dejarás de crecer."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배움에 대한 열정을 키우세요. 그렇게 하면 성장을 멈추지 않을 것입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rozwijaj w sobie pasję do nauki. Jeśli to zrobisz, nigdy nie przestaniesz się rozwijać."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "培养学习热情。只有这样，你才能不断成长。"
+          }
+        }
+      }
+    },
+    "quote_8" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Man versteht etwas erst, wenn man es auf mehr als eine Weise lernt."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You don’t understand anything until you learn it more than one way."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No entiendes nada hasta que lo aprendes de más de una manera."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 가지 이상의 방법을 배우기 전까지는 아무것도 이해하지 못합니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie zrozumiesz niczego, dopóki nie nauczysz się tego na więcej niż jeden sposób."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有通过多种途径学习，你才能理解任何事情。"
+          }
+        }
+      }
+    },
+    "quote_9" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wer am meisten lacht, lernt am besten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "He who laughs most, learns best."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quien más ríe, mejor aprende."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 많이 웃는 사람이 가장 잘 배웁니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ten, kto śmieje się najwięcej, uczy się najlepiej."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "笑得最多的人，学得最好。"
+          }
+        }
+      }
+    },
+    "quote_10" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wer aufhört zu lernen, ist alt, ob mit zwanzig oder achtzig. Wer ständig lernt, bleibt jung. Das Größte im Leben ist es, seinen Geist jung zu halten."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quien deja de aprender envejece, tenga veinte u ochenta años. Quien sigue aprendiendo se mantiene joven. Lo mejor de la vida es mantener la mente joven."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스무 살이든 여든 살이든 배움을 멈추는 사람은 늙습니다. 계속 배우는 사람은 젊음을 유지합니다. 인생에서 가장 중요한 것은 마음을 젊게 유지하는 것입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Każdy, kto przestaje się uczyć, jest stary, niezależnie od tego, czy ma dwadzieścia czy osiemdziesiąt lat. Każdy, kto ciągle się uczy, pozostaje młody. Najważniejszą rzeczą w życiu jest zachowanie młodego umysłu."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "任何停止学习的人都会老去，无论是二十岁还是八十岁。不断学习的人永远年轻。生命中最伟大的事情就是保持思想年轻。"
+          }
+        }
+      }
+    },
+    "quote_11" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studieren Sie das, was Sie am meisten interessiert, auf möglichst undisziplinierte, respektlose und originelle Weise."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Study hard what interests you the most in the most undisciplined, irreverent and original manner possible."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estudia con ahínco lo que más te interese de la forma más indisciplinada, irreverente y original posible."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 관심 있는 분야를 가장 자유분방하고 경건하며 독창적인 방식으로 열심히 공부하세요."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Studiuj intensywnie to, co interesuje cię najbardziej, w najbardziej niezdyscyplinowany, lekceważący i oryginalny sposób."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以最无拘无束、最不羁、最新颖的方式，努力学习你最感兴趣的东西。"
+          }
+        }
+      }
+    },
+    "quote_12" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Das Schöne am Lernen ist, dass es einem niemand wegnehmen kann."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The beautiful thing about learning is nobody can take it away from you."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lo bonito de aprender es que nadie te lo puede quitar."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배움의 아름다운 점은 누구도 빼앗을 수 없다는 것입니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piękną rzeczą w nauce jest to, że nikt nie może ci jej odebrać."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "学习的美妙之处在于，没有人能夺走它。"
+          }
+        }
+      }
+    },
+    "Results" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ergebnisse"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Results"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resultados"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "결과"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyniki"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "成果"
+          }
+        }
+      }
+    },
+    "Round 2. Now position is left upper corner. N is equal to 1 so you need to remember only previous position. Was the previous left upper corner? It wasn't, it was right upper corner, so you don't press the 'Position' button." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runde 2. Jetzt ist die Position die linke obere Ecke. N ist gleich 1, also musst du dir nur die vorherige Position merken. War die vorherige linke obere Ecke? Nein, es war die rechte obere Ecke, also drückst du nicht auf die Schaltfläche 'Position'."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Round 2. Now position is left upper corner. N is equal to 1 so you need to remember only previous position. Was the previous left upper corner? It wasn't, it was right upper corner, so you don't press the 'Position' button."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Segundo asalto. Ahora la posición es la esquina superior izquierda. N es igual a 1 por lo que sólo necesita recordar la posición anterior. ¿La anterior era la esquina superior izquierda? No lo era, era la esquina superior derecha, así que no pulses el botón 'Posición'."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2라운드. 이제 위치는 왼쪽 상단 모서리입니다. N은 1과 같으므로 이전 위치만 기억하면 됩니다. 이전 위치가 왼쪽 상단 모서리였나요? 아니요, 오른쪽 상단 모서리였으므로 '위치' 버튼을 누르지 않습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runda 2. Teraz pozycją jest lewy górny róg. N jest równe 1, więc musisz zapamiętać tylko poprzednią pozycję. Czy poprzednią pozycją był lewy górny róg? Nie, to był prawy górny róg, więc nie naciskasz przycisku 'Pozycja'."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第 2 轮。现在的位置是左上角。N 等于 1，因此您只需记住之前的位置。上一个位置是左上角吗？不是，是右上角，所以你不能按 '位置 '按钮。"
+          }
+        }
+      }
+    },
+    "Round 3. Now position is right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It wasn't it was left upper corner, so you don't press the 'Position' button." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runde 3. Jetzt ist die Position wieder die rechte obere Ecke. N ist gleich 1, also prüfe nur die letzte. War es die rechte obere Ecke? War es nicht, es war die linke obere Ecke, also drückst du nicht auf die Schaltfläche 'Position'."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Round 3. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It wasn't it was left upper corner, so you don't press the 'Position' button."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ronda 3. Ahora la posición es de nuevo la esquina superior derecha. N es igual a 1, así que comprueba sólo la última. ¿Era la esquina superior derecha? No, era la esquina superior izquierda, así que no pulses el botón 'Posición'."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3라운드. 이제 위치는 다시 오른쪽 상단 모서리입니다. N은 1과 같으므로 마지막 하나만 확인합니다. 오른쪽 상단 모서리였나요? 왼쪽 위 모서리가 아니었으므로 '위치' 버튼을 누르지 않습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runda 3. Teraz pozycja jest ponownie w prawym górnym rogu. N jest równe 1, więc sprawdź tylko ostatni. Czy był to prawy górny róg? Nie, to był lewy górny róg, więc nie naciskasz przycisku 'Pozycja'."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第 3 轮。现在位置又是右上角。N 等于 1，所以只检查最后一个。是右上角吗？不是，是左上角，所以不用按 '位置 '按钮。"
+          }
+        }
+      }
+    },
+    "Round 4. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It was, so you should press the 'Position' button." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runde 4. Jetzt ist die Position wieder die rechte obere Ecke. N ist gleich 1, also prüfe nur die letzte. War es die rechte obere Ecke? Ja, also solltest du die Schaltfläche 'Position' drücken."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Round 4. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It was, so you should press the 'Position' button."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ronda 4. Ahora la posición es de nuevo la esquina superior derecha. N es igual a 1, así que comprueba sólo la última. ¿Era la esquina superior derecha? Sí, así que pulsa el botón 'Posición'."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4라운드. 이제 위치는 다시 오른쪽 상단 모서리입니다. N은 1과 같으므로 마지막 하나만 확인합니다. 오른쪽 상단 모서리였나요? 맞았으므로 '위치' 버튼을 눌러야 합니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runda 4. Teraz pozycja jest ponownie w prawym górnym rogu. N jest równe 1, więc sprawdź tylko ostatni. Czy był to prawy górny róg? Tak, więc powinieneś nacisnąć przycisk 'Pozycja'."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第 4 轮。现在位置又是右上角。N 等于 1，所以只检查最后一个。是右上角吗？是的，所以你应该按下 '位置 '按钮。"
+          }
+        }
+      }
+    },
+    "Round: %@/%@" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runde: %1$@/%2$@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Round: %1$@/%2$@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ronda: %1$@/%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라운드: %1$@/%2$@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Runda: %1$@/%2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回合：%1$@/%2$@"
+          }
+        }
+      }
+    },
+    "Sound" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sound"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonido"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사운드"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dźwięk"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "声音"
+          }
+        }
+      }
+    },
+    "Statistics" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistik"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistics"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estadísticas"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "통계"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statystyki"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "统计资料"
+          }
+        }
+      }
+    },
+    "The second round. Do you compare it the previous? No, you don't because N is equal to 2. This round you also only remember the position." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die zweite Runde. Vergleichen Sie sie mit der vorherigen? Nein, denn N ist gleich 2. Auch in dieser Runde merken Sie sich nur die Position."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The second round. Do you compare it the previous? No, you don't because N is equal to 2. This round you also only remember the position."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La segunda ronda. ¿La comparas con la anterior? No, no lo haces porque N es igual a 2. En esta ronda también sólo recuerdas la posición."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두 번째 라운드입니다. 이전 라운드와 비교하시나요? 아니요, N이 2와 같기 때문에 비교하지 않습니다. 이번 라운드에서도 위치만 기억합니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Druga runda. Czy porównujesz ją z poprzednią? Nie, ponieważ N jest równe 2. W tej rundzie pamiętasz tylko pozycję."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第二轮。你会和上一轮比较吗？这一轮你也只记住了位置。"
+          }
+        }
+      }
+    },
+    "The third round. Now, you need to compare current position with the position from the first round. What it the same? No, in the first round position was the center." : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die dritte Runde. Jetzt müssen Sie die aktuelle Position mit der Position aus der ersten Runde vergleichen. Ist es die gleiche? Nein, in der ersten Runde war die Position die Mitte."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The third round. Now, you need to compare current position with the position from the first round. What it the same? No, in the first round position was the center."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La tercera ronda. Ahora, tienes que comparar la posición actual con la posición de la primera ronda. ¿Qué es lo mismo? No, en la primera ronda la posición era el centro."
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세 번째 라운드. 이제 현재 위치와 첫 번째 라운드의 위치를 비교해야 합니다. 똑같나요? 아니요, 첫 번째 라운드의 위치는 중앙이었습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trzecia runda. Teraz należy porównać aktualną pozycję z pozycją z pierwszej rundy. Czy jest taka sama? Nie, w pierwszej rundzie pozycja była środkowa."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第三轮。现在，你需要将当前位置与第一轮的位置进行比较。一样吗？不一样，第一轮的位置是中锋。"
+          }
+        }
+      }
+    },
+    "Tutorial" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutorial"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutorial"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutorial"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "튜토리얼"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samouczek"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "教程"
+          }
+        }
+      }
+    },
+    "Yes, delete" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ja, löschen"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yes, delete"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sí, borrar"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예, 삭제"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak, usuń"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "是，删除"
+          }
+        }
+      }
+    },
+    "You haven't unlock this level yet" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast dieses Level noch nicht freigeschaltet"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven't unlock this level yet"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no has desbloqueado este nivel"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 이 레벨을 잠금 해제하지 않았습니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie odblokowałeś jeszcze tego poziomu"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "您尚未解锁这一关卡"
+          }
+        }
+      }
+    },
+    "You need to finish the level %@ before that" : {
+      "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du musst das Level %@ vorher beenden"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You need to finish the level %@ before that"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tienes que terminar el nivel %@ antes de que"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그 전에 %@ 레벨을 완료해야 합니다."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wcześniej musisz ukończyć poziom %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在此之前，您需要完成 %@ 关卡"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
 }

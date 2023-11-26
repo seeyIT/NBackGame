@@ -20,6 +20,7 @@ class GameState<T>: ViewState<T> {
 }
 
 enum MenuViewState {
+    case splashScreen
     case menu
     case tutorial
     case game

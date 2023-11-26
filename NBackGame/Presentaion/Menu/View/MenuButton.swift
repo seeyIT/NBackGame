@@ -61,6 +61,12 @@ struct MenuButton: View {
                     Image(systemName: rightIconName)
                         .frame(width: imageSize, height: imageSize)
                 }
+                if rightIconName == nil,
+                   leftIconName == nil {
+                    Text(LocalizedStringKey(text.description))
+                        .font(.headline)
+                        .frame(alignment: .center)
+                }
             }
             .padding()
             .foregroundColor(Color.blue)

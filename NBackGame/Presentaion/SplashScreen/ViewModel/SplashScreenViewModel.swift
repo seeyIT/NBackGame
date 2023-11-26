@@ -16,7 +16,7 @@ class SplashScreenViewModel: ObservableObject {
     }
     
     func showMenu() {
-        log("Splash Screen view showMenu")
+//        log("Splash Screen view showMenu")
         menuCoordinator.showMenu()
     }
 }

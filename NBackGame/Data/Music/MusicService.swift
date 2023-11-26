@@ -38,9 +38,9 @@ class MusicService {
         if let audioURL = Bundle.main.url(forResource: "background", withExtension: "m4a") {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: audioURL)
-                audioPlayer?.volume = 0.5
                 audioPlayer?.numberOfLoops = -1
                 audioPlayer?.play()
+                audioPlayer?.volume = 0.005
             } catch {
                 print("Couldn't play audio, error: \(error)")
             }

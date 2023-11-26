@@ -6,27 +6,60 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct GameSummaryButtons: View {
-    @ObservedObject var viewModel: GameSummaryViewModel
     @Environment(\.sizeCategory) var sizeCategory
+    @Environment(\.requestReview) var requestReview
+    @AppStorage("userWasAskedForReview") private var userWasAskedForReview = false
+    
+    @ObservedObject var viewModel: GameSummaryViewModel
+    @State var userWasAsked = false
     
     var body: some View {
-        if sizeCategory > ContentSizeCategory.extraExtraLarge {
-            VStack {
-                createPlayAgainButton()
-                createBackToMenuButton()
+        Group {
+            if sizeCategory > ContentSizeCategory.extraExtraLarge {
+                VStack {
+                    createRateAppButton()
+                    createPlayAgainButton()
+                    createBackToMenuButton()
+                }
+                .padding()
+            } else {
+                VStack {
+                    createRateAppButton()
+                    HStack {
+                        Spacer()
+                        createPlayAgainButton()
+                        Spacer()
+                        createBackToMenuButton()
+                        Spacer()
+                    }
+                }
+                .padding()
             }
-            .padding()
+        }
+        .onDisappear(perform: {
+            if userWasAsked {
+                userWasAskedForReview = true
+            }
+        })
+    }
+    
+    @ViewBuilder
+    private func createRateAppButton() -> some View {
+        if !userWasAskedForReview {
+            MenuButton(
+                text: "Help me to share this app with other people! ❤️",
+                accessibilityIdentifier: AccessibilityIdentifier.GameSummary.playAgainButton,
+                onTapFeedbackImpact: .medium,
+                onTap: {
+                    self.userWasAsked = true
+                    requestReview()
+                }
+            )
         } else {
-            HStack {
-                Spacer()
-                createPlayAgainButton()
-                Spacer()
-                createBackToMenuButton()
-                Spacer()
-            }
-            .padding()
+            EmptyView()
         }
     }
     

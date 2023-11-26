@@ -97,7 +97,6 @@ struct MenuView: View {
                             }
                         )
                         .padding(.bottom, 16)
-                    
                     }
                     
                     if verticalSizeClass == .regular {

@@ -43,7 +43,7 @@ class GameSummaryViewModel: ObservableObject {
     // MARK: - Public functions
     
     func onAppear() {
-        log("GameSummary onAppear")
+//        log("GameSummary onAppear")
         useCases.calculateGameResultUseCase.execute(history: gameInfo.history, level: gameInfo.level) { gameResults in
             self.gameResults = gameResults
             self.saveGame()
@@ -75,12 +75,12 @@ class GameSummaryViewModel: ObservableObject {
     }
     
     func showMenu() {
-        log("GameSummary showMenu")
+//        log("GameSummary showMenu")
         gameCoordinator.showMenu()
     }
     
     func playAgain() {
-        log("GameSummary playAgain")
+//        log("GameSummary playAgain")
         gameCoordinator.playAgain()
     }
     

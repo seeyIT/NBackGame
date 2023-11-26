@@ -14,7 +14,7 @@ struct GameSummaryButtons: View {
     @AppStorage("userWasAskedForReview") private var userWasAskedForReview = false
     
     @ObservedObject var viewModel: GameSummaryViewModel
-    @State var userWasAsked = false
+    @State var userWasAskedThisTime = false
     
     var body: some View {
         Group {
@@ -40,9 +40,11 @@ struct GameSummaryButtons: View {
             }
         }
         .onDisappear(perform: {
-            if userWasAsked {
+            if userWasAskedThisTime {
                 userWasAskedForReview = true
             }
+            log(["UserWasAskedThisTime" : "\(userWasAskedThisTime)",
+                "UserWasAskedForReview" : "\(userWasAskedForReview)"])
         })
     }
     
@@ -54,7 +56,7 @@ struct GameSummaryButtons: View {
                 accessibilityIdentifier: AccessibilityIdentifier.GameSummary.playAgainButton,
                 onTapFeedbackImpact: .medium,
                 onTap: {
-                    self.userWasAsked = true
+                    self.userWasAskedThisTime = true
                     requestReview()
                 }
             )

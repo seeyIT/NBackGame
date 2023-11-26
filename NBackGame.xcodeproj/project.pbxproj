@@ -26,6 +26,8 @@
 		5F3A835D2B1334F200A94FE6 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5F3A835C2B1334F200A94FE6 /* InfoPlist.xcstrings */; };
 		5F3A83602B1337CB00A94FE6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3A835F2B1337CB00A94FE6 /* SplashScreenView.swift */; };
 		5F3A83622B1337E800A94FE6 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3A83612B1337E800A94FE6 /* SplashScreenViewModel.swift */; };
+		5F3A83652B138B8E00A94FE6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C13F92A9C94DC0034B161 /* Logger.swift */; };
+		5F3A83662B138B8E00A94FE6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F69221325CB25F9008A18C9 /* Utils.swift */; };
 		5F3C13DF2A97847E0034B161 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */; };
 		5F3C13FA2A9C94DC0034B161 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C13F92A9C94DC0034B161 /* Logger.swift */; };
 		5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */; };
@@ -451,8 +453,6 @@
 				5F3D21CC265D2F1100E1FCC6 /* Extensions */,
 				5F949A9825FA045F00512ADE /* UseCases */,
 				5F2C25AC258D2D68008D36F1 /* Entities */,
-				5F69221325CB25F9008A18C9 /* Utils.swift */,
-				5F3C13F92A9C94DC0034B161 /* Logger.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -590,6 +590,8 @@
 		5FA4929B25D53E7F00BB2DE3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5F69221325CB25F9008A18C9 /* Utils.swift */,
+				5F3C13F92A9C94DC0034B161 /* Logger.swift */,
 				5FA4929C25D53EA800BB2DE3 /* AccessibilityIdentifier.swift */,
 			);
 			path = Utils;
@@ -1122,11 +1124,13 @@
 			files = (
 				5FA8B29D265FA4400026547A /* SnapshotHelper.swift in Sources */,
 				5F8503C629F1861D006CBFDC /* Helpers.swift in Sources */,
+				5F3A83662B138B8E00A94FE6 /* Utils.swift in Sources */,
 				5FA8B2B1265FAEEE0026547A /* SnapshotUITests.swift in Sources */,
 				5FA492B625D54DD300BB2DE3 /* TutorialUITests.swift in Sources */,
 				5F3D20F5264BDC1100E1FCC6 /* LevelSelectionUITests.swift in Sources */,
 				5FA492A825D5447B00BB2DE3 /* AccessibilityIdentifier.swift in Sources */,
 				5F69227525D2C9DB008A18C9 /* PlayGameUITests.swift in Sources */,
+				5F3A83652B138B8E00A94FE6 /* Logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,14 +27,14 @@ class LevelSelectionViewModel: ObservableObject {
     }
     
     func onAppear() {
-        log("Level selection onAppear")
+//        log("Level selection onAppear")
         self.useCases.getHighestUnlockedLevelUseCase.execute { result in
             self.unlockedLevels = result ?? self.defaultLevelUnlocked
         }
     }
     
     func selectLevel(_ level: Int) {
-        log("Level selection select level: \(level)")
+//        log("Level selection select level: \(level)")
         selectedLevel = level
         if level <= unlockedLevels {
             gameCoordinator.selectLevel(level)

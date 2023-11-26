@@ -12,11 +12,11 @@ struct QuotesView: View {
     
     var body: some View {
         HStack {
-            Text(viewModel.currentQuote.0)
+            Text(LocalizedStringKey(viewModel.currentQuote.0))
                 .font(.headline)
                 .italic()
-                + Text(" - ")
-                + Text(viewModel.currentQuote.1)
+                + Text("-")
+            + Text(LocalizedStringKey(viewModel.currentQuote.1))
                 .bold()
         }
         .padding(20)

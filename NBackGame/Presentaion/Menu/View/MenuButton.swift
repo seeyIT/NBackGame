@@ -50,12 +50,12 @@ struct MenuButton: View {
                 if let leftIconName = leftIconName {
                     Image(systemName: leftIconName)
                         .frame(width: imageSize, height: imageSize)
-                    Text(text)
+                    Text(LocalizedStringKey(text.description))
                         .font(.headline)
                         .frame(alignment: .center)
                 }
                 if let rightIconName = rightIconName {
-                    Text(text)
+                    Text(LocalizedStringKey(text.description))
                         .font(.headline)
                         .frame(alignment: .center)
                     Image(systemName: rightIconName)

@@ -20,6 +20,14 @@ final class MenuDIContainer {
     }
     
     // MARK: - Menu
+    func makeSplashScreenView(menuCoordinator: MenuCoordinator) -> SplashScreenView {
+        SplashScreenView(viewModel: makeSplashScreenViewModel(menuCoordinator: menuCoordinator))
+    }
+    
+    func makeSplashScreenViewModel(menuCoordinator: MenuCoordinator) -> SplashScreenViewModel {
+        return SplashScreenViewModel(menuCoordinator: menuCoordinator)
+    }
+    
     func makeMenuView(menuCoordinator: MenuCoordinator) -> MenuView {
         return MenuView(viewModel: makeMenuViewModel(menuCoordinator: menuCoordinator))
     }

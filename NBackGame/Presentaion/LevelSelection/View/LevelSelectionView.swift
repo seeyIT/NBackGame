@@ -57,7 +57,7 @@ struct LevelSelectionView: View {
                                     
                                 })
                                 .accessibility(identifier: "\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(number)")
-                                Text("\(number)")
+                                Text("\(number.description)")
                                     .font(.title)
                                     .bold()
                                     .foregroundColor(Color.white)
@@ -70,7 +70,7 @@ struct LevelSelectionView: View {
         }
         .navigationBarHidden(true)
         .alert(isPresented: $isShowingAlert) {
-            Alert(title: Text("You haven't unlock this level yet"), message: Text("You need to finish the level \(viewModel.selectedLevel - 1) to start this"), dismissButton: .default(Text("OK")))
+            Alert(title: Text("You haven't unlock this level yet"), message: Text("You need to finish the level \((viewModel.selectedLevel - 1).description) before that"), dismissButton: .default(Text("OK")))
         }
         .onAppear(perform: {
             calculateGridCount()

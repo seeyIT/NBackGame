@@ -16,7 +16,7 @@ protocol MenuCoordinator {
 }
 
 class DefaultMenuCoordinator: MenuCoordinator, ObservableObject {
-    @Published var menuViewState: MenuViewState = .menu
+    @Published var menuViewState: MenuViewState = .splashScreen
     
     func showMenu() {
         menuViewState = .menu
@@ -48,6 +48,8 @@ struct MenuCoordinatorView: View {
     
     var body: some View {
         switch menuCoordinator.menuViewState {
+        case .splashScreen:
+            menuDIContainer.makeSplashScreenView(menuCoordinator: menuCoordinator)
         case .menu:
             menuDIContainer.makeMenuView(menuCoordinator: menuCoordinator)
         case .game:

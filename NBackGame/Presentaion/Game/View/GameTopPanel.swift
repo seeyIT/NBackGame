@@ -18,11 +18,11 @@ struct GameTopPanel: View {
             HStack {
                 GameBackButton(viewModel: viewModel)
                 Spacer()
-                Text("N: \(viewModel.gameCoordinator.gameInfo.level)")
+                Text("N: \(viewModel.gameCoordinator.gameInfo.level.description)")
                     .font(.largeTitle)
                     .foregroundColor(.blue)
                 Spacer()
-                Text("Round: \(viewModel.currentRoundNumber)/\(viewModel.maxRounds)")
+                Text("Round: \(viewModel.currentRoundNumber.description)/\(viewModel.maxRounds.description)")
                     .font(.largeTitle)
                     .foregroundColor(.blue)
             }
@@ -30,21 +30,21 @@ struct GameTopPanel: View {
         } else {
             if sizeCategory > ContentSizeCategory.extraExtraLarge {
                 VStack {
-                    Text("N: \(viewModel.gameCoordinator.gameInfo.level)")
+                    Text("N: \(viewModel.gameCoordinator.gameInfo.level.description)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
-                    Text("Round: \(viewModel.currentRoundNumber)/\(viewModel.maxRounds)")
+                    Text("Round: \(viewModel.currentRoundNumber.description)/\(viewModel.maxRounds.description)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                 }
             } else {
                 HStack {
-                    Text("N: \(viewModel.gameCoordinator.gameInfo.level)")
+                    Text("N: \(viewModel.gameCoordinator.gameInfo.level.description)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                         .padding(.leading)
                     Spacer()
-                    Text("Round: \(viewModel.currentRoundNumber)/\(viewModel.maxRounds)")
+                    Text("Round: \(viewModel.currentRoundNumber.description)/\(viewModel.maxRounds.description)")
                         .font(.largeTitle)
                         .foregroundColor(.blue)
                         .padding(.trailing)

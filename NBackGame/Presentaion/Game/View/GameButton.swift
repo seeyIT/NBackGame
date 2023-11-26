@@ -16,7 +16,7 @@ struct GameButton: View {
             if pressed {
                 PlayCircle()
                     .foregroundColor(Color.blue)
-                Text(text)
+                Text(LocalizedStringKey(text.description))
                     .font(.title)
                     .bold()
                     .foregroundColor(Color.white)
@@ -25,7 +25,7 @@ struct GameButton: View {
             } else {
                 PlayCircle()
                     .stroke(Color.blue, style: StrokeStyle(lineWidth: 2, lineCap: .round, lineJoin: .round))
-                Text(text)
+                Text(LocalizedStringKey(text.description))
                     .font(.title)
                     .bold()
                     .foregroundColor(Color.blue)
@@ -34,6 +34,5 @@ struct GameButton: View {
             }
         }
         .frame(width: 140, height: 140)
-        
     }
 }

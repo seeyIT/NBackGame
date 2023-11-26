@@ -15,7 +15,7 @@ struct TutorialText: View {
     private let text: String
     
     var body: some View {
-        Text(text)
+        Text(LocalizedStringKey(text.description))
             .font(.body)
             .foregroundColor(.white)
             .padding()

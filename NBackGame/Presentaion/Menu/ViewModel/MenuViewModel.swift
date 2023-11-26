@@ -15,18 +15,19 @@ class MenuViewModel: ObservableObject {
     private let menuCoordinator: MenuCoordinator
     private let musicService: MusicService
     
-    private let quotes: [(String, String)] = [("We now accept the fact that learning is a lifelong process of keeping abreast of change. And the most pressing task is to teach people how to learn.", "Peter Drucker"),
-                                              ("Live as if you were to die tomorrow. Learn as if you were to live forever.", "Mahatma Gandhil"),
-                                              ("I am always ready to learn although I do not always like being taught.", "Winston Churchill"),
-                                              ("Wisdom is not a product of schooling but of the lifelong attempt to acquire it.", "Albert Einstein"),
-                                              ("One learns from books and example only that certain things can be done. Actual learning requires that you do those things.", "Frank Herbert"),
-                                              ("Tell me and I forget, teach me and I may remember, involve me and I learn.", "Benjamin Franklin"),
-                                              ("Develop a passion for learning. If you do, you will never cease to grow.", "Anthony J. D’Angelo"),
-                                              ("You don’t understand anything until you learn it more than one way", "Marvin Minsky"),
-                                              ("He who laughs most, learns best.", "John Cleese"),
-                                              ("Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young. The greatest thing in life is to keep your mind young.", "Henry Ford"),
-                                              ("Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.", "Richard Feynman"),
-                                              ("The beautiful thing about learning is nobody can take it away from you.", "B.B. King")
+    private let quotes: [(String, String)] = [
+        ("quote_1", "author_1"),
+        ("quote_2", "author_2"),
+        ("quote_3", "author_3"),
+        ("quote_4", "author_4"),
+        ("quote_5", "author_5"),
+        ("quote_6", "author_6"),
+        ("quote_7", "author_7"),
+        ("quote_8", "author_8"),
+        ("quote_9", "author_9"),
+        ("quote_10", "author_10"),
+        ("quote_11", "author_11"),
+        ("quote_12", "author_12")
     ]
     
     private let musicButtonImages: [String] = ["speaker.wave.3", "speaker"]

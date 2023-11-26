@@ -23,11 +23,11 @@ struct StatisticsView: View {
                     ForEach(viewModel.history, id: \.uuid) { gameHistory in
                         HStack {
                             VStack(alignment: .leading, spacing: 4) {
-                                Text("Correct: \(gameHistory.correctSelectionSound + gameHistory.correctSelectionPosition)")
+                                Text("Correct: \((gameHistory.correctSelectionSound + gameHistory.correctSelectionPosition).description)")
                                     .foregroundColor(.green)
-                                Text("Missed: \(gameHistory.missedSelectionSound + gameHistory.missedSelectionPosition)")
+                                Text("Missed: \((gameHistory.missedSelectionSound + gameHistory.missedSelectionPosition).description)")
                                     .foregroundColor(.yellow)
-                                Text("Incorrect: \(gameHistory.incorrectSelectionSound + gameHistory.incorrectSelectionPosition)")
+                                Text("Incorrect: \((gameHistory.incorrectSelectionSound + gameHistory.incorrectSelectionPosition).description)")
                                     .foregroundColor(.red)
                             }
                             .font(.headline)
@@ -38,7 +38,7 @@ struct StatisticsView: View {
                                 Text(Date(timeIntervalSince1970: TimeInterval(gameHistory.startTime / 1000)), style: .time)
                                     .foregroundColor(.white)
                                 Spacer()
-                                Text("Level: \(gameHistory.level)")
+                                Text("Level: \(gameHistory.level.description)")
                                     .foregroundColor(.white)
                             }
                             VStack {

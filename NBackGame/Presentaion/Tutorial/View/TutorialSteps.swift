@@ -18,7 +18,6 @@ struct TutorialStep1: View {
             .scaleEffect(0.8)
             .disabled(true)
         TutorialText("On each round one of the squares is selected and one letter is spoken. Your job is to decide if position or sound or both was/were the same N round(s) ago. Let's see example on next screen...")
-        
     }
 }
 
@@ -33,7 +32,7 @@ struct TutorialStep2: View {
                 .font(.largeTitle)
                 .foregroundColor(.blue)
             Spacer()
-            Text("Round: 1/4")
+            Text("Round: \(2.description)/\(4.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
             
@@ -46,7 +45,7 @@ struct TutorialStep2: View {
 }
 struct TutorialStep3: View {
     var body: some View {
-        TutorialText("Round 2. Now position is left upper corner. N is equal to 1 so you need to remeber only previous position. Was the previous left upper corner? It wasn't, it was right upper corner, so you don't press Position button.")
+        TutorialText("Round 2. Now position is left upper corner. N is equal to 1 so you need to remember only previous position. Was the previous left upper corner? It wasn't, it was right upper corner, so you don't press the 'Position' button.")
         
         HStack {
             Text("N: 1")
@@ -54,7 +53,7 @@ struct TutorialStep3: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 2/4")
+            Text("Round: \(2.description)/\(4.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -69,7 +68,7 @@ struct TutorialStep3: View {
 
 struct TutorialStep4: View {
     var body: some View {
-        TutorialText("Round 3. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It wasn't it was left upper corner, so you don't press Position button.")
+        TutorialText("Round 3. Now position is right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It wasn't it was left upper corner, so you don't press the 'Position' button.")
         
         HStack {
             Text("N: 1")
@@ -77,7 +76,7 @@ struct TutorialStep4: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 3/4")
+            Text("Round: \(3.description)/\(4.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -91,7 +90,7 @@ struct TutorialStep4: View {
 
 struct TutorialStep5: View {
     var body: some View {
-        TutorialText("Round 4. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It was, so you press Position button.")
+        TutorialText("Round 4. Now position is again right upper corner. N is equal to 1, so check only last one. Was it right upper corner? It was, so you should press the 'Position' button.")
         
         HStack {
             Text("N: 1")
@@ -99,7 +98,7 @@ struct TutorialStep5: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 4/4")
+            Text("Round: \(4.description)/\(4.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -115,7 +114,7 @@ struct TutorialStep5: View {
 
 struct TutorialStep6: View {
     var body: some View {
-        TutorialText("Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just rember, center this time.")
+        TutorialText("Now let's say N is equal 2. So you need to compare current position with two rounds ago. In the first round you just remember, the center this time.")
         
         HStack {
             Text("N: 2")
@@ -123,7 +122,7 @@ struct TutorialStep6: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 1/5")
+            Text("Round: \(1.description)/\(5.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -132,13 +131,12 @@ struct TutorialStep6: View {
         .scaleEffect(0.5, anchor: .bottom)
         MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 4)
             .frame(width: 200, height: 200)
-        
     }
 }
 
 struct TutorialStep7: View {
     var body: some View {
-        TutorialText("The second round. Do you compare it the previous? No, you don't because N is equal to 2. This round you also only remeber position.")
+        TutorialText("The second round. Do you compare it the previous? No, you don't because N is equal to 2. This round you also only remember the position.")
         
         HStack {
             Text("N: 2")
@@ -146,7 +144,7 @@ struct TutorialStep7: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 2/5")
+            Text("Round: \(2.description)/\(5.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -155,13 +153,12 @@ struct TutorialStep7: View {
         .scaleEffect(0.5, anchor: .bottom)
         MainBoard(boardSize: 3, cellsCount: 9, currentItemPosition: 8)
             .frame(width: 200, height: 200)
-        
     }
 }
 
 struct TutorialStep8: View {
     var body: some View {
-        TutorialText("The third round. Now, you need to compare current position with the position from the first round. What it the same? No, in the first round position was center.")
+        TutorialText("The third round. Now, you need to compare current position with the position from the first round. What it the same? No, in the first round position was the center.")
         
         HStack {
             Text("N: 2")
@@ -169,7 +166,7 @@ struct TutorialStep8: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 3/5")
+            Text("Round: \(3.description)/\(5.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -184,7 +181,7 @@ struct TutorialStep8: View {
 
 struct TutorialStep9: View {
     var body: some View {
-        TutorialText("Now, you need to compare current position with the position from the second round. What it the same? No, not it's right center, and there was bottom right")
+        TutorialText("Now, you need to compare current position with the position from the second round. What it the same? No, it's right center, and there was bottom right.")
         
         HStack {
             Text("N: 2")
@@ -192,7 +189,7 @@ struct TutorialStep9: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 4/5")
+            Text("Round: \(4.description)/\(5.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()
@@ -216,7 +213,7 @@ struct TutorialStep10: View {
                 .foregroundColor(.blue)
                 .padding()
             Spacer()
-            Text("Round: 5/5")
+            Text("Round: \(5.description)/\(5.description)")
                 .font(.largeTitle)
                 .foregroundColor(.blue)
                 .padding()

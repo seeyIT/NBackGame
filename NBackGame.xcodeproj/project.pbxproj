@@ -23,6 +23,9 @@
 		5F2C2570258D1DEE008D36F1 /* GameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C256F258D1DEE008D36F1 /* GameInfo.swift */; };
 		5F2C2575258D1DFD008D36F1 /* GameDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */; };
 		5F3587D42565300B002BC31C /* GameSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3587D32565300B002BC31C /* GameSummaryView.swift */; };
+		5F3A835D2B1334F200A94FE6 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5F3A835C2B1334F200A94FE6 /* InfoPlist.xcstrings */; };
+		5F3A83602B1337CB00A94FE6 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3A835F2B1337CB00A94FE6 /* SplashScreenView.swift */; };
+		5F3A83622B1337E800A94FE6 /* SplashScreenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3A83612B1337E800A94FE6 /* SplashScreenViewModel.swift */; };
 		5F3C13DF2A97847E0034B161 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */; };
 		5F3C13FA2A9C94DC0034B161 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3C13F92A9C94DC0034B161 /* Logger.swift */; };
 		5F3D20ED264BD33500E1FCC6 /* GameBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */; };
@@ -107,6 +110,7 @@
 		5FC62C6F2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */; };
 		5FCD41D82540A57F002635BC /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FCD41D72540A57F002635BC /* GameViewModel.swift */; };
 		5FD6A66C2B0FB69B002160EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */; };
+		5FD6A6932B111ECC002160EC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 5FD6A6922B111ECC002160EC /* Localizable.xcstrings */; };
 		5FFDE6C225654BE8008E977F /* GameSummaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +142,9 @@
 		5F2C256F258D1DEE008D36F1 /* GameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInfo.swift; sourceTree = "<group>"; };
 		5F2C2574258D1DFD008D36F1 /* GameDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDIContainer.swift; sourceTree = "<group>"; };
 		5F3587D32565300B002BC31C /* GameSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryView.swift; sourceTree = "<group>"; };
+		5F3A835C2B1334F200A94FE6 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		5F3A835F2B1337CB00A94FE6 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		5F3A83612B1337E800A94FE6 /* SplashScreenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewModel.swift; sourceTree = "<group>"; };
 		5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5F3C13F92A9C94DC0034B161 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		5F3D20EC264BD33500E1FCC6 /* GameBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameBackButton.swift; sourceTree = "<group>"; };
@@ -225,6 +232,7 @@
 		5FC62C6E2602454C00D03AD8 /* FetchHighestUnlockedLevelUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchHighestUnlockedLevelUseCaseTests.swift; sourceTree = "<group>"; };
 		5FCD41D72540A57F002635BC /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5FD6A6922B111ECC002160EC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		5FFDE6C125654BE8008E977F /* GameSummaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +274,7 @@
 			children = (
 				5FA4929B25D53E7F00BB2DE3 /* Utils */,
 				5F2C2589258D2B31008D36F1 /* Flow */,
+				5F3A835E2B1337B600A94FE6 /* SplashScreen */,
 				5F2C2598258D2C12008D36F1 /* Menu */,
 				5F2C259B258D2C30008D36F1 /* GameSummary */,
 				5F2C2595258D2BF9008D36F1 /* Game */,
@@ -424,6 +433,8 @@
 		5F2C259E258D2C5A008D36F1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FD6A6922B111ECC002160EC /* Localizable.xcstrings */,
+				5F3A835C2B1334F200A94FE6 /* InfoPlist.xcstrings */,
 				5FD6A66B2B0FB69B002160EC /* LaunchScreen.storyboard */,
 				5F3C13DE2A97847E0034B161 /* GoogleService-Info.plist */,
 				5FB46DF0270C4D4F00B41F37 /* Music */,
@@ -458,6 +469,31 @@
 				5FC4560326F8809D0088E279 /* GameHistorySingleRound.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		5F3A835E2B1337B600A94FE6 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5F3A83642B13400F00A94FE6 /* ViewModel */,
+				5F3A83632B13400600A94FE6 /* View */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		5F3A83632B13400600A94FE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5F3A835F2B1337CB00A94FE6 /* SplashScreenView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5F3A83642B13400F00A94FE6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5F3A83612B1337E800A94FE6 /* SplashScreenViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5F3D21CC265D2F1100E1FCC6 /* Extensions */ = {
@@ -902,11 +938,16 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				"zh-Hans",
+				de,
+				pl,
+				ko,
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
-				5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -934,9 +975,11 @@
 				5FB46DFA271A082F00B41F37 /* background.m4a in Resources */,
 				5F85D2F5297C65E2002A85CD /* g.wav in Resources */,
 				5F85D2F8297C65E2002A85CD /* d.wav in Resources */,
+				5FD6A6932B111ECC002160EC /* Localizable.xcstrings in Resources */,
 				5FA863462529D997006B5F33 /* Assets.xcassets in Resources */,
 				5F85D2FC297C65E2002A85CD /* l.wav in Resources */,
 				5F85D2F4297C65E2002A85CD /* b.wav in Resources */,
+				5F3A835D2B1334F200A94FE6 /* InfoPlist.xcstrings in Resources */,
 				5F85D2FA297C65E2002A85CD /* p.wav in Resources */,
 				5F3C13DF2A97847E0034B161 /* GoogleService-Info.plist in Resources */,
 			);
@@ -1017,6 +1060,7 @@
 				5FC38F99256C4BC0007AF3EA /* LevelSelectionViewModel.swift in Sources */,
 				5FC4560B26F8A9C60088E279 /* StatisticsViewModel.swift in Sources */,
 				5F6921ED25CB1D41008A18C9 /* RealmService.swift in Sources */,
+				5F3A83602B1337CB00A94FE6 /* SplashScreenView.swift in Sources */,
 				5F6921E525CB1C2D008A18C9 /* GameRepository.swift in Sources */,
 				5FBF32D5257E6FA00007FBA0 /* TutorialText.swift in Sources */,
 				5F05FB86256686F500984BD5 /* TutorialViewModel.swift in Sources */,
@@ -1054,6 +1098,7 @@
 				5F2C2575258D1DFD008D36F1 /* GameDIContainer.swift in Sources */,
 				5FC4560926F8A9B30088E279 /* StatisticsView.swift in Sources */,
 				5F3D21CE265D2F2D00E1FCC6 /* ViewExtensions.swift in Sources */,
+				5F3A83622B1337E800A94FE6 /* SplashScreenViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1413,7 +1458,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1421,7 +1466,7 @@
 				kind = branch;
 			};
 		};
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1434,42 +1479,42 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F1F6ED12B0120D500727FFB /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		5F1F6ED42B01273600727FFB /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		5F1F6ED62B01273600727FFB /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 		5F1F6ED82B01273600727FFB /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		5F1F6EDA2B01276900727FFB /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 		5F1F6EDC2B01276900727FFB /* FirebaseFirestoreSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5F1F6ED02B0120D500727FFB /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
 		};
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -9,7 +9,7 @@ import XCTest
 
 class SnapshotUITests: XCTestCase {
 
-    func testMenuPlusTutorialSnapshots() throws {
+    @MainActor func testMenuPlusTutorialSnapshots() throws {
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
@@ -24,7 +24,7 @@ class SnapshotUITests: XCTestCase {
 
     }
 
-    func testGameSnapshots() throws {
+    @MainActor func testGameSnapshots() throws {
         let nBack = 2
         let app = XCUIApplication()
         setupSnapshot(app)

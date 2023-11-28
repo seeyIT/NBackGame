@@ -1,7 +1,7 @@
 
 devices([
-  "iPhone 14 Plus",
-  "iPhone 8 Plus",
+  "iPhone 15 Plus",
+ # "iPhone 8 Plus",
   "iPad Pro (12.9-inch) (6th generation)",
   "iPad Pro (12.9-inch) (2nd generation)"
 ])
@@ -16,4 +16,11 @@ skip_open_summary(true)
 
 headless(true)
 
-
+languages([
+  "en-US", 
+  "pl",
+  "es-ES",
+  "ko",
+  "de-DE",
+  "zh-Hans"
+])

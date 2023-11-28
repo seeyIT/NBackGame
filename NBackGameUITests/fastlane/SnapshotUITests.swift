@@ -9,37 +9,37 @@ import XCTest
 
 class SnapshotUITests: XCTestCase {
 
-    @MainActor func testMenuPlusTutorialSnapshots() throws {
-        let app = XCUIApplication()
-        setupSnapshot(app)
-        app.launch()
-        Thread.sleep(forTimeInterval: TimeInterval(1))
-
-        snapshot("1MenuScreen")
-        Thread.sleep(forTimeInterval: TimeInterval(1))
-
-        app.buttons[AccessibilityIdentifier.Menu.tutorialButton].tap()
-        snapshot("2TutorialScreen")
-        Thread.sleep(forTimeInterval: TimeInterval(1))
-
-    }
-
-    @MainActor func testGameSnapshots() throws {
+    @MainActor func testWholeFlowSnapshots() throws {
         let nBack = 2
         let app = XCUIApplication()
         setupSnapshot(app)
         app.launch()
+
+        let tutorialButton = app.buttons[AccessibilityIdentifier.Menu.tutorialButton]
+        _ = tutorialButton.waitForExistence(timeout: 30)
+        snapshot("1MenuScreen")
+
+        tutorialButton.tap()
         
-        app.buttons[AccessibilityIdentifier.Menu.playButton].tap()
-        app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"].tap()
-        Thread.sleep(forTimeInterval: TimeInterval(10))
-        app.buttons[AccessibilityIdentifier.Game.positionButton].tap()
-        snapshot("2GameScreen")
+        let backToMenuButton = app.buttons[AccessibilityIdentifier.Tutorial.showMenuButton]
+        _ = backToMenuButton.waitForExistence(timeout: 10)
+        
+        snapshot("2TutorialScreen")
 
-        Thread.sleep(forTimeInterval: TimeInterval(10))
-        app.buttons[AccessibilityIdentifier.Game.soundButton].tap()
+        backToMenuButton.tap()
+        
+        let playButton = app.buttons[AccessibilityIdentifier.Menu.playButton]
+        _ = playButton.waitForExistence(timeout: 5)
+        playButton.tap()
+        
+        let levelSelectionButton = app.buttons["\(AccessibilityIdentifier.LevelSelection.levelPrefixButton)\(nBack)"]
+        _ = levelSelectionButton.waitForExistence(timeout: 10)
+        levelSelectionButton.tap()
+        
+        let positionButton = app.buttons[AccessibilityIdentifier.Game.positionButton]
+        _ = positionButton.waitForExistence(timeout: 5)
+        positionButton.tap()
+        
         snapshot("3GameScreen")
-        Thread.sleep(forTimeInterval: TimeInterval(1))
-
     }
 }

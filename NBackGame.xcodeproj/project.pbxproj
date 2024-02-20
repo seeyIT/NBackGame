@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -973,7 +973,7 @@
 				};
 			};
 			buildConfigurationList = 5FA863392529D995006B5F33 /* Build configuration list for PBXProject "NBackGame" */;
-			compatibilityVersion = "Xcode 11.0";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -987,8 +987,8 @@
 			);
 			mainGroup = 5FA863352529D995006B5F33;
 			packageReferences = (
-				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */,
-				5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */,
+				5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */,
+				5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5FA8633F2529D996006B5F33 /* Products */;
 			projectDirPath = "";
@@ -1503,7 +1503,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */ = {
+		5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
 			requirement = {
@@ -1511,7 +1511,7 @@
 				kind = branch;
 			};
 		};
-		5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */ = {
+		5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1524,87 +1524,87 @@
 /* Begin XCSwiftPackageProductDependency section */
 		5F9E283E2911024500DCAD3B /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = Realm;
 		};
 		5F9E28402911024500DCAD3B /* RealmSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift.git" */;
+			package = 5F9E283D2911024500DCAD3B /* XCRemoteSwiftPackageReference "realm-swift" */;
 			productName = RealmSwift;
 		};
 		5FE8FC4A2B14A07300306AD7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		5FE8FC4C2B14A07300306AD7 /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
 		};
 		5FE8FC4E2B14A07300306AD7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		5FE8FC502B14A07300306AD7 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		5FE8FC522B14A07300306AD7 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 		5FE8FC552B14A15600306AD7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		5FE8FC572B14A15600306AD7 /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
 		};
 		5FE8FC592B14A15600306AD7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		5FE8FC5B2B14A15600306AD7 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		5FE8FC5D2B14A15600306AD7 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 		5FE8FC5F2B14A21000306AD7 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
 		5FE8FC612B14A21000306AD7 /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsSwift;
 		};
 		5FE8FC632B14A21000306AD7 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
 		5FE8FC652B14A21000306AD7 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
 		};
 		5FE8FC672B14A21000306AD7 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk.git" */;
+			package = 5FE8FC492B14A07300306AD7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */

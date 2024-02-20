@@ -56,12 +56,19 @@ struct GameSummaryButtons: View {
                 accessibilityIdentifier: AccessibilityIdentifier.GameSummary.playAgainButton,
                 onTapFeedbackImpact: .medium,
                 onTap: {
-                    self.userWasAskedThisTime = true
+                    log(["UserTappedToReview" : "\(getTimestamp())"])
                     requestReview()
+                    self.userWasAskedThisTime = true
                 }
             )
+            .onAppear(perform: {
+                log(["AppearButtonForReview" : "\(getTimestamp())"])
+            })
         } else {
             EmptyView()
+            .onAppear(perform: {
+                log(["DoNotAppearButtonForReview" : "\(getTimestamp())"])
+            })
         }
     }
     

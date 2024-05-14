@@ -34,6 +34,7 @@ def create_temp_keychain()
 end
 
 def ensure_temp_keychain()
+  clean_build_artifacts
   delete_temp_keychain()
   create_temp_keychain()
 end

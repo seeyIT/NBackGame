@@ -103,6 +103,12 @@ platform :ios do
       force: true,
       release_notes: {
         'default' => PR_BODY,
+        'Zh-Hans' => '更新了应用程序，使功能加载更快，并修复了一些崩溃问题。',
+        'de-DE' => 'Die App wurde aktualisiert, damit die Funktionen schneller laden und einige Abstürze behoben werden.',
+        'ko' => '기능 로딩 속도를 높이고 일부 충돌을 수정하기 위해 앱을 업데이트했습니다.',
+        'pl' => 'Zaktualizowano aplikację, aby przyspieszyć ładowanie funkcji i naprawić niektóre błędy.',
+        'es-ES' => 'Se ha actualizado la aplicación para que las funciones se carguen más rápido y se han corregido algunos fallos.'
+        
       },
       submission_information: {
         export_compliance_uses_encryption: false,

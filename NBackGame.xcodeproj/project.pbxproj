@@ -1316,7 +1316,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 28;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				ENABLE_PREVIEWS = YES;
@@ -1327,7 +1327,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 35.0;
+				MARKETING_VERSION = 36.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1347,7 +1347,7 @@
 				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 28;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NBackGame/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = JKY8VL4356;
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = JKY8VL4356;
@@ -1359,7 +1359,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 35.0;
+				MARKETING_VERSION = 36.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smashswift.nback;
 				PRODUCT_NAME = "$(TARGET_NAME)";
